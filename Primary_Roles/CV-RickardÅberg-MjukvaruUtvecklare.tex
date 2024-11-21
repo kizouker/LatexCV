@@ -1,0 +1,369 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2015 Xavier Danaux (xdanaux@gmail.com), 2020-2022 moderncv maintainers (github.com/moderncv).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+\usepackage{graphicx}
+\graphicspath{{../includes/photos}} % Specify the directory here
+\moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{red}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+\setlength{\footskip}{136.00005pt}                 % depending on the amount of information in the footer, you need to change this value. comment this line out and set it to the size given in the warning
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+\usepackage{enumitem}   
+\newcommand{\thepage}{\arabic{page}}
+\newlist{quotelist}{enumerate}{1}
+\setlist[quotelist]{label=\textquotedblleft\arabic*\textquotedblright}
+
+\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+\ifxetexorluatex
+  \usepackage{fontspec}
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Ligatures=TeX}
+  \setmainfont{Latin Modern Roman}
+  \setsansfont{Latin Modern Sans}
+  \setmonofont{Latin Modern Mono}
+  \setmathfont{Latin Modern Math} 
+\else
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage{lmodern}
+\fi
+
+% document language
+\usepackage[swedish]{babel}  % FIXME: using spanish breaks moderncv
+
+% personal data
+\name{MSc, Rickard}{Åberg}
+%\title{``I am ...``}           
+\title{Utvecklare, DevOps, scrum master, problemlösare civ.ing}                           
+\photo[72pt][0pt]{me}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+\address{Bodekullsgatan 34b}{21440 Malmö}% optional, remove / comment the line if not wanted; the ``postcode city`` and and ``country`` arguments can be omitted or provided empty
+\phone[mobile]{+46~709~43~14~01}     
+
+% optional, remove / comment the line if not wanted
+\email{rickard.aaberg@icloud.com}                               % optional, remove / comment the line if not wanted
+
+% Social icons
+\social[linkedin]{rickard-åberg-9866891}                        % optional, remove / comment the line if not wanted
+\social[github]{kizouker}                            % optional, remove / comment the line if not wanted
+\social[researchgate]{Rickard_Aberg}                        % optional, remove / comment the line if not wanted
+
+
+%\homepage{                         % optional, remove / co''mment the line if not wanted
+%\extrainfo{\url{https://www.researchgate.net/profile/Rickard_Aberg}}                 % optional, remove / comment the line if not wanted
+%https://www.linkedin.com/in/rickard-%C3%A5berg-9866891/
+
+\quote{I wrote my CV in Latex, and I'm proud if it!}
+
+\makeatletter
+\@ifpackageloaded{moderncvstylebanking}{%
+\let\oldmakecvtitle\makecvtitle
+\renewcommand*{\makecvtitle}{%
+  {\centering\framebox{\includegraphics[width=\@photowidth]{\@photo}}\par\vspace{10pt}}%
+  \oldmakecvtitle%
+}%
+}{%
+}
+\makeatother
+
+\begin{document}
+\newcommand{\myparagraph}[1]{\paragraph{#1}\mbox{}\\}
+\makecvtitle
+\section{Roles}
+\cvlistdoubleitem{Develop on Mac or Linux/Ubuntu}  { Node/javscript/typescript, React, Angular }
+\cvlistdoubleitem{Java, Maven, SpringBoot} {Github/GitLab, Azure Devops}
+\cvlistdoubleitem{Docker/Kubernetes, MySQL, PostgreSQL }{Scrum Master, Team Lead }
+
+\cventry{Car driver's license}{}{}{}{}{}
+%\cventry{Diver's license}{}{}{}{}{}
+
+\section{Certifications}
+\cvlistdoubleitem{Scrum Master }{ICC Coach}
+\cvlistdoubleitem{ISEB / ISTQB  (Test)}{React nanodegree }
+
+\section{Developer experiences etc}
+\cventry{2024 VT  }{Open Trip Planner (OTP)}{https://www.opentripplanner.org/}{}{Java}{Java21, GraphQL, python, open source}
+\cventry{2022 HT  }{Hot Yoga Malmö}{hotyogamalmo.se}{Malmö}{Wordpress}{Wordpress, plugins, php, loopia}
+\cventry{2021-12 - 2022-06-01 }{ADBSafegate AB}{ADBSafegate AB}{Malmö}{Fullstack Developer}{Angular, typescript, Azure, Scaled Agile Framework, SAFe}
+\cventry{2019-2021 }{React.JS Nanodegree}{@ Udacity}{}{}{Projects - reviewed and passed by react experts:}
+\begin{itemize}
+  \item  \url{https://github.com/kizouker/reactnd-project-would-you-rather-starter}
+\end{itemize}
+\cventry{2019-}{Therealantidepp}{Open Source}{Malmö}{}{Help people to avoid depression. Java 11 (HttpClient), Spring boot, Hibernate, RESTful API/JSON, Swagger. }
+
+\cventry{2017-2018}{Fullstack Developer }{@ Verisure}{Malmö}{}{Java8, android, Docker/Kubernetes, wildfly, maven, jsp, javascript, jquery, bootstrap, AJAX, RESTful, mysql (Cassandra), git/gerrit, Linux/Ubuntu, IntelliJ, SonaQube, Nexus, Jenkins CI, Artifactory.}
+\begin{itemize}
+    \item Setup of Microservice deployment to kobol/galactica in kubernetes, myhotel 
+    \item Android development for ipcaminit   
+    \item Hands-on development in the GWIT/Installer Solutions, Fullstack – from db to javascript 
+    \item GDPR coordinator
+    Responsible for analyzing the data passing trough an application and how it relates to General Data Protection Regulation, communication with Legal, Projects and Managers. 
+\end{itemize}
+
+\cventry{HT2016 }{Community services in Stockholm}{@ SL}{}{}{Participated in the project responsible for improving processes around CM. Developing and maintaining a system in Java for sick travels. GitLab, Sonatype, Nexus, Maven, Git, JEE, Jenkins CI. }  
+
+\cventry{2014-2015}{Java developer - Java EE, Spring, Maven, Hibernate and Linux Ubuntu.}{@ Norwegian fur retailer}{}{}{Bouvet maintains an auction web-site for a Norwegian retailer of fur materials, based on JEE, hibernate, java6. I have worked to support this the site, trouble shoot, fix bugs etc. One part has been to migrate from Redhat to Scientific Linux. }  
+
+\cventry{2011-}{Solution Architect}{@ IKEA IT}{Helsingborg}{}{Evaluated SaaS (Software-as-a-Service, cloud computing) for a custom support system to be presented to the enterprise architecture board (EAB). The report took into account aspects such as integration issues, security, capacity, economy, legality etc.}  
+
+\cventry{2011-}{System Integration Specialist – TIBCO - Application Lead}{@ Hi3G (TRE)}{}{Stockholm}
+Application Lead for EAI (Enterprise Application Integration) – a layer consisting of 15 adapters to systems for example Billing (Single.E.View), CRM (PeopleSoft) and so on. }
+
+\cventry{2004-2012}{Java Developer and Integration specialist}{@ Telenor}{Oslo/Malmö}{}{Back-end and system integration developer Java EE and Tibco products. Delivering speed and  progress for the project which was six months late after schedule. CI-servers, cruise control – code coverage etc. 
+}  
+
+
+\begin{itemize}
+    \item Jira plugin developer, java, velocity. 
+    \item Process Designer for BPM-systems 
+    \item Defining a template for Software Architectural Description after read-in on Togaf, Zachman, Krutchen4+1, and SEI’s views and beyond. 
+    \item  System integrator tester, on site in Norway, making the final integration tests for a large BPM system that was later prized with the silver medal in BPM global Awards. Webservices, JMS, Tibo Inconcert, Integration Manager. 
+    \item Java Developer, IKEA IT 
+    \item Test Leader for J2EE project, Sony Ericsson 
+    \item Project Coordinator, IKEA IT 
+\end{itemize}
+
+\cventry{ 2003-2004 }{research engineer}{@ Ecole des Mines}{Nantes/France}{}{desc}  
+\begin{itemize}
+ \item As part of the research project EASYCOMP integrated Vienna component framework with the cutting edge framework for Event-based Aspect-Oriented Programming, by effectively communication with researchers in Vienna. Used java and rmi. 
+
+ \item Software Developer/Java for a digital library project. Analysis and design in UML and coding using J2EE, Struts, Mysql] 
+\end{itemize}
+
+
+\large
+\section {Project Mgmt, Scrum master etc}
+
+\cventry{2015-2016}{Problem Manager}{@ Länsstyrelsernas IT-enhet}{}{}{ITIL, problem process, incident management, service management, cross-functional teams, root cause 
+}  
+
+In the role as Problem Manager within Länsstyrelsernas IT-enhet, via Västra Götalands region I have driven, and coordinated meetings to solve problems spanning over different departments. Daily contact with incident managers, the coordinator for service desk, service managers for areas such as Webb, Network, Print, Hardware, Gis, Windows, Integration and message technology. Identifying bottlenecks in groups, and roles and escalating to process owner and senior management. Successfully implemented a new architecture together with an architect in one area which decreased monthly error codes from 1400 to 50.  
+
+\cventry{2014-2015}{Senior Project Manager / Scrum Master}{@ Nordea}{Cph/Denmark}{}{Several roles, Scrum, DevOps, Java }  
+In the role as DevOps Coach / Scrum master I have introduced agile/scrum methodologies and tools (git, jira, confluence) for a cross-functional team consisting of Operation Specialist, Automic specialists and Developers to setup test environments (preprod/uat), deployment, alarms and monitoring solutions. 
+
+Facilitated Scrum artefacts such as: 
+\begin{itemize}
+    \item Sprint planning meetings 
+    \item Sprint Demo 
+    \item Retrospective 
+    \item Individual coaching sessions 
+\end{itemize}
+
+In the role as Senior Project Manager I’ve been driving different infrastructure projects around IaaS/Amazon EC2 PoC: 
+\begin{itemize}
+    \item Project planning and documentation 
+    \item Setting up QRA – risk analysis  
+    \item Started a cross organizational local group for puppet automation, to share knowledge.
+    \item Contact with vendors, AWS and Tibco for Staffing and advise 
+    \item Initial architecture for grid solution based on Tibco DataSynapse, and Amazon EC2 for a computing grid in the cload. 
+    \item Hands-on java coding to interface to an integration motor, to provide a framework for an improved deployment solution. Springboot, maven3,  
+\end{itemize}
+
+
+\cventry{2012-2014 }{DevOps, Automatic Deployment, Knowledge Transfer, Release Management }{@ IKANO Bank}{}{}{desc}  
+\begin{itemize}
+    \item I was responsible and secured the deployment of ikanobank.se. One part of the project was to faciliate a knowledge-transfer from Germany to Denmark. At the same time I took several initatiatives necessary to create a succesful environment to deploy in, both technical-wise and process-wise. 
+    
+    \item The continuous improvements, knowledge-transfer, documentation clean-up, retrospectives, coaching of ops team in agile methods and introduction of ways of working with a DevOps/C.D. Tool, CA Lisa resulted in decreased resources by about 75% and improved quality multiple times. Handling and took initiatives to several sub-projects. 
+    
+    \item Technology stack: MS .NET, BizTalk, CA Lisa/Nolio, Jenkins, Infrastructure, Load balancing, SCOM etc. Led a team of operations specialist and coordinated work between 15 people including developers, testers, etc. 
+    
+    \item Work in Germany, Denmark and Sweden. 
+\end{itemize}
+
+\section{Process Management}
+\cvlistdoubleitem{Change Mnmt} {Release Mnmt}
+\cvlistdoubleitem{Deploy Mnmt} {Problem Mnmt}
+\cvlistdoubleitem{ITIL}{GDPR}
+
+
+\section{Education}
+\cventry{2023 HT-- 2024 VT}{Google CyberSecurity Fundamentals}{Google/Coursera}{ }{}{} 
+\cventry{2023 VT -- Ongoing}{ToastMasters}{Lund}{ }{Public Speaking}{} 
+\cventry{2022 HT -- Ongoing}{SRE, Fullstack and Frontend}{Udacity@Palo Alto}{ }{Grafana, Terraform, Kubernetes, AWS}{} 
+\cventry{2020}{Pedagogical Drama, Story Telling, Improvisational theatre, Groupe Dynamics}{Malmö University}{Malmö}{}{}      
+\cventry{2019-2021}{React.JS (ES6, React, Router, Redux, Native) Nanodegree}{Udacity@Palo Alto}{Remote}{}{}  
+\cventry{2016}{Programming and Problem-solving in Python. 2.5 ECTS}{Blekinge Institute of Technology}{Ronneby}{}{}  
+\cventry{1996-2003}{MSc in Computer Science and Engineering. 300 ECTS}{Linköping Institute of Technology}{Linköping}{}{Computer/IT-Security, Software production, Artificial Intelligence, Object-Oriented Programming, Functional Programming, Real time programing, Lisp/C, Advanced computer architecture, Hardware construction, Embedded development with micro-controller}  
+\includegraphics[scale=0.4]{it-security}
+\section{Courses}
+\cvdoubleitem{Agile}{Certified Scrum Master (CSM) Softhouse Consulting Öresund AB }
+{Coaching}{International Coaching Certificate, (ICC, ICF, EMCC), SLH - Center of Excellence in Thailand, Banh Phee,  Lars-Eric Uneståhl, phD }
+\cvdoubleitem{Communication}{18 days workshop during a whole year on NonViolent-Communication (Varg och giraff-språk} {Negotiation}{Negotiation workshop, Företags Ekonomiskt Institut (FEI)}
+\cvdoubleitem{Project Management}{Practical Project Management Wenell Management.}
+{Pedagogical drama, Story Telling, Improvisation }{Malmö University }
+\cvdoubleitem{Front-End}{React}{DevOps} {CA Lisa Release Automation (Nolio) (Continuous Delivery) CA Technologies Inc.}
+
+\section{Master thesis}
+\cvitem{Title}{\emph{On the automatic evolution of an OS kernel using temporal Logic and AOP}}
+\cvitem{Supervisors}{Julia Lawall phD, Mario Südholt phD, Gilles Muller phD}
+\cvitem{Description}{
+In IEEE International Conference on Automated Software Engineering, Montréal, Canada, pages 196-204, 42 citations}
+\url{https://www.researchgate.net/publication/220883611\_On_the_automatic_evolution_of_an_OS_kernel_using_temporal_logic_and_AOP}
+
+\section{What people have said about me}
+\large 
+
+\begin{quotelist}
+    \item
+    ``Rickard became rapidly proficient in all technologies by effectively communicating with the research engineers and has delivered to all my requirements´´,
+      Mario Südholt, associate professor OBASCO group at Ecole des Mines 
+\item
+        ``Rickard has rapidly, with great accuracy and interest fulfilled the requirements of which the roles demanded.  He is also responsible and enterprising``. ``Rickard’s work has meant close cooperation with several clients and demanded great communication skills to understand the end-users needs´´ 
+        ``we give him our best recommendations´´ – Cybercom 
+\item     
+        `` Rickard is ambitious and dedicated to his work and his team the reason for our success with a stable environment``  - Frank Amersbasch, Head of Technical operations, Ikano Bank 
+\item  ``Rickard has not only used the existing processes but also simplified and improved them`` ``Rickard is goal-oriented, planning-oriented and flexible``  - Jonas Paulsson Länsstyrelsen IT 
+       
+  \end{quotelist}
+
+\section{Languages}
+\cvitemwithcomment{Swedish}{Mother tongue}{}
+\cvitemwithcomment{English}{Professional proficiency}{}
+\cvitemwithcomment{French}{Professional proficiency}{}
+
+\section{Industry sectors}
+\cvlistdoubleitem{Aviation}{Hospitality}
+\cvlistdoubleitem{Healthcare}{BioTech}
+\cvlistdoubleitem{Security}{Energy}
+\cvlistdoubleitem{Public}{Telecom}
+\cvlistdoubleitem{Finance}{Trade}
+
+\
+
+\section{Employments}
+\cventry{2021-12 - 2022-06-01 }{ADBSafegate AB}{ADBSafegate AB}{Malmö}{Fullstack Developer}{Angular, typescript, Azure, Scaled Agile Framework, SAFe}
+\cventry{2021-06 - 2021-09 }{Zaplox AB}{Zaplox AB}{Lund}{Fullstack Developer}{Vue.js node javascript css AWS}
+\cventry{2019-2021 }{React.JS Nanodegree}{Udacity}{Remote}{}{Portfolio Projects - reviewed and passed by react experts}
+\cventry{Aug 2017-Nov 2018}{Senior Software Engineer}{Verisure Innovation}{Malmö}{}{}
+\cventry{May2012 - Dec2017}{Managing Consultant}{Bouvet Syd AB}{Malmö}{}{Java Developer, Team Leader/CUManager/Partner Responsible DevOps}
+\cventry{May2004-Feb 2012}{Consultant}{Cybercom}{Malmö}{}{Java, Integration, Test}
+ \cventry{Mar 2003-Feb 2004}{RnD Engineer}{Ecole Des Mines}{Nantes/France}{}{}
+\cventry{Mar 2003-Feb 2004}{Thésard}{Ecole Des Mines}{Nantes/France}{}{MSc Thesis}
+\cventry{Jul 2002 - Sep 2002}{Embedded Developer}{Hemocue}{Ängelholm}{}{}
+
+\section{Interests}
+\cvitem{hobby 1}{Yoga and Meditation}
+\cvitem{hobby 2}{Dance and Martial Arts}
+\cvitem{hobby 3}{Singing and playing piano}
+
+\section{References}
+\begin{cvcolumns}
+  \cvcolumn{Managers}
+      {\begin{itemize}
+      \item Mathias Hansen 
+      \item(more upon request)
+      \end{itemize}}
+    \cvcolumn{Peers}
+    {\begin{itemize}
+        \item Peter Törnkvist, 
+        \item(more upon request)
+        \end{itemize}}
+    
+  \cvcolumn{Msc}
+    {\begin{itemize}
+            \item Julia Lawall, and
+            \item   Mario Sudholt
+    \end{itemize}(more upon request)}
+  \cvcolumn[0.5]{I managed}{\textit{Martin Björcke}, and \textit{David Bennehult} also (all available upon request).}
+\end{cvcolumns}
+\footnotesize
+\section{Experience from Tools, Technologies and methods}
+\begin{cvcolumns}
+    \cvcolumn{Programming languages}
+        {\begin{itemize}
+            \item Java/JEE/Spring/Android 
+            \item JavaScript, ES6, React, Redux, Bootstrap, HTML/CSS
+            \item Python
+            \item Lisp, ocaml  (functional)
+            \item SQL, PL/SQL, MySQL 
+            \item Assembler (PIC, Cop8, 68000) 
+        \end{itemize}}
+    \cvcolumn{Version Control, build, CI, CD}
+	{\begin{itemize}
+        \item Git/Gerrit, gitlab, github, bitbucket 
+        \item Gradle, Maven, Ant, npm, yarn
+        \item Docker, Kubernetes, Ansible
+        \item Bamboo, Jenkins, CruiseControl 
+        \item JFrog Artifactory, SonarQube
+        \item Azure, AWS 
+    \end{itemize}}
+\end{cvcolumns} 
+\begin{cvcolumns}
+    \cvcolumn{Methods}
+	{\begin{itemize}
+            \item Scrum
+            \item Kanban
+            \item DevOps
+            \item ITIL
+            \item Continuous Delivery 
+            \item C.D. Toolchain/pipeline 
+    \end{itemize}}
+     \cvcolumn{System integration }
+    	{\begin{itemize}
+                \item Mule ESB Studio
+                \item TIBCO Business Works, Rendez-vous 
+                \item Active MQ / JMS / RabbitMQ 
+                \item Json, XML, XSD Schemas 
+                \item SoapUI / Postman
+        \end{itemize}}
+\end{cvcolumns} 
+\begin{cvcolumns}
+  \cvcolumn{Design principles}
+	{\begin{itemize}
+            \item Object-Oriented Analysis – UML 
+            \item Aspect-Oriented Programming  
+            \item Service-Oriented Architecture 
+    \end{itemize}}
+ \cvcolumn{Operating Systems and Containers }
+	{\begin{itemize}
+            \item Windows Server  
+            \item Unix and Linux (Ubuntu)
+            \item Mac Os X 
+            \item Android
+            \item iOs (Iphone)
+            \item Docker/Kubernetes
+    \end{itemize}}
+    \end{cvcolumns} 
+    \begin{cvcolumns}
+ \cvcolumn{Tools }
+	{\begin{itemize}
+            \item IntelliJ, Visual Code 
+            \item Jira / Confluence 
+            \item Remedy / Serena / MS Service Desk 
+    \end{itemize}
+    }
+     \cvcolumn{Databases }
+	{\begin{itemize}
+            \item MS SQL Server
+            \item Oracle
+            \item Mysql
+            \item PostgreSQL
+    \end{itemize}}
+ \end{cvcolumns} 
+   \begin{cvcolumns}
+ \cvcolumn{Application Servers  }
+	{\begin{itemize}
+            \item Apache Tomcat 
+            \item JBoss/Wildfly 
+    \end{itemize}}
+ \end{cvcolumns} 
+
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+\clearpage
+\Large
+
+\end{document}
