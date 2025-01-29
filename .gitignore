@@ -1,3 +1,4 @@
 *.pdf
 job-applications/
 includes/
+.DS_Store
