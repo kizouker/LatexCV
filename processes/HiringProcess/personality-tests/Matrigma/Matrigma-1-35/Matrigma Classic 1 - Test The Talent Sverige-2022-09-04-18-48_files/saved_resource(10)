@@ -1,0 +1,16 @@
+div.watu-question, div.show-question {
+margin-top: 15px !important;
+}
+.question-choices, .show-question-choices {
+margin-top: 5px !important;
+}
+.watupro_buttons input, input.watupro-start-quiz, button.watupro-start-quiz {
+width:200px !important;
+height:30px !important;
+}
+.watupro-question-choice span {
+		  display: inline !important; /* added in WatuPRO 6.1.0.4 */
+		}
+@media 
+			only screen and (max-width: 600px) {
+}
