@@ -1,7 +1,7 @@
 % Rickard Åberg - Cybersecurity & Ethical Hacking
 % LaTeX CV focusing on Security-related roles (urval av erfarenheter)
 
-% (Minor update: added a comment line to force re-render in Canvas)
+% This version fixes compilation issues by removing the leftover $1 and adding \end{document}
 
 \documentclass[11pt,a4paper,sans]{moderncv}
 \moderncvstyle{banking}
@@ -27,26 +27,35 @@
 \section{Erfarenhet (Urval)}
 
 % ---- 2023 -- Present ----
-\cventry{2023-- pågående}{Cybersecurity \& Ethical Hacking}{Självstudier och projekt}{}{}{
+\cventry{2024-- pågående}{Cybersecurity \& Ethical Hacking}{Självstudier och projekt}{}{}{
 \begin{itemize}
 \item Praktisk penetrationstestning, nätverksforensik
 \item Reverse engineering av firmware, BIOS-säkerhet
+\item Etisk hackning av android, iphone och windows
 \end{itemize}}
 
 % ---- 2022 ----
-\cventry{2022}{Udacity Ethical Hacking}{Udacity}{}{}{
+\cventry{2024}{Udacity Ethical Hacking (utbildning, del av Accenture)}{Udacity}{Distans}{}{
 \begin{itemize}
 \item Praktiskt arbete med Metasploit, John the Ripper, Burp Suite och Wireshark
 \item Projektuppgifter med sårbarhetsanalys och intrångstest
 \end{itemize}}
 
+
+% ---- 2021--2022 ----
+\cventry{2021--2022}{Fullstack Developer}{ADB Safegate}{Malmö}{}{
+\begin{itemize}
+\item Angular, TypeScript, Azure
+\item Arbetade enligt SAFe (Scaled Agile Framework)
+\end{itemize}}
+
 % ---- 2012 -- 2019 ----
 \cventry{2012--2019}{Konsult / DevSecOps \& Deploy}{Ikano Bank, Nordea, Länsstyrelsen, Verisure}{Malmö med omnejd}{}{
 \begin{itemize}
-\item Ikano Bank (2012--2014): Fokus på säkerhet inom CI/CD, DevSecOps och serverhärdning
-\item Nordea (2014--2015): DevOps, infrastrukturprojekt och IaaS (AWS), initierade puppet-automation
-\item Länsstyrelsen (2015--2016): Problem Manager med ansvar för incidenter och ITIL-processer, minskade felkoder radikalt
-\item Verisure (2017--2018): Senior Software Engineer med GDPR-ansvar, hantering av persondata och regelefterlevnad
+    \item Verisure (2017--2018): Senior Software Engineer med GDPR-ansvar, hantering av persondata och regelefterlevnad
+    \item Länsstyrelsen (2015--2016): Problem Manager med ansvar för incidenter och ITIL-processer, minskade felkoder radikalt
+    \item Nordea (2014--2015): DevOps, infrastrukturprojekt och IaaS (AWS), initierade puppet-automation
+    \item Ikano Bank (2012--2014): Fokus på säkerhet inom CI/CD, DevSecOps och crossfunctional samarbete
 \end{itemize}}
 
 % ---- 2004 -- 2012 ----
@@ -57,9 +66,16 @@
 \end{itemize}}
 
 \section{Utbildning}
-\cventry{2023}{Google Cybersecurity (Distans)}{Efter Udacity-kursen}{}{}{Fördjupade studier i hotdetektering och incidenthantering}
-\cventry{2023}{Cybersecurity \& Ethical Hacking}{Udacity}{Distans}{}{Praktisk penetrationstestning och forensik}
+\cventry{2024}{Bertellmans Scholarship @ Udacity for Ethical Hacking}{Udacity}{Distans}{Praktisk penetrationstestning}{
+    \begin{itemize}
+        \item Ansökan påbörjad 2023, antagen 2024
+        \item Första provet godkänt, men jag repeterar kursmaterialet (del 2 planerad)
+    \end{itemize}}
+\cventry{2023}{Google Cybersecurity (Distans)}{}{}{}{En översiktskurs i cybersäkerhet för att orientera mig i området. Fokuserar på grundläggande begrepp, hotdetektering och incidenthantering.}
+
+
 \cventry{2003}{MSc i Datateknik}{Linköpings Universitet}{Linköping}{}{Inriktning mot IT-säkerhet, OS-utveckling och nätverk}
+\\\emph{Examensarbete: "Evolving an OS kernel using temporal logic and AOP" (Linux-säkerhet).}}
 
 \section{Certifieringar}
 \cvlistdoubleitem{Udacity Ethical Hacking}{Scrum Master}
@@ -67,9 +83,10 @@
 
 \section{Tekniska färdigheter}
 \cvlistdoubleitem{Penetrationstestning}{Metasploit, Burp Suite, Wireshark}
-\cvlistdoubleitem{Operativsystem}{Linux (Ubuntu, Arch), Windows, macOS, Android, iOS}
+\cvlistdoubleitem{Operativsystem}{Linux (Ubuntu), Windows, macOS, Android, iOS}
 \cvlistdoubleitem{Säker kodgranskning}{OWASP Top 10, SQL-injection, XSS}
 \cvlistdoubleitem{Logganalys/övervakning}{Felsökning, prestandaoptimering, logghantering}
+\cvlistdoubleitem{Modern webbutveckling}{React, Angular, TypeScript}
 
 \section{Språk}
 \cvitemwithcomment{Svenska}{Modersmål}{}
