@@ -1,0 +1,27 @@
+Ansökningsbrev – Cybersäkerhet
+
+[Datum]
+
+[Arbetsgivarens namn]
+[Företagets namn]
+[Adress]
+[Postnummer, Stad]
+
+Ansökan om tjänsten som [Jobbtitel, t.ex. IT-säkerhetsspecialist]
+
+Hej [Rekryterarens namn],
+
+Jag är en erfaren ingenjör inom IT och cybersäkerhet med en stark bakgrund inom systemutveckling, penetrationstester och nätverkssäkerhet. Mitt intresse för cybersäkerhet har vuxit fram under de senaste åren, och jag har aktivt byggt på min kompetens genom både självstudier och praktiska projekt, inklusive arbete med penetrationstester, forensik och säkerhetsanalys.
+
+Jag har en förmåga att snabbt ta till mig nya områden och applicera min bakgrund inom operativsystem, applikationslager och tekniker jag har använt sedan jag började med datorer som 8-åring, 1977. Jag kan visualisera komplexa system och säkerhetsutmaningar för att hitta lösningar som förstärker den övergripande säkerheten.
+
+Under min karriär har jag arbetat med både backend-utveckling och säkerhetsgranskningar, där jag har använt verktyg som Metasploit, Burp Suite och Kali Linux för att identifiera och åtgärda sårbarheter i system. Jag har även genomfört avancerade penetrationstester och säkerhetsgranskningar av webbtjänster och nätverk.
+
+Jag motiveras av att identifiera och förebygga säkerhetsbrister och trivs i en miljö där jag får använda mina analytiska färdigheter för att stärka IT-säkerheten. Jag har även en vana att arbeta metodiskt och noggrant, samtidigt som jag anpassar mig snabbt till nya tekniska utmaningar.
+
+Jag ser fram emot möjligheten att diskutera hur jag kan bidra till ert team och hjälpa er att stärka säkerheten i era system. Jag är tillgänglig för en intervju enligt ert önskemål och kan kontaktas på [ditt telefonnummer] eller [din e-postadress].
+
+Tack för din tid och jag ser fram emot att höra från dig.
+
+Med vänliga hälsningar,
+[Ditt namn]

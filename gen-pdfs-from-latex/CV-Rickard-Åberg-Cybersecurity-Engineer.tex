@@ -1,0 +1,79 @@
+% Rickard Åberg - Cybersecurity & Ethical Hacking
+% LaTeX CV focusing on Security-related roles (urval av erfarenheter)
+
+% (Minor update: added a comment line to force re-render in Canvas)
+
+\documentclass[11pt,a4paper,sans]{moderncv}
+\moderncvstyle{banking}
+\moderncvcolor{red}
+
+\usepackage[scale=0.75]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[swedish]{babel}
+\usepackage{lmodern}
+
+\name{Rickard}{Åberg}
+\title{Cybersecurity & Ethical Hacking}
+\address{Bodekullsgatan 34b}{21440 Malmö}{Sverige}
+\phone[mobile]{+46~709~43~14~01}
+\email{raberg@duck.com}
+\social[linkedin]{rickard-åberg-9866891}
+\social[github]{kizouker}
+
+\begin{document}
+\makecvtitle
+
+\section{Erfarenhet (Urval)}
+
+% ---- 2023 -- Present ----
+\cventry{2023-- pågående}{Cybersecurity \& Ethical Hacking}{Självstudier och projekt}{}{}{
+\begin{itemize}
+\item Praktisk penetrationstestning, nätverksforensik
+\item Reverse engineering av firmware, BIOS-säkerhet
+\end{itemize}}
+
+% ---- 2022 ----
+\cventry{2022}{Udacity Ethical Hacking}{Udacity}{}{}{
+\begin{itemize}
+\item Praktiskt arbete med Metasploit, John the Ripper, Burp Suite och Wireshark
+\item Projektuppgifter med sårbarhetsanalys och intrångstest
+\end{itemize}}
+
+% ---- 2012 -- 2019 ----
+\cventry{2012--2019}{Konsult / DevSecOps \& Deploy}{Ikano Bank, Nordea, Länsstyrelsen, Verisure}{Malmö med omnejd}{}{
+\begin{itemize}
+\item Ikano Bank (2012--2014): Fokus på säkerhet inom CI/CD, DevSecOps och serverhärdning
+\item Nordea (2014--2015): DevOps, infrastrukturprojekt och IaaS (AWS), initierade puppet-automation
+\item Länsstyrelsen (2015--2016): Problem Manager med ansvar för incidenter och ITIL-processer, minskade felkoder radikalt
+\item Verisure (2017--2018): Senior Software Engineer med GDPR-ansvar, hantering av persondata och regelefterlevnad
+\end{itemize}}
+
+% ---- 2004 -- 2012 ----
+\cventry{2004--2012}{Systemutvecklare och Integrationsspecialist}{Teleca / Cybercom}{Malmö}{}{
+\begin{itemize}
+\item Logganalys, systemövervakning, felsökning
+\item Utveckling i alla lager: frontend, backend, messaging, databaser
+\end{itemize}}
+
+\section{Utbildning}
+\cventry{2023}{Google Cybersecurity (Distans)}{Efter Udacity-kursen}{}{}{Fördjupade studier i hotdetektering och incidenthantering}
+\cventry{2023}{Cybersecurity \& Ethical Hacking}{Udacity}{Distans}{}{Praktisk penetrationstestning och forensik}
+\cventry{2003}{MSc i Datateknik}{Linköpings Universitet}{Linköping}{}{Inriktning mot IT-säkerhet, OS-utveckling och nätverk}
+
+\section{Certifieringar}
+\cvlistdoubleitem{Udacity Ethical Hacking}{Scrum Master}
+\cvlistdoubleitem{ISEB / ISTQB (Test)}{React Nanodegree}
+
+\section{Tekniska färdigheter}
+\cvlistdoubleitem{Penetrationstestning}{Metasploit, Burp Suite, Wireshark}
+\cvlistdoubleitem{Operativsystem}{Linux (Ubuntu, Arch), Windows, macOS, Android, iOS}
+\cvlistdoubleitem{Säker kodgranskning}{OWASP Top 10, SQL-injection, XSS}
+\cvlistdoubleitem{Logganalys/övervakning}{Felsökning, prestandaoptimering, logghantering}
+
+\section{Språk}
+\cvitemwithcomment{Svenska}{Modersmål}{}
+\cvitemwithcomment{Engelska}{Professionell nivå}{}
+\cvitemwithcomment{Franska}{Professionell nivå}{}
+
+\end{document}

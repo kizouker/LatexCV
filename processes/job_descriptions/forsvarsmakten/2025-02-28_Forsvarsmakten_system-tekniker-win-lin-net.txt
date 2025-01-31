@@ -1,0 +1,69 @@
+Systemtekniker Windows/Linux/Nätverk Håbo
+Dela
+Dela
+
+Vi söker 3 systemtekniker
+
+
+I Försvarsmakten finns en stark värdegrund där såväl professionell utveckling som personlig hälsa ryms. Hos oss är en bra balans mellan arbete och privatliv viktigt och vi erbjuder många karriärmöjligheter.
+Försvarsmaktens telekommunikations- och informationssystemförband, FMTIS, säkerställer Försvarsmaktens förmåga att kommunicera och leda -dygnet runt, året om.
+
+
+Som anställd på Försvarsmaktens IT-Driftcentral är du delaktig i ett viktigt samhällsuppdrag med många spännande verksamhetsområden.
+
+
+Vår avdelning ansvarar bland annat för drift och vidmakthållande av Försvarsmaktens system som består av Windowsbaserade klient/serverlösningar, Linuxbaserade klient-/serverlösningar, VMware-plattformar och Nätverks lösningar.
+För att kunna ta emot nya viktigt system för Försvarsmakten söker vi nu flera systemtekniker med bredden inom de nämnda teknikområdena. Vi ser att du behöver vara erfaren med teknisk bredd inom samtliga teknikområden. Du behöver trivas med att dela med dig av din erfarenhet till andra och samtidigt fortsatt vara nyfiken att lära dig nytt för att lyckas i rollen.
+Då systemen som vi tar emot fortfarande är under utveckling så är det sannolikt att vårt uppdrag som avdelning förändras över tid beroende på Försvarsmaktens övergripande behov. Detta kan över tid påverka arbetsinnehållet i denna roll som vi söker.
+
+
+Huvudsakliga arbetsuppgifter
+Du kommer att ingå i ett team som har sin huvudsakliga arbetsplats i Arboga/Bålsta. Under perioder kommer du tillsammans med andra medarbetare på avdelningen att delta i Försvarsmaktens övningsverksamhet i Sverige och troligtvis även utanför riket.
+I arbetsuppgifterna ingår att göra installationer, test och felsökningar, användarkontakter samt att optimera och konfigurera de Windowsmiljöer, Linuxmiljöer, virtualisering miljöer och nätverk som ingår i systemen.
+Du kommer att samarbeta med olika interna organisationsenheter och externa leverantörer(ex FMV) samt medverka i tillfälligt organiserade arbetsgrupper eller projekt.
+
+
+Kvalifikationer
+-Högskoleutbildning med inriktning mot IT eller motsvarande kunskaper förvärvade på annat sätt enligt arbetsgivarens bedömning. 
+-Minst 3 års arbetserfarenhet av drift och underhåll av IT-driftmiljöer bestående av ovan nämnda teknikområden.
+-Kunskaper inom följande områden, DNS ,SMTP, NTP, VoIP.
+-Goda kunskaper inom Linux, ex CentOS, Red Hat, SUSE. 
+-God förmåga att kommunicera i tal och skrift på såväl svenska som engelska.
+-Körkortsbehörighet B
+
+
+Personliga egenskaper
+Du behöver ha förmågan att bygga och underhålla relationer med olika personligheter såväl inom som utanför Försvarsmakten. Du behöver vara flexibel och kunna hantera förändringar i arbetsuppgifter.  Du behöver vara engagerad och en pedagogisk förmåga att stötta mer juniora kolleger med det de inte kan. Stor vikt kommer att läggas vid personlig lämplighet.
+
+
+Övrigt
+Upplysningar om befattningen lämnas av Dietmar Gaar (Sektionschef ) 0589-40 400 (vxl).
+Befattningen är en tillsvidareanställning som civilt anställd och inleds med 6 månaders provanställning för dig som inte är anställd inom Försvarsmakten.
+Placeringsort: Arboga samt Bålsta
+Intervjuer kan komma att påbörjas innan annonstiden har gått ut. Beredskap samt arbete på annan ort ingår i tjänsten.
+
+Fackliga företrädare
+SACO-F Pär Lohman
+OFR/S Martin Sparr
+SEKO Matz Felix
+OFR/O Johan Nestvall-Boo
+Samtliga nås genom växeln 0589-404 00
+
+
+Välkommen in med ansökan senast 2025-02-28
+
+Ansökningar till denna befattning kommer endast tas emot via Försvarsmaktens webbplats.
+--------------------------------------------------------
+Information om Försvarsmakten och det rekryterande förbandet:
+
+Försvarsmaktens telekommunikations- och informationssystemförband, FMTIS, säkerställer Försvarsmaktens förmåga att kommunicera och leda - dygnet runt, året om.
+
+Förbandet har ett samlat ansvar för Försvarsmaktens tekniska ledningssystem som stödjer militära insatser till sjöss, på land och i luften – i Sverige och utomlands. Förbandet har över 1 800 medarbetare på mer än 30 orter runt om i landet. Läs mer på https://jobb.forsvarsmakten.se/fmtis
+
+En anställning hos oss innebär placering i säkerhetsklass. Vanligtvis krävs svenskt medborgarskap. Säkerhetsprövning med registerkontroll kommer att genomföras före anställning enligt 3 kap i säkerhetsskyddslagen.
+Med anställning följer en skyldighet att krigsplaceras samt att tjänstgöra utomlands. Innebörden av detta varierar beroende på typ av befattning.
+
+Till ansökan om anställning ska CV och personligt brev bifogas. Om du går vidare i anställningsprocessen ska alltid vidimerade kopior av betyg och intyg uppvisas.
+
+Samtal från externa rekryteringsföretag och säljare undanbedes.
+Ansök
