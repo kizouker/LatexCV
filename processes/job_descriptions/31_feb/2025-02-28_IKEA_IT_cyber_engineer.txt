@@ -1,0 +1,123 @@
+/Users/rickardaberg/LatexCV/processes/job_descriptions/31 Februari
+
+Cyber Engineer
+
+IKEA IT AB
+
+IT-säkerhetsanalytiker
+Kommun: Malmö
+Korta fakta om jobbet
+Omfattning: Heltid
+Varaktighet: Tills vidare
+Anställningsform: Tillsvidare- eller tidsbegränsad anställning
+Kvalifikationer
+Arbetslivserfarenhet
+Meriterande
+IT-säkerhetsanalytiker -  
+2-4 års erfarenhet
+Öppen för alla
+
+Arbetsgivaren är villig att göra anpassningar av rollen eller arbetsplatsen för dig som till exempel har särskilda behov, en funktionsnedsättning eller till dig som är ny i Sverige.
+
+
+
+Om jobbet
+What you will do: 
+
+We are looking for an enthusiastic Privacy Engineer who is not only passionate about privacy, data protection, integrity, and ethics, but also about developing software. The successful candidate will be part of developing software solutions that ultimately ensure our customers and co-workers privacy is protected. As a Privacy Engineer, you will work in our Privacy Enablement team to develop, integrate, and maintain software and automation solutions that take us to the next level of data protection for our customers and co-workers.
+
+Design, develop, and integrate software solutions for various privacy projects 
+Develop experiments, proof of concepts, and early pilots
+Learn more about privacy engineering, software development, and scaling projects in our global size and impact
+Be part of taking software solutions from ideas and concepts to global rollout
+
+
+Who are you? 
+
+We expect that you are passionate about software development and interested in the privacy engineering space.
+
+What we hope that you bring to the table: 
+
+Experience in software development in languages such as Python and Golang
+Experience in data engineering and building data pipelines
+Experience in software architecture, cloud native applications, and Google Cloud
+Familiarity with privacy enhancing technologies, such as differential privacy
+Familiarity with data protection frameworks, such as GDPR and NIST
+ 
+
+Relevant technologies/skills 
+
+Python, Golang
+Google Cloud Platform 
+Terraform, GitHub Actions
+SQL, Data modelling, Data pipelines, Data integrations
+ 
+
+Together as a Team 
+
+You would be joining the Cyber Security & Privacy capability, a part of Ingka Group Digital, where we set the digital agenda to keep IKEA leading in an uncertain and fast-moving environment. We drive the development, provision, and operation of our digital products and services using new and existing technologies, as well as agile delivery methods to deliver at pace. 
+
+At the same time, we provide a home for digital skills to both develop and extend the technical, people and business skills needed to ensure continuous development and growth of our digital capability. 
+
+The Privacy Enablement team within the Cyber Security & Privacy capability ensures that our large group of Cyber Engineers and digital product teams have the tools necessary to build in privacy and data protection in their digital products as early as possible. Privacy Engineering is a new space for us, and we're excited about testing new things, innovating, experimenting, and making an impact
+
+ 
+
+Apply Now!
+
+Studies show that members of underrepresented communities don't apply for jobs unless they're 100% "qualified". If this is part of the reason you hesitate to apply, we like you to reconsider and give it a chance. Maybe your profile fits our needs much better than you think. We look forward to receiving your application.
+
+From: "Why Women Don't Apply for Jobs Unless They're 100% Qualified" by Tara Sophia Mohr, August 2014"
+
+The role is based in Malmö.
+
+"In line with our value of togetherness, we believe the best way for us to collaborate and co-create is when we meet in the office. This is why we expect you to spend the majority of time in the office."
+
+We will be interviewing continuously and are looking forward to hearing from you!
+
+Internal title: Cyber Engineer
+
+"In this recruitment there is no relocation support provided by IKEA, hence we are looking for people living in the mentioned location."
+
+Om anställningen
+Lön
+Lönetyp: Fast månads- vecko- eller timlön
+Var ligger arbetsplatsen?
+Älmhultsgatan 2
+21586 Malmö
+Arbetsgivaren
+IKEA IT AB
+Sök jobbet
+Ansök senast 5 mars (om 13 dagar)
+Ansök via mejl
+Mejla din ansökan till
+jay.mistry@ingka.ikea.com
+Dela annonsen
+Mejl
+Facebook
+X
+Linkedin
+Skriv ut annonsen
+Annons-Id: 29480352
+Publicerad: 19 februari 2025, kl. 15.44
+Other languages
+Teckenspråk
+Tillgänglighet
+Kontakta oss
+Kod för dela skärm
+För press och media
+För hälso- och sjukvården
+För kommuner
+Om webbplatsen
+Så hanterar vi dina personuppgifter
+Lever du med våld i en nära relation?
+För arbetsgivare
+När du behöver rekrytera hjälper vi dig att hitta värdefull kompetens
+För leverantörer
+När du är leverantör av våra tjänster
+Om oss
+När du vill veta mer om vår myndighet och våra uppdrag
+Statistik och analyser
+När du vill se statistik och ta del av våra analyser för arbetsmarknaden
+ Arbetsförmedlingen
+Följ oss på Facebook Linkedin Youtube Instagram

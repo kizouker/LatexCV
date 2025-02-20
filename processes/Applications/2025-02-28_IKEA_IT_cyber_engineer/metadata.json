@@ -1,0 +1,24 @@
+{
+    "company": "IKEA",
+    "role": "IT_cyber_engineer",
+    "location": "Unknown",
+    "application_date": "2025-02-28",
+    "job_id": "Unknown",
+    "status": "Pending",
+    "response": "Not yet received",
+    "follow_up_date": "TBD",
+    "source": "Unknown",
+    "notes": "",
+    "extracted_keywords": [
+        "and",
+        "the",
+        "in",
+        "privacy",
+        "to",
+        "we",
+        "of",
+        "you",
+        "for",
+        "data"
+    ]
+}

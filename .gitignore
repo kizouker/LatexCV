@@ -1,5 +1,1 @@
-*.pdf
-job-applications/
-includes/
-.DS_Store
-venv
+__pycache__/CVGenerator.cpython-313.pyc
