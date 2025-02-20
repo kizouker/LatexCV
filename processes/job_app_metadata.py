@@ -72,14 +72,14 @@ def ensure_file_exists(filename, content=""):
     print(f"Ensured file exists: {filename}")
 
 # Function to process job descriptions and create applications
-def process_job_descriptions():
+def process_job_descriptions(job_description_dir="job_descriptions"):
     job_description_dir = "job_descriptions"
     if not os.path.exists(job_description_dir):
         print("Job descriptions folder does not exist.")
         return
     
     for filename in os.listdir(job_description_dir):
-        if filename.endswith(".txt"):
+        if (filename.endswith(".txt")) :
             file_path = os.path.join(job_description_dir, filename)
             with open(file_path, 'r', encoding='utf-8') as f:
                 job_description = f.read()
@@ -115,6 +115,8 @@ def process_job_descriptions():
                 keywords_file.write("\n".join(keywords))
             print(f"Extracted keywords saved to {keywords_path}")
 
-# Example usage
+
+# Exempel på anrop med en specifik subfolder
 if __name__ == "__main__":
-    process_job_descriptions()
+    # Ändra "din_subfolder" till den mapp du vill använda
+    process_job_descriptions("31_feb")
