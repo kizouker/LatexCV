@@ -1,0 +1,133 @@
+Pentester
+
+Orange Cyberdefense
+Malmö
+Heltid
+Penetrationstestare
+46 dagar kvar
+
+Arbetsbeskrivning
+
+Orange Cyberdefense is on a mission to build a safer digital society by helping our customers fight different kinds of cybercrime.
+
+We are looking for colleagues who want to help us make a difference and work in an organization that is permeated by a humble and open culture.
+
+
+What would your role as a Penetration Tester be like?
+
+The team is responsible for performing all forms of complex technical security assessments of IT systems, ranging from testing web applications and external perimeter to internal infrastructure and Active Directory.
+
+Occasionally, mobile application assessments and source code reviews are performed as well as custom-made client software and hardware solutions.
+
+The team is looking to expand their operations and capabilities to include additional types of assessments such as phishing and other social engineering assessments, cloud assessments (Azure, AWS and GCP) and red teaming down the road.
+
+
+You will be given the opportunity to:
+
+Perform penetration testing of new and novel systems, as well as old and established ones.
+Perform security reviews of architecture and application designs.
+Keep up to date with the latest vulnerabilities and TTP’s.
+Research cutting edge security topics and new attack vectors.
+Share and evolve your knowledge and findings with colleagues.
+Represent Orange Cyberdefense at international events, forums or training events.
+
+Your Background
+
+You will have 3+ years’ worth of experience in offensive security and consulting and are proficient in at least three of the following areas:
+
+Modern web application security
+Internal enterprise networks and Active Directory
+External perimeter tests and reconnaissance
+Phishing
+Cloud assessments (Azure, AWS, GCP)
+In addition, you will have acquired knowledge and skills with formal and/or informal education and possess relevant industry certifications such as OSCP, CRTO, PNPT, OSEP, OSCE, CRTL or extensive experience and expertise in one specific area of cyber security.
+
+Experience in a low-level programming language and a thirst for CTF are a bonus.
+
+Your background is not as important to us as your mindset and aspirations forward.
+
+We are looking for someone creative and innovative with a hacker’s mindset.
+
+Why us?
+
+Opportunity to work with market leading technology in combination with some of the industry’s most talented experts.
+We offer a flexible work environment.
+We will provide you with opportunities for development, both within your professional role but also the opportunity to develop within the organization where only your ambitions set the limit!
+A culture that encourages you to be self-driven and curious.
+
+The story of Orange Cyberdefense
+
+Orange Cyberdefense is Sweden’s leading company in cyber security.
+
+Our vision is to contribute to a safer digital society by fighting different kinds of cybercrimes.
+
+We have about 2700 employees worldwide and 390 in Sweden.
+
+We offer our customers services within Anticipate, Identity, Protect, Detect and Respond.
+
+At Orange Cyberdefense, we are all different but with the same passion; and that is our greatest strength.
+
+We are proud of our individual differences, experiences and histories and are convinced that we must include everyone to be able to offer solutions that protect everyone.
+
+That is why we always make sure to treat all applications equally.
+
+The recruitment process
+
+
+
+Please reach out to Helena Feldt if you have any questions:
+
+Helena.feldt@orangecyberdefense.com
+
+
+Mer info
+Anställningsform
+Vanlig anställning
+Publicerad
+2024-10-25
+Lön
+Fast månads- vecko- eller timlön
+Antal platser
+1
+Varaktighet
+Tillsvidare
+Hemsida
+Länk 
+Dela annons
+Kopiera länk
+Liknande yrken
+Säkerhetsexpert (122)
+Säkerhetsingenjör (121)
+Säkerhetskonsult (106)
+IT-säkerhetsarkitekt (69)
+IT-säkerhetsexpert (67)
+Sök jobbet
+Ansök via arbetsgivarens hemsida
+
+Liknande jobb
+Senior Penetrationstestare
+Meet a Groups kund
+Solna
+Penetrationstestare
+24 feb
+
+Penetrationstestare till Zacco Digital Trust
+Friday
+Stockholm
+Penetrationstestare
+31 jan
+
+Penetrationstestare till ledande IT-säkerhetsbolag
+Acely AB
+Stockholm
+Penetrationstestare
+13 jan
+
+Penetrationstestare
+EnlightSec AB
+Linköping
+Penetrationstestare
+Ansök utan CV
+9 jan
+
+

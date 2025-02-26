@@ -1,0 +1,21 @@
+Som penetrationstestare på Kits kommer du att genomföra säkerhetsanalyser och tester, med fokus på white-box-testning. Detta innebär att du granskar både kod och konfiguration, samt utför dynamiska tester för att identifiera sårbarheter och ge våra kunder rekommendationer för att stärka deras IT-säkerhet. Dina analyser sammanställs vanligtvis i en teknisk rapport som du skriver tillsammans med dina kollegor och presenterar för kunden. Det är därför viktigt att du kan kommunicera tydligt både i tal och skrift, anpassat till mottagarens tekniska kunskapsnivå. Du kommer att delta i hela leveransprocessen, från att definiera omfattningen av uppdraget till att skriva rapporten och presentera resultaten för kunden.
+
+Våra projekt genomförs oftast i team och varar vanligtvis mellan 1–4 veckor. Det är viktigt att du kan planera och strukturera ditt arbete självständigt, samtidigt som du bidrar till en inkluderande och stödjande arbetsmiljö. Du kommer även att ta en ledande roll i projekten när det behövs, där förmågan att inspirera och engagera andra är avgörande.
+
+I vår medarbetarägda verksamhet bygger vi vårt företag tillsammans. Din röst och ditt engagemang spelar roll — här gör vi skillnad, inte bara för våra kunder utan även för varandra. Är du redo att ta klivet, göra stort avtryck och arbeta på en arbetsplats där du både utmanas och trivs? Då är Kits rätt för dig. Vi siktar högt, och vi vill att du ska vara med och leda vägen.
+
+Meriterande certifieringar
+
+OSCP
+CPTS
+OSWE
+BSCP
+
+Avdelning
+Göteborgskontoret
+Roll
+Säkerhetsguru
+Platser
+Göteborg
+Distansarbete
+Hybridarbete

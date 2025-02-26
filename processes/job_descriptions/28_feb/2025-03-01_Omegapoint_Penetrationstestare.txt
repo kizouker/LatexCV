@@ -1,0 +1,79 @@
+Utveckla framtiden med oss
+Vi fortsätter att växa och letar nu efter dig som har några års erfarenhet av penetrationstester och säkerhetsgranskningar. 
+
+I koncernen är vi idag 30 penetrationstestare spridda över Stockholm, Göteborg och Enköping med olika inriktningar som infrastruktur, applikation och hårdvarusäkerhet. Vi jobbar alltid i team och aldrig ensamma. Du kommer tillhöra Stockholm, där vi är 8 personer som byggt upp vår affär från grunden. Vi provar kontinuerligt nya saker och utmanar ständigt hur vi jobbar. Tillsammans utvecklas vi fort och har väldigt kul på resan.
+
+
+
+I rollen som penetrationstestare kommer du att: 
+
+delta i spännande penetrationstest på kunders infrastruktur, webbapplikationer, IoT-prylar, båtar, och annat kul
+engagera dig i säkerheten runt Omegapoints interna utvecklingsprojekt
+driva workshops, och utbilda Omegapoints utvecklare samt IT- och informationssäkerhetskonsulter inom offensiv säkerhet
+Vi som penetrationstestare blir även utbildade av våra utvecklare och DevOps-experter inom allt som är hett inom kod, molnkonfigurationer och arbetsmetodik. Att utvecklas är i fokus och utöver the usual suspects som SEC-T, Security Fest och Defcon, anordnar Omegapoint två interna konferenser per år.
+
+
+
+Är du den vi söker?
+
+För denna roll behöver du känna dig bekväm med att leda penetrationstest inom webapplikationer och infrastruktur (Active Directory och en splash av AWS/Azure/GCP). Just nu så fokuserar vi vår interna kompetensutveckling på OSCP, OSWE och OSEP samt AWS/Azure/GCP med stöd av Omegapoints molnarkitekter.
+
+Vi lägger stort fokus på att vara nära våra kunder, vi scopear våra uppdrag själva och är kommunikativa - vilket uppskattas. Vi ser därför gärna att du känner dig trygg i att hålla möten med kund och hålla ihop uppdragen för att säkra kvalitén på leveransen.
+
+Vidare söker vi dig som har ett genuint intresse för hacking och lärande. Vi tycker om att göra HTB och CTF:er tillsammans, hålla föreläsningar och workshops för våra kollegor och bug bounty-kvällar.
+
+Det är ett plus om du har klarat eller pluggar till t ex: OSCP, OSWA, OSWE, OSEP, CRTO eller något certifikat kopplat till dom stora molnleverantörerna. Men certifikat är inget krav.
+
+
+
+Om oss
+
+Omegapoint grundades 2001 och är Norra Europas ledande konsultbolag inom cybersäker digitalisering. Med en vision om en framtid där vi fullt ut kan lita på teknik använder vi vår expertis för att säkra våra kunders och medarbetares utveckling. Vi är vassa och snälla, något som karaktäriseras av vår kompetensutvecklingskultur och viljan att dela vår kunskap med varandra. För närvarande är vi över 900 anställda konsulter i Stockholm, Oslo, Drammen, Köpenhamn, Göteborg, Malmö, Örebro, Västerås, Enköping, Uppsala, Umeå och Montreal.
+
+ 
+
+Vi satsar på dig
+
+Med en stor och varierande kundbas, från små specialistföretag till stora och välkända företag och myndigheter, har vi en möjlighet att utifrån just dina önskemål hitta utmanande och roliga uppdrag.
+
+Givetvis erbjuder vi även allt det andra som är viktigt, som marknadsmässiga löner, övertidsersättning, anpassade förmånspaket, friskvårdsbidrag, förstärkt föräldralön, sjukvårdsförsäkring och möjlighet till delägarskap.
+
+Vi vågar lova dig en arbetsplats där du kommer att trivas, utvecklas och ges alla möjligheter till en ljus framtid.
+
+ 
+
+Varmt välkommen med din ansökan! 
+
+Har några frågor kring tjänsten är du välkommen att kontakta petra.soderberg@omegapoint.se.
+
+Departments
+Cybersecurity
+Locations
+Stockholm
+Recruiting Company
+Stockholm
+Related jobs
+Information Security Consultant
+Cybersecurity · Stockholm · Hybrid
+Erfaren säkerhetsskyddskonsult
+Cybersecurity · Stockholm · Hybrid
+Software Security Developer
+Cybersecurity · Stockholm · Hybrid
+More jobs
+Stockholm
+Vasagatan 16
+
+111 20 Stockholm
+
+Directions
+info@omegapoint.se
+08-545 106 90
+View page
++
+−
+© OpenStreetMap, © CARTO
+About Omegapoint
+Omegapoint are leaders within cyber secure digitalization in Northern Europe. Omegapoint is rapidly growing and has more than 900 consultants in Stockholm, Oslo, Drammen, Copenhagen, Gothenburg, Malmö, Örebro, Västerås, Enköping, Uppsala and Umeå. The company was founded in 2001 and is partly employee owned.
+
+Founded in 2001
+Coworkers About 90

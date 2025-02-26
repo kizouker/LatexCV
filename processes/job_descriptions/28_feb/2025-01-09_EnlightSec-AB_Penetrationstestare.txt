@@ -1,0 +1,101 @@
+[200~Penetrationstestare
+
+EnlightSec AB
+Linköping
+Heltid
+Penetrationstestare
+30 dagar kvar
+
+Arbetsbeskrivning
+
+På EnlightSec är vår ambition inte att bli störst, den är att vara bäst!
+
+Vi fokuserar på kvalitet över kvantitet, och som konsult hos oss får du möjligheten att arbeta mot både stora och små kunder i ett flertal olika branscher.
+
+Våra uppdrag innefattar allt ifrån att penetrationstesta webbapplikationer och infrastruktur till att genomföra kodgranskningar samt att samordna och genomföra säkerhetsgranskningar.
+
+Vi söker nu en penetrationstestare som är redo att utmanas, utvecklas och bygga något större tillsammans med oss!
+
+
+
+Vem är du?
+
+Vi söker dig som har flerårig arbetslivserfarenhet inom IT-säkerhetsområdet, och precis som oss, drivs av att ständigt bli bättre.
+
+Oavsett om det är att läsa om det senaste stora hacket, testa den coola exploiten eller bara prova en ny säkerhetsprodukt som verkar grym.
+
+Vi är ett engagerat team som vill bli fler likasinnade.
+
+För den här tjänsten krävs det att du har:
+
+En akademisk utbildning inom datavetenskap eller systemvetenskap.
+
+Alternativt arbetslivserfarenhet som bedöms likvärdig.
+Minst tre års praktisk erfarenhet av att självständigt driva och genomföra penetrationstester och etisk hackning.
+Erfarenhet och förmågan att fördjupa dig i tekniska detaljer för att förstå hur tekniska skydd kan implementeras och kringgås.
+Kunskap inom ett eller flera programmeringsspråk.
+Mycket goda kunskaper i svenska och engelska, både skriftligt och muntligt.
+Om du utöver detta har erfarenhet av exempelvis Capture The Flag, reverse engineering, Bug Bounty-program, Red Team-övningar eller har arbetat med ramverk som OWASP och MITRE ATT&CK är det starkt meriterande.
+
+Ett stort plus i kanten är såklart också certifieringar som OSCP, GXPN eller liknande.
+
+Med det sagt förväntar vi oss inte att du planerar att stå på Black Hat-scenen tredje gången gillt, däremot förväntar vi oss att du är redo att utveckla din spetskompetens tillsammans med oss.
+
+Då våra kunders verksamheter har höga säkerhetskrav, ska du tillsammans med oss bidra till att stärka vårt samhälle genom att se till att de alltid är skyddade mot eventuella angrepp och potentiella hot.
+
+Vi strävar alltid efter långsiktiga relationer med våra kunder, och här kommer du att ha en avgörande roll.
+
+Som konsult hos oss axlar du rollen som experten i rummet ute hos våra kunder, redo att kommunicera och förklara olika tekniska lösningar för både stora och små grupper.
+
+
+
+Hur är det att jobba på EnlightSec?
+
+När du kliver in på vårt kontor möts du av en arbetsplats där vi värdesätter både gemenskap och professionalism, vi tror att det går att ha kul tillsammans och samtidigt leverera på topp!
+
+Vi strävar efter att varje anställd ska känna sig som hemma och kan ta en kaffe i soffan tillsammans med kollegorna, äta lunch på vår takterrass i solen och avsluta rasten med en runda på arkadspelet.
+
+Vi lägger även stort värde vid att hitta på saker tillsammans utanför arbetstid, oavsett om det rör sig om en spontan AW, en hackingchallenge eller en kväll med sällskapsspel.
+
+På vårt kontor finns också allt du kan tänkas behöva både under och efter arbetsdagen som en schysst kaffemaskin, högtalare, 3D-printer, bastu och givetvis kollegor med dålig musiksmak.
+
+Även om vi har ett av Linköpings schysstaste kontor där vi helst ser att du spenderar dina arbetsdagar, vet vi att livet ibland är svårt att få ihop och du ges stort förtroende att själv styra över din arbetstid när inte kunduppdragen kräver fysisk närvaro.
+
+Utöver ett härligt gäng med gott häng och varierande arbetsuppgifter erbjuder vi dig även ett generöst friskvårdsbidrag, sjukvårdsförsäkring och möjligheten att själv välja vilken hårdvara du vill använda i arbetet.
+
+Och såklart, för att både du och vi ska fortsätta utvecklas, en årlig utbildningsbudget!
+
+
+Vill du bli en del av vårt team?
+
+Skicka in CV och personligt brev till career@enlightsec.se så snart som möjligt.
+
+Dina uppgifter behandlas i enlighet med GDPR.
+
+Har du frågor kring tjänsten är du varmt välkommen att kontakta rekryteringsansvarig Hanna Davidsson på telefon 076-3464496.
+
+Vi undanbeder oss all kontakt med säljare av annonser samt rekryterings- och bemanningsföretag.
+
+Tjänsten är en tillsvidareanställning på heltid.
+Fast månadslön, individuell lönesättning.
+Tillträde enligt överenskommelse.
+Vid erbjudande om anställning kan vi be dig att visa upp ett utdrag från belastningsregistret.
+
+Observera att du vid arbete hos vissa av våra kunder kommer att inneha en säkerhetsklassad tjänst, vilket innebär att du måste ha svenskt medborgarskap samt är skyldig att genomgå en säkerhetsprövning.
+
+Mer info
+Anställningsform
+Vanlig anställning
+Publicerad
+2025-01-09
+Lön
+Fast månads- vecko- eller timlön
+Antal platser
+1
+Varaktighet
+Tillsvidare
+Hemsida
+Länk 
+Dela annons
+Kopiera länk
+~

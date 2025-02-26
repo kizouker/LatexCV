@@ -1,0 +1,75 @@
+Jobbify är en jobbplattform för vassa kandidater.
+
+För kunds räkning har vi publicerat denna annons, vill du komma i kontakt med den slutgiltiga arbetsgivaren kan du klicka dig vidare till annonsen:
+
+Kom och bygg framtidens cybersäkerhet med oss på Cyloq!
+
+Vi är specialiserade på offensiv cybersäkerhet med fokus på penetrationstester och skydd mot cyberhot. Som ett snabbt växande IT-startup med stor tillväxtpotential erbjuder vi en dynamisk och innovativ arbetsmiljö. Vi värdesätter en lättsam och stödjande kultur där vi har roligt tillsammans medan vi skapar framtidens säkerhetslösningar.
+
+Senior Penetrationstestare - Hjälp oss säkra framtidens digitala landskap
+
+Har du lång erfarenhet av att utföra penetrationstester och ett skarpt öga för detaljer som andra missar? Hos Cyloq får du möjlighet att arbeta med att identifiera och åtgärda sårbarheter i allt från komplexa IT-infrastrukturer till moderna webb- och mobilapplikationer. Bli en del av vårt lilla, kreativa team i Solna, Stockholm som kombinerar djup teknisk expertis med en kultur som värderar både personlig utveckling och balans mellan arbete och fritid.
+
+Om rollen
+
+Som Senior Penetrationstestare hos oss kommer du att:
+
+Utföra avancerade penetrationstester inom områden som infrastrukturer, Active Directory, webb- och mobilapplikationer.
+
+Delta i red teaming-övningar och simuleringar av avancerade attacker.
+
+Identifiera och bedöma sårbarheter samt leverera detaljerade rapporter med rekommenderade åtgärder.
+
+Rådgöra våra kunder och stötta kollegor i framtagning av säkra och hållbara lösningar.
+
+Du får också möjlighet att fördjupa dig inom specifika områden genom utbildningar, certifieringar och deltagande i konferenser.
+
+Vad vi letar efter
+
+Vi söker dig som brinner för cybersäkerhet och har dokumenterad erfarenhet av avancerade pentester. Du är en problemlösare med en hackermentalitet, som ständigt vill utvecklas och dela med dig av din kunskap för att bidra till ett säkrare digitalt samhälle.
+
+Obligatoriska kvalifikationer:
+
+Flera års erfarenhet av penetrationstestning och säkerhetsgranskningar.
+
+Mycket god problemlösningsförmåga och analytiskt tänkande.
+
+God förmåga att arbeta självständigt och i team.
+
+Flytande svenska och engelska i tal och skrift.
+
+Meriterande kvalifikationer:
+
+Dokumenterad erfarenhet av red teaming eller avancerade attacker.
+
+Aktivitet i bug bounty-program eller CTF-tävlingar.
+
+Kunskap om molnsäkerhet (Azure, AWS, GCP).
+
+Certifieringar som OSCP, OSWE eller liknande.
+
+Erfarenhet av nätverk, systemadministration eller programmering.
+
+Varför Cyloq?
+
+Utveckling och utbildning: Vi tror på kontinuerlig kompetensutveckling och erbjuder möjlighet till årliga utbildningar och certifieringar.
+
+Balans och välmående: Hos oss får du friskvårdsbidrag och möjlighet att delta i friskvårdsaktiviteter under arbetstid.
+
+Inspirerande miljö: Ett litet och innovativt team där du får stort inflytande och stöd.
+
+Flexibilitet: Kombinera arbete på plats i Solna med distansarbete.
+
+Roliga resor och aktiviteter för att stärka gemenskapen och ha kul tillsammans.
+
+Om Cyloq
+
+Cyloq är ett cybersäkerhetsföretag baserat i Solna som erbjuder penetrationstester, säkerhetsgranskningar och utbildning inom säker utveckling. Vi arbetar med kunder inom både offentlig och privat sektor och värderar kreativitet, samarbete och expertis.
+
+Har du frågor? Kontakta oss på work@cyloq.se. Vi ser fram emot din ansökan!
+
+Så ansöker du
+
+Skicka in ditt CV och ett personligt brev där du berättar om din erfarenhet av penetrationstestning och varför du är intresserad av rollen.
+
+Välkommen att hjälpa oss att göra världen säkrare!

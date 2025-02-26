@@ -1,0 +1,91 @@
+enetrationstestare till ledande IT-säkerhetsbolag
+
+Acely AB
+Stockholm
+Heltid
+Penetrationstestare
+18 dagar kvar
+
+Arbetsbeskrivning
+
+Om rollen
+
+I rollen som penetrationstestare arbetar du med både interna och såväl externa nätverk, applikationer, molntjänster, mobila plattformar, etc. Arbetet sker både på plats hos kund och remote. I rollen krävs god kommunikationsförmåga, både skriftlig och muntlig, liksom förmågan att förmedla komplex teknisk information till viktiga internationella kunder. Tjänsten är på heltid på kontoret i Stockholm.
+
+
+
+Ansvarsområden
+
+
+Utföra djupgående penetrationstester på applikationer, infrastruktur, moln och mobila plattformar.
+Genomföra zero-knowledge black-box, grey-box och white-box penetrationstester av specifika områden inom företaget.
+Utföra tester och bedömningar i molnmiljöer, inklusive men inte begränsat till AWS, Azure, GCP, etc.
+Utföra säkerhetsgranskningar av servrar, nätverksenheter, arkitektur och applikationsdesign.
+Agera som eskaleringspunkt för teammedlemmar gällande projektrelaterade problem.
+
+Vidare i i rollen tillhandahåller du pre-sales-stöd, inklusive projektdimensionering, uppskattningar och teknisk assistans via samtal, möten och presentationer med nyckelkunder. Du är med och förbättrar företagets säkerhetstjänster genom att förfina metoder, rapporteringsstandarder och utbildningsmaterial. Du representerar företaget vid internationella evenemang, forum eller utbildningstillfällen.
+
+
+För att kunna axla rollen krävs:
+
+
+Minimum 5 års erfarenhet av penetrationstester eller red team-operationer, inklusive tester av kritisk funktionalitet, banksystem och mer.
+Erfarenhet av manuell penetrationstestning utöver att köra automatiserade verktyg.
+Expertis inom AWS, Azure och molnbaserade teknologier, inklusive virtuella maskiner, containers och infrastruktur som kod.
+Erfarenhet av att testa ICS, SCADA, mainframes, containers och hårdvaruenheter.
+Utmärkt förståelse av brandväggar, proxies, iptables, antivirusprogram och EDR-produkter, VPN, IDS/IPS och olika nätverkskoncept.
+Kunskap om trådlösa teknologier, främst RF, mobilnät, NFC och Bluetooth-teknologi.
+Erfarenhet av att testa OSX/iOS och Android-enheter.
+
+Du har tidigare erfarenhet från området eller liknande roll och du besitter en utmärkt kommunikations- och presentationsförmåga. Du har skaffat dig erfarenhet av att utveckla anpassande säkerhetsverktyg och skript, där du är flytande i ett eller flera programmerings- eller skriptspråk: Java, Python, C/C++, C#, .NET, ASP, PHP.
+
+
+Önskade kvalifikationer
+
+
+En eller flera branschledande certifieringar (OSCP, CRTE, CRTO, OSCE, OSWP, ARTE, CPTS, etc.)
+CHECK Team Leader eller motsvarande är meriterande.
+Examen inom datavetenskap, IT eller cybersäkerhet ett starkt plus.
+
+Om företaget
+
+Företaget, ett ledande bolag i sitt slag inom cybersäkerhet med kontor på flera platser i Europa. Bolaget erbjuder ett stort utbud av professionella, support- och cybersäkerhetstjänster för över 300 kunder runt om i världen. Med fyra förstklassiga Security Operation Centers erbjuder man sina kunder kompletta säkerhetstjänster som täcker behov av säkerhet från alla håll och vinklar. Tjänster inkluderar bland annat Managed Security, Cyber Security Testing, Incident Response, Security Integration, PCI Compliance och Cyber Risk & Assurance.
+
+
+Bolaget sticker ut och skiljer sig från mängden. Kompetensen och erfarenheten hos medarbetarna är några av de bästa inom branschen och kunder väljer att stanna kvar över tid, framför allt för hög tillit och att leveranserna alltid överträffar förväntningar. Företaget grundades med fokus på teknisk expertis – en filosofi som lever kvar. Vid flera tillfällen har man listats på Gartners Market Guides för Managed Security Services.
+
+
+Övrig information
+
+Start: Omgående med hänsyn till ev. uppsägningstid
+
+Omfattning: Heltid
+
+
+
+Detta är en rekrytering där vi på Acely är rekryteringspartner till vår uppdragsgivare. Vi intervjuar löpande så skicka gärna din ansökan redan idag!
+
+
+För mer information, vänligen kontakta:
+
+christoffer.sjostrom@acely.se
+
+
+Mer info
+Anställningsform
+Vanlig anställning
+Publicerad
+2025-01-13
+Lön
+Fast månads- vecko- eller timlön
+Antal platser
+1
+Varaktighet
+Tillsvidare
+Hemsida
+Länk 
+Dela annons
+Kopiera länk
+Liknande yrken
+Säkerhetsexpert (122)
+
