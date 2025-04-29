@@ -1,1 +1,7 @@
 __pycache__/CVGenerator.cpython-313.pyc
+*.aux
+*.log
+*.out
+*.fls
+*.fdb*
+*.gz
