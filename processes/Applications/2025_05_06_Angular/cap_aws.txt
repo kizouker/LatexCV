@@ -1,0 +1,52 @@
+AWS Software Engineer
+Brinner du för att koda, upptäcka nya tekniker och samtidigt ha kul på jobbet tillsammans med dina härliga kollegor?  Då har vi på Capgemini otroliga möjligheter för dig! Kom och bli en del av vårt AWS Team där vi kombinerar passion för mjukvaruutveckling med en varm, snäll, utvecklande och välkomnande arbetsmiljö. 
+
+Vi hjälper våra kunder, samhället och våra anställda att tillsammans skapa en bättre framtid inom affärs- och tekniktransformation till en digital och mer hållbar värld. Redo att #GetTheFutureYouWant? Hos oss får du chansen att forma din framtida karriär! Vi letar efter nya kollegor som AWS Software Engineer till både Stockholm, Göteborg  och Malmö. 
+
+Hos oss får du möjlighet att arbeta med innovativa och mångsidiga projekt som använder de senaste AWS-teknologierna, GenAI och moderna frameworks. Vi erbjuder oändliga möjligheter för lärande och utveckling för att ta din karriär till nya höjder, med karriärvägar för arkitekter, tech leads, juniorer, gurus och alla däremellan. #GetTheFutureYouWant. Du blir en del av en vänlig och inkluderande miljö som firar mångfald och främjar samarbete. Dessutom erbjuder vi flexibla arbetstider som främjar en hälsosam balans mellan arbete och fritid.
+
+Om rollen
+•    Skapa och leverera fantastiska mjukvarulösningar i molnet.
+•    Samarbeta med tvärfunktionella team för att producera förstklassig mjukvara.
+•    Implementera bästa praxis för molnarkitektur och säkerhet.
+
+Din profil 
+•    Arbetslivserfarenhet med molntjänster (AWS Glue, AWS SageMaker, AWS API Gateway, AWS Lambda).
+•    Erfarenhet inom programmeringsspråk som Java, Python, Kotlin, Golang eller Node.js.
+•    Goda kunskaper i svenska och engelska då båda språken används i det dagliga arbetet. 
+ 
+
+Vad vi tror kommer få dig att trivas
+Hos oss på Capgemini tror vi på en positiv och professionell inställning, att dela kunskap och att investera i varje medarbetares utbildning och kompetensutveckling för att hjälpa alla att växa. Hos oss kan du därför Get TheFfuture You Want! Samtidigt värdesätter vi såklart att ha KUL på jobbet. En dag spelar vi pingis på rasten, en annan dag kör vi en omgång Mario Cart eller fikar tillsammans. Vi har även mentorsprogram samt engagerar oss i kvinnliga Tech nätverk, som exempelvis #Addher. Varje fredag njuter vi såklart även av vår lyxiga fredagsfrukost! Då vill man inte jobba hemifrån (vilket du kan göra en annan dag under veckan)!
+
+
+Ansökan
+Redo att ta din karriär till nästa nivå? Ansök nu och bli en del av Capgemini Sveriges innovativa AWS-team! Rekryteringsarbetet sker med löpande urval, så välkommen in med din ansökan redan idag! 
+LI-ET1
+
+Om Capgemini
+Hos våra kunder arbetar vi i leveranser som kan ha bland annat AWS, GCP, Azure, AliCloud, Java, Go/Golang, Python, Kotlin, Node, HTML, TypeScript, JavaScript, CSS, Java, CloudFormation, Terraform, Docker, Kafka, React, Angular, Vue, Bash, Spring, GenAI, GraphQL, Backstage, Kubernetes, LLM, RAG, Copilot, GitHub Actions, SonarQube, BlackDuck, Apache Beam, Kong, Jenkins, Apigee, OpenShift, Ansible, DevSecOps, cloud architecture, cloud assessments, integration,  Snowflake, Elastic Search, Grafana, Kibana, Splunk, Databricks, HelmChart, CloudFoundry.
+
+Capgemini är en global partner inom affärs- och tekniktransformation som hjälper organisationer att påskynda övergången till en digital och hållbar värld, och samtidigt gör skillnad för företag och samhälle. Det är en ansvarsfull och mångsidig organisation med 340 000 medarbetare i över 50 länder. Med ett starkt arv som sträcker sig över 55 år tillbaka har Capgemini sina kunders förtroende att hjälpa dem frigöra värdet av teknik för att tillgodose hela deras affärsbehov. Capgemini levererar helhetslösningar som utnyttjar styrkan från strategi och design till teknik. Allt drivet av en marknadsledande kapacitet inom AI, generativ AI, moln och data, kombinerat med en djup branschexpertis och ett ekosystem av partners. År 2024 rapporterade Capgemini Group globala intäkter på 22,1 miljarder euro.
+
+Get The Future You Want | www.capgemini.com
+
+Observera att identitets- och bakgrundskontroller kan genomföras som en del av rekryteringsprocessen.
+
+Ref. code: 
+155744
+Posted on: 
+Apr 24, 2025
+Experience Level: 
+Experienced Professionals
+Contract Type: 
+Permanent
+Location: 
+Malmö, SE
+Stockholm, SE
+Göteborg, SE
+Brand: 
+Capgemini
+Professional Community: 
+Software Engineering
+
