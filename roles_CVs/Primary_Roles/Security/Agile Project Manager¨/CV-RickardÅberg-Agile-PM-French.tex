@@ -26,6 +26,12 @@
   \setsansfont{Latin Modern Sans}
   \setmonofont{Latin Modern Mono}
   \setmathfont{Latin Modern Math} 
+  \moderncvcolor{blue}    % ren, professionell
+  % eller
+  \moderncvcolor{burgundy}  % sofistikerad, djup röd
+% eller
+  \moderncvcolor{grey}      % elegant och diskret
+
 \else
   \usepackage[utf8]{inputenc}
   \usepackage[T1]{fontenc}
@@ -55,7 +61,7 @@
 }{}
 
 % Ange din bildfil
-\def\@photo{./photos/rickardaberg-consultant.jpeg}
+%\def\@photo{./photos/rickardaberg-consultant.jpeg}
 
 % Modifiera \makecvtitle om stilen är 'banking'
 \@ifpackageloaded{moderncvstylebanking}{%
@@ -72,16 +78,22 @@
 
 \makeatother
 
-\usepackage{xcolor} % För färg
-\usepackage{helvet} % Sans-serif (Helvetica)
-\renewcommand{\familydefault}{\sfdefault} % Gör hela dokumentet sans-serif
-
 \beforetitle{
-  \vspace*{-2em} % Avstånd ovanför fotot – öka för mer luft
+  \vspace*{-2em}
   \begin{center}
-    \hspace*{1.5cm}{\color{black}\Huge\sffamily\itshape \textbf Agile Project Manager }
+    {\Huge\sffamily\bfseries French-speaking} \\[0.3em]
+    {\Huge\sffamily Agile Project Manager} \\[0.4em]
+    {\color{gray}\large\sffamily Fullstack Developer – GTFS, OSM, PostGIS} \\[1em]
+    \includegraphics[width=3.6cm]{./photos/rickardaberg-consultant.jpeg} \\[1em]
+    {\Large\sffamily Rickard \textbf{\AA{}berg}} \\[-0.3em]
+    {\normalsize\sffamily MSc in Software Engineering} \\[0.5em]
+    {\small\sffamily 
+      \textbf{Tel:} +46 709 43 14 01 \quad 
+      \textbf{Email:} rickard.aaberg@icloud.com \quad 
+      \textbf{Malmö, Sweden}
+    }
   \end{center}
-  \vspace{1em} % Luft under rubriken
+  \vspace{0.5em}
 }
 
 
@@ -89,74 +101,83 @@
 %------------------%------------------%------------------%------------------%------------------
 % Title - photo etc
 %------------------%------------------%------------------%------------------%------------------       
-%\title{DevSecOps Coach}        
-\title{Agile Project Manager}
-\title{MSc in Software Engineering }                   
-%-\cvitem{}{
-%-\begin{minipage}[t]{0.3\linewidth}
- %- \centering/
-  %-\includegraphics[width=0.8\linewidth]{./images/D_märke-1024x1024.png}\\
-  %-\hfill
-  %-\begin{minipage}[t]{0.3\linewidth}
-  %-  \centering
-  %-  \includegraphics[width=2.0\linewidth]{./images/linkopings_universitet_logo_detail_blue.png}\\
- %- \hfill
- %- \end{minipage}
- %-\end{minipage}
-%-}
+\title{MSc, Software Engineering}      
+
 %------------------%------------------%------------------%------------------%------------------ 
 % Address - email - phone
 %------------------%------------------%------------------%------------------%------------------ 
 \firstname{Rickard}
-\lastname{Åberg}
-\address{Bodekullsgatan 34b}{21440 Malmö}
+\lastname{\AA{}berg}
+\address{Bodekullsgatan 34b}{21440 Malm\"o}
 \phone[mobile]{+46~709~43~14~01}     
-%------------------%------------------%------------------%------------------%------------------ 
-%------------------%------------------%------------------%------------------%------------------ 
-% Email, LinkedIn, Github, Researchgate
- \email{rickard.aaberg@icloud.com}                               
- \social[linkedin]{rickard-åberg-9866891}                 
- \social[github]{kizouker}                          
- \social[researchgate]{Rickard\_Aberg}                     
-%------------------%------------------%------------------%------------------%------------------ 
-%------------------%------------------%------------------%------------------%------------------ 
+\email{rickard.aaberg@icloud.com}   
+
+%\social[linkedin]{rickard-\aa{}berg-9866891}                 
+%\social[github]{kizouker}                          
+%\social[researchgate]{Rickard\_Aberg}                     
+
 %------------------%------------------%------------------%------------------%------------------ 
 % QUOTE
 \quote{If you fall one-hundred times and then get up, the 101 time you never lost!}
-%------------------%------------------%------------------%------------------%------------------ 
+%------------------%------------------%------------------%------------------%------------------
 
 \begin{document}
-\makecvtitle{}
+%\makecvtitle{}
+
+\renewcommand*{\namefont}{\LARGE\sffamily\mdseries}
+\renewcommand*{\titlefont}{\Large\sffamily\mdseries}
+
 
 \section{Customer experiences}
 \cvitem{}{%
   \textbf{Enterprises and organizations:}%
   \\[0.3em]
-  IKEA IT, Nordea, Ikano, Tre (Hi3G), Länsstyrelsen IT, Telenor, École des Mines, IDA Infront, Lindab, HemoCue, Hot Yoga Malmö, Radioforum, Sony
+   École des Mines, IKEA IT, Nordea, Ikano, Tre (Hi3G), Länsstyrelsen IT, Telenor, IDA Infront, Lindab, HemoCue, Hot Yoga Malmö, Radioforum, Sony
 }
+
+\cvitemwithcomment{French}{C1 – Advanced professional proficiency}{Used in project work with clients at École des Mines}
+
+\section{Certification Badges}
 
 \section{Certification Badges}
 
 \cvitem{}{
-  \begin{minipage}[t]{0.3\linewidth}
+  \begin{minipage}[t]{0.24\linewidth}
     \centering
-    \includegraphics[width=1.2\linewidth]{./images/azure-fundamentals-badge.png}\\
+    \includegraphics[width=0.9\linewidth]{./images/azure-fundamentals-badge.png}\\
     \scriptsize Microsoft Certified: Azure Fundamentals (AZ-900)
   \end{minipage}
   \hfill
-  \begin{minipage}[t]{0.3\linewidth}
+  \begin{minipage}[t]{0.24\linewidth}
     \centering
     \includegraphics[width=0.6\linewidth]{./images/icc_coach.jpeg}\\
     \scriptsize ICC Certified Coach
   \end{minipage}
   \hfill
-  \begin{minipage}[t]{0.3\linewidth}
+  \begin{minipage}[t]{0.24\linewidth}
     \centering
     \includegraphics[width=0.6\linewidth]{./images/ISQTB.jpg}\\
     \scriptsize ISTQB Certified Tester \\
     Foundation Level (CTFL)
   \end{minipage}
   \hfill
+  \begin{minipage}[t]{0.24\linewidth}
+    \centering
+    \includegraphics[width=0.9\linewidth]{./images/scrum-master-badge.png}\\
+    \scriptsize Certified Scrum Master
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.24\linewidth}
+    \centering
+    \includegraphics[width=0.9\linewidth]{./images/wenell-ppl-badge.png}\\
+    \scriptsize Practical Project Management (Wenell)
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.24\linewidth}
+    \centering
+    \includegraphics[width=0.9\linewidth]{./images/nvc-year-badge.png}\\
+    \scriptsize 1-Year Program in Nonviolent Communication (NVC)
+  \end{minipage}
 }
 
 %/Users/raberg/Documents/GitHub/LatexCV/roles_CVs/Primary_Roles/Security/PenetrationTester/images/IMT_Atlantique_logo_1.png
@@ -165,10 +186,10 @@
 % === Sections ===
 \input{sections/key_competencies.tex}
 \input{sections/Project_Management_Tools_Section.tex}
-\input{sections/ethical_hacking.tex}
+%\input{sections/ethical_hacking.tex}
 \input{sections/cyber_security.tex}
 \input{sections/fullstack.tex}
-\input{sections/middle_ware.tex}
+%\input{sections/middle_ware.tex}
 \input{sections/management.tex}
 
 
