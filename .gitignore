@@ -5,3 +5,4 @@ __pycache__/CVGenerator.cpython-313.pyc
 *.fls
 *.fdb*
 *.gz
+.DS_STORE
