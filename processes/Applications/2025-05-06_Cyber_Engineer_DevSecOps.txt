@@ -6,6 +6,14 @@ Your profile looks a good fit, Would you be interested in discussing furthermore
 Overview
 We’re seeking a consultant to help embed cybersecurity best practices directly within agile product development teams. This individual will play a key role in driving secure development principles and improving the overall security maturity across multiple initiatives.
 
+agile security interpersonal skills lead influence
+devsecops metodik
+cloud security
+coordination
+pen-testing
+vulnerability management
+
+
 Key Skills & Experience:
 Strong communication and interpersonal skills with the ability to lead through influence. 
 Proven knowledge in DevSecOps methodologies. 
