@@ -1,0 +1,328 @@
+\documentclass[11pt,a4paper,sans]{moderncv}        
+%---------%---------%---------%---------%---------%---------%---------%---------
+% Includes of packages, etc
+%---------%---------%---------%---------%---------%---------%---------%---------
+\moderncvstyle{banking}                            
+\moderncvcolor{red}                               
+\nopagenumbers{}
+
+\usepackage[scale=0.75]{geometry}
+\setlength{\footskip}{136.00005pt} 
+
+\usepackage{graphicx}
+\graphicspath{{../includes}} % Specify the directory here
+\usepackage{enumitem}   
+
+\setlength{\hintscolumnwidth}{3cm}                
+\setlength{\footskip}{136.00005pt} 
+
+\setlength{\hintscolumnwidth}{3cm}                
+
+\ifxetexorluatex{}
+  \usepackage{fontspec}
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Ligatures=TeX}
+  \setmainfont{Latin Modern Roman}
+  \setsansfont{Latin Modern Sans}
+  \setmonofont{Latin Modern Mono}
+  \setmathfont{Latin Modern Math} 
+  \moderncvcolor{blue}    % ren, professionell
+  % eller
+  \moderncvcolor{burgundy}  % sofistikerad, djup röd
+% eller
+  \moderncvcolor{grey}      % elegant och diskret
+
+\else
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage{lmodern}
+\fi
+
+\usepackage[swedish]{babel}  
+\usepackage{underscore} 
+% ------- % ------- % ------- % ------- % ------- % ------- % -------
+% ------- % ------- % ------- % ------- % ------- % ------- % -------
+% Self-defined commands
+% ------- % ------- % ------- % ------- % ------- % ------- % -------
+% ------- % ------- % ------- % ------- % ------- % ------- % -------
+
+\newcommand{\thepage}{\arabic{page}}
+\newlist{quotelist}{enumerate}{1}
+\setlist[quotelist]{label=\textquotedblleft\arabic*\textquotedblright}
+
+\newcommand{\myparagraph}[1]{\paragraph{#1}\mbox{}\par}
+
+\makeatletter
+
+% Definiera bredden om den inte finns
+\@ifundefined{@photowidth}{%
+  \newlength{\@photowidth}
+  \setlength{\@photowidth}{4cm} % Justera storleken här – t.ex. 3cm, 4cm, 5cm
+}{}
+
+% Ange din bildfil
+%\def\@photo{./photos/rickardaberg-consultant.jpeg}
+
+% Modifiera \makecvtitle om stilen är 'banking'
+\@ifpackageloaded{moderncvstylebanking}{%
+  \let\oldmakecvtitle\makecvtitle
+  \renewcommand*{\makecvtitle}{%
+    \vspace*{-1em}
+    \begin{center}
+      \includegraphics[width=\@photowidth,keepaspectratio]{\@photo}
+    \end{center}
+    \vspace{0.5em}
+    \oldmakecvtitle
+  }%
+}
+
+\makeatother
+
+\beforetitle{
+  \vspace*{-2em}  
+  \begin{center}
+
+    {\Huge\sffamily Backend Developer} \\[0.4em]
+    {\color{gray}\large\sffamily JAVA\# mongodb} \\[1em]
+    \includegraphics[width=3.6cm]{../../../photos/rickardaberg-consultant.jpeg} \\[1em]
+    {\Large\sffamily Rickard \textbf{\AA{}berg}} \\[-0.3em]
+    {\normalsize\sffamily MSc in Software Engineering} \\[0.5em]
+    {\small\sffamily 
+      \textbf{Tel:} +46 709 43 14 01 \quad 
+      \textbf{Email:} rickard.aaberg@icloud.com \quad 
+      \textbf{Malmö, Sweden}
+    }
+  \end{center}
+  \vspace{0.5em}
+}
+
+
+
+%------------------%------------------%------------------%------------------%------------------
+% Title - photo etc
+%------------------%------------------%------------------%------------------%------------------       
+\title{MSc, Software Engineering}      
+
+%------------------%------------------%------------------%------------------%------------------ 
+% Address - email - phone
+%------------------%------------------%------------------%------------------%------------------ 
+\firstname{Rickard}
+\lastname{\AA{}berg}
+\address{Bodekullsgatan 34b}{21440 Malm\"o}
+\phone[mobile]{+46~709~43~14~01}     
+\email{rickard.aaberg@icloud.com}   
+
+%\social[linkedin]{rickard-\aa{}berg-9866891}                 
+%\social[github]{kizouker}                          
+%\social[researchgate]{Rickard\_Aberg}                     
+
+%------------------%------------------%------------------%------------------%------------------ 
+% QUOTE
+\quote{If you fall one-hundred times and then get up, the 101 time you never lost!}
+%------------------%------------------%------------------%------------------%------------------
+
+\begin{document}
+%\makecvtitle{}
+
+\renewcommand*{\namefont}{\LARGE\sffamily\mdseries}
+\renewcommand*{\titlefont}{\Large\sffamily\mdseries}
+
+\input{../../../sections/summary_backend.tex}
+
+\section{Customer experiences}
+\cvitem{}{%
+  \textbf{Enterprises and organizations:}%
+  \\[0.3em]
+   École des Mines, IKEA IT, Nordea, Ikano, Tre (Hi3G), Länsstyrelsen IT, Telenor, IDA Infront, Lindab, HemoCue, Hot Yoga Malmö, Radioforum, Sony
+}
+
+\cvitemwithcomment{French}{C1 – Advanced professional proficiency}{Used in project work with clients at École des Mines}
+
+\input{../../../sections/fullstack.tex}
+\clearpage
+\section{Certification Badges}
+\cvitem{}{
+  \begin{minipage}[t]{0.24\linewidth}
+    \centering
+    \includegraphics[width=0.9\linewidth]{../../../images/azure-fundamentals-badge.png}\\
+    \scriptsize Microsoft Certified: Azure Fundamentals (AZ-900)
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.24\linewidth}
+    \centering
+    \includegraphics[width=0.6\linewidth]{../../../images/icc_coach.jpeg}\\
+    \scriptsize ICC Certified Coach
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.24\linewidth}
+    \centering
+    \includegraphics[width=0.6\linewidth]{../../../images/ISQTB.jpg}\\
+    \scriptsize ISTQB Certified Tester\\
+    Foundation Level (CTFL)
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.24\linewidth}
+    \centering
+    \includegraphics[width=0.9\linewidth]{../../../images/Certified_Scrum_Master_(CSM)_certification_badge.PNG}\\
+    \scriptsize Certified Scrum Master
+  \end{minipage}
+}
+
+\cvitem{}{
+  \begin{minipage}[t]{0.24\linewidth}
+    \centering
+    \includegraphics[width=0.9\linewidth]{../../../images/wenell-ppl-badge.png}\\
+    \scriptsize Practical Project Management (Wenell)
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.24\linewidth}
+    \centering
+    \includegraphics[width=0.9\linewidth]{../../../images/nvc-year-badge.JPEG}\\
+    \scriptsize 1-Year Program in Nonviolent Communication (NVC)
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.24\linewidth}
+    \centering
+    \includegraphics[width=0.8\linewidth]{../../../images/IMT_Atlantique_logo_1.png}\\
+    \scriptsize École des Mines de Nantes
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.24\linewidth}
+    \centering
+    \includegraphics[width=0.9\linewidth]{../../../images/liu-logo.png}\\
+    \scriptsize Linköpings tekniska högskola (LiTH)
+  \end{minipage}
+}
+
+% === Sections ===
+%\input{../../../sections/key_competencies.tex}
+%%\input{../../../sections/Project_Management_Tools_Section.tex}
+%\input{sections/ethical_hacking.tex}
+\input{../../../sections/cyber_security.tex}
+
+\clearpage
+\input{../../../sections/fullstack.tex}
+\input{../../../sections/middle_ware.tex}
+%\input{../../../sections/management.tex}
+%\input{../../../sections/pm_tm_experiences.tex}
+
+\cventry{Car driver's license}{}{}{}{}{}
+
+%\cventry{Diver's license}{}{}{}{}{}
+
+%\section{Certifications}
+%\cvlistdoubleitem{Scrum Master }{ICC Coach}
+%\cvlistdoubleitem{ISEB / ISTQB  (Test)}{React nanodegree }
+
+\input{../../../sections/dev_experiences.tex}
+%\input{../../../sections/process_management.tex}
+
+
+
+
+
+\section{Education}
+\cventry{2023 HT-- 2024 VT}{Google CyberSecurity Fundamentals}{Google/Coursera}{ }{}{} 
+\cventry{2023 VT -- Ongoing}{ToastMasters}{Lund}{ }{Public Speaking}{} 
+\cventry{2022 HT -- Ongoing}{SRE, Fullstack and Front-end}{Udacity@Palo Alto}{ }{Grafana, Terraform, Kubernetes, AWS}{} 
+\cventry{2020}{Pedagogical Drama, Story Telling, Improvisational theatre, Groupe Dynamics}{Malmö University}{Malmö}{}{}      
+\cventry{2019-2021}{React.JS (ES6, React, Router, Redux, Native) Nanodegree}{Udacity@Palo Alto}{Remote}{}{}  
+\cventry{2016}{Programming and Problem-solving in Python. 2.5 ECTS}{Blekinge Institute of Technology}{Ronneby}{}{}  
+\cventry{1996 --2003}{MSc in Computer Science and Engineering. 300 ECTS}{Linköping Institute of Technology}{Linköping}{}{Computer/IT-Security, Software production, Artificial Intelligence, Object-Oriented Programming, Functional Programming, Real time programing, Lisp/C, Advanced computer architecture, Hardware construction, Embedded development with micro-controller}  
+\includegraphics[scale=0.4]{../../../images/it-security}
+\section{Courses}
+\cvdoubleitem{Agile}{Certified Scrum Master (CSM) Softhouse Consulting Öresund AB }
+{Coaching}{International Coaching Certificate, (ICC, ICF, EMCC), SLH - Center of Excellence in Thailand, Banh Phee,  Lars-Eric Uneståhl, phD }
+\cvdoubleitem{Communication}{18 days workshop during a whole year on NonViolent-Communication (Varg och giraff-språk} {Negotiation}{Negotiation workshop, Företags Ekonomiskt Institut (FEI)}
+\cvdoubleitem{Project Management}{Practical Project Management Wenell Management.}
+{Pedagogical drama, Story Telling, Improvisation }{Malmö University }
+\cvdoubleitem{Front-End}{React}{DevOps} {CA Lisa Release Automation (Nolio) (Continuous Delivery) CA Technologies Inc.}
+
+\section{Master thesis}
+\cvitem{Title}{\emph{On the automatic evolution of an OS kernel using temporal Logic and AOP}}
+\cvitem{Supervisors}{Julia Lawall phD, Mario Südholt phD, Gilles Muller phD}
+\cvitem{Description}{
+In IEEE International Conference on Automated Software Engineering, Montréal, Canada, pages 196 --204, 42 citations}
+\url{https://www.researchgate.net/publication/220883611\_On_the_automatic_evolution_of_an_OS_kernel_using_temporal_logic_and_AOP}
+
+\section{What people have said about me}
+\large 
+
+\begin{quotelist}
+    \item
+    ``Rickard became rapidly proficient in all technologies by effectively communicating with the research engineers and has delivered to all my requirements´´,
+      Mario Südholt, associate professor OBASCO group at Ecole des Mines 
+\item
+        ``Rickard has rapidly, with great accuracy and interest fulfilled the requirements of which the roles demanded.  He is also responsible and enterprising``. ``Rickard’s work has meant close cooperation with several clients and demanded great communication skills to understand the end-users needs´´ 
+        ``we give him our best recommendations´´ – Cybercom 
+\item     
+        `` Rickard is ambitious and dedicated to his work and his team the reason for our success with a stable environment``  - Frank Amersbasch, Head of Technical operations, Ikano Bank 
+\item  ``Rickard has not only used the existing processes but also simplified and improved them`` ``Rickard is goal-oriented, planning-oriented and flexible``  - Jonas Paulsson Länsstyrelsen IT 
+       
+  \end{quotelist}
+
+\section{Languages}
+\cvitemwithcomment{Swedish}{Mother tongue}{}
+\cvitemwithcomment{English}{Professional proficiency}{}
+\cvitemwithcomment{French}{Professional proficiency}{}
+
+\section{Industry sectors}
+\cvlistdoubleitem{Aviation}{Hospitality}
+\cvlistdoubleitem{Healthcare}{BioTech}
+\cvlistdoubleitem{Security}{Energy}
+\cvlistdoubleitem{Public}{Telecom}
+\cvlistdoubleitem{Finance}{Trade}
+
+\
+
+\section{Employments}
+\cventry{2025}{Cloud Computing och Azure-kurs}{ReDI School of Digital Integration}{}{}{
+Praktisk kursfokuserad utbildning inom Azure, molnsäkerhet och DevOps. Förberedelse inför certifiering med case-baserade projekt.
+}
+\cventry{2021-12 -- 2022-06-01 }{ADBSafegate AB}{ADBSafegate AB}{Malmö}{Fullstack Developer}{Angular, typescript, Azure, Scaled Agile Framework, SAFe}
+\cventry{2021-06 -- 2021-09 }{Zaplox AB}{Zaplox AB}{Lund}{Fullstack Developer}{Vue.js node javascript css AWS}
+\cventry{2019-2021 }{React.JS Nanodegree}{Udacity}{Remote}{}{Portfolio Projects - reviewed and passed by react experts}
+\cventry{Aug 2017-Nov 2018}{Senior Software Engineer}{Verisure Innovation}{Malmö}{}{}
+\cventry{May2012 -- Dec2017}{Managing Consultant}{Bouvet Syd AB}{Malmö}{}{Java Developer, Team Leader/CUManager/Partner Responsible DevOps}
+\cventry{May2004 --Feb 2012}{Consultant}{Cybercom}{Malmö}{}{Java, Integration, Test}
+ \cventry{Mar 2003 --Feb 2004}{RnD Engineer}{Ecole Des Mines}{Nantes/France}{}{}
+\cventry{Mar 2003 --Feb 2004}{Thésard}{Ecole Des Mines}{Nantes/France}{}{MSc Thesis}
+\cventry{Jul 2002 -- Sep 2002}{Embedded Developer}{Hemocue}{Ängelholm}{}{}
+
+\section{Interests}
+\cvitem{hobby 1}{Yoga and Meditation}
+\cvitem{hobby 2}{Dance and Martial Arts}
+\cvitem{hobby 3}{Singing and playing piano}
+
+\section{References}
+\begin{cvcolumns}
+  \cvcolumn{Managers}
+      {\begin{itemize}
+      \item Mathias Hansen 
+      \item(more upon request)
+      \end{itemize}}
+    \cvcolumn{Peers}
+    {\begin{itemize}
+        \item Peter Törnkvist, 
+        \item(more upon request)
+        \end{itemize}}
+    
+  \cvcolumn{Msc}
+    {\begin{itemize}
+            \item Julia Lawall, and
+            \item   Mario Sudholt
+    \end{itemize}(more upon request)}
+  \cvcolumn[0.5]{I managed}{\textit{Martin Björcke}, and \textit{David Bennehult} also (all available upon request).}
+\end{cvcolumns}
+\footnotesize
+
+\input{../../../sections/tools_languages_processes.tex}
+
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+\clearpage
+\Large
+
+\end{document}
