@@ -1,0 +1,77 @@
+
+\documentclass[11pt,a4paper,sans]{moderncv}        
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[scale=0.75]{geometry}
+
+% ModernCV settings
+\moderncvstyle{banking}                            
+\moderncvcolor{red}                               
+\nopagenumbers{}                                  
+\usepackage[scale=0.75]{geometry}                 
+
+% Language and input encoding
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[swedish]{babel}
+
+% Fonts and symbols
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+% Graphics and colors
+\usepackage{graphicx}
+\graphicspath{{./}}  % sök i samma mapp
+
+%\graphicspath{{../includes}}   % adjust to your actual image path
+% \graphicspath{{./}}   % adjust to your actual image path
+% \graphicspath{{../../../photos/}}
+
+\usepackage[svgnames]{xcolor}
+
+% Lists
+\usepackage{enumitem}
+\newlist{quotelist}{enumerate}{1}
+\setlist[quotelist]{label=\textquotedblleft\arabic*\textquotedblright}
+
+% Custom command for highlighted headings
+\newcommand{\customheading}[1]{%
+  \vspace{1em}
+  {\LARGE\sffamily\bfseries #1}%
+  \par\vspace{0.5em}
+}
+
+
+\firstname{Rickard}
+\lastname{\AA{}berg}
+\title{MSc, Software Engineering}
+\address{Bodekullsgatan 34b}{21440 Malmö}
+\phone[mobile]{+46~709~43~14~01}
+\email{rickard.aaberg@icloud.com}
+\photo[40pt][0.4pt]{rickardaberg-consultant.jpg}  % Bild i samma mapp
+\quote{If you fall one-hundred times and then get up, the 101\textsuperscript{st} time you never lost!}
+
+\begin{document}
+
+\makecvtitle
+
+\section{Professional Summary}
+Kort text här...
+
+\end{document}
+
+
+
+\section{Professional Summary}
+Resultatinriktad och serviceorienterad IT-tekniker med certifiering i Microsoft Azure (AZ-900) och över 10 års erfarenhet inom IT-support, systemutveckling och teknisk problemlösning. Van att vägleda användare på alla nivåer – både tekniskt och kommunikativt – på svenska och engelska. Gedigen erfarenhet av Windows, macOS och Linux, samt felsökning av nätverk, hårdvara, mjukvara och molnbaserade system.
+
+\section{Technical Skills}
+\cvitem{Operating Systems}{Windows 10/11, Windows Server, Ubuntu/Linux, macOS}
+\cvitem{Support Tools}{Microsoft Service Desk, Remedy, Jira, Confluence}
+\cvitem{Cloud \& Scripting}{Microsoft Azure, PowerShell, Azure CLI, Python}
+\cvitem{Networking}{DNS, TCP/IP, VPN, Remote Desktop}
+\cvitem{Communication}{Microsoft 365, Teams, SharePoint, Outlook}
+\cvitem{IT Methodology}{ITIL, Incident \& Problem Management}
+
+\end{document}
