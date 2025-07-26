@@ -1,0 +1,25 @@
+{
+
+  "latex-workshop.latex.tools": [
+    {
+      "name": "latexmk",
+      "command": "latexmk",
+      "args": [
+        "-r", "${workspaceFolder}/.latexmkrc",
+        "-pdf",
+        "-interaction=nonstopmode",
+        "-synctex=1",
+        "%DOC%"
+      ]
+    }
+  ],
+  "latex-workshop.latex.autoBuild.run": "onFileChange",
+
+
+"latex-workshop.latex.recipes": [
+  {
+    "name": "latexmk (one-shot)",
+    "tools": ["latexmk"]
+  }
+]
+}

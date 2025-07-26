@@ -8,7 +8,7 @@
 \usepackage[scale=0.75]{geometry}
 \setlength{\footskip}{136.00005pt} 
 \usepackage{titlesec}
-\graphicspath{{../includes}} % Specify the directory here
+\graphicspath{{../includes/}{../../images/}{../../photos/}}
 \usepackage{enumitem}   
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -16,18 +16,14 @@
 
 \usepackage{helvet}  % Helvetica typsnitt
 \newcommand{\customheading}[1]{%
-  {\LARGE\bfseries\sffamily #1}%
+  {\LARGE\bfseries\sffamily #1}%make
   \vspace{0.5em}%
   \par
 }
 
-
-% \geometry{top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm}
-% \usepackage{helvet}
-% %\renewcommand{\familydefault}{\sfdefault}
-% \setlength{\hintscolumnwidth}{3cm}                
-% \setlength{\footskip}{136.00005pt} 
-% \setlength{\hintscolumnwidth}{3cm}                
+\titleformat{\section}
+  {\normalfont\Large\bfseries\sffamily} % Stil: fet, storlek, sans serif
+  {\thesection}{1em}{} % Sektionens nummerformatering
 
 \ifxetexorluatex{}
   \usepackage{fontspec}
@@ -57,7 +53,9 @@
 % ------- % ------- % ------- % ------- % ------- % ------- % -------
 % ------- % ------- % ------- % ------- % ------- % ------- % -------
 
-\newcommand{\thepage}{\arabic{page}}
+%\newcommand{\thepage}{\arabic{page}}
+\pagestyle{plain}  % eller 'empty', 'headings', 'fancy' m.m.
+  
 \newlist{quotelist}{enumerate}{1}
 \setlist[quotelist]{label=\textquotedblleft\arabic*\textquotedblright}
 
@@ -71,8 +69,7 @@
   \setlength{\@photowidth}{4cm} % Justera storleken här – t.ex. 3cm, 4cm, 5cm
 }{}
 
-% Ange din bildfil
-%\def\@photo{./photos/rickardaberg-consultant.jpeg}
+
 
 % Modifiera \makecvtitle om stilen är 'banking'
 \@ifpackageloaded{moderncvstylebanking}{%
@@ -98,13 +95,37 @@
 % {\Large \sffamily \bfseries IT-Support Engineer}\\[0.2em]
 
 %\beforetitle{
+
+
+
+%------------------%------------------%------------------%------------------%------------------
+% Title - photo etc
+%     {\color{gray}\large\sffamily JAVA\# } \\[1em]
+%------------------%------------------%------------------%------------------%------------------       
+\title{MSc, Software Engineering}      
+%------------------%------------------%------------------%------------------%------------------ 
+%------------------%------------------%------------------%------------------%------------------ 
+\firstname{Rickard}
+\lastname{\AA{}berg}
+\address{Bodekullsgatan 34b}{21440 Malm\"o}
+\phone[mobile]{+46~709~43~14~01}     
+\email{rickard.aaberg@icloud.com}   
+               
+
+%------------------%------------------%------------------%------------------%------------------ 
+% QUOTE
+\quote{If you fall one-hundred times and then get up, the 101 time you never lost!}
+%------------------%------------------%------------------%------------------%------------------
+
+\begin{document}
+%\makecvtitle{}
 \begin{center}
     \vspace*{1cm}
-    s
+    
     {\Huge \textbf{\textcolor{gray!20!black}{IT-Support Engineer}}}\\[1em]
     
 
-    \includegraphics[width=3.6cm]{../../../photos/rickardaberg-consultant.jpeg} \\[1em]
+    \includegraphics[width=3.6cm]{../../photos/rickardaberg-consultant.jpeg} \\[1em]
     
     {\LARGE \textbf{Rickard Åberg}}\\[0.2em]
     {\large MSc in Software Engineering}\\[2em]
@@ -122,58 +143,11 @@
 %}
 \newpage
 
-
-% {\Huge \sffamily \textcolor{red!70!black}{IT-Support Engineer}}
-% \textcolor{blue!60!black}{IT-Support Engineer}
-% {\LARGE \sffamily \textbf{\textcolor{pink!40!black}{IT-Support Engineer}}}
-
-
-%     \includegraphics[width=3.6cm]{../../../photos/rickardaberg-consultant.jpeg} \\[1em]
-%     {\Large\sffamily Rickard \textbf{\AA{}berg}} \\[-0.3em]
-%     {\normalsize\sffamily MSc in Software Engineering} \\[0.5em]
-%     {\small\sffamily 
-%       \textbf{Tel:} +46 709 43 14 01 \quad 
-%       \textbf{Email:} rickard.aaberg@icloud.com \quad 
-%       \textbf{Malmö, Sweden}
-%     }
-%   \end{center}
-%   \vspace{0.5em}
-% }
-
-
-
-%------------------%------------------%------------------%------------------%------------------
-% Title - photo etc
-%     {\color{gray}\large\sffamily JAVA\# } \\[1em]
-%------------------%------------------%------------------%------------------%------------------       
-\title{MSc, Software Engineering}      
-
-%------------------%------------------%------------------%------------------%------------------ 
-% Address - email - phone
-%------------------%------------------%------------------%------------------%------------------ 
-\firstname{Rickard}
-\lastname{\AA{}berg}
-\address{Bodekullsgatan 34b}{21440 Malm\"o}
-\phone[mobile]{+46~709~43~14~01}     
-\email{rickard.aaberg@icloud.com}   
-
-%\social[linkedin]{rickard-\aa{}berg-9866891}                 
-%\social[github]{kizouker}                          
-%\social[researchgate]{Rickard\_Aberg}                     
-
-%------------------%------------------%------------------%------------------%------------------ 
-% QUOTE
-\quote{If you fall one-hundred times and then get up, the 101 time you never lost!}
-%------------------%------------------%------------------%------------------%------------------
-
-\begin{document}
-%\makecvtitle{}
-
 \renewcommand*{\namefont}{\LARGE\sffamily\mdseries}
 \renewcommand*{\titlefont}{\Large\sffamily\mdseries}
 
-\input{../../../sections/cv_section_prof_summ_IT_support.tex}
-\input{../../../sections/cv_section_sectors_n_customers.tex}
+\input{../../sections/cv_section_prof_summ_IT_support.tex}
+\input{../../sections/cv_section_sectors_n_customers.tex}
 
 
 \cvitemwithcomment{French}{C1 – Advanced professional proficiency}{Used in project work with clients at École des Mines}
@@ -190,67 +164,67 @@
 \cvitem{}{
   \begin{minipage}[t]{0.24\linewidth}
     \centering
-    \includegraphics[width=0.9\linewidth]{../../../images/azure-fundamentals-badge.png}\\
+    \includegraphics[width=0.9\linewidth]{../../images/azure-fundamentals-badge.png}\\
     \scriptsize Microsoft Certified: Azure Fundamentals (AZ-900)
   \end{minipage}
   \hfill
+  % \begin{minipage}[t]{0.24\linewidth}
+  %   \centering
+  %   \includegraphics[width=0.6\linewidth]{../../images/icc_coach.jpeg}\\
+  %   \scriptsize ICC Certified Coach
+  % \end{minipage}
+  % \hfill
   \begin{minipage}[t]{0.24\linewidth}
     \centering
-    \includegraphics[width=0.6\linewidth]{../../../images/icc_coach.jpeg}\\
-    \scriptsize ICC Certified Coach
-  \end{minipage}
-  \hfill
-  \begin{minipage}[t]{0.24\linewidth}
-    \centering
-    \includegraphics[width=0.6\linewidth]{../../../images/ISQTB.jpg}\\
+    \includegraphics[width=0.6\linewidth]{../../images/ISQTB.jpg}\\
     \scriptsize ISTQB Certified Tester\\
     Foundation Level (CTFL)
   \end{minipage}
   \hfill
   \begin{minipage}[t]{0.24\linewidth}
     \centering
-    \includegraphics[width=0.9\linewidth]{../../../images/Certified_Scrum_Master_(CSM)_certification_badge.PNG}\\
+    \includegraphics[width=0.9\linewidth]{../../images/Certified_Scrum_Master_(CSM)_certification_badge.PNG}\\
     \scriptsize Certified Scrum Master
   \end{minipage}
 }
 
-\cvitem{}{
-  \begin{minipage}[t]{0.24\linewidth}
-    \centering
-    \includegraphics[width=0.9\linewidth]{../../../images/wenell-ppl-badge.png}\\
-    \scriptsize Practical Project Management (Wenell)
-  \end{minipage}
-  \hfill
-  \begin{minipage}[t]{0.24\linewidth}
-    \centering
-    \includegraphics[width=0.9\linewidth]{../../../images/nvc-year-badge.JPEG}\\
-    \scriptsize 1-Year Program in Nonviolent Communication (NVC)
-  \end{minipage}
-  \hfill
-  \begin{minipage}[t]{0.24\linewidth}
-    \centering
-    \includegraphics[width=0.8\linewidth]{../../../images/IMT_Atlantique_logo_1.png}\\
-    \scriptsize École des Mines de Nantes
-  \end{minipage}
-  \hfill
-  \begin{minipage}[t]{0.24\linewidth}
-    \centering
-    \includegraphics[width=0.9\linewidth]{../../../images/liu-logo.png}\\
-    \scriptsize Linköpings tekniska högskola (LiTH)
-  \end{minipage}
-}
+% \cvitem{}{
+%   \begin{minipage}[t]{0.24\linewidth}
+%     \centering
+%     \includegraphics[width=0.9\linewidth]{../../images/wenell-ppl-badge.png}\\
+%     \scriptsize Practical Project Management (Wenell)
+%   \end{minipage}
+%   \hfill
+%   \begin{minipage}[t]{0.24\linewidth}
+%     \centering
+%     \includegraphics[width=0.9\linewidth]{../../images/nvc-year-badge.JPEG}\\
+%     \scriptsize 1-Year Program in Nonviolent Communication (NVC)
+%   \end{minipage}
+%   \hfill
+%   \begin{minipage}[t]{0.24\linewidth}
+%     \centering
+%     \includegraphics[width=0.8\linewidth]{../../images/IMT_Atlantique_logo_1.png}\\
+%     \scriptsize École des Mines de Nantes
+%   \end{minipage}
+%   \hfill
+%   \begin{minipage}[t]{0.24\linewidth}
+%     \centering
+%     \includegraphics[width=0.9\linewidth]{../../images/liu-logo.png}\\
+%     \scriptsize Linköpings tekniska högskola (LiTH)
+%   \end{minipage}
+% }
 
 % === Sections ===
 %\input{../../../sections/key_competencies.tex}
 %%\input{../../../sections/Project_Management_Tools_Section.tex}
 %\input{sections/ethical_hacking.tex}
-\input{../../../sections/cyber_security.tex}
+\input{../../sections/cyber_security.tex}
 
 \clearpage
 %\input{../../../sections/fullstack.tex}
 %\input{../../../sections/middle_ware.tex}
 
-\input{../../../sections/cv_section_application_mngmt_IT_support.tex}
+\input{../../sections/cv_section_application_mngmt_IT_support.tex}
 
 
 %\input{../../../sections/management.tex}
@@ -264,16 +238,16 @@
 %\cvlistdoubleitem{Scrum Master }{ICC Coach}
 %\cvlistdoubleitem{ISEB / ISTQB  (Test)}{React nanodegree }
 
-\input{../../../sections/dev_experiences_from_IT_support_perspective.tex}
+\input{../../sections/dev_experiences_from_IT_support_perspective.tex}
 
-\input{../../../sections/cv_section_it_support_tech_skills.tex
+\input{../../sections/cv_section_it_support_tech_skills.tex}
 
 
 
 \section{Education}
 
 \cventry{1996--2003}{MSc in Computer Science and Engineering}{Linköping Institute of Technology}{Linköping}{}{}
-\includegraphics[scale=0.4]{../../../images/it-security}
+\includegraphics[scale=0.4]{../../images/it-security}
 \cventry{2016}{Python Programming \& Problem Solving (2.5 ECTS)}{Blekinge Institute of Technology}{Ronneby}{}{}
 
 \cventry{2023--2024}{CyberSecurity Fundamentals}{Google / Coursera}{Online}{}{}
@@ -308,10 +282,10 @@
 
 
 
-\input{../../../sections/quotelists.tex}
+\input{../../sections/quotelists.tex}
 
 
-\input{../../../sections/pm_tm_experiences.tex}
+%\input{../../sections/pm_tm_experiences.tex}
 
 \section{Employments}
 \cventry{2025}{Cloud Computing och Azure-kurs}{ReDI School of Digital Integration}{}{}{
@@ -339,10 +313,10 @@ Lämnas på begäran.
 
 % \nocite{*}}
 
-\bibliographystyle{plain}
-\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+% \bibliographystyle{plain}
+% \bibliography{publications}                        % 'publications' is the name of a BibTeX file
 
 \clearpage
 \Large
 
-\end{document}
+\end{document}  
