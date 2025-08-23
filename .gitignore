@@ -7,7 +7,6 @@ __pycache__/CVGenerator.cpython-313.pyc
 *.gz
 .DS_STORE
 roles_CVs/Primary_Roles/Security/.DS_Store
-roles_CVs/Primary_Roles/Security/.DS_Store
-roles_CVs/Primary_Roles/Security/.DS_Store
 *.pdf
 roles_CVs/Secondary_Roles/Developer/.DS_Store
+roles_CVs/Secondary_Roles/Manager/.DS_Store
