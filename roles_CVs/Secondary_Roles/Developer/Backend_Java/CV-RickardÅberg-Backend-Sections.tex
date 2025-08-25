@@ -1,4 +1,4 @@
-\documentclass[11pt,a4paper,sans]{moderncv}        
+\documentclass[11pt,a4paper,sans]{moderncv}}       
 %---------%---------%---------%---------%---------%---------%---------%---------
 % Includes of packages, etc
 %---------%---------%---------%---------%---------%---------%---------%---------
@@ -6,13 +6,27 @@
 \moderncvcolor{red}                               
 \nopagenumbers{}
 
+% Definiera \HUGE manuellt
+\makeatletter
+\newcommand\HUGE{\@setfontsize\Huge{30pt}{36pt}} % ändra siffrorna om du vill
+\makeatother
+
+% Ny textstorlek: \mylargish
+\makeatletter
+\newcommand\mylargish{\@setfontsize\mylargish{16pt}{19pt}}
+\makeatother
+
+
+
 \usepackage[scale=0.75]{geometry}
 \setlength{\footskip}{136.00005pt} 
 
 \usepackage{graphicx}
 \graphicspath{{../includes}} % Specify the directory here
 \usepackage{enumitem}   
-
+% I preamble
+\usepackage[most]{tcolorbox} 
+\usepackage{microtype}
 \setlength{\hintscolumnwidth}{3cm}                
 \setlength{\footskip}{136.00005pt} 
 
@@ -21,6 +35,7 @@
 \ifxetexorluatex{}
   \usepackage{fontspec}
   \usepackage{unicode-math}
+  \usepackage{memoir}
   \defaultfontfeatures{Ligatures=TeX}
   \setmainfont{Latin Modern Roman}
   \setsansfont{Latin Modern Sans}
@@ -54,6 +69,11 @@
 
 \makeatletter
 
+
+\newlength{\headerwidth}
+\setlength{\headerwidth}{0.72\linewidth}
+
+
 % Definiera bredden om den inte finns
 \@ifundefined{@photowidth}{%
   \newlength{\@photowidth}
@@ -78,26 +98,57 @@
 
 \makeatother
 
-\beforetitle{
-  \vspace*{-2em}  
-  \begin{center}
+% \beforetitle{
+%   \vspace*{-0.5em}  
+%   \begin{center}
+%     {\HUGE\sffamily Java Backend Developer} \\[0.4em]
+%     \includegraphics[width=8.6cm]{../../../photos/rickardaberg-consultant.jpeg} \\[1em]
+%     {\Huge\sffamily Rickard \textbf{\AA{}berg}} \\[1.5em]
+%     {\Large\sffamily MSc in Software Engineering} \\[1em]
+%    \fbox{%
+%       \parbox{0.6\linewidth}{%
+%         \ttfamily
+%            \textls[400]{\textbf{Tel:}} +46 709 43 14 01 \\[4pt]
+%     \textls[400]{\textbf{Email:}} rickard.aaberg@icloud.com \\[4pt]
+%     \textls[400]{\textbf{Ort:}} Malmö, Sweden
+%       }%
+%     }
+%   \end{center}
+%   \vspace{1em}
+% }
+\newlength{\headerwidth}
+\setlength{\headerwidth}{0.7\linewidth} % mindre bredd (foto+box)
 
-    {\Huge\sffamily Backend Developer} \\[0.4em]
-    {\color{gray}\large\sffamily JAVA\# } \\[1em]
-    \includegraphics[width=3.6cm]{../../../photos/rickardaberg-consultant.jpeg} \\[1em]
-    {\Large\sffamily Rickard \textbf{\AA{}berg}} \\[-0.3em]
-    {\normalsize\sffamily MSc in Software Engineering} \\[0.5em]
-    {\small\sffamily 
-      \textbf{Tel:} +46 709 43 14 01 \quad 
-      \textbf{Email:} rickard.aaberg@icloud.com \quad 
-      \textbf{Malmö, Sweden}
+\setlength{\fboxsep}{6pt}   % inre marginal i ramen
+\setlength{\fboxrule}{0.6pt}% linjetjocklek
+
+\beforetitle{%
+  \vspace*{-0.5em}
+%  \hfill % <-- flyttar blocket åt höger
+\hspace*{0.23\linewidth} % flytta ca 10 % av sidbredden åt höger
+  \begin{minipage}{\headerwidth}
+    \centering
+    {\HUGE\sffamily Java Backend Developer}\\[0.6em]
+    % Mindre foto
+    \includegraphics[width=0.7\headerwidth]{../../../photos/rickardaberg-consultant.jpeg}\\[1.0em]
+    {\Huge\sffamily Rickard \textbf{\AA{}berg}}\\[1.0em]
+    {\Large\sffamily MSc in Software Engineering}\\[1.0em]
+
+    % Kontaktinfo i ruta
+    \fbox{%
+      \parbox{0.9\linewidth}{%
+        \ttfamily\raggedright
+        \textls[400]{\textbf{Tel:}} +46 709 43 14 01\\[4pt]
+        \textls[400]{\textbf{Email:}} rickard.aaberg@icloud.com\\[4pt]
+        \textls[400]{\textbf{Ort:}} Malmö, Sweden
+      }%
     }
-  \end{center}
-  \vspace{0.5em}
+  \end{minipage}
+  \vspace{1em}
 }
 
 
-
+%     {\Huge\sffamily JAVA } \\[1em]
 %------------------%------------------%------------------%------------------%------------------
 % Title - photo etc
 %------------------%------------------%------------------%------------------%------------------       
