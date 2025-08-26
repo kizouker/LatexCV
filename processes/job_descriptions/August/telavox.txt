@@ -1,0 +1,105 @@
+Software Engineer- Full-stack- AI Voice
+Telavox
+
+Mjukvaruutvecklare
+Kommun: Malmö
+Korta fakta om jobbet
+Omfattning: Heltid
+Varaktighet: Tills vidare
+Anställningsform: Tillsvidare- eller tidsbegränsad anställning
+Kvalifikationer
+Arbetslivserfarenhet
+Krav
+Mjukvaruutvecklare -  
+erfarenhet efterfrågas
+Om jobbet
+Join Telavox as Software Engineer – AI Voice Agents 
+Are you a Full-stack Developer passionate about building powerful user experiences and scalable backend systems? We are expanding our AI Voice Agent Platform and looking for a Full-stack Engineer who thrives where frontend, backend, and AI meet. In this role, placed in Malmö or Stockholm, you'll help us build a reliable foundation for iterating on AI voice products. You’ll collaborate closely with engineers across disciplines to craft intuitive interfaces, robust APIs, and ensure smooth user journeys from end to end. If you'd like to take your next step within Telavox and are excited by the challenge of enabling AI at scale, this is your opportunity! 
+
+About the job 
+You’ll be working on evolving our AI Voice Agent Platform. Your mission is to develop both the customer-facing and behind-the-scenes components that make AI voice interactions seamless and intuitive. You’ll work side-by-side with AI engineers and fellow developers, driving improvements across our web apps, APIs, and system architecture. Your work will directly impact how users experience and interact with AI Voice technologies. 
+
+Your day-to-day work may include:
+
+ 
+Experimenting and iterating on solutions to increase the output quality of our AI Agents. 
+
+ 
+Collaborating with the team, you will take part in the service architecture, designing, implementing, and testing new features. 
+
+ 
+Collaborating on user-centric design and data-driven UX improvements 
+
+ 
+Ensuring performance, scalability, and accessibility across the full stack
+
+ 
+ About you
+ You're a product-minded engineer who enjoys building scalable products that are loved by our users. You’re energized by working closely with AI specialists and product designers, and you have a passion for user experience, performance, and maintainability. You thrive in a fast-moving, cross-functional environment where your work makes a tangible impact. 
+
+Key skills and experience we’re looking for:
+
+ 
+Solid experience with modern frontend frameworks (e.g., React, Vue) 
+
+ 
+Solid understanding of Javascript and/or Typescript 
+
+ 
+Solid experience with object oriented programming languages, preferably Java. 
+
+ 
+Strong understanding of REST APIs and system integration 
+
+ 
+Good-to-have skills:
+
+ 
+Experience designing user-facing features for AI or voice applications 
+
+ 
+Familiarity with accessibility and responsive design 
+
+ 
+Experience with monitoring, observability, or A/B testing in a production setting
+
+ 
+Join us at Telavox 
+Since Telavox's journey started in 2002, we have strengthened our position as the leading forward-thinking communication platform for businesses. As a digital mobile operator, we develop and own our all-in-one communication platform, which integrates telephony, PBX, messaging, meetings, and contact centers, giving businesses a smarter way to connect. Today, we’re a thriving company with 1.9 billion SEK in revenue and 500+ Telavoxers across nine countries. We embrace AI and automation to push the boundaries of business communication. We offer flexible work options and adaptable hours, giving you the freedom to balance life and career while staying connected to our vibrant Telavox culture.
+
+How to apply! 
+At Telavox, we don't focus on fitting in; we focus on making room for everyone.  A quick heads-up: It’s vacation time, so things are moving a little slower than usual. We’re still reviewing applications and will get back to you in the middle of August.  Thank you so much for your patience!   ann-marie.faraguna@telavox.com" target="_blank" rel="nofollow"> 
+
+Learn more about what we do!  
+
+Om anställningen
+Lön
+ Lön enligt överenskommelse
+Lönetyp: Fast månads- vecko- eller timlön
+Anställningsvillkor
+Heltid
+Anställningstid enligt överenskommelse
+Var ligger arbetsplatsen?
+Arbetsplatsen ligger i kommunen Malmö i Skåne län.
+Arbetsgivaren
+Telavox AB
+https://telavox.com/
+Postadress
+Telavox AB
+Stora Varvsgatan 6A
+21119 Malmö
+Kontakt
+Ami Faraguna
+ann-marie.faraguna@telavox.com
+Sök jobbet
+Ansök senast 4 januari (om 132 dagar)
+Ansök via arbetsgivarens webbplats
+
+Dela annonsen
+Mejl
+Facebook
+X
+Linkedin
+Skriv ut annonsen
+Annons-Id: 29845195
+Publicerad: 18 juli 2025, kl. 12.49

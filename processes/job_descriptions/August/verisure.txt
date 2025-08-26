@@ -1,0 +1,79 @@
+Backend Java Developer
+Verisure Innovation AB
+
+Mjukvaruutvecklare
+Kommun: Malmö
+Korta fakta om jobbet
+Omfattning: Heltid
+Varaktighet: Tills vidare
+Anställningsform: Tillsvidare- eller tidsbegränsad anställning
+Kvalifikationer
+Arbetslivserfarenhet
+Krav
+Mjukvaruutvecklare -  
+erfarenhet efterfrågas
+Om jobbet
+Do you want to make the world a safer place while being part of a team where experience and collaboration are truly valued?
+
+Would you like to join a global and technically skilled team that plays an essential role in Verisure’s success?
+
+Are you a backend-focused problem-solver who brings clarity and composure in fast-paced, high-ambition environments, with a strong belief in knowledge-sharing and steady teamwork?
+
+Then this might be the right opportunity for you! ⬇
+
+About the job
+
+In this role, you will build and contribute to the Backend of our smart home alarm products for the future. You’ll be a vital part of an empowered agile team that develops critical internal systems and tools — essential software components that make everything tick in our product portfolio.
+
+You will be joining a collaborative team of 17 skilled and fun colleagues who value deep collaboration, shared problem-solving, and long-term thinking, led by Patrik Klinger, an ambitious and energetic leader who places a strong emphasis on teamwork and tackling challenges collectively.
+
+We truly enjoy coming into the office — not just for productivity, but because we believe trust, laughter, and fast learning happen faster face-to-face. In our team, being present and connected creates the glue that helps us thrive even when the pressure is high. We expect you to appreciate and contribute to this in-person collaboration culture.
+ 
+
+About you
+
+Most importantly, you are a team player who combines strong technical skills with empathy and humility. You share your knowledge generously and welcome the expertise of others.
+
+You bring a senior mindset — calm, focus and clear thinking, even in complex or high-pressure situations. You’re structured, curious, and motivated to find the best solutions together with your team. You’re also comfortable working independently and navigating ambiguity when needed.
+
+Also, great if you have:
+     * Several years of hands-on experience in backend development
+
+     * Experience in DevOps / Automation environments
+     * Familiarity with agile methodologies such as Scrum or other iterative ways of working
+     * Practical experience with as many of the following technologies and software development domains as possible: Java, Spring Boot, MySQL, GIT, Kubernetes, Docker, RabbitMQ, Python, JavaScript, Typescript and React.
+
+We don’t expect you to tick every box — what matters most is your mindset, approach, and the depth you bring in one or more relevant areas.
+
+If large parts of the above sound exciting to you, and if you want to be part of a warm, driven and capable team that values both deep focus and good coffee — and you bring a senior calm to everything you do — we’d love to hear from you. Apply today!
+
+About Verisure
+
+Verisure is a global leading provider of professionally monitored security solutions. We are an international company with a start-up mindset, fast, agile, lean, high-performance and value-driven. We protect millions of customers in 17 countries. Our business model integrates product development, design and sales with installation, outstanding service and a 24/7 professional monitoring solution. We protect people from intrusion, fire, and flood - and we save lives.
+
+Over the past years, Verisure has experienced exceptional and resilient financial performance with a very long track record of double-digit growth - thanks to our continuous drive for Innovation, our very sophisticated Go-To-Market approach and our replicable business model for expansion into new countries. We are now supporting the business’s next phase of growth with a robust business plan for value creation. Verisure’s success depends on its people, and we invest in them every day. Working with Verisure is being part of an industry-leading leading world-class company that has a strong entrepreneurial spirit.
+
+My team and I eagerly await your application! Join us on this thrilling journey towards a safer, smarter world. Apply today!
+
+If you have questions regarding this position, please reach out to our Group TA Specialist, Robert Jonasson, at robert.jonasson@verisure.com
+
+Verisure Innovation is an equal-opportunity employer and welcomes applicants from diverse backgrounds. We are an international company with offices and colleagues in multiple countries.
+
+Verisure - 35 years of delivering peace of mind.
+Om anställningen
+Lön
+ SALARY
+Lönetyp: Fast månads- vecko- eller timlön
+Anställningsvillkor
+FULLTIME
+PERMANENT
+Var ligger arbetsplatsen?
+Arbetsplatsen ligger i kommunen Malmö i Skåne län.
+Arbetsgivaren
+Verisure Sverige AB
+Postadress
+Verisure Sverige AB
+Not Specified
+21120 Malmö
+Kontakt
+Robert_Jonasson

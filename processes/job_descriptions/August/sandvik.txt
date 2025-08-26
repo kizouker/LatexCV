@@ -1,0 +1,54 @@
+Senior Java Developer
+Ansök
+remote type
+Hybrid
+locations
+Sweden, Malmö
+time type
+Full time
+posted on
+Registrerades för 10 dagar sedan
+time left to apply
+Slutdatum: 31 augusti 2025 (5 dagar kvar för att ansöka)
+job requisition id
+R0078208
+At Business Area Rock Processing, we’re at the forefront of digital transformation in the manufacturing industry. Our mission is to develop cutting-edge tech that redefines possibilities—and we’re looking for curious, driven, and collaborative minds to join us. This is where you come in! 
+ 
+We’re looking for a Senior Java Developer – someone who wants to solve real-world challenges, make tangible impact, and shape the future of our digital offering! 
+ 
+The team 
+You’ll join our Digital Solutions team—a tight-knit, agile group with a start-up spirit, a passion for innovation, and a genuine interest in tech. We design and maintain a customer-centric platform, including a web interface and two native apps. With a strong focus on UX, we collaborate directly with our customers to continuously improve and evolve our solutions. 
+ 
+About the job 
+In this position, you’re involved in everything from design, architecture, delivery and follow-up and you explore how digital trends and emerging technologies can keep us one step ahead. We build microservices as Docker containers, run them in Kubernetes on Azure, and expose RESTful APIs secured with OAuth. While your main focus is backend development, you’ll have the chance to explore other areas—like React.js for web, Swift for iOS, or Kotlin for Android—depending on your interests. 
+ 
+We offer flexible working conditions, with your base at our headquarters in Malmö. Whether you prefer meeting global customers or working your magic remotely, we support your way of working. 
+ 
+Your profile 
+You bring solid experience with modern Java and Spring Framework, along with familiarity in Linux/Unix environments and databases like PostgreSQL or TimescaleDB. You’re comfortable with test data management and mocking external APIs. Ideally, you hold a relevant academic degree and have at least three years of experience in a similar role. Fluency in English is essential, and Swedish or other languages are a plus. 
+ 
+You approach programming as a craft, combining technical skills with a hands-on, can-do attitude. Thriving in agile environments, you’re always eager to challenge yourself, learn new things, and tackle complex problems with confidence. As a true team player, you value collaboration, take ownership of your work, and actively contribute to a positive and productive team culture. 
+ 
+Our culture 
+At Sandvik, we’re tech driven, innovative and entrepreneurial. We believe that success is a team effort so we value diversity and are committed to creating an inclusive culture where people can be themselves and reach their full potential. So, we invest in supporting each other, learning together and celebrating our differences. Visit our stories hub, LinkedIn or Facebook to get to know us further. 
+ 
+Contact information 
+For further information about this position, please contact Anders Hovén, hiring manager, anders.hoven@sandvik.com 
+ 
+We’ve already decided on which advertising channels and marketing campaigns we wish to use and respectfully decline any additional contacts in that matter. 
+ 
+Union contacts – Sweden 
+Mårten Lindberg, Unionen, +46 (0)76 111 03 36 
+Jonny Hansson, Akademikerföreningen, +46 (0)76 126 45 81 
+Michael Wicktor-Ohlsson, Ledarna, +46 (0)70 251 44 57 
+ 
+Recruitment Specialist: Ulrika Gruffman 
+ 
+How to apply 
+Send your application no later than August 30, 2025. Click apply and include your resume and cover letter in English. Please note that we don’t accept applications by e-mail. Job ID: R0078208.  
+ 
+As we aim for a fair recruitment process, we utilize assessment tools to safeguard objectivity. When you apply for this job, you will therefore receive an invitation via email to a personality and logic ability test. Feedback comes immediately after the test has been completed and the selection process begins after the application deadline. 
+ 
+To learn more about our recruitment process, please visit our career site or contact HR Services at hrservices.sweden@sandvik.com 
+ 
+Rock Processing is a business area within the Sandvik Group and a leading supplier of equipment, tools, parts, service and solutions for processing rock and minerals in the mining and infrastructure industries. Application areas include crushing and screening, breaking and demolition. In 2024, sales were approximately 11 billion SEK with about 2,700 employees. 

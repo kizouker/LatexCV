@@ -1,0 +1,122 @@
+Javautvecklare med lösningsarkitektur, krav- eller testkunskap
+Kronofogden
+
+Systemutvecklare/Programmerare
+Kommun: Malmö
+Korta fakta om jobbet
+Omfattning: Heltid
+Varaktighet: 6 månader eller längre
+Anställningsform: Tillsvidare- eller tidsbegränsad anställning
+Antal jobb: 5
+Kvalifikationer
+Arbetslivserfarenhet
+Krav
+Systemutvecklare/Programmerare -  
+erfarenhet efterfrågas
+Om jobbet
+Är du en skicklig systemutvecklare inom Java som också har erfarenhet av lösningsarkitektur, kravhantering- och/eller testautomatisering?  Tycker du om att ha ett jobb som räknas?  Då måste du läsa vidare!
+
+Hos oss bidrar du till ett välfungerande samhälle för allmänhet och företag samtidigt som du får möjlighet att bidra och utveckla dina kunskaper! Kronofogden erbjuder ett modernt och hållbart arbetsliv där t.
+
+ex. distansarbete är en möjlighet i den omfattning verksamheten beslutar.
+
+Just nu anställer vi medarbetare i Göteborg, Stockholm, Malmö och Kalmar.
+
+Välkommen med din ansökan redan idag!
+
+Om jobbet
+Vi är närmare 230 kollegor på Kronofogden som arbetar med IT-utveckling och vi har en spännande resa framför oss med modernisering, digitalisering och automatisering. Vi driver framåtriktade projekt och i fokus finns bland annat internetteknik, informationscentrisk syn, händelsedriven arkitektur (EDA) och moderna e-tjänster. Våra främsta framgångsfaktorer är att vi arbetar tillsammans i agila team med verksamheterna inom myndigheten.
+
+Som javautvecklare hos oss kommer du att ha omväxlande och utmanande arbetsuppgifter. Du arbetar dagligen i högt prioriterade och strategiskt viktiga it-system tillsammans med kompetenta kollegor som du delar ditt intresse för teknik med. Du kommer att vara med och utveckla nya system och vidareutveckla samt förvalta befintliga system. Vår nyutveckling görs i Spring Boot.
+
+Vår system- och informationsstruktur är komplex, med mycket integration där en del av systemen även är integrerade med andra myndigheter såsom Polisen, Försäkringskassan och Skatteverket. Här finns således goda möjligheter att utvecklas som systemutvecklare, men även möjlighet att prova andra roller inom it- organisationen.
+
+Alla som arbetar på Kronofogden bidrar till arbetet mot brott. I dina arbets­upp­gifter ingår att identifiera och förhindra försök till brottslighet samt underrätta andra myndigheter om misstänkta brott. 
+
+Om dig
+Som medarbetare på Kronofogden förväntas du leva upp till vår https://www.kronofogden.se/jobba-hos-oss/medarbetarpolicy. Du tar initiativ, är engagerad och tar ansvar för att målen nås. Du bidrar till verksamhetens utveckling och hjälper dina kollegor att lyckas. Du bemöter andra med respekt, vänlighet och lyssnar aktivt på andra och visar positiv attityd.
+
+Du har personliga egenskaper som innebär att du är ansvarstagande, kreativ samt har förmåga att kommunicera och skapa goda relationer med kollegor och leverantörer. Du har ett strukturerat arbetssätt, är noggrann och kvalitetsmedveten. 
+
+Dina kvalifikationer:
+Vi söker dig som har:
+•    minst 4 års aktuell arbetslivserfarenhet som java-utvecklare
+•    minst 1 års arbetslivserfarenhet av Spring Boot, v2 eller v3
+•    arbetslivserfarenhet av automatiserad testning, agil kravhantering och/eller lösningsarkitekt
+•    arbetslivserfarenhet av CI/CD
+•    goda kunskaper i svenska och engelska
+•    utbildning på minst gymnasienivå.
+
+Det är önskvärt om du har:
+•    arbetslivserfarenhet av utveckling baserat på Openshift Container Plattform eller annan Kubernetesbaserad plattform
+•    erfarenhet av JavaEE/JakartaEE och Weblogic Server eller JBoss
+•    erfarenhet av att arbeta med Angular, React eller liknande Frontend-ramverk  
+•    erfarenhet av databas-hantering i JPA eller motsvarande baserat på relationsdatabas
+•    erfarenhet av agil kravhantering
+•    erfarenhet av testdriven utveckling.
+
+Om oss
+Kronofogden är en statlig myndighet med ett viktigt uppdrag. Vi jobbar nära människor i utsatta situationer. Vi hjälper den som inte har fått betalt och vägleder den som ska betala. Vi ger medborgare och företag information och god service, så att de kan fatta långsiktiga och hållbara beslut. Det kräver kunskap, handlings­kraft, omtanke och mod. Vi bidrar till ett väl fungerande samhälle för allmänhet och företag – ett samhälle där skulder och andra krav blir fastställda och indrivna på ett rättssäkert sätt.
+
+Hos oss kan du räkna med utmanande arbetsuppgifter som även är utvecklande för dig. När du går hem från en dag på jobbet kan du vara säker på att du har gjort något som verkligen räknas – både för andra och för dig.
+
+Bra att veta
+För att söka tjänsten vänligen klicka på länken nedan för att komma vidare till ansökningsformuläret. Referensnummer 2025/165:
+https://kronofogden.varbi.com/se/what:job/jobID:837714/
+Du väljer sedan en eller flera möjliga placeringsorter i urvalsfrågorna.
+
+Anställningen är tillsvidare och inleds med provanställning i sex månader. Du blir anställd som IT handläggare. Kronofogden erbjuder möjlighet till distansarbete efter överenskommelse med arbetsgivaren.
+
+Att arbeta i staten innebär att du följer den statliga värdegrunden. Det ställs också särskilda krav på omdöme, säkerhetstänkande och att du följer gällande lagar. Vi ställer frågor vid intervju om tidigare eventuell brotts­lighet och brister i tidigare anställning. För slutkandidater ställs även dessa frågor till referenspersoner. Vi tar även in uppgifter om skulder registrerade hos Kronofogden, konkurs och närings­förbud. Framkomna uppgifter vägs in vid helhetsbedömningen av din lämplighet för den aktuella anställningen.
+
+En anställning hos oss kan innebära placering i säkerhetsklass. En säkerhets­prövning med registerkontroll enligt säkerhetsskyddslagen (2018:585) kan därför komma att genomföras före beslut om anställning. För en del av våra arbets-uppgifter i säkerhetsklass krävs svenskt medborgarskap.
+
+När du ansöker bifogar du ditt cv. Vi använder inte personligt brev i våra rekry­teringar och du ska därför inte bifoga det i din ansökan.
+
+Lär känna oss bättre genom att följa oss på LinkedIn och besöka vår https://www.kronofogden.se/jobba-hos-oss.
+
+Välkommen med din ansökan senast 2025-08-29!
+
+Vi samarbetar med Skatteverket i våra rekryteringar, vilket innebär att Skatteverkets hr-avdelning kommer att hantera din ansökan.
+
+
+Kronofogden använder det statliga ramavtalet för annonsförmedling. Vi undanber oss därför vänligen samtal från annonsförmedlare eller försäljare.
+Om anställningen
+Lön
+ Individuell lönesättning
+Lönetyp: Fast månads- vecko- eller timlön
+Anställningsvillkor
+100%. Tillträde: Enligt överenskommelse
+Provanställning t.o.m.
+Var ligger arbetsplatsen?
+Arbetsplatsen ligger i kommunen Malmö i Skåne län.
+Arbetsgivaren
+Kronofogdemyndigheten
+Postadress
+Kronofogdemyndigheten
+Sundbyberg
+17267 Sundbyberg
+Kontakt
+Kontaktpersoner
+Annica Caesar, chef
+010-5792026
+Susanna Jareno, hr-specialist
+susanna.jareno@skatteverket.se,010-5743143
+Fackliga kontaktpersoner
+Henrik Jonés, SACO
+010-5792535
+Lars Dahlin, ST
+010-5776407
+Sök jobbet
+Ansök senast 29 augusti (om 4 dagar)
+Ange referens 2025/167 i din ansökan
+Ansök via arbetsgivarens webbplats
+
+Dela annonsen
+Mejl
+Facebook
+X
+Linkedin
+Skriv ut annonsen
+Annons-Id: 29773994
+Publicerad: 16 juni 2025, kl. 17.43
