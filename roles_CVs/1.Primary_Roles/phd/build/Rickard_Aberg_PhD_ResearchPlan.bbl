@@ -1,0 +1,73 @@
+\begin{thebibliography}{13}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[gdp(2016)]{gdpr2016}
+Regulation (eu) 2016/679 of the european parliament and of the council of 27 april 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data (general data protection regulation), 2016.
+\newblock Official Journal of the European Union, L 119, 4 May 2016.
+
+\bibitem[cra(2024)]{cra2024}
+Regulation (eu) 2024/2847 -- cyber resilience act, 2024.
+\newblock Official Journal of the European Union, L 284, 10 October 2024.
+
+\bibitem[Alhassan et~al.(2016)Alhassan, Sammon, and Daly]{alhassan2016datagovernance}
+Ibrahim Alhassan, David Sammon, and Mark Daly.
+\newblock Data governance activities: An empirical investigation.
+\newblock \emph{Information \& Management}, 53\penalty0 (7):\penalty0 930--945, 2016.
+
+\bibitem[Bosch(2025)]{bosch2025kaizen}
+Jan Bosch.
+\newblock The ai-driven company: The kaizen ai generator, October 2025.
+\newblock URL \url{https://janbosch.com/blog/index.php/2025/10/06/the-ai-driven-company-the-kaizen-ai-generator/}.
+\newblock Accessed 2025-10-10.
+
+\bibitem[Cavoukian(2011)]{cavoukian2011pbd}
+Ann Cavoukian.
+\newblock Privacy by design: The 7 foundational principles.
+\newblock Technical report, Information and Privacy Commissioner of Ontario, 2011.
+\newblock URL \url{https://www.ipc.on.ca/wp-content/uploads/resources/7foundationalprinciples.pdf}.
+
+\bibitem[Clements et~al.(2003)Clements, Bachmann, Bass, Garlan, Ivers, Little, Nord, and Stafford]{clements2003views}
+Paul Clements, Felix Bachmann, Len Bass, David Garlan, James Ivers, Reed Little, Robert Nord, and Judith Stafford.
+\newblock \emph{Software Architecture: Views and Beyond}.
+\newblock Addison-Wesley, 2003.
+
+\bibitem[Dellermann et~al.(2019)Dellermann, Ebel, S{\"o}llner, and Leimeister]{dellermann2019hybrid}
+Dominik Dellermann, Philipp Ebel, Matthias S{\"o}llner, and Jan~Marco Leimeister.
+\newblock Hybrid intelligence.
+\newblock \emph{Business \& Information Systems Engineering}, 61\penalty0 (5):\penalty0 637--643, 2019.
+
+\bibitem[Edmondson(1999)]{edmondson1999psychological}
+Amy Edmondson.
+\newblock Psychological safety and learning behavior in work teams.
+\newblock \emph{Administrative Science Quarterly}, 44\penalty0 (2):\penalty0 350--383, 1999.
+
+\bibitem[Holmstr\"{o}m~Olsson and Bosch(2020)]{holmstrom2020ai}
+Helena Holmstr\"{o}m~Olsson and Jan Bosch.
+\newblock Towards ai maturity in software-intensive companies: A framework for evaluating ai readiness.
+\newblock In \emph{Proceedings of the International Conference on Software and System Processes (ICSSP)}, 2020.
+
+\bibitem[Holmstr{\"o}m~Olsson and Bosch(2022)]{holmstrom2022data}
+Helena Holmstr{\"o}m~Olsson and Jan Bosch.
+\newblock Data-driven development in the automotive industry: Challenges for ai adoption.
+\newblock \emph{Journal of Software: Evolution and Process}, 2022.
+
+\bibitem[Kiczales et~al.(1997)Kiczales, Lamping, Mendhekar, Maeda, Lopes, Loingtier, and Irwin]{kiczales1997aop}
+Gregor Kiczales, John Lamping, Anurag Mendhekar, Chris Maeda, Cristina Lopes, Jean-Marc Loingtier, and John Irwin.
+\newblock Aspect-oriented programming.
+\newblock In \emph{ECOOP'97 -- Object-Oriented Programming}, Jyv{\"a}skyl{\"a}, Finland, 1997. Springer.
+
+\bibitem[Otto(2011)]{otto2011datagovernance}
+Boris Otto.
+\newblock A morphology of the organization of data governance.
+\newblock \emph{European Conference on Information Systems (ECIS)}, pages 1--12, 2011.
+
+\bibitem[Rahm and Do(2000)]{rahm2000datacleaning}
+Erhard Rahm and Hong~Hai Do.
+\newblock Data cleaning: Problems and current approaches.
+\newblock \emph{IEEE Data Engineering Bulletin}, 23\penalty0 (4):\penalty0 3--13, 2000.
+
+\end{thebibliography}

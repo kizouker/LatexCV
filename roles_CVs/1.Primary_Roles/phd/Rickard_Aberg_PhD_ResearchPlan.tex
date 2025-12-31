@@ -1,0 +1,198 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage[english]{babel}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage[numbers]{natbib}
+\usepackage{enumitem}
+\usepackage{url}
+\setstretch{1.1}
+
+\titleformat{\section}{\bfseries\large}{\thesection.}{1em}{}
+\titleformat{\subsection}{\bfseries}{\thesubsection}{1em}{}
+
+\begin{document}
+
+% ------------------------------
+% Title Page
+% ------------------------------
+\begin{titlepage}
+    \centering
+    {\Large Malmö University\\[4pt]
+    Department of Computer Science and Media Technology\par}
+    \vspace{3cm}
+    {\LARGE \bfseries Data-Driven Product Development and Human--AI Collaboration in Software-Intensive Systems \par}
+    \vspace{1cm}
+    {\Large \itshape PhD Application -- Research Plan \par}
+    \vspace{3cm}
+    {\large 
+    \textbf{Author:} Rickard Åberg\\[3pt]
+    \textbf{E-mail:} \href{mailto:raberg@duck.com}{raberg@duck.com}\\[3pt]
+    \textbf{Phone:} +46 709 431 401\\[3pt]
+    \textbf{Date:} \today\par}
+    \vfill
+    {\normalsize Malmö, Sweden\\[6pt]
+    \small Submitted as part of the application for doctoral studies at Malmö University.}
+\end{titlepage}
+
+% ------------------------------
+% Research Plan
+% ------------------------------
+\title{Research Plan\\[4pt]
+\large Data-Driven Product Development and Human--AI Collaboration in Software-Intensive Systems}
+\author{Rickard Åberg}
+\date{\today}
+\maketitle
+
+\begin{abstract}
+This research plan aims to outline to investigate how data, artificial intelligence (AI), and automation reshape software-intensive embedded systems.r
+Building on the AI Readiness Framework by Holmström Olsson and Bosch (2020, 2022), the study explores how companies can effectively integrate data-driven practices across architecture, process, and organisation.
+By combining case studies and action research with industrial partners, the project will identify enablers and barriers for data quality, compliance, and human--AI collaboration.
+The work extends existing theory by introducing data governance as a \textit{cross-cutting concern} and exploring new roles, architectures, and pipelines (DevOps, DataOps, MLOps, and CyberOps) in the era of AI-driven development.
+\end{abstract}
+
+\section{Introduction}
+Software-intensive industries are increasingly driven by data and AI. 
+While progress has been made in software engineering and DevOps, many organisations still struggle with data collection, validation, and reuse, as well as with integrating AI models into existing systems. 
+The goal of this research is to understand how data-driven methods can improve product development and management while maintaining trust, quality, and human control.
+
+\section{Background and Research Context}
+Holmström Olsson and Bosch~\cite{holmstrom2020ai,holmstrom2022data} argue that AI adoption requires a \textit{holistic approach}, addressing data, technology, and organisation simultaneously.
+However, industrial studies reveal persistent challenges in data governance, architecture integration, and role alignment.
+Bosch~\cite{bosch2025kaizen} describes the ``AI-driven company'' as one that learns continuously through telemetry feedback loops.
+This project extends these ideas by conceptualising data governance as a \textbf{modern cross-cutting concern}~\cite{kiczales1997aop,otto2011datagovernance,alhassan2016datagovernance}, spanning architectural, procedural, and organisational layers.
+
+\section{Research Questions}
+\begin{enumerate}[noitemsep]
+\item What is the role and use of data in the development of software-intensive embedded systems?
+\item Which architectures and technical approaches support data-driven and AI-enabled development?
+\item How do DevOps, DataOps, and MLOps transform roles and collaboration?
+\item How can product management coordinate multiple interdependent pipelines?
+\item How can privacy, security, and compliance be integrated without reducing innovation speed?
+\end{enumerate}
+
+\section{Conceptual Framing}
+The study adopts a three-layered analytical view inspired by \textit{Software Architecture: Views and Beyond}~\cite{clements2003views}:
+\begin{itemize}
+    \item \textbf{Architectural layer:} Edge--Cloud--Embedded integration and feedback loops.
+    \item \textbf{Process layer:} DevOps, DataOps, MLOps (and emerging CyberOps).
+    \item \textbf{Organisational layer:} Roles, collaboration, and product ownership.
+\end{itemize}
+Across these layers, data connects architecture, process, and organisation as a continuous flow of feedback and decision support.
+
+\section{Data Quality, Governance, and Compliance}
+Ensuring data reliability is both a technical and ethical necessity. 
+Data governance is treated as a cross-cutting concern integrating technical, ethical, and legal dimensions:
+\begin{itemize}
+\item \textbf{Data Washing / Cleaning} --- removal of inconsistencies and duplicates~\cite{rahm2000datacleaning}.
+\item \textbf{Metadata Tagging} --- systematic use of standards such as ISO/IEC~11179 and W3C~DCAT for lineage and traceability.
+\item \textbf{Validation} --- statistical and semantic checks, including drift detection and integrity testing.
+\item \textbf{Privacy by Design} --- proactive integration of privacy into architecture and process~\cite{cavoukian2011pbd}.
+\item \textbf{GDPR (2016)} --- defines lawful processing and accountability~\cite{gdpr2016}.
+\item \textbf{EU Cyber Resilience Act (2024)} --- mandates cybersecurity and vulnerability management for digital products~\cite{cra2024}.
+\end{itemize}
+
+\section{Integration of Architecture, Pipelines, and Product Ownership}
+Modern systems depend on multiple continuous pipelines:
+\begin{enumerate}[noitemsep]
+\item \textbf{DevOps} -- software build, test, release.
+\item \textbf{DataOps} -- data ingestion, cleaning, validation.
+\item \textbf{MLOps} -- model training, deployment, monitoring.
+\end{enumerate}
+
+Each pipeline has its own cadence and backlog, but coordination is essential for value creation.
+Product owners, platform leads, and data/ML engineers must align priorities across pipelines.
+The study analyses how backlog synchronisation and architectural feedback evolve, particularly in Edge--Cloud--Embedded architectures.
+
+\subsection*{CyberOps: a forward-looking pipeline for AI-driven red teaming (optional extension)}
+
+As a forward-looking extension, this study proposes \textbf{CyberOps} as an additional pipeline option.  
+CyberOps comprises continuous security validation and automated adversarial testing, and—in future practice—may include AI agents that perform virtual penetration testing and red-team activities by exercising known vulnerability classes against live or staged artefacts.
+
+Rationale and scope:
+\begin{itemize}[noitemsep]
+  \item \textbf{Why:} Continuous delivery and data-driven automation increase the attack surface and the velocity of change; traditional periodic security testing may not scale. AI-assisted red teaming can provide frequent, repeatable, and context-aware security checks that complement human-led audits.
+  \item \textbf{What:} Agentic components that (i) generate adversarial inputs or attack patterns based on threat models, (ii) interact with system APIs, CI/CD pipelines or simulated environments, and (iii) report findings with reproducible traces and remediation guidance.
+  \item \textbf{How it relates to other pipelines:} CyberOps integrates with DevOps (testing and deployment), DataOps (secure handling and synthetic data generation for test scenarios) and MLOps (models for detection of malicious behaviour and model-robustness testing). It can be implemented as scheduled jobs, on-demand services, or event-triggered agents.
+\end{itemize}
+
+Evaluation targets and research questions:
+\begin{itemize}[noitemsep]
+  \item Which deployment patterns (service, function, batch job, edge) are suitable for AI-driven red teaming in different industrial contexts?
+  \item How do AI agents compare to human red teams in terms of coverage, false positive/negative rates, and cost?
+  \item What are the operational trade-offs (latency, cost, safety) of integrating CyberOps into continuous pipelines?
+  \item How does the presence of automated red teams affect organisational processes, accountability, and psychological safety for engineers?
+\end{itemize}
+
+Risks, ethics and governance:
+\begin{itemize}[noitemsep]
+  \item \textbf{Safety:} AI agents must be constrained (sandboxing, rate limits, scoped environments) to avoid causing harm to production systems or leaking sensitive data.
+  \item \textbf{Legal and compliance:} Penetration testing—even automated—requires explicit consent, clear rules of engagement, and alignment with regulations (e.g., data protection). This is particularly salient for cross-border deployments.
+  \item \textbf{Transparency and auditability:} Findings must include reproducible traces, evidence, and provenance so that human teams can verify and remediate issues.
+  \item \textbf{Human oversight:} Automated red-team outputs should be triaged and validated by security engineers; AI agents are complementary, not replacements for skilled human attackers.
+\end{itemize}
+
+Positioning in the study:
+\begin{itemize}[noitemsep]
+  \item CyberOps is suggested as an \textit{optional} research track or future extension. Where partner organisations are willing and regulation permits, the study will prototype and compare agentic CyberOps deployments and evaluate their technical, processual and organisational impact.
+\end{itemize}
+
+
+\section{Methodological Approach}
+The research combines a systematic literature review, case studies, and action research.
+A literature review will map the state-of-the-art in AI-enabled, data-driven development.
+Case studies with industrial partners will analyse architecture, data pipelines, and organisational practices.
+Action research cycles---plan, act, observe, reflect---will co-develop and evaluate interventions addressing identified challenges.
+
+\section{Empirical Material and Data Collection}
+Data collection will include semi-structured interviews, workshops, and analysis of artefacts (logs, architecture diagrams, pipeline configurations).
+Workshops may use role-play and simulation to explore socio-technical dynamics such as AI participation and role negotiation.
+
+\section{Theoretical Framework}
+The research integrates four complementary perspectives:
+\begin{enumerate}[noitemsep]
+\item AI Readiness Framework~\cite{holmstrom2020ai,holmstrom2022data}.
+\item Socio-Technical Systems Theory.
+\item Psychological Safety and Team Learning~\cite{edmondson1999psychological}.
+\item Hybrid Intelligence~\cite{dellermann2019hybrid}.
+\end{enumerate}
+
+\section{Expected Contributions}
+\begin{itemize}[noitemsep]
+\item A multi-view model of data-driven product development across architecture, process, and organisation.
+\item Empirical framework for coordinating DevOps, DataOps, MLOps, and CyberOps.
+\item Insights into human--AI collaboration, trust, and role evolution.
+\item Guidelines for embedding privacy and compliance as cross-cutting concerns.
+\end{itemize}
+
+\newpage
+\bibliographystyle{plainnat}
+\bibliography{ref}
+\newpage
+
+\appendix
+\section*{Appendix A: Potential Industrial Partners (Software Center)}
+\begin{itemize}
+\item Volvo Cars / Group -- automotive, Azure IoT, Kafka, Databricks.
+\item Ericsson -- telecom, Kubernetes, ONAP, Go/Python.
+\item Saab AB -- defence, secure Linux, real-time systems.
+\item Axis Communications -- IoT, Edge AI, AWS, TensorFlow Lite.
+\item Tetra Pak -- industrial automation, PLC, Azure IoT.
+\item Bosch Rexroth -- manufacturing, OPC UA, Kafka streams.
+\item Autoliv -- automotive safety, C/C++, AWS Edge.
+\end{itemize}
+
+\section*{Appendix B: Example Interview Themes}
+\begin{enumerate}
+\item Data and Architecture: collection, validation, edge/cloud integration.
+\item Pipelines: DevOps, DataOps, MLOps, CyberOps integration.
+\item Roles and Organisation: product owners, data engineers, AI ops.
+\item Governance and Compliance: GDPR, CRA, privacy by design.
+\item Human--AI Collaboration: trust, creativity, psychological safety.
+\end{enumerate}
+
+
+\end{document}

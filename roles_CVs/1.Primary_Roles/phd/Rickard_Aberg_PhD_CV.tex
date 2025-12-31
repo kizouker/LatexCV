@@ -1,0 +1,92 @@
+% !TEX TS-program = xelatex
+\documentclass[11pt,a4paper,sans]{moderncv}
+\moderncvstyle{banking}
+\moderncvcolor{red}
+\nopagenumbers{}
+\usepackage[scale=0.75]{geometry}
+\setlength{\hintscolumnwidth}{3cm}
+\setlength{\footskip}{18mm}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage{lmodern}
+\else
+  \usepackage{fontspec}
+  \defaultfontfeatures{Ligatures=TeX}
+  \setsansfont{Latin Modern Sans}
+  \setmainfont{Latin Modern Roman}
+  \setmonofont{Latin Modern Mono}
+\fi
+\usepackage[english]{babel}
+\usepackage{graphicx}
+\graphicspath{{images/}{../images/}{../../images/}}
+\usepackage{enumitem}
+
+\name{Rickard}{Åberg}
+\title{PhD Candidate – Data-Driven Product Development and AI}
+\address{Bodekullsgatan 34B}{214 40 Malmö}{Sweden}
+\phone[mobile]{+46\,709\,43\,14\,01}
+\email{rickard.aaberg@icloud.com}
+\social[linkedin]{rickard-åberg-9866891}
+\social[github]{kizouker}
+\social[researchgate]{Rickard\_Aberg}
+\quote{"Curiosity and reflection are at the core of all progress."}
+
+\begin{document}
+\makecvtitle
+
+\section{Profile}
+\cvitem{}{MSc in Computer Science and Engineering with broad experience in software engineering, leadership, and communication. Over two decades of professional experience (since 1999) combining technical expertise, coaching, and organizational development in both national and international contexts. My research interest lies in integrating data, AI, and automation into software pipelines to enhance quality, compliance, and adaptability. I have extensive experience communicating in English in both professional and social settings, and have collaborated with colleagues and partners from diverse cultural backgrounds, which has strengthened my intercultural communication skills. Although not directly related to my proposed research, my ongoing studies in musicology at Lund University reflect a long-standing curiosity and interdisciplinary mindset that I bring to complex technical and organizational challenges.}
+
+\section{Research Interests}
+\cvitem{}{Data-driven software engineering, DevSecOps, AI-augmented development processes, CyberOps for resilient embedded systems, and automation of regulatory compliance.}
+
+\section{Education}
+\cventry{1996--2003}{MSc in Computer Science and Engineering}{Linköping University}{Sweden}{}{Specializations in AI, Software Production, Security, Functional and Object-Oriented Programming, Embedded Systems.}
+\cventry{2003--2004}{Research Engineer (EASYCOMP Project)}{École des Mines de Nantes}{France}{}{Part of the EASYCOMP project integrating component frameworks and event-based aspect-oriented programming.}
+\cventry{2023--2024}{Google Cybersecurity Fundamentals}{Coursera/Google}{}{}{}
+\cventry{2022--}{Fullstack and SRE Nanodegree}{Udacity}{Remote}{Terraform, Kubernetes, AWS, Python, DevOps.}{}
+\cventry{2016}{Programming and Problem-Solving in Python (2.5 ECTS)}{Blekinge Institute of Technology}{Sweden}{}{}
+\cventry{2020}{Pedagogical Drama and Group Dynamics}{Malmö University}{Sweden}{}{}
+\cventry{2025--}{Musicology Studies}{Lund University}{Sweden}{}{Courses in music theory, analysis, and production.}
+
+\section{Research Experience}
+\cventry{2003--2004}{Research Engineer}{École des Mines de Nantes}{Nantes, France}{EASYCOMP Project}{Developed integration between the Vienna Component Framework and event-based aspect-oriented programming. Published paper in IEEE ASE 2003.}
+\cvitem{Publication}{\emph{On the Automatic Evolution of an OS Kernel Using Temporal Logic and AOP}, IEEE ASE Conference, Montréal, Canada, pp. 196–204. \url{https://www.researchgate.net/publication/220883611_On_the_automatic_evolution_of_an_OS_kernel_using_temporal_logic_and_AOP}}
+
+\section{Professional Experience (Selected)}
+\cvitem{}{Over 15 years of experience in software engineering, DevOps, and product leadership within large organizations such as IKEA IT, Nordea, Telenor, and Verisure. My roles have included Java and fullstack development, system integration, and leading initiatives to modernize delivery pipelines, strengthen security, and introduce continuous delivery and compliance-by-design. Worked with national and international partners and clients, including teams from France, Germany, Denmark, Spain, Chile, and Brazil, in research, software engineering, and consulting contexts.}
+\cvitem{}{Focus areas: DataOps, DevSecOps, CI/CD automation, AI integration, and system resilience in regulated environments.}
+
+\section{Teaching \& Leadership Experience}
+\cvlistitem{Certified Scrum Master and experienced project leader with focus on agile and data-driven software development.}
+\cvlistitem{Extensive background in test leadership, quality assurance, and team facilitation.}
+\cvlistitem{Certified coach (ICC/EMCC) with experience in group dynamics, communication, and personal development.}
+\cvlistitem{Toastmasters participant with advanced presentation and speech skills.}
+\cvlistitem{Practical experience in drama pedagogy and theatre, contributing to strong interpersonal and communication abilities.}
+
+\section{Technical Competence}
+\cvlistdoubleitem{Programming}{Java, Python, TypeScript/JavaScript, React, SQL, Bash}
+\cvlistdoubleitem{DevOps}{GitHub, GitLab, Jenkins, Azure DevOps, Docker, Kubernetes, Terraform}
+\cvlistdoubleitem{Cloud}{Azure, AWS, GCP}
+\cvlistdoubleitem{Security}{Ethical Hacking, OWASP, Vulnerability Testing, Compliance Automation}
+
+\section{Certifications}
+\cvlistitem{Microsoft Certified: Azure Fundamentals (AZ-900)}
+\cvlistitem{Google Cybersecurity Fundamentals}
+\cvlistitem{Udacity Nanodegree: Ethical Hacking}
+\cvlistitem{ISTQB Certified Tester – Foundation Level (CTFL)}
+\cvlistitem{Certified Scrum Master (CSM), Softhouse Consulting Öresund AB}
+\cvlistitem{International Coaching Certificate (ICC/EMCC), SLH Center of Excellence, Thailand}
+
+\section{Languages}
+\cvitemwithcomment{Swedish}{Native}{ }
+\cvitemwithcomment{English}{Professional working proficiency}{ }
+\cvitemwithcomment{French}{Professional working proficiency}{ }
+
+\section{References}
+\cvitem{}{\textbf{Julia Lawall, PhD} – Research Director, Inria Paris. Former MSc Thesis Supervisor.}
+\cvitem{}{\textbf{Mario Südholt, PhD} – Professor, IMT Atlantique. Former Research Collaborator.}
+
+\end{document}

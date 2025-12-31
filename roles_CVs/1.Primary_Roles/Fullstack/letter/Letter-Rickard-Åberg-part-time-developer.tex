@@ -1,0 +1,63 @@
+\documentclass[a4paper,14pt]{extarticle}
+
+% --- Language & fonts (LuaLaTeX) ---
+\usepackage{fontspec}
+\usepackage[english]{babel}
+
+% Sans-serif "Helvetica-like"
+\setsansfont{TeX Gyre Heros} % good cross-platform Helvetica clone
+\renewcommand{\familydefault}{\sfdefault}
+% If you have real Helvetica installed, you can try:
+% \setsansfont{Helvetica Neue}  % or: \setsansfont{Helvetica}
+
+% --- Layout & links ---
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+\usepackage{parskip}
+\usepackage[hidelinks]{hyperref}
+\usepackage{graphicx}
+\graphicspath{{./}{../}} % finds images in current or parent dir
+
+\begin{document}
+
+% --- Header with contacts + QR ---
+\noindent
+\begin{minipage}[t]{0.72\textwidth}
+\raggedleft
+\textbf{Rickard Åberg}\\
+Malmö, Sweden\\
+Email: \href{mailto:raberg@duck.com}{raberg@duck.com}\\
+Phone: +46 (0)709 43 14 01\\
+GitHub: \href{https://github.com/kizouker}{github.com/kizouker}\\
+LinkedIn: \href{https://www.linkedin.com/in/rickard-%C3%A5berg-9866891/}{linkedin.com/in/rickard-åberg-9866891}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.22\textwidth}
+\raggedleft
+\includegraphics[width=2.4cm]{github_qr.png}\\
+{\footnotesize QR – GitHub profile}
+\end{minipage}
+
+\vspace{1cm}
+
+% --- Letter body ---
+\section*{Cover Letter – Developer at Zetkin Foundation}
+
+Dear Zetkin team,
+
+I’m writing to apply for the \textbf{Developer position} at Zetkin Foundation. I’m based in Malmö and have experience in both frontend and backend development, mainly with \textbf{React/Next.js, TypeScript, Java, and Python}, as well as \textbf{Docker}, testing, and open-source collaboration.
+
+After many years as a consultant, I’ve seen how technology is often shaped by market logic rather than human needs. That has made me more interested in how software can strengthen people and communities, especially where access to technical resources is uneven. What motivates me most is contributing to meaningful, sustainable projects that empower participation and collaboration.
+
+I participated in a Zetkin hackathon in 2024, where I contributed a small ticket and got familiar with the codebase. That experience inspired me to stay involved. I also completed a \textbf{React Nanodegree at Udacity}, and I want to use those skills in a setting where technology serves both social and human value.
+
+I value the sense of community that comes from building products in code together with others. For me, collaboration and shared learning are what make development truly meaningful. I have also studied \textbf{drama pedagogy} to better understand power structures and collaboration, drawing on my 15 years of consulting work. These experiences taught me to appreciate diversity in teams and to focus on inclusion and transparency.
+
+When I’m not coding, I study music production and theory part-time at Lund University. I write music about everyday experiences—sometimes about encounters with bureaucracy—and see art as a way to make sense of life and spark empathy. I also enjoy yoga, martial arts, playing piano, and making music with friends. I sing in a choir and take long walks with my Maine Coon cat, Diesel—a big but lovable feral cat.
+
+I’m available to work part-time during CET daytime hours and am fully comfortable working in English. Please find my CV attached for more details.
+
+\vspace{0.7cm}
+Best regards,\\[0.3cm]
+\textbf{Rickard Åberg}
+
+\end{document}

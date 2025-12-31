@@ -1,0 +1,184 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage[numbers]{natbib}
+\usepackage[swedish]{babel}
+\usepackage{csquotes}
+\usepackage{url}
+\usepackage{tikz}
+\usepackage{textcomp}
+\usepackage{newunicodechar}
+\newunicodechar{—}{---}
+\newunicodechar{→}{$\rightarrow$}
+\usetikzlibrary{arrows.meta, positioning, shapes.misc, fit}
+\setstretch{1.1}
+
+\titleformat{\section}{\bfseries\large}{\thesection.}{1em}{}
+\titleformat{\subsection}{\bfseries}{\thesubsection}{1em}{}
+
+\title{Forskningsplan\\[4pt]\large Datadriven produktutveckling, DevOps, DataOps och MLOps för säkra inbyggda system}
+\author{Rickard Åberg}
+\date{\today}
+
+\begin{document}
+\maketitle
+\section*{Background and Motivation}
+
+I have a broad background in software development and system integration, where I early on worked with continuous integration in the telecommunications sector. When I was responsible for the deployment process at a bank and introduced CA Lisa solutions, I became aware of the principles that would later be known as DevOps, already around 2012--2013. At Bouvet, I subsequently led an initiative and consulting group focused on DevOps and process improvement.
+
+I conducted my master's thesis at \'{E}cole des Mines de Nantes and Linköping University, which resulted in two research papers~\cite{aberg2003aosd,aberg2003ase}. This experience provided me with a solid foundation in formal methods and software architecture — themes that are still highly relevant in addressing today’s challenges in data-driven software engineering and AI-based product development.
+
+I hold a Master of Science in Computer Science and Engineering (Software Engineering) and have professional experience as a developer, project manager, Scrum Master, and consultant manager, with a background in DevOps, test management, and system architecture. 
+
+My first encounter with artificial intelligence was already in 1999 at Linköping University, in a course based on \textit{Artificial Intelligence: A Modern Approach}~\cite{russell1995ai} by Stuart Russell and Peter Norvig. The course introduced an agent-based view of intelligence as rational action, combining symbolic methods with probabilistic reasoning and early forms of machine learning. These ideas remain central to modern AI, particularly in how autonomous agents learn and adapt from data.
+
+In 2018, I became interested in AI and machine learning again and started revisiting the fundamentals through Udacity and Coursera, including courses by Andrew Ng~\cite{ng2018yearning}. At that time, I realized that what motivates me most is understanding the practical applications of technology rather than focusing solely on mathematical formalisms.
+
+Over the years, I have followed AI developments both theoretically and through personal idea projects. One example is a concept for an application that analyzes grocery purchases and connects them to well-being, inspired by research on the microbiome and mental health. It reflects my interest in how data can be used to generate insights that improve everyday life.
+
+Since 2022, I have used large language models such as ChatGPT to experiment with and prototype different AI-based concepts — including computer vision algorithms and data-driven tools. As the technology evolved, my focus shifted toward how \textbf{LLM-based agents}, \textbf{Retrieval-Augmented Generation (RAG)}, and \textbf{vector databases} can be integrated into real-world development processes.
+
+I now want to deepen my understanding of these areas at a level that combines conceptual insight with practical implementation. My goal is to contribute to bridging the gap between technical potential and actual usefulness, particularly within data-driven product development~\cite{bishop2006pattern,goodfellow2016deep}.
+
+
+\section{Background: Industrialization of Data and Artificial Intelligence (AI)}
+
+In recent years, research conducted within the Software Center — particularly by \textcite{holmstrom2020ai, holmstrom2022data} — has shown that although the software industry has made significant progress in software engineering, substantial challenges remain regarding how artificial intelligence (AI) can be integrated into products and how dynamic adaptation of system behavior can be achieved in software-intensive systems.
+
+These observations, which form the basis for the present doctoral call, indicate that many industrial partners continue to struggle with fundamental questions related to data: which data to collect, where and how it should be processed and analyzed, and how it should be stored, validated, and used for the development and training of machine learning (ML) models. 
+
+As highlighted by \textcite{bosch2025kaizen}, many companies focus primarily on technical proofs-of-concept rather than on the systematic industrialization of data pipelines and the integration of AI into everyday development practices. This results in fragmented approaches, where data and AI initiatives often remain isolated from core product development processes.
+
+Despite growing industrial interest, there is still limited understanding of how data-driven and AI-based development can be effectively integrated into existing software engineering practices, particularly within embedded and safety-critical domains. Prior research has mainly emphasized technical enablers such as data pipelines and model training, while organizational aspects — for example, how \textit{DevOps}, \textit{DataOps}, and \textit{MLOps} can be aligned — have remained largely unexplored.
+
+Consequently, there is a need to better understand how data-driven practices reshape roles, responsibilities, and product management structures in software-intensive organizations. Achieving a sustainable industrialization of AI will require both technical solutions and organizational frameworks that support continuous learning and accountability for data, models, and system behavior.
+
+This research plan therefore aims to investigate how data and machine learning can be integrated into the development of software-intensive embedded systems, addressing both the technical and organizational challenges that arise in the transition toward data-driven product development.
+
+
+
+ \section{Background and Motivation}
+
+In recent years, software-intensive companies have increasingly aimed to leverage data and artificial intelligence to improve products after deployment. However, as Holmström Olsson and Bosch observe, many organizations still struggle to move beyond experimentation and achieve true AI maturity~\cite{holmstrom2020ai}. Their framework for evaluating AI readiness highlights that while technical capabilities (e.g., data pipelines, model deployment) are emerging, organizational and cultural readiness often lag behind.
+
+In the automotive and embedded systems domain, the transition toward data-driven development poses additional challenges, including issues of data quality, availability, and cross-functional collaboration~\cite{holmstrom2022data}. These challenges emphasize the need for systematic approaches to integrate data and machine learning into the product development process, spanning roles, methods, and architectures that bridge the gap between DevOps, DataOps, and MLOps practices.
+
+\section{Research Questions}
+\begin{enumerate}[noitemsep]
+\item What is the role and use of data in the development of software-intensive embedded systems?
+\item Which approaches and architectures are required to support data-driven development of software-intensive embedded systems?
+\item In what ways are existing roles and practices transformed or replaced by new methods (DevOps, DataOps, and MLOps) and digital technologies (software, data, and AI)?
+
+\end{enumerate}
+
+
+
+\section{Methodological Approach and Execution}
+The research will have an empirical orientation and will be conducted in close collaboration with industrial partners within the framework of Software Center.
+
+\subsection{Methodological Approach}
+The study combines \textbf{action research}, \textbf{case studies}, and a \textbf{systematic literature review}:
+\begin{itemize}[noitemsep]
+  \item \textbf{Systematic literature review}: to map the current state of research on data-driven, AI-enabled development in software-intensive embedded systems, and to establish a theoretical framework for the empirical work.
+  \item \textbf{Action research}: to collaboratively develop, implement, and evaluate new processes and practices in industrial settings.
+  \item \textbf{Case studies}: to analyze and document the evolution of data-driven pipelines, architectures, and roles over time.
+\end{itemize}
+
+In addition, I sugges that the research will explore the use of \textbf{role-playing exercises} as a creative and participatory technique to simulate future scenarios and organizational dynamics.  
+Such exercises can be used in workshops to foster reflection, learning, and creativity among practitioners, enabling them to experience and co-design the impact of emerging roles, tools, and processes in data- and AI-driven development.
+
+
+
+\subsection{Analysmetoder}
+Tematisk analys och jämförande fallstudier används för att identifiera mönster och framgångsfaktorer.  
+Kvalitativa data kombineras med kvantitativa mätetal (t.ex. cykeltid, datakvalitet, modellprestanda) för att skapa en helhetsbild.
+
+\section{Teoretiskt ramverk}
+Det teoretiska ramverket hämtar begrepp och modeller från:
+\begin{itemize}[noitemsep]
+  \item \textbf{Software Engineering och DevOps} – kontinuerlig leverans, kvalitet, automatisering~\cite{bosch2016speed};
+  \item \textbf{DataOps och MLOps} – datalivscykler, återkoppling, modellstyrning;
+  \item \textbf{Produktledning och organisatoriskt lärande} – värdeskapande, feedbackloopar och förändringsarbete;
+  \item \textbf{Säkerhet och resiliens} – integrering av DevSecOps och säkerhet-by-design.
+\end{itemize}
+
+\section{Datadriven produktledning och agentbaserad utveckling}
+
+En central del av projektet är att förstå hur datadriven produktledning förändrar beslutsfattande, prioritering och värdeskapande i mjukvaruintensiva inbyggda system. 
+Produktledning handlar i detta sammanhang inte enbart om att planera funktioner, utan om att leda en kontinuerlig inlärningsprocess där produkt och användardata står i centrum.
+
+Den datadrivna produktledningen baseras på tre samverkande pipelines:
+
+\begin{enumerate}[noitemsep]
+  \item \textbf{DevOps-pipelinen} – för kontinuerlig utveckling, test och leverans av kod.
+  \item \textbf{DataOps-pipelinen} – för insamling, tvättning, taggning och lagring av data från t.ex. sensorer, användarinteraktioner eller datacenterloggar.
+  \item \textbf{MLOps-pipelinen} – för träning, validering och deployment av maskininlärningsmodeller som använder denna data.
+\end{enumerate}
+
+Tillsammans skapar dessa pipelines en sluten loop där användardata återförs till utveckling och produktledning, vilket möjliggör kontinuerlig förbättring baserad på faktisk användning och kontext. 
+
+I framtida iterationer kan även \textbf{maskininlärningsagenter} bli en del av denna process. 
+Som Bosch~\cite{bosch2016speed,bosch2025kaizen} beskriver, kommer dessa agenter inte bara att analysera data utan även kunna initiera förändringar i mjukvaran, och på sikt fungera som \emph{aktiva medlemmar i utvecklingsteamet}. 
+Det öppnar för en ny form av produktledning där mänskliga och artificiella aktörer samarbetar för att kontinuerligt anpassa och optimera produkten.
+
+\subsection*{Produktledningens förändrade roll}
+
+I en datadriven utvecklingsmiljö förändras produktledningens arbete i grunden.  
+Istället för att styra en enda backlog för utvecklingsaktiviteter behöver produktledningen koordinera och prioritera tre delvis överlappande flöden, kopplade till respektive pipeline:
+
+\begin{itemize}[noitemsep]
+  \item \textbf{DevOps-backlogen} innehåller traditionella utvecklings- och leveransaktiviteter, såsom nya funktioner, buggfixar och förbättringar.
+  \item \textbf{DataOps-backlogen} omfattar insamling, annotering, kvalitetssäkring och lagring av data – ofta från sensorer, användarinteraktioner eller loggar från datacenter.
+  \item \textbf{MLOps-backlogen} hanterar aktiviteter kopplade till modellträning, validering, driftsättning och kontinuerlig uppdatering av maskininlärningsmodeller.
+\end{itemize}
+
+Produktledningen blir därmed en central nod mellan dessa tre backlogs.  
+I praktiken innebär det att man behöver synkronisera och prioritera mellan kod-, data- och modellrelaterade aktiviteter, vilket kräver både teknisk och organisatorisk förståelse.  
+Initialt kan detta ske genom manuella koordinationsmöten och cross-functional team, men på sikt kan mer av denna koordinering automatiseras med hjälp av digitala verktyg och AI-stöd, där \textbf{autonoma agenter} hjälper till att föreslå prioriteringar eller initiera ändringar.
+
+Detta väcker nya forskningsfrågor om hur team och processer bör organiseras:  
+ska man arbeta i \textbf{tvärfunktionella team} som spänner över alla pipelines, eller i separata specialistteam med synkroniseringspunkter?  
+Hur kan beroenden och flaskhalsar identifieras och hanteras automatiskt?  
+Och hur långt kan automatisering och agentstöd drivas innan mänsklig översyn blir nödvändig?
+
+Dessa frågor är centrala för att förstå framtidens datadrivna produktledning – en hybrid mellan mänsklig strategi, maskinell analys och adaptiv organisationsdesign.
+
+\section{Förväntade resultat och bidrag}
+\begin{itemize}[noitemsep]
+  \item En referensmodell för integration av DevOps, DataOps, MLOps och DevSecOps.
+  \item En konceptuell modell för datadriven produktledning och pipeline-samordning.
+  \item Nya arbetssätt och roller för datadriven utveckling.
+  \item Arkitekturexempel och rekommendationer för industriell tillämpning.
+  \item Ökad förståelse för hur datadrivna processer påverkar säkerhet och produktledning.
+\end{itemize}
+
+\section{Relevans och påverkan}
+Projektet möter industrins behov av att kombinera snabb leverans med hög säkerhet och efterlevnad av regelverk.  
+Det stärker svensk industris förmåga att utveckla säkra, skalbara och hållbara system, i linje med EU:s digitala strategi.
+
+\clearpage
+\section*{Tillägg: Egna reflektioner och vidareutveckling}
+Utöver den föreslagna ramen ser jag en tydlig potential att fördjupa forskningen inom området \textbf{regulatorisk automatisering och cybersäkerhet}.
+
+\subsection*{Integrering av regelverk och säkerhet}
+\begin{itemize}[noitemsep]
+  \item Automatisering av regelverk (Compliance as Code) i CI/CD och MLOps.
+  \item Integration av penetrations- och sårbarhetstester (CVE, OWASP) i DevSecOps.
+  \item Data governance med fokus på privacy-by-design i DataOps.
+\end{itemize}
+
+\subsection*{CyberOps – en möjlig framtida riktning}
+Jag föreslår ett nytt begrepp \textbf{CyberOps}, som vidareutvecklar DevSecOps genom aktiv övervakning, realtidsrespons och simulering av hot.  
+CyberOps kan bli särskilt relevant i fordon och industriella styrsystem, där kontinuerlig drift är kritisk.
+
+\subsection*{Koppling till samhällelig resiliens}
+Genom att förena datadriven utveckling med regulatorisk efterlevnad och proaktiv säkerhet kan forskningen bidra till \emph{digital suveränitet} och långsiktig samhällelig resiliens.
+
+\bibliographystyle{plainnat}
+\bibliography{ref}
+\end{document}

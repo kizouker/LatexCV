@@ -1,0 +1,136 @@
+ \documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{setspace}
+\usepackage{hyperref}
+
+\setstretch{1.1}
+\titleformat{\section}{\bfseries\large}{\thesection.}{1em}{}
+\titleformat{\subsection}{\bfseries}{\thesubsection}{1em}{}
+
+\title{Forskningsplan\\[4pt]\large Datadriven produktutveckling, DevOps, DataOps och MLOps för säkra inbyggda system}
+\author{Rickard Åberg}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Bakgrund och motivation}
+
+Jag har en bred bakgrund inom mjukvaruutveckling och systemintegration, där jag tidigt arbetade med \textbf{Continuous Integration (CI)} och \textbf{Continuous Delivery (CD)} inom telekomsektorn. 
+Senare, inom bankindustrin, införde jag \textbf{automatiska deploy-lösningar} (t.ex. CA Lisa) och etablerade \textbf{cross-functional DevOps-team} med fokus på kvalitet, effektivitet och samarbete.
+
+Jag har arbetat som \textbf{projektledare, testledare, Scrum Master och utvecklare} och har både teknisk och organisatorisk erfarenhet av att förbättra utvecklings- och driftsprocesser. 
+Min tekniska bas omfattar Windows Server, containerteknologier som Docker samt molntjänster i Azure (certifierad SC-900, AZ-900, pågående AZ-500). 
+Jag har en \textbf{Master of Science in Computer Science and Engineering} med profilen \emph{Software Engineering}, vilket gav en stark grund i process- och kvalitetsstyrning.
+
+Jag har följt AI-området sedan 1999 och under senare år fördjupat mig i maskininlärning (Udacity, Kaggle) och egna Python-projekt. 
+Jag har experimenterat med \textbf{LLM-baserade agenter}, \textbf{Retrieval-Augmented Generation (RAG)} och \textbf{vektordatabaser}. 
+Mitt mål är nu att undersöka hur AI, data och moderna utvecklingsmetoder kan kombineras för att skapa \textbf{robusta, säkra och användarcentrerade produkter} inom fordon- och flygindustrin.
+
+\section{Syfte}
+
+Syftet är att undersöka hur \textbf{data och maskininlärning} kan integreras i utvecklingen av mjukvaruintensiva inbyggda system för att skapa produkter som är:
+\begin{itemize}[noitemsep]
+  \item datadrivna och adaptiva (lär sig av användning och kontext),
+  \item resilienta och säkra (uppfyller krav enligt EU:s \emph{Cyber Resilience Act} och \emph{Data Act}),
+  \item effektiva och hållbara,
+  \item användarcentrerade (förbättrad infotainment, säkerhet och funktionalitet).
+\end{itemize}
+
+Projektet ska bidra med en \textbf{holistisk modell} som förenar \textbf{DevOps, DataOps och MLOps} och inför \textbf{säkerhet som en fjärde aspekt} i hela livscykeln.
+
+\section{Forskningsfrågor}
+
+\begin{enumerate}[noitemsep]
+\item Vilken är rollen och användningen av data i utvecklingen av mjukvaruintensiva inbyggda system?
+\item Vilka arkitekturer och processer krävs för att förena DevOps, DataOps och MLOps?
+\item Hur förändras roller och arbetssätt när AI-baserade komponenter blir en del av produktlivscykeln?
+\item Hur kan säkerhets- och integritetsaspekter (DevSecOps, GDPR, CRA) integreras utan att hämma innovationstakten?
+\item Hur kan dessa principer omsättas i praktiska pipeline-lösningar för fordon, flyg och IoT?
+\end{enumerate}
+
+\section{Metod och genomförande}
+
+\subsection{Empirisk del}
+\begin{itemize}[noitemsep]
+  \item Intervjuer och workshops med industripartners inom fordon, flyg och IoT.
+  \item Fallstudier av miljöer som kombinerar DevOps och AI-komponenter.
+  \item Analys av hur data samlas in, taggas och används i pipeline-flöden.
+\end{itemize}
+
+\subsection{Teknisk/teoretisk del}
+Tre huvudsakliga pipelines:
+\begin{enumerate}[noitemsep]
+  \item \textbf{DevOps-pipeline} – CI/CD, test och deployment av kod.
+  \item \textbf{DataOps-pipeline} – insamling, tvättning, annotering (taggning) och lagring av data, inklusive vektordatabaser.
+  \item \textbf{MLOps-pipeline} – träning, validering och distribution av modeller samt återkoppling till utveckling och produktledning.
+\end{enumerate}
+
+Dessa kompletteras av ett \textbf{tvärgående säkerhetslager (DevSecOps)} som omfattar:
+automatiserad sårbarhetsskanning och penetrationstestning (CVE-baserade verktyg),
+dataskydd (GDPR, EU Data Act)
+och livscykelspårbarhet samt \emph{security-by-design} enligt \emph{Cyber Resilience Act}.
+
+\subsection{Fallstudie / Proof of Concept}
+Exempel: ett videobaserat hastighetsigenkänningssystem för fordon.  
+DataOps = insamling och annotering av videodata;  
+MLOps = träning av datorseende-modeller;  
+DevOps = kontinuerlig integration i inbyggd miljö;  
+DevSecOps = automatiska penetrationstester och logg-/integritetsskydd.
+
+\subsection{Deltagande metodik – rollspel och processimulering}
+
+För att empiriskt undersöka samspelet mellan roller, dataflöden och artefakter används en \textbf{deltagande, spelbaserad metodik} inspirerad av dramatpedagogik och teamutveckling.  
+Ett \textbf{DevOps-labspel} låter deltagare från företag simulera hur artefakter, data och beslut rör sig genom DevOps-, DataOps- och MLOps-pipelines.  
+Syftet är att:
+\begin{itemize}[noitemsep]
+  \item synliggöra beroenden och flaskhalsar,
+  \item experimentera med nya roller och ansvar,
+  \item stimulera kreativitet och organisatoriskt lärande.
+\end{itemize}
+Observationer från simuleringarna används för att validera och förbättra den föreslagna pipeline-modellen.
+
+\section{Förväntade resultat}
+
+\begin{itemize}[noitemsep]
+  \item En referensmodell som integrerar DevOps, DataOps, MLOps och DevSecOps.
+  \item Rekommendationer för nya roller och arbetssätt.
+  \item Arkitekturexempel och visualisering av pipeline-flöden.
+  \item En spel- eller simuleringsprototyp som stödjer lärande och analys.
+\end{itemize}
+
+\section{Relevans och påverkan}
+
+Projektet möter industrins behov av att kombinera snabb leverans med hög säkerhet.  
+Det bidrar till att uppfylla krav i EU:s \emph{Cyber Resilience Act}, \emph{Data Act} och \emph{NIS2}, samt stärker svensk industris förmåga att utveckla säkra, skalbara och hållbara system.
+
+\section{Avgränsningar och vidare perspektiv}
+
+Huvudfokus ligger på process- och arkitekturfrågor kring DevOps, DataOps och MLOps.  
+En vidare aspekt är att inkludera de nya EU-reglerna mer systematiskt som en genomgående dimension – enligt principen för \emph{cross-cutting concerns}, där säkerhet och data ses som tvärgående egenskaper som genomsyrar hela utvecklingskedjan.  
+
+En annan tvärgående egenskap i datadriven produktutveckling är \textbf{data-centric logging}.
+Traditionell loggning har länge betraktats som en systemövergripande mekanism, men i datadrivna produkter får loggningen
+en ny roll: att samla användarhändelser och kontextdata som underlag för analys, modellträning och kontinuerlig förbättring.
+Som Bosch (2016) beskriver har utvecklingen gått från funktionscentrerade till datacentrerade processer, där insamling och användning av data
+måste integreras i hela mjukvarulivscykeln.
+Data-centric logging blir därmed en ny form av cross-cutting concern — en aspekt som förenar DevOps-, DataOps- och MLOps-pipelines.
+
+Denna fjärde pipeline kan ses som parentes, men är avgörande för att bygga säkra, resilienta och framtidssäkra system.
+
+\section{Referenser (preliminära)}
+
+\begin{itemize}[noitemsep]
+  \item Bosch, J. \& Holmström Olsson, H. (2019–2024). Artiklar om datadriven produktutveckling och AI-integration.
+  \item Bosch, J. (2016). \emph{Speed, Data, and Ecosystems: Excelling in a Software-Driven World}. IEEE Software, 33(1), 82–88.
+  \item Bishop, C. (2006). \emph{Pattern Recognition and Machine Learning}. Springer.
+  \item Goodfellow, I., Bengio, Y., Courville, A. (2016). \emph{Deep Learning}. MIT Press.
+  \item Ng, A. (2018). \emph{Machine Learning Yearning}.
+  \item EU Cyber Resilience Act (2024); EU Data Act (2024); NIS2 Directive (2023).
+\end{itemize}
+
+\end{document}

@@ -1,0 +1,226 @@
+\documentclass[11pt,a4paper,sans]{moderncv}        
+%---------%---------%---------%---------%---------%---------%---------%---------
+% Includes of packages, etc
+%---------%---------%---------%---------%---------%---------%---------%---------
+\moderncvstyle{banking}                            
+\moderncvcolor{red}                               
+\nopagenumbers{}
+
+\usepackage[scale=0.75]{geometry}
+\setlength{\footskip}{136.00005pt} 
+
+\usepackage{graphicx}
+\graphicspath{{../includes}} % Specify the directory here
+\usepackage{enumitem}   
+% Definiera \HUGE manuellt
+\makeatletter
+\newcommand\HUGE{\@setfontsize\Huge{30pt}{36pt}} % ändra siffrorna om du vill
+\makeatother
+
+% Ny textstorlek: \mylargish
+\makeatletter
+\newcommand\mylargish{\@setfontsize\mylargish{16pt}{19pt}}
+\makeatother
+
+\setlength{\hintscolumnwidth}{3cm}                
+\setlength{\footskip}{136.00005pt} 
+
+\setlength{\hintscolumnwidth}{3cm}                
+
+\usepackage[most]{tcolorbox} 
+\usepackage{microtype}
+\setlength{\hintscolumnwidth}{3cm}                
+\setlength{\footskip}{136.00005pt} 
+
+\setlength{\hintscolumnwidth}{3cm}                
+
+
+
+\ifxetexorluatex{}
+  \usepackage{fontspec}
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Ligatures=TeX}
+  \setmainfont{Latin Modern Roman}
+  \setsansfont{Latin Modern Sans}
+  \setmonofont{Latin Modern Mono}
+  \setmathfont{Latin Modern Math} 
+  \moderncvcolor{blue}    % ren, professionell
+  % eller
+  \moderncvcolor{burgundy}  % sofistikerad, djup röd
+% eller
+  \moderncvcolor{grey}      % elegant och diskret
+
+\else
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage{lmodern}
+\fi
+
+\usepackage[swedish]{babel}  
+\usepackage{underscore} 
+% ------- % ------- % ------- % ------- % ------- % ------- % -------
+% ------- % ------- % ------- % ------- % ------- % ------- % -------
+% Self-defined commands
+% ------- % ------- % ------- % ------- % ------- % ------- % -------
+% ------- % ------- % ------- % ------- % ------- % ------- % -------
+
+\newcommand{\thepage}{\arabic{page}}
+\newlist{quotelist}{enumerate}{1}
+\setlist[quotelist]{label=\textquotedblleft\arabic*\textquotedblright}
+
+\newcommand{\myparagraph}[1]{\paragraph{#1}\mbox{}\par}
+
+\makeatletter
+
+% Definiera bredden om den inte finns
+\@ifundefined{@photowidth}{%
+  \newlength{\@photowidth}
+  \setlength{\@photowidth}{4cm} % Justera storleken här – t.ex. 3cm, 4cm, 5cm
+}{}
+
+% Ange din bildfil
+%\def\@photo{./photos/rickardaberg-consultant.jpeg}
+
+% Modifiera \makecvtitle om stilen är 'banking'
+\@ifpackageloaded{moderncvstylebanking}{%
+  \let\oldmakecvtitle\makecvtitle
+  \renewcommand*{\makecvtitle}{%
+    \vspace*{-1em}
+    \begin{center}
+      \includegraphics[width=\@photowidth,keepaspectratio]{\@photo}
+    \end{center}
+    \vspace{0.5em}
+    \oldmakecvtitle
+  }%
+}
+
+\makeatother
+
+
+\newlength{\headerwidth}
+\setlength{\headerwidth}{0.7\linewidth} % mindre bredd (foto+box)
+
+\setlength{\fboxsep}{6pt}   % inre marginal i ramen
+\setlength{\fboxrule}{0.6pt}% linjetjocklek
+
+\beforetitle{%
+  \vspace*{-0.5em}
+%  \hfill % <-- flyttar blocket åt höger
+\hspace*{0.23\linewidth} % flytta ca 10 % av sidbredden åt höger
+  \begin{minipage}{\headerwidth}
+    \centering
+    {\HUGE\sffamily Tekniker}\\[0.6em]
+    % Mindre fotoroles_CVs/__2._photos
+    \includegraphics[width=0.7\headerwidth]{../../../__2._photos/rickardaberg-consultant.jpeg}\\[1.0em]
+    {\Huge\sffamily Rickard \textbf{\AA{}berg}}\\[1.0em]
+    {\Large\sffamily MSc in Software Engineering}\\[1.0em]
+
+    % Kontaktinfo i ruta
+    \fbox{%
+      \parbox{0.9\linewidth}{%
+        \ttfamily\raggedright
+        \textls[400]{\textbf{Tel:}} +46 709 43 14 01\\[4pt]
+        \textls[400]{\textbf{Email:}} rickard.aaberg@icloud.com\\[4pt]
+        \textls[400]{\textbf{Ort:}} Malmö, Sweden
+      }%
+    }
+  \end{minipage}
+  \vspace{1em}
+}
+
+
+%------------------%------------------%------------------%------------------%------------------
+% Title - photo etc
+%------------------%------------------%------------------%------------------%------------------       
+\title{MSc, Software Engineering}      
+
+%------------------%------------------%------------------%------------------%------------------ 
+% Address - email - phone
+%------------------%------------------%------------------%------------------%------------------ 
+\firstname{Rickard}
+\lastname{\AA{}berg}
+\address{Bodekullsgatan 34b}{21440 Malm\"o}
+\phone[mobile]{+46~709~43~14~01}     
+\email{rickard.aaberg@icloud.com}   
+
+%\social[linkedin]{rickard-\aa{}berg-9866891}                 
+%\social[github]{kizouker}                          
+%\social[researchgate]{Rickard\_Aberg}                     
+
+%------------------%------------------%------------------%------------------%------------------ 
+% QUOTE
+\quote{If you fall one-hundred times and then get up, the 101 time you never lost!}
+%------------------%------------------%------------------%------------------%------------------
+
+\begin{document}
+%\makecvtitle{}
+
+\renewcommand*{\namefont}{\LARGE\sffamily\mdseries}
+\renewcommand*{\titlefont}{\Large\sffamily\mdseries}
+
+
+%\input{../../sections/cv_section_customer.tex}
+
+
+\input{../../../../__3._sections/cv_section_prof_summary_worker_fix_electronics.tex}
+
+\input{../../../../__3._sections/cv_sections_electronics_troubleshooting.tex}
+\newpage
+\input{../../../../__3._sections/cv_sections_computer_technician.tex}
+
+
+
+
+%\input{../../sections/cv_sections_certification_badges.tex}
+
+%/Users/raberg/Documents/GitHub/LatexCV/roles_CVs/Primary_Roles/Security/PenetrationTester/images/IMT_Atlantique_logo_1.png
+ 
+
+% === Sections ===
+% \input{../../../__3._sections/project_management_key_comp.tex}
+% \input{../../../__3._sections/Project_Management_Tools_Section.tex}
+% %\input{../../sections/ethical_hacking.tex}
+% \input{../../../__3._sections/cyber_security.tex}
+% \input{../../../__3._sections/fullstack.tex}
+% %\input{../../sections/middle_ware.tex}
+
+\cventry{Car driver's license}{}{}{}{}{}
+\input{../../../__3._sections/cv_section_employments_practical.tex}
+\newpage
+\input{../../../__3._sections/cv_section_education_short.tex}
+%\newpage
+%\input{../../../__3._sections/section_employments.tex}
+\newpage
+\input{../../../__3._sections/cv_section_praktik.tex}q
+
+%\cventry{Diver's license}{}{}{}{}{}
+
+%\section{Certifications}
+%\cvlistdoubleitem{Scrum Master }{ICC Coach}
+%\cvlistdoubleitem{ISEB / ISTQB  (Test)}{React nanodegree }
+
+% \input{../../../__3._sections/pm_tm_experiences.tex}
+
+% \input{/__3._sections/cv_section_process_mngmt.tex}
+% \input{/__3._sections/dev_experiences.tex}
+
+
+
+% \input{/__3._sections/cv-references-quotes.tex}
+
+% \input{/__3._sections/cv_industry_sectors.tex}
+
+
+
+% \input{/__3._sections/drift_deploy_troubleshoot.tex}
+% \input{/__3._sections/cv-references.tex}
+
+
+\nocite{*}
+%\bibliographystyle{plain}
+%\bibliography{publications}                        % 'publications' is the name of a BibTeX file%
+
+\clearpage
+\Large
+
+\end{document}

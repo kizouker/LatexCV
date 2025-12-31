@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99d (TeX Live 2025)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: Rickard_Aberg_PhD_ResearchPlan.aux
+The style file: plainnat.bst
+Database file #1: ref.bib
+Warning--entry type for "bosch2025kaizen" isn't style-file defined
+--line 226 of file ref.bib
+Warning--to sort, need author or key in gdpr2016
+Warning--to sort, need author or key in cra2024
+You've used 13 entries,
+            2773 wiz_defined-function locations,
+            670 strings with 7373 characters,
+and the built_in function-call counts, 5469 in all, are:
+= -- 480
+> -- 313
+< -- 8
++ -- 109
+- -- 96
+* -- 423
+:= -- 829
+add.period$ -- 40
+call.type$ -- 13
+change.case$ -- 71
+chr.to.int$ -- 13
+cite$ -- 30
+duplicate$ -- 254
+empty$ -- 467
+format.name$ -- 113
+if$ -- 1149
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 10
+newline$ -- 73
+num.names$ -- 44
+pop$ -- 163
+preamble$ -- 1
+purify$ -- 58
+quote$ -- 0
+skip$ -- 197
+stack$ -- 0
+substring$ -- 138
+swap$ -- 19
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 138
+warning$ -- 2
+while$ -- 44
+width$ -- 0
+write$ -- 171
+(There were 3 warnings)

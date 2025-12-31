@@ -1,0 +1,337 @@
+\documentclass[11pt,a4paper,sans]{moderncv}        
+%---------%---------%---------%---------%---------%---------%---------%---------
+% Includes of packages, etc
+%---------%---------%---------%---------%---------%---------%---------%---------
+\moderncvstyle{banking}                            
+\moderncvcolor{red}                               
+\nopagenumbers{}
+\usepackage[scale=0.75]{geometry}
+\setlength{\footskip}{136.00005pt} 
+\usepackage{titlesec}
+\graphicspath{{../includes/}{../../images/}{../../photos/}}
+\usepackage{enumitem}   
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[svgnames]{xcolor}
+
+\usepackage{helvet}  % Helvetica typsnistt
+\newcommand{\customheading}[1]{%
+  {\LARGE\bfseries\sffamily #1}%make
+  \vspace{0.5em}%
+  \par
+}
+
+\titleformat{\section}
+  {\normalfont\Large\bfseries\sffamily} % Stil: fet, storlek, sans serif
+  {\thesection}{1em}{} % Sektionens nummerformatering
+
+\ifxetexorluatex{}
+  \usepackage{fontspec}
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Ligatures=TeX}
+  \setmainfont{Latin Modern Roman}
+  \setsansfont{Latin Modern Sans}
+  \setmonofont{Latin Modern Mono}
+  \setmathfont{Latin Modern Math} 
+  \moderncvcolor{blue}    % ren, professionell
+  % eller
+  \moderncvcolor{burgundy}  % sofistikerad, djup röd
+% eller
+  \moderncvcolor{grey}      % elegant och diskret
+
+\else
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage{lmodern}
+\fi
+
+\usepackage[swedish]{babel}  
+\usepackage{underscore} 
+% ------- % ------- % ------- % ------- % ------- % ------- % -------
+% ------- % ------- % ------- % ------- % ------- % ------- % -------
+% Self-defined commands
+% ------- % ------- % ------- % ------- % ------- % ------- % -------
+% ------- % ------- % ------- % ------- % ------- % ------- % -------
+
+%\newcommand{\thepage}{\arabic{page}}
+\pagestyle{plain}  % eller 'empty', 'headings', 'fancy' m.m.
+  
+\newlist{quotelist}{enumerate}{1}
+\setlist[quotelist]{label=\textquotedblleft\arabic*\textquotedblright}
+
+\newcommand{\myparagraph}[1]{\paragraph{#1}\mbox{}\par}
+
+\makeatletter
+
+% Definiera bredden om den inte finns
+\@ifundefined{@photowidth}{%
+  \newlength{\@photowidth}
+  \setlength{\@photowidth}{4cm} % Justera storleken här – t.ex. 3cm, 4cm, 5cm
+}{}
+
+
+
+% Modifiera \makecvtitle om stilen är 'banking'
+\@ifpackageloaded{moderncvstylebanking}{%
+  \let\oldmakecvtitle\makecvtitle
+  \renewcommand*{\makecvtitle}{%
+    \vspace*{-1em}
+    \begin{center}
+      \includegraphics[width=\@photowidth,keepaspectratio]{\@photo}
+    \end{center}
+    \vspace{0.5em}
+    \oldmakecvtitle
+  }%
+}
+
+\makeatother
+
+    % ------ ---------- -------- ---------- ----------- ----------- ----------------
+    % ------ ---------- -------- ---------- ----------- ----------- ----------------
+    % 
+    % Head Line : Role : Role
+    %2-------- ----------------
+    % ------ ---------- -------- ---------- ----------- ----------- ----------------
+% {\Large \sffamily \bfseries IT-Support Engineer}\\[0.2em]
+
+%\beforetitle{
+
+
+
+%------------------%------------------%------------------%------------------%------------------
+% Title - photo etc
+%     {\color{gray}\large\sffamily JAVA\# } \\[1em]
+%------------------%------------------%------------------%------------------%------------------       
+\title{MSc, Software Engineering}      
+%------------------%------------------%------------------%------------------%------------------ 
+%------------------%------------------%------------------%------------------%------------------ 
+\firstname{Rickard}
+\lastname{\AA{}berg}
+\address{Bodekullsgatan 34b}{21440 Malm\"o}
+\phone[mobile]{+46~709~43~14~01}     
+\email{rickard.aaberg@icloud.com}   
+               
+
+%------------------%------------------%------------------%------------------%------------------ 
+% QUOTE
+\quote{If you fall one-hundred times and then get up, the 101 time you never lost!}
+%------------------%------------------%------------------%------------------%------------------
+
+\begin{document}
+%\makecvtitle{}
+\begin{center}
+  
+\vspace{1cm}
+\begin{center}
+    \large\textbf{Servicetekniker och civilingenjör med fokus på krypterad kommunikation, molnplattformar, virtualisering och avancerad felsökning i Linux- och Windowsmiljöer}
+\end{center}
+\vspace{1cm}
+
+    % {\Huge \textbf{\textcolor{gray!20!black}{Service Tekniker}}}\\[1em]
+    
+    \includegraphics[width=3.6cm]{../../roles_CVs/photos/rickardaberg-service-tekniker.jpeg
+} \\[1em]
+    
+    {\LARGE \textbf{Rickard Åberg}}\\[0.2em]
+    {\large MSc in Software Engineering}\\[2em]
+  
+{\footnotesize
+\begin{tabular}{l}
+\texttt{Tel: +46 709 43 14 01} \\
+\texttt{Email: rickard.aaberg@icloud.com} \\
+\texttt{Location: Malmö, Sweden}
+\end{tabular}
+}
+  
+    \vspace*{1cm}
+\end{center}
+%}
+\newpage
+
+\renewcommand*{\namefont}{\LARGE\sffamily\mdseries}
+\renewcommand*{\titlefont}{\Large\sffamily\mdseries}
+
+
+
+
+\input{../../sections/cv_section_prof_summary_service_tek.tex}
+
+%\input{../../sections/cv_section_prof_summ_IT_support.tex}
+
+
+
+\input{../../sections/cv_section_sectors_n_customers.tex}
+\input{../../sections/cv_section_competence_matrix_service_tekniker_norrköping.tex}
+
+
+\input{../../sections/cv_section_service_tekniker.tex}
+\cvitemwithcomment{French}{C1 – Advanced professional proficiency}{Used in project work with clients at École des Mines}
+
+\section{Languages}
+\cvitemwithcomment{Swedish}{Mother tongue}{}
+\cvitemwithcomment{English}{Professional proficiency}{}
+\cvitemwithcomment{French}{Professional proficiency}{}
+
+
+
+\clearpage
+\section{Certification Badges}
+\cvitem{}{
+  \begin{minipage}[t]{0.24\linewidth}
+    \centering
+    \includegraphics[width=0.9\linewidth]{../../images/azure-fundamentals-badge.png}\\
+    \scriptsize Microsoft Certified: Azure Fundamentals (AZ-900)
+  \end{minipage}
+  \hfill
+  % \begin{minipage}[t]{0.24\linewidth}
+  %   \centering
+  %   \includegraphics[width=0.6\linewidth]{../../images/icc_coach.jpeg}\\
+  %   \scriptsize ICC Certified Coach
+  % \end{minipage}
+  % \hfill
+  \begin{minipage}[t]{0.24\linewidth}
+    \centering
+    \includegraphics[width=0.6\linewidth]{../../images/ISQTB.jpg}\\
+    \scriptsize ISTQB Certified Tester\\
+    Foundation Level (CTFL)
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.24\linewidth}
+    \centering
+    \includegraphics[width=0.9\linewidth]{../../images/Certified_Scrum_Master_(CSM)_certification_badge.PNG}\\
+    \scriptsize Certified Scrum Master
+  \end{minipage}
+}
+
+\cvitem{}{
+  \begin{minipage}[t]{0.24\linewidth}
+    \centering
+    \includegraphics[width=0.9\linewidth]{../../images/wenell-ppl-badge.png}\\
+    \scriptsize Practical Project Management (Wenell)
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.24\linewidth}
+    \centering
+    \includegraphics[width=0.9\linewidth]{../../images/nvc-year-badge.JPEG}\\
+    \scriptsize 1-Year Program in Nonviolent Communication (NVC)
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.24\linewidth}
+    \centering
+    \includegraphics[width=0.8\linewidth]{../../images/IMT_Atlantique_logo_1.png}\\
+    \scriptsize École des Mines de Nantes
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.24\linewidth}
+    \centering
+    \includegraphics[width=0.9\linewidth]{../../images/liu-logo.png}\\
+    \scriptsize Linköpings tekniska högskola (LiTH)
+  \end{minipage}
+}
+
+% === Sections ===
+%\input{../../../sections/key_competencies.tex}
+%%\input{../../../sections/Project_Management_Tools_Section.tex}
+%\input{sections/ethical_hacking.tex}
+\input{../../sections/cyber_security.tex}
+
+\clearpage
+%\input{../../../sections/fullstack.tex}
+%\input{../../../sections/middle_ware.tex}
+
+% \input{../../sections/cv_section_application_mngmt_IT_support.tex}
+
+
+%\input{../../../sections/management.tex}
+
+
+\cventry{Car driver's license}{}{}{}{}{}
+
+%\cventry{Diver's license}{}{}{}{}{}
+
+%\section{Certifications}
+%\cvlistdoubleitem{Scrum Master }{ICC Coach}
+%\cvlistdoubleitem{ISEB / ISTQB  (Test)}{React nanodegree }
+
+\input{../../sections/dev_experiences_from_IT_support_perspective.tex}
+
+\input{../../sections/cv_section_it_support_tech_skills.tex}
+
+
+
+\section{Education}
+
+\cventry{1996--2003}{MSc in Computer Science and Engineering}{Linköping Institute of Technology}{Linköping}{}{}
+\includegraphics[scale=0.4]{../../images/it-security}
+\cventry{2016}{Python Programming \& Problem Solving (2.5 ECTS)}{Blekinge Institute of Technology}{Ronneby}{}{}
+
+\cventry{2023--2024}{CyberSecurity Fundamentals}{Google / Coursera}{Online}{}{}
+
+\cventry{2022--Ongoing}{Cloud \& DevOps Labs}{Udacity}{Remote}{Grafana, Terraform, Kubernetes, AWS}{}
+
+\cventry{2023--Ongoing}{Public Speaking \& Communication}{Toastmasters}{Lund}{}{}
+
+\section{Education}
+\cventry{2023 HT-- 2024 VT}{Google CyberSecurity Fundamentals}{Google/Coursera}{ }{}{} 
+\cventry{2023 VT -- Ongoing}{ToastMasters}{Lund}{ }{Public Speaking}{} 
+\cventry{2022 HT -- Ongoing}{SRE, Fullstack and Front-end}{Udacity@Palo Alto}{ }{Grafana, Terraform, Kubernetes, AWS}{} 
+\cventry{2020}{Pedagogical Drama, Story Telling, Improvisational theatre, Groupe Dynamics}{Malmö University}{Malmö}{}{}      
+\cventry{2019-2021}{React.JS (ES6, React, Router, Redux, Native) Nanodegree}{Udacity@Palo Alto}{Remote}{}{}  
+\cventry{2016}{Programming and Problem-solving in Python. 2.5 ECTS}{Blekinge Institute of Technology}{Ronneby}{}{}  
+\cventry{1996 --2003}{MSc in Computer Science and Engineering. 300 ECTS}{Linköping Institute of Technology}{Linköping}{}{Computer/IT-Security, Software production, Artificial Intelligence, Object-Oriented Programming, Functional Programming, Real time programing, Lisp/C, Advanced computer architecture, Hardware construction, Embedded development with micro-controller}  
+
+\section{Certifications \& Additional Training}
+\cvitem{Microsoft Azure}{Certified Azure Fundamentals (AZ-900)}
+\cvitem{Agile \& Scrum}{Certified Scrum Master (CSM), Softhouse}
+\cvitem{IT Service Management}{ITIL Foundation (internal knowledge)}
+\cvitem{DevOps Tooling}{CA Lisa/Nolio – Continuous Delivery Automation}
+\cvitem{Communication}{18-day Nonviolent Communication (NVC) Program}
+\cvitem{Coaching}{ICC Certified Coach – SLH, Thailand}
+
+% \section{Master thesis}
+% \cvitem{Title}{\emph{On the automatic evolution of an OS kernel using temporal Logic and AOP}}
+% \cvitem{Supervisors}{Julia Lawall phD, Mario Südholt phD, Gilles Muller phD}
+% \cvitem{Description}{
+% In IEEE International Conference on Automated Software Engineering, Montréal, Canada, pages 196 --204, 42 citations}
+% \url{https://www.researchgate.net/publication/220883611\_On_the_automatic_evolution_of_an_OS_kernel_using_temporal_logic_and_AOP}
+
+
+
+\input{../../sections/quotelists.tex}
+
+
+%\input{../../sections/pm_tm_experiences.tex}
+
+\section{Employments}
+\cventry{2025}{Cloud Computing och Azure-kurs}{ReDI School of Digital Integration}{}{}{
+Praktisk kursfokuserad utbildning inom Azure, molnsäkerhet och DevOps. Förberedelse inför certifiering med case-baserade projekt.
+}
+\cventry{2021-12 -- 2022-06-01 }{ADBSafegate AB}{ADBSafegate AB}{Malmö}{Fullstack Developer}{Angular, typescript, Azure, Scaled Agile Framework, SAFe}
+\cventry{2021-06 -- 2021-09 }{Zaplox AB}{Zaplox AB}{Lund}{Fullstack Developer}{Vue.js node javascript css AWS}
+\cventry{2019-2021 }{React.JS Nanodegree}{Udacity}{Remote}{}{Portfolio Projects - reviewed and passed by react experts}
+\cventry{Aug 2017-Nov 2018}{Senior Software Engineer}{Verisure Innovation}{Malmö}{}{}
+\cventry{May2012 -- Dec2017}{Managing Consultant}{Bouvet Syd AB}{Malmö}{}{Java Developer, Team Leader/CUManager/Partner Responsible DevOps}
+\cventry{May2004 --Feb 2012}{Consultant}{Cybercom}{Malmö}{}{Java, Integration, Test}
+ \cventry{Mar 2003 --Feb 2004}{RnD Engineer}{Ecole Des Mines}{Nantes/France}{}{}
+\cventry{Mar 2003 --Feb 2004}{Thésard}{Ecole Des Mines}{Nantes/France}{}{MSc Thesis}
+\cventry{Jul 2002 -- Sep 2002}{Embedded Developer}{Hemocue}{Ängelholm}{}{}
+
+% \section{Interests}
+% \cvitem{hobby 1}{Yoga and Meditation}
+% \cvitem{hobby 2}{Dance and Martial Arts}
+% \cvitem{hobby 3}{Singing and playing piano}
+
+\section{References}
+Lämnas på begäran.
+
+
+
+% \nocite{*}}
+
+% \bibliographystyle{plain}
+% \bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+\clearpage
+\Large
+
+\end{document}  

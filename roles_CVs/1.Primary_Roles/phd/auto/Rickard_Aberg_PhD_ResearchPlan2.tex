@@ -1,0 +1,164 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage[numbers]{natbib}
+\usepackage[swedish]{babel}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{csquotes}
+\usepackage{natbib}
+\usepackage{url}
+\usepackage{tikz}
+\usepackage{textcomp}
+\usepackage{newunicodechar}
+\newunicodechar{—}{---}
+
+
+\newunicodechar{→}{$\rightarrow$}
+\usetikzlibrary{arrows.meta, positioning, shapes.misc, fit}
+\setstretch{1.1}
+\titleformat{\section}{\bfseries\large}{\thesection.}{1em}{}
+\titleformat{\subsection}{\bfseries}{\thesubsection}{1em}{}
+
+\title{Forskningsplan\\[4pt]\large Datadriven produktutveckling, DevOps, DataOps och MLOps för säkra inbyggda system}
+\author{Rickard Åberg}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\section*{Bakgrund och tidig forsknings­erfarenhet}
+Jag har en bred bakgrund inom mjukvaruutveckling och systemintegration, där jag tidigt arbetade med Continuous Integration inom telekomsektorn. 
+När jag fick möjligheten att vara ansvarig för Deploymentprocessen på en bank, och vara del av att införa Automatic Deploy-lösningar (t.ex. CA Lisa), fick jag upp ögonen för DevOps runt 2012/2013, utan att skryta kan jag säga att jag var en av de första. På Bouvet drev jag en satsning och konsultgrupp inom DevOps och processutveckling. I detta arbete skapade jag även partnerskap med CA Lisa och XebiaLabs som då var pionjärer inom området.
+På en annan bank var jag med och etablerade cross-functional DevOps-team med fokus på kvalitet, effektivitet och samarbete.
+
+Intresset för Software Engineering har funnits med mig sedan jag läste Civilingenjörsprogrammet i Datateknik vid Linköpings universitet med examen 2003, med inriktning Softwar Engineering. I en kurs i programvarukvalitet lärde jag mig om processer, mätetal och förbättringsarbete och vi studerade utvecklingspocessen XP (eXtreme Programming).
+
+ag genomförde mitt examensarbete vid '{E}cole des Mines de Nantes och Linköpings universitet, där jag fick en tidig inblick i forskningsvärlden genom arbetet~[1][2]. Jag fick därefter en tidsbegränsad anställning vid '{E}cole des Mines de Nantes där vi fortsatte forskningen under hösten 2003. Arbetet ledde till vidare publikationer inom området, bland annat artikeln \textit{“On the Automatic Evolution of an OS Kernel Using Temporal Logic and Aspect-Oriented Programming”}, presenterad vid \textbf{IEEE ASE 2003} i Montr'eal.
+Erfarenheten gav mig en solid grund inom formella metoder, programvaruarkitektur och automatisering av komplex systemutveckling – teman som har en tydlig koppling till dagens utmaningar inom datadriven mjukvaruutveckling och AI-baserad produktutveckling.
+
+
+Jag har arbetat som och har både teknisk och organisatorisk erfarenhet av att förbättra utvecklings- och driftsprocesser. Min tekniska bas omfattar Utveckling i flertalet back- och front-end språk, Windows Server, containerteknologier som Docker samt molntjänster i Azure (certifierad SC-900, AZ-900, pågående AZ-500). 
+Jag har en Master of Science in Computer Science and Engineering med profilen \emph{Software Engineering}, 
+vilket gav en stark grund i process- och kvalitetsstyrning.
+
+% Jag har följt AI-området sedan 1999 och sen 2018, fördjupat mig i maskininlärning (Udacity, Kaggle) och egna Python-projekt. 
+% Jag har på idéstadiet experimenterat med LLM-baserade agenter, Retrieval-Augmented Generation (RAG) och vektordatabaser. 
+% Min förståelse bygger på litteratur som Bishop \cite{bishop2006pattern}, Goodfellow et~al. \cite{goodfellow2016deep} och Ng \cite{ng2018yearning}. 
+% Mitt mål är nu att undersöka hur AI, data och moderna utvecklingsmetoder kan kombineras för att skapa robusta, säkra och användarcentrerade produkter inom fordon- och flygindustrin.
+
+
+
+Jag har en Master of Science in Computer Science and Engineering (Software Engineering) samt erfarenhet av DevOps, testledning och systemarkitektur. Sedan 2018 har jag åter fördjupat mig i AI och datadrivna tekniker~\cite{bishop2006pattern,goodfellow2016deep,ng2018yearning,russell1995ai}, särskilt kopplingen mellan LLM-baserade agenter, RAG och vektordatabaser.
+
+Jag hade min första kurs i artificiell intelligens vid Linköpings universitet redan 1999, då med en för sin tid modern ansats baserad på \textit{“Artificial Intelligence: A Modern Approach”}~\cite{russell1995ai} av Stuart Russell och Peter Norvig. Kursen introducerade ett agentbaserat synsätt där intelligens definieras genom rationellt handlande, och förenade klassiska symboliska metoder med sannolikhetsbaserat resonemang och maskininlärning. Dessa grundprinciper – särskilt idén om autonoma agenter som lär och anpassar sig genom data – är fortsatt centrala i dagens AI-drivna systemutveckling och datadrivna produktutveckling.
+
+
+År 2018 återupptog jag området genom att repetera grunderna via Udacity och Coursera, bland annat kurser av Andrew Ng. Jag insåg då att jag framför allt drivs av att förstå teknikens praktiska nytta snarare än att fördjupa mig i alla matematiska detaljer.
+
+Jag har sedan dess, i olika perioder, följt AI-utvecklingen, både genom teoretiska studier och egna idéprojekt. Ett exempel är ett koncept för en applikation som analyserar matinköp och kopplar dem till välmående, inspirerat av forskning kring mikrobiom och psykisk hälsa. Sådana idéer speglar mitt intresse för hur data kan användas för att generera insikter som förbättrar människors liv.
+
+Sedan 2022 har jag på nytt engagerat mig mer aktivt, denna gång genom att använda språkmodeller som ChatGPT för att testa och skissa olika AI-koncept — bland annat datorseendealgoritmer och datadrivna verktyg. I takt med att tekniken utvecklats har mitt fokus förskjutits mot hur \textbf{LLM-baserade agenter}, \textbf{Retrieval-Augmented Generation (RAG)} och \textbf{vektordatabaser} kan integreras i praktiska tillämpningar och i datadrivna utvecklingsprocesser.
+
+Jag vill nu fördjupa mig i dessa områden på en nivå som kombinerar förståelse och tillämpning — där jag använder befintliga bibliotek och verktyg snarare än att förlora mig i detaljerad implementering. Min ambition är att bidra till att överbrygga klyftan mellan teknisk potential och faktisk nytta, särskilt inom ramen för datadriven produktutveckling.
+
+Jag planerar att läsa in mig mer på den teoretiska grunden för dessa tekniker, med utgångspunkt i verk som \emph{Pattern Recognition and Machine Learning} av Bishop \cite{bishop2006pattern}, \emph{Deep Learning} av Goodfellow et~al. \cite{goodfellow2016deep} och \emph{Machine Learning Yearning} av Ng \cite{ng2018yearning}.
+
+\section{Syfte}
+Syftet är att undersöka hur data och maskininlärning kan integreras i utvecklingen 
+av mjukvaruintensiva inbyggda system för att skapa produkter som är:
+\begin{itemize}[noitemsep]
+  \item datadrivna och adaptiva (lär sig av användning och kontext),
+  \item resilienta och säkra (uppfyller krav enligt EU:s \emph{Cyber Resilience Act} \cite{eu2024cyberresilience} och \emph{Data Act} \cite{eu2024dataact}),
+  \item effektiva och hållbara,
+  \item användarcentrerade (förbättrad infotainment, säkerhet och funktionalitet).
+\end{itemize}
+Projektet ska bidra med en holistisk modell som förenar DevOps, DataOps och MLOps och inför \textbf{säkerhet som en fjärde aspekt} i hela livscykeln.
+
+\section{Forskningsfrågor}
+\begin{enumerate}[noitemsep]
+\item Vilken är rollen och användningen av data i utvecklingen av mjukvaruintensiva inbyggda system?
+\item Vilka arkitekturer och processer krävs för att förena DevOps, DataOps och MLOps?
+\item Hur förändras roller och arbetssätt när AI-baserade komponenter blir en del av produktlivscykeln?
+\item Hur kan säkerhets- och integritetsaspekter (DevSecOps, GDPR, CRA) integreras utan att hämma innovationstakten?
+\item Hur kan dessa principer omsättas i praktiska pipeline-lösningar för fordon, flyg och IoT?
+\end{enumerate}
+
+\section{Metod och genomförande}
+
+\subsection{Empirisk del}
+\begin{itemize}[noitemsep]
+  \item Intervjuer och workshops med industripartners inom fordon, flyg och IoT.
+  \item Fallstudier av miljöer som kombinerar DevOps och AI-komponenter.
+  \item Analys av hur data samlas in, taggas och används i pipeline-flöden.
+\end{itemize}
+
+\subsection{Teknisk/teoretisk del}
+Tre huvudsakliga pipelines:
+\begin{enumerate}[noitemsep]
+  \item DevOps-pipeline – CI/CD, test och deployment av kod.
+  \item DataOps-pipeline – insamling, tvättning, annotering (taggning) och lagring av data, inklusive vektordatabaser.
+  \item MLOps-pipeline– träning, validering och distribution av modeller samt återkoppling till utveckling och produktledning.
+\end{enumerate}
+
+Dessa kompletteras av ett tvärgående säkerhetslager (DevSecOps) som omfattar:
+automatiserad sårbarhetsskanning och penetrationstestning (CVE-baserade verktyg),
+dataskydd (GDPR, EU Data Act \cite{eu2024dataact})
+och livscykelspårbarhet samt \emph{security-by-design} enligt \emph{Cyber Resilience Act} \cite{eu2024cyberresilience}.
+
+\subsection{Fallstudie / Proof of Concept}
+Exempel: ett videobaserat hastighetsigenkänningssystem för fordon.  
+DataOps = insamling och annotering av videodata;  
+MLOps = träning av datorseende-modeller;  
+DevOps = kontinuerlig integration i inbyggd miljö;  
+DevSecOps = automatiska penetrationstester och logg-/integritetsskydd.
+
+\subsection{Deltagande metodik – rollspel och processimulering}
+
+För att empiriskt undersöka samspelet mellan roller, dataflöden och artefakter används en deltagande, spelbaserad metodik inspirerad av dramatpedagogik och teamutveckling.  
+Ett DevOps-labspel låter deltagare från företag simulera hur artefakter, data och beslut rör sig genom DevOps-, DataOps- och MLOps-pipelines.  
+Syftet är att:
+\begin{itemize}[noitemsep]
+  \item synliggöra beroenden och flaskhalsar,
+  \item experimentera med nya roller och ansvar,
+  \item stimulera kreativitet och organisatoriskt lärande.
+\end{itemize}
+Observationer från simuleringarna används för att validera och förbättra den föreslagna pipeline-modellen.
+
+\section{Förväntade resultat}
+
+\begin{itemize}[noitemsep]
+  \item En referensmodell som integrerar DevOps, DataOps, MLOps och DevSecOps.
+  \item Rekommendationer för nya roller och arbetssätt.
+  \item Arkitekturexempel och visualisering av pipeline-flöden.
+  \item En spel- eller simuleringsprototyp som stödjer lärande och analys.
+\end{itemize}
+
+\section{Relevans och påverkan}
+
+Projektet möter industrins behov av att kombinera snabb leverans med hög säkerhet.  
+Det bidrar till att uppfylla krav i EU:s \emph{Cyber Resilience Act} \cite{eu2024cyberresilience}, \emph{Data Act} \cite{eu2024dataact} och \emph{NIS2 Directive} \cite{eu2023nis2}, samt stärker svensk industris förmåga att utveckla säkra, skalbara och hållbara system.
+
+\section{Avgränsningar och vidare perspektiv}
+
+Huvudfokus ligger på process- och arkitekturfrågor kring DevOps, DataOps och MLOps.  
+En vidare aspekt är att inkludera de nya EU-reglerna mer systematiskt som en genomgående dimension – enligt principen för \emph{cross-cutting concerns}, där säkerhet och data ses som tvärgående egenskaper som genomsyrar hela utvecklingskedjan.  
+
+En annan tvärgående egenskap i datadriven produktutveckling är data-centric logging.
+Traditionell loggning har länge betraktats som en systemövergripande mekanism, men i datadrivna produkter får loggningen
+en ny roll: att samla användarhändelser och kontextdata som underlag för analys, modellträning och kontinuerlig förbättring.
+Som Bosch \cite{bosch2016speed} beskriver har utvecklingen gått från funktionscentrerade till datacentrerade processer, där insamling och användning av data
+måste integreras i hela mjukvarulivscykeln.
+Data-centric logging blir därmed en ny form av cross-cutting concern — en aspekt som förenar DevOps-, DataOps- och MLOps-pipelines.
+
+Denna fjärde pipeline kan ses som parentes, men är avgörande för att bygga säkra, resilienta och framtidssäkra system.
+
+\bibliographystyle{plain}
+\bibliography{ref}
+
+\end{document}

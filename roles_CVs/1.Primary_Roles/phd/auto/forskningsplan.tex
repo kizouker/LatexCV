@@ -1,0 +1,135 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+\usepackage{setspace}
+\onehalfspacing
+
+\title{Data-Driven Development of Software-Intensive Embedded Systems}
+\author{Rickard Åberg}
+\date{PhD Research Plan – Malmö University, 2025}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+Syftet med detta forskningsprojekt är att undersöka hur data och maskininlärning kan integreras i utvecklingen av mjukvaruintensiva inbyggda system för att skapa produkter som är adaptiva, resilienta och säkra. Projektet fokuserar på hur organisationer kan gå från experimentella till produktionsklara tillämpningar av datadriven utveckling och lärande komponenter.  
+
+Forskningsfrågorna behandlar (i) datans roll i utvecklingsprocessen, (ii) vilka tillvägagångssätt och arkitekturer som krävs för att stödja datadriven utveckling, samt (iii) hur roller och arbetssätt förändras när mjukvaru-, data- och maskininlärningsprocesser behöver samordnas.  
+
+Metoden kombinerar fallstudier och design science för att utveckla och validera modeller som beskriver hur mjukvara, data och lärande komponenter samverkar i industriella sammanhang. Särskilt fokus läggs på att undersöka nya arkitektoniska mönster som \textit{retrieval-augmented generation (RAG)}, vektorbaserade databaser och autonoma agenter som potentiella mekanismer för adaptiv funktionalitet och effektiv datahantering.  
+
+Projektet genomförs i samarbete med industriella partner inom Software Center och inkluderar utvecklingen av en \textit{minimum viable prototype (MVP)} tillsammans med masterstudenter och ingenjörer, för att testa och validera konceptuella modeller i praktiken. Resultaten förväntas bidra till både vetenskaplig förståelse och praktisk tillämpning av datadriven utveckling i inbyggda system, samt ge riktlinjer för hur tillförlitlighet, säkerhet och regulatorisk efterlevnad kan integreras utan att hämma innovationsförmågan.
+\end{abstract}
+
+\section{Aim and Motivation}
+
+The aim of this research is to investigate how data and machine learning can be systematically integrated into the development of software-intensive embedded systems so that products become adaptive, resilient, and secure. The focus is on moving from experimentation and prototyping to production-quality deployment in industrial settings.
+
+Motivation for this work is grounded in prior studies showing that companies face significant engineering challenges when adopting ML/DL components at scale, including data quality management, design methods and processes, model performance, and deployment and compliance~\cite{bosch2020engineering}. Although ML/DL models are often treated as isolated artefacts, industrial practice shows that they must be engineered as parts of larger systems with dependable data pipelines, monitoring, logging, testing, and continuous evolution.
+
+In addition, the project will explore recent advances in data retrieval and representation, such as retrieval-augmented generation (RAG), vector-based data storage, and autonomous software agents, as potential mechanisms to enhance data access, traceability, and adaptive behaviour within embedded architectures.
+
+The project’s objective is therefore twofold: (i) to characterise how data is collected, prepared, labelled, and governed for embedded use; and (ii) to identify architectural and process mechanisms that enable dependable scaling from prototypes to production without compromising system reliability, safety, or regulatory conformance. Empirical collaboration with industry partners within the Software Center will ensure that findings are grounded in real-world constraints and yield actionable guidance for practice.
+
+\section{Research Questions}
+
+Building on prior work that highlights challenges in data quality management, design methods and processes, model performance, and deployment and compliance in industrial ML adoption~\cite{bosch2020engineering}, this project addresses the following research questions:
+
+\textbf{RQ1. What is the role and use of data in the development of software-intensive embedded systems?}
+
+\textit{Guiding aspects:}
+\begin{itemize}[noitemsep,topsep=0pt]
+  \item How data is collected from devices and environments; how it is cleaned, labelled, versioned, and governed across releases.
+  \item How data characteristics (balance, drift, heterogeneity, implicit dependencies) affect training and operation.
+  \item Which feedback signals from deployed systems are most useful to improve subsequent development cycles.
+\end{itemize}
+
+\textit{Expected outcome:} A structured description of data flows and decision points that connects data preparation, training, and deployment to product outcomes in embedded contexts.
+
+\medskip
+\textbf{RQ2. Which approaches and architectures are required to support data-driven development of software-intensive embedded systems?}
+
+\textit{Guiding aspects:}
+\begin{itemize}[noitemsep,topsep=0pt]
+  \item How to structure pipelines and system components so that software, data, and models evolve reliably together.
+  \item Instrumentation, monitoring, logging, testing, and rollback mechanisms that enable dependable deployment at scale.
+  \item Investigation of emerging architectural patterns, including the use of retrieval-augmented generation (RAG) techniques, vector databases, and autonomous agents for integrating learned knowledge and supporting adaptive functionality in embedded systems.
+\end{itemize}
+
+\textit{Expected outcome:} Reference structures and coordination mechanisms that align development and evolution of software components, data pipelines, and learning components in industrial settings.
+
+\medskip
+\textbf{RQ3. How do existing roles and ways of working change when adopting data-driven and learning-based development (DevOps, DataOps, MLOps)?}
+
+\textit{Guiding aspects:}
+\begin{itemize}[noitemsep,topsep=0pt]
+  \item Responsibilities, handovers, and collaboration between product management, development, data, and model-focused roles.
+  \item Practices for experiment management, model comparison (including A/B testing), monitoring, and incident response.
+  \item Artifacts and routines needed to sustain continuous improvement while keeping reliability and safety.
+\end{itemize}
+
+\textit{Expected outcome:} Practical guidelines for coordinating the three pipelines under a unified product perspective, including minimal role definitions, interfaces, and artifacts.
+
+\medskip
+\textbf{Scope note.} Regulatory aspects (e.g., CRA, GDPR) are considered as constraints and evaluation criteria and will be discussed after the core results on data, architecture, and roles have been established.
+
+\section{Method and Material}
+
+The research will follow a qualitative and design-science approach, combining empirical data collection from industrial partners with the construction and evaluation of conceptual and practical artefacts. The work is structured around the three research questions (RQ1–RQ3) and proceeds in three interrelated phases: \textit{empirical exploration}, \textit{conceptual modelling}, and \textit{evaluation}.
+
+\subsection*{Empirical exploration}
+
+Multiple case studies with companies within the Software Center network will focus on automotive, industrial automation, and embedded systems domains. Semi-structured interviews, document analysis, and artefact inspection (e.g., pipeline configurations, dashboards, release notes) will capture how data and learning processes are organised in practice. Thematic analysis~\cite{bosch2020engineering} will identify recurring challenges and dependencies across organizations and roles.
+
+\subsection*{Conceptual modelling}
+
+Empirical findings will be synthesised into models describing data and learning flows across software, data, and machine-learning pipelines. The modelling approach builds on design-science and systems-engineering principles and will explore how retrieval-augmented generation, vector-based data storage, and agent-based coordination can support information reuse and context-aware reasoning in embedded environments. This phase extends earlier work on automation of cross-cutting concerns~\cite{aberg2003aosd} to the domain of data and learning pipelines.
+
+\subsection*{Evaluation and validation}
+
+Proposed models and coordination mechanisms will be evaluated with industrial partners through workshops, scenario walkthroughs, and pilot implementations. Evaluation will focus on utility, generalisability, and compliance with safety and regulatory requirements.  
+
+As part of the evaluation, the project will include the development of a minimum viable prototype (MVP) in collaboration with MSc students or engineers from partner companies. The MVP will serve as a boundary object for validating the conceptual models and architectural principles in practice. It will demonstrate how data flows, retrieval mechanisms (RAG, vector search), and autonomous agents can be integrated and monitored within a realistic embedded or industrial context. This collaborative activity will also function as a learning environment to test interdisciplinary coordination between software, data, and AI development roles.
+
+\section{Theoretical Framework}
+
+The theoretical foundation of this project lies in the emerging field of \textit{AI engineering}, which extends traditional software engineering with methods, tools, and processes for building and evolving systems that include machine-learning components~\cite{bosch2020engineering}. In this view, machine-learning models are integral parts of a continuously evolving socio-technical system that includes data pipelines, software components, and organizational routines.
+
+The project also builds on the concepts of \textit{continuous experimentation} and \textit{data-driven development}, where system behaviour is informed by operational data and feedback loops drive improvement over time. From an organizational perspective, the research draws on theories of coordination and socio-technical alignment in software-intensive organisations.  
+
+As the principal investigator and project leader, the doctoral researcher will plan and execute the empirical studies, develop the conceptual models, coordinate industrial collaboration, and ensure integration between the technical and organisational dimensions of the research. The theoretical framework thus serves both as an analytical lens and as a management structure guiding the design and evaluation of the work.
+
+\section{Expected Contributions}
+
+The expected contribution of this research is twofold: (i) to advance scientific understanding of how data and learning processes can be integrated into software-intensive embedded systems, and (ii) to provide practical guidance for organisations undergoing this transformation.
+
+\subsection*{Scientific contributions}
+\begin{itemize}[noitemsep,topsep=0pt]
+  \item Empirically grounded descriptions of data collection, preparation, and management in industrial embedded contexts.
+  \item Conceptual models describing the integration of software, data, and learning pipelines and their dependencies.
+  \item Extensions of existing AI engineering frameworks~\cite{bosch2020engineering} with insights into role coordination, lifecycle synchronisation, and compliance integration.
+  \item Bridging formal system reasoning from earlier work on cross-cutting concerns~\cite{aberg2003aosd} with the empirical study of industrial data and learning systems.
+\end{itemize}
+
+\subsection*{Industrial and practical contributions}
+\begin{itemize}[noitemsep,topsep=0pt]
+  \item Reference architectures and coordination mechanisms for aligning software, data, and ML development in embedded systems.
+  \item Descriptions of organisational evolution patterns and maturity steps toward large-scale AI adoption.
+  \item Checklists and minimal role definitions for synchronising the three pipelines (\textit{DevOps}, \textit{DataOps}, \textit{MLOps}) under a unified product-management perspective.
+  \item A validated minimum viable prototype (MVP) developed in collaboration with MSc students and industrial partners, demonstrating the integration of RAG, vector-based data management, and agent-based coordination in a controlled embedded environment.
+  \item Recommendations for integrating reliability, safety, and compliance (CRA, GDPR) into data-driven and learning-based workflows without reducing innovation speed.
+\end{itemize}
+
+The results are expected to support both researchers and practitioners in structuring, reasoning about, and managing the complexity of AI-enabled embedded systems, contributing to the scientific and practical foundation for future industrial adoption.
+
+\begin{thebibliography}{9}
+\bibitem{bosch2020engineering}
+J. Bosch, H. Holmström Olsson, and I. Crnkovic, ``Engineering AI Systems: A Research Agenda,'' \textit{arXiv preprint arXiv:2001.07522}, 2020.
+
+\bibitem{aberg2003aosd}
+R. Åberg, J. Lawall, M. Südholt, D. Lo, and A.-F. Le Meur, ``On the Automatic Evolution of an OS Kernel using Temporal Logic and Aspect-Oriented Programming,'' in \textit{Proceedings of the 18th IEEE International Conference on Automated Software Engineering (ASE 2003)}, Montreal, Canada.
+\end{thebibliography}
+
+\end{document}
+s
