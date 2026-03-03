@@ -2,6 +2,10 @@
 %---------%---------%---------%---------%---------%---------%---------%---------
 % Includes of packages, etc
 %---------%---------%---------%---------%---------%---------%---------%---------
+
+\usepackage[scaled]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\setlength{\hintscolumnwidth}{3cm}
 \moderncvstyle{banking}                            
 \moderncvcolor{red}                               
 \nopagenumbers{}
@@ -55,7 +59,7 @@
 }{}
 
 % Ange din bildfil
-\def\@photo{./photos/rickardaberg-consultant.jpeg}
+\def\@photo{../../__2._photos/rickardaberg-consultant.jpeg}
 
 % Modifiera \makecvtitle om stilen är 'banking'
 \@ifpackageloaded{moderncvstylebanking}{%
@@ -95,11 +99,11 @@
 %-\cvitem{}{
 %-\begin{minipage}[t]{0.3\linewidth}
  %- \centering/
-  %-\includegraphics[width=0.8\linewidth]{./images/D_märke-1024x1024.png}\\
+  %-\includegraphics[width=0.8\linewidth]{../../D_märke-1024x1024.png}\\
   %-\hfill
   %-\begin{minipage}[t]{0.3\linewidth}
   %-  \centering
-  %-  \includegraphics[width=2.0\linewidth]{./images/linkopings_universitet_logo_detail_blue.png}\\
+  %-  \includegraphics[width=2.0\linewidth]{../../linkopings_universitet_logo_detail_blue.png}\\
  %- \hfill
  %- \end{minipage}
  %-\end{minipage}
@@ -134,25 +138,75 @@
   \\[0.3em]
   IKEA IT, Nordea, Ikano, Tre (Hi3G), Länsstyrelsen IT, Telenor, École des Mines, IDA Infront, Lindab, HemoCue, Hot Yoga Malmö, Radioforum, Sony
 }
-
 \section{Certification Badges}
+\cvitem{}{
+  \begin{minipage}[t]{0.24\linewidth}
+    \centering
+    \includegraphics[width=0.9\linewidth]{../../__1._images/azure-fundamentals-badge.png}\\
+    \scriptsize Microsoft Certified: Azure Fundamentals (AZ-900)
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.24\linewidth}
+    \centering
+    \includegraphics[width=0.6\linewidth]{../../__1._images/icc_coach.jpeg}\\
+    \scriptsize ICC Certified Coach
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.24\linewidth}
+    \centering
+    \includegraphics[width=0.6\linewidth]{../../__1._images/ISQTB.jpg}\\
+    \scriptsize ISTQB Certified Tester\\
+    Foundation Level (CTFL)
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.24\linewidth}
+    \centering
+    \includegraphics[width=0.9\linewidth]{../../__1._images/Certified_Scrum_Master_(CSM)_certification_badge.PNG}\\
+    \scriptsize Certified Scrum Master
+  \end{minipage}
+}
 
+\cvitem{}{
+  \begin{minipage}[t]{0.24\linewidth}
+    \centering
+    \includegraphics[width=0.9\linewidth]{../../__1._images/wenell-ppl-badge.png}\\
+    \scriptsize Practical Project Management (Wenell)
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.24\linewidth}
+    \centering
+    \includegraphics[width=0.9\linewidth]{../../__1._images/nvc-year-badge.JPEG}\\
+    \scriptsize 1-Year Program in Nonviolent Communication (NVC)
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.24\linewidth}
+    \centering
+    \includegraphics[width=0.8\linewidth]{../../__1._images/IMT_Atlantique_logo_1.png}\\
+    \scriptsize École des Mines de Nantes
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.24\linewidth}
+    \centering
+    \includegraphics[width=0.9\linewidth]{../../__1._images/liu-logo.png}\\
+    \scriptsize Linköpings tekniska högskola (LiTH)
+  \end{minipage}
+}
 \cvitem{}{
   \begin{minipage}[t]{0.3\linewidth}
     \centering
-    \includegraphics[width=1.2\linewidth]{./images/azure-fundamentals-badge.png}\\
+    \includegraphics[width=1.2\linewidth]{../../__1._images/azure-fundamentals-badge.png}\\
     \scriptsize Microsoft Certified: Azure Fundamentals (AZ-900)
   \end{minipage}
   \hfill
   \begin{minipage}[t]{0.3\linewidth}
     \centering
-    \includegraphics[width=0.6\linewidth]{./images/icc_coach.jpeg}\\
+    \includegraphics[width=0.6\linewidth]{../../__1._images/icc_coach.jpeg}\\
     \scriptsize ICC Certified Coach
   \end{minipage}
   \hfill
   \begin{minipage}[t]{0.3\linewidth}
     \centering
-    \includegraphics[width=0.6\linewidth]{./images/ISQTB.jpg}\\
+    \includegraphics[width=0.6\linewidth]{../../__1._images/ISQTB.jpg}\\
     \scriptsize ISTQB Certified Tester \\
     Foundation Level (CTFL)
   \end{minipage}
@@ -204,15 +258,23 @@ Negotation and Prospecting, PreSales, Coaching, TeamLead, Group pscyc
 \cventry{Car driver's license}{}{}{}{}{}
 %\cventry{Diver's license}{}{}{}{}{}
 
-%\section{Certifications}
-%\cvlistdoubleitem{Scrum Master }{ICC Coach}
+\section{Certifications}
+\cvlistdoubleitem{Scrum Master }{ICC Coach}
 %\cvlistdoubleitem{ISEB / ISTQB  (Test)}{React nanodegree }
 
 \section{Todo}
-\cventry{2025 VT -- }{Jhipster}{https://www.jhipster.tech/}{Remote}{Java Jascript}{Open Source}
+%\cventry{2026 VT -- }{Jhipster}{https://www.jhipster.tech/}{Remote}{Java Jascript}{Open Source}
+\cventry{2026 -- Ongoing}
+{iOS App – Breathwork, HRV & Biofeedback}
+{Independent Project}
+{}
+{Design and development of an iOS application integrating HRV analysis, breath pacing algorithms, vagal stimulation protocols and real-time biometric feedback.}
+{}
 
+
+  
 \section{Developer experiences etc}
-\cventry{2025 VT -- }{Fia Med Knuff}{https://github.com/kizouker/Fia_med_knuff.git}{Remote}{Java Jascript .Net core RabbitMQ}{Open Source}
+\cventry{2025 VT -- }{Fia Med Knuff}{https://github.com/kizouker/Fia_med_knuff.git}{Remote}{Java Jascript .Net core RabbitMQ System architectur and design}{Open Source}
 \cventry{2025}{radioforum.se}{Upgrade of phpbb}{Git, branches, releasemanagement}{}{}
 \cventry{2025}{ReDI School of Digital Integration}{Cloud Computing and Azure Security}{Hands-on labs from Microsoft 12+}{}{}
 \cventry{2024 VT -- }{Zetkin Foundation}{https://github.com/zetkin/app.zetkin.org/}{Malmö}{React Typescript}{React Typescript Front-End Open Source}
@@ -309,6 +371,26 @@ In the role as Senior Project Manager I’ve been driving different infrastructu
 
 
 \section{Education}
+
+%\cventry{Våren 2026}{Naturligt språk och Artificiell Intelligens}{Linköpings universitet}{}{}{
+% Studier inom Natural Language Processing (NLP) och maskininlärning.
+% Metoder för textklassificering, sekvensmodellering och semantisk analys.
+% Praktiskt arbete i Python med språkdata och moderna språkmodeller.
+% }
+% \cventry{2026--}{Musik- och Ljuddesign}{Linnéuniversitetet}{}{}{
+% Fördjupning inom ljudproduktion, inspelningsteknik och digital signalbehandling.
+% Arbete i DAW-miljö (Logic Pro), mixning, arrangering och ljudestetik.
+% Projektbaserat arbete med fokus på kreativ process och teknisk precision.
+% }
+% \cventry{2025}{MUVA61 – Musikproduktion}{Lunds universitet}{}{}{
+% Universitetskurs i musikproduktion med fokus på inspelning, arrangering och mixning.
+% Praktiskt arbete i Logic Pro med produktion av egna och tolkade verk.
+% Fördjupning i ljudestetik, dynamikbearbetning och produktionsmetodik.
+% }
+
+\cventry{2026 VT}{Naturliga språk och AI}{Linköpings universitet}{ }{Natural Language Processing, språkmodeller, AI}{} 
+\cventry{2026 VT -- 2030 (Expected)}{Master's Programme in Sound and Music Design (120 ECTS)}{Linnéuniversitetet}{Distance studies}{Audio DSP, Sound Design, Production, Digital Signal Processing}{Expected graduation: 2030}
+\cventry{2025 VT}{MUVA61 – Musikproduktion i praktiken}{Lunds universitet}{ }{Akademiskt skrivande, musikproduktion, musikteori}{} 
 \cventry{2023 HT-- 2024 VT}{Google CyberSecurity Fundamentals}{Google/Coursera}{ }{}{} 
 \cventry{2023 VT -- Ongoing}{ToastMasters}{Lund}{ }{Public Speaking}{} 
 \cventry{2022 HT -- Ongoing}{SRE, Fullstack and Front-end}{Udacity@Palo Alto}{ }{Grafana, Terraform, Kubernetes, AWS}{} 
@@ -363,6 +445,11 @@ In IEEE International Conference on Automated Software Engineering, Montréal, C
 \
 
 \section{Employments}
+\section{Professional Experience}
+
+\cventry{2026}{Field Officer (Fixed-term)}{Skogsstyrelsen}{Sweden}{}{
+Nature conservation, field inventory, environmental monitoring and regulatory compliance within forestry operations.}
+
 \cventry{2025}{Cloud Computing och Azure-kurs}{ReDI School of Digital Integration}{}{}{
 Praktisk kursfokuserad utbildning inom Azure, molnsäkerhet och DevOps. Förberedelse inför certifiering med case-baserade projekt.
 }

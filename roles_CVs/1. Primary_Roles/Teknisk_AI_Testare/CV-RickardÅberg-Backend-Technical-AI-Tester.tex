@@ -70,7 +70,7 @@
 \makeatletter
 
 
-\newlength{\headerwidth}
+%newlength{\headerwidth}
 \setlength{\headerwidth}{0.72\linewidth}
 
 
@@ -98,24 +98,7 @@
 
 \makeatother
 
-% \beforetitle{
-%   \vspace*{-0.5em}  
-%   \begin{center}
-%     {\HUGE\sffamily Java Backend Developer} \\[0.4em]
-%     \includegraphics[width=8.6cm]{../../../photos/rickardaberg-consultant.jpeg} \\[1em]
-%     {\Huge\sffamily Rickard \textbf{\AA{}berg}} \\[1.5em]
-%     {\Large\sffamily MSc in Software Engineering} \\[1em]
-%    \fbox{%
-%       \parbox{0.6\linewidth}{%
-%         \ttfamily
-%            \textls[400]{\textbf{Tel:}} +46 709 43 14 01 \\[4pt]
-%     \textls[400]{\textbf{Email:}} rickard.aaberg@icloud.com \\[4pt]
-%     \textls[400]{\textbf{Ort:}} Malmö, Sweden
-%       }%
-%     }
-%   \end{center}
-%   \vspace{1em}
-% }
+
 \newlength{\headerwidth}
 \setlength{\headerwidth}{0.7\linewidth} % mindre bredd (foto+box)
 
@@ -123,14 +106,19 @@
 \setlength{\fboxrule}{0.6pt}% linjetjocklek
 
 \beforetitle{%
-  \vspace*{-0.5em}
-%  \hfill % <-- flyttar blocket åt höger
+  \vspace*{-0.5em}}
+
 \hspace*{0.23\linewidth} % flytta ca 10 % av sidbredden åt höger
   \begin{minipage}{\headerwidth}
     \centering
-    {\HUGE\sffamily Java Backend Developer}\\[0.6em]
-    % Mindre foto
-    \includegraphics[width=0.7\headerwidth]{../../../photos/rickardaberg-consultant.jpeg}\\[1.0em]
+    {\HUGE\sffamily Technical AI Tester}\\[0.6em]
+     {\LARGE\sffamily med samhällsintresse!}\\[0.6em]
+  
+    % \newcommand{\photoPath}{../../../../__2._photos/skogen_me.jpeg}
+
+% \includegraphics[width=0.7\headerwidth]{\photoPath}\\[1.0em]
+    % \includegraphics[width=0.7\headerwidth]{./skogen_me.jpeg\\[1.0em]
+        % \includegraphics[width=0.7\headerwidth]{../../../../__2._photos/skogen_me.jpeg\\[1.0em]
     {\Huge\sffamily Rickard \textbf{\AA{}berg}}\\[1.0em]
     {\Large\sffamily MSc in Software Engineering}\\[1.0em]
 
@@ -178,8 +166,8 @@
 \renewcommand*{\namefont}{\LARGE\sffamily\mdseries}
 \renewcommand*{\titlefont}{\Large\sffamily\mdseries}
 
-\input{../../../__3._sections/summary_backend.tex}
-
+\input{../../../__3._sections/summar_technical_tester.tex}
+\clearpage
 \section{Customer experiences}
 \cvitem{}{%
   \textbf{Enterprises and organizations:}%
@@ -187,78 +175,74 @@
    École des Mines, IKEA IT, Nordea, Ikano, Tre (Hi3G), Länsstyrelsen IT, Telenor, IDA Infront, Lindab, HemoCue, Hot Yoga Malmö, Radioforum, Sony
 }
 
-\cvitemwithcomment{French}{C1 – Advanced professional proficiency}{Used in project work with clients at École des Mines}
-
-\input{../../../__3._sections/fullstack.tex}
-
+\cvitemwithcomment{French}w{C1 – Advanced professional proficiency}{Used in project work with clients at École des Mines}
 
 \input{../../../__3._sections/cv_section_ai_machine_learning.tex}
-
-
+\input{../../../__3._sections/dev_and_test_experiences.tex}
 \clearpage
 \section{Certification Badges}
 \cvitem{}{
   \begin{minipage}[t]{0.24\linewidth}
     \centering
-    \includegraphics[width=0.9\linewidth]{../../../images/azure-fundamentals-badge.png}\\
+    \includegraphics[width=0.9\linewidth]{../../__1._images/azure-fundamentals-badge.png}\\
     \scriptsize Microsoft Certified: Azure Fundamentals (AZ-900)
   \end{minipage}
   \hfill
   \begin{minipage}[t]{0.24\linewidth}
     \centering
-    \includegraphics[width=0.6\linewidth]{../../../images/icc_coach.jpeg}\\
+    \includegraphics[width=0.6\linewidth]{../../__1._images/icc_coach.jpeg}\\
     \scriptsize ICC Certified Coach
   \end{minipage}
   \hfill
   \begin{minipage}[t]{0.24\linewidth}
     \centering
-    \includegraphics[width=0.6\linewidth]{../../../images/ISQTB.jpg}\\
+    \includegraphics[width=0.6\linewidth]{../../__1._images/ISQTB.jpg}\\
     \scriptsize ISTQB Certified Tester\\
     Foundation Level (CTFL)
   \end{minipage}
   \hfill
   \begin{minipage}[t]{0.24\linewidth}
     \centering
-    \includegraphics[width=0.9\linewidth]{../../../images/Certified_Scrum_Master_(CSM)_certification_badge.PNG}\\
+    \includegraphics[width=0.9\linewidth]{../../__1._images/Certified_Scrum_Master_(CSM)_certification_badge.PNG}\\
     \scriptsize Certified Scrum Master
   \end{minipage}
-}
-
-\cvitem{}{
+  \hfill
   \begin{minipage}[t]{0.24\linewidth}
     \centering
-    \includegraphics[width=0.9\linewidth]{../../../images/wenell-ppl-badge.png}\\
+    \includegraphics[width=0.9\linewidth]{../../__1._images/wenell-ppl-badge.png}\\
     \scriptsize Practical Project Management (Wenell)
   \end{minipage}
   \hfill
   \begin{minipage}[t]{0.24\linewidth}
     \centering
-    \includegraphics[width=0.9\linewidth]{../../../images/nvc-year-badge.JPEG}\\
+    \includegraphics[width=0.9\linewidth]{../../__1._images/nvc-year-badge.JPEG}\\
     \scriptsize 1-Year Program in Nonviolent Communication (NVC)
   \end{minipage}
   \hfill
   \begin{minipage}[t]{0.24\linewidth}
     \centering
-    \includegraphics[width=0.8\linewidth]{../../../images/IMT_Atlantique_logo_1.png}\\
+    \includegraphics[width=0.8\linewidth]{../../__1._images/IMT_Atlantique_logo_1.png}\\
     \scriptsize École des Mines de Nantes
   \end{minipage}
   \hfill
   \begin{minipage}[t]{0.24\linewidth}
     \centering
-    \includegraphics[width=0.9\linewidth]{../../../images/liu-logo.png}\\
+    \includegraphics[width=0.9\linewidth]{../../__1._images/liu-logo.png}\\
     \scriptsize Linköpings tekniska högskola (LiTH)
   \end{minipage}
+ \hfill
 }
+
+
 
 % === Sections ===
 %\input{../../../sections/key_competencies.tex}
 %%\input{../../../sections/Project_Management_Tools_Section.tex}
 %\input{sections/ethical_hacking.tex}
-\input{../../../__3._sections/cyber_security.tex}
+\input{../../__3._sections/cyber_security.tex}
 
 \clearpage
-\input{../../../__3._sections/fullstack.tex}
-\input{../../../__3._sections/middle_ware.tex}
+
 %\input{../../../sections/management.tex}
 
 
@@ -270,29 +254,30 @@
 %\cvlistdoubleitem{Scrum Master }{ICC Coach}
 %\cvlistdoubleitem{ISEB / ISTQB  (Test)}{React nanodegree }
 
-\input{../../../__3._sections/dev_experiences.tex}
-
-
-
-
-
+\input{../../__3._sections/test_tools_languages_processes.tex}
 
 \section{Education}
+\cventry{2026 VT}{Naturliga språk och AI}{Linköpings universitet}{ }{Natural Language Processing, språkmodeller, AI}{} 
+% \cventry{2026 VT -- 2030 (Expected)}{Master's Programme in Sound and Music Design (120 ECTS)}{Linnéuniversitetet}{Distance studies}{Audio DSP, Sound Design, Production, Digital Signal Processing}{Expected graduation: 2030}
+
 \cventry{2023 HT-- 2024 VT}{Google CyberSecurity Fundamentals}{Google/Coursera}{ }{}{} 
-\cventry{2023 VT -- Ongoing}{ToastMasters}{Lund}{ }{Public Speaking}{} 
+
 \cventry{2022 HT -- Ongoing}{SRE, Fullstack and Front-end}{Udacity@Palo Alto}{ }{Grafana, Terraform, Kubernetes, AWS}{} 
-\cventry{2020}{Pedagogical Drama, Story Telling, Improvisational theatre, Groupe Dynamics}{Malmö University}{Malmö}{}{}      
+  
 \cventry{2019-2021}{React.JS (ES6, React, Router, Redux, Native) Nanodegree}{Udacity@Palo Alto}{Remote}{}{}  
 \cventry{2016}{Programming and Problem-solving in Python. 2.5 ECTS}{Blekinge Institute of Technology}{Ronneby}{}{}  
 \cventry{1996 --2003}{MSc in Computer Science and Engineering. 300 ECTS}{Linköping Institute of Technology}{Linköping}{}{Computer/IT-Security, Software production, Artificial Intelligence, Object-Oriented Programming, Functional Programming, Real time programing, Lisp/C, Advanced computer architecture, Hardware construction, Embedded development with micro-controller}  
-\includegraphics[scale=0.4]{../../../images/it-security}
-\section{Courses}
-\cvdoubleitem{Agile}{Certified Scrum Master (CSM) Softhouse Consulting Öresund AB }
-{Coaching}{International Coaching Certificate, (ICC, ICF, EMCC), SLH - Center of Excellence in Thailand, Banh Phee,  Lars-Eric Uneståhl, phD }
-\cvdoubleitem{Communication}{18 days workshop during a whole year on NonViolent-Communication (Varg och giraff-språk} {Negotiation}{Negotiation workshop, Företags Ekonomiskt Institut (FEI)}
-\cvdoubleitem{Project Management}{Practical Project Management Wenell Management.}
-{Pedagogical drama, Story Telling, Improvisation }{Malmö University }
-\cvdoubleitem{Front-End}{React}{DevOps} {CA Lisa Release Automation (Nolio) (Continuous Delivery) CA Technologies Inc.}
+\includegraphics[scale=0.4]{../../__1._images/it-security}
+
+\section{Certifications}
+\cventry{2014}{Certified Scrum Master (CSM)}{Softhouse Consulting Öresund AB}{}{}{}
+\cventry{2009}{International Coaching Certificate (ICC)}{SLH – Center of Excellence, Thailand}{}{}{}
+\cventry{2006}{ISTQB Certified Tester – Foundation Level (CTFL)}{}{}{}{}
+
+\section{Professional Training}
+\cventry{2014}{Nonviolent Communication (NVC)}{18-day workshop program}{}{}{}
+\cventry{2014}{Practical Project Management}{Wenell Management}{}{}{}s
+\cventry{2011}{Negotiation Workshop}{Företagsekonomiska Institutet (FEI)}{}{}{}
 
 \section{Master thesis}
 \cvitem{Title}{\emph{On the automatic evolution of an OS kernel using temporal Logic and AOP}}
@@ -317,6 +302,14 @@ In IEEE International Conference on Automated Software Engineering, Montréal, C
        
   \end{quotelist}
 
+
+\section{Additional Education}
+
+\cventry{2025}{MUVA61 – Music Production in Practice}{Lund University}{}{}{}
+\cventry{2023--Ongoing}{Toastmasters – Public Speaking}{Lund}{}{}{}
+\cventry{2020}{Pedagogical Drama, Storytelling, Improvisation}{Malmö University}{}{}{}
+
+
 \section{Languages}
 \cvitemwithcomment{Swedish}{Mother tongue}{}
 \cvitemwithcomment{English}{Professional proficiency}{}
@@ -328,10 +321,21 @@ In IEEE International Conference on Automated Software Engineering, Montréal, C
 \cvlistdoubleitem{Security}{Energy}
 \cvlistdoubleitem{Public}{Telecom}
 \cvlistdoubleitem{Finance}{Trade}
-
-\input{../../../sections/pm_tm_experiences.tex}
+\input{../../__3._sections/pm_tm_experiences.tex}
 
 \section{Employments}
+\begin{minipage}[t]{0.24\linewidth}
+ \centering
+%  \includegraphics[width=0.9\linewidth]{../../../../__1._images/Skogsstyrelsen_logo_1rad.png}\\
+ \scriptsize Skogsstyrelsen
+\end{minipage}
+
+\cventry{2026}{Field Officer (Fixed-term)}{Skogsstyrelsen}{Sweden}{}{
+Operational field work in nature conservation and forest management.
+Clearing vegetation (including birch), controlled burning, and practical measures to support biodiversity and sustainable forestry.
+}
+
+
 \cventry{2025}{Cloud Computing och Azure-kurs}{ReDI School of Digital Integration}{}{}{
 Praktisk kursfokuserad utbildning inom Azure, molnsäkerhet och DevOps. Förberedelse inför certifiering med case-baserade projekt.
 }
@@ -345,34 +349,20 @@ Praktisk kursfokuserad utbildning inom Azure, molnsäkerhet och DevOps. Förbere
 \cventry{Mar 2003 --Feb 2004}{Thésard}{Ecole Des Mines}{Nantes/France}{}{MSc Thesis}
 \cventry{Jul 2002 -- Sep 2002}{Embedded Developer}{Hemocue}{Ängelholm}{}{}
 
-\section{Interests}
-\cvitem{hobby 1}{Yoga and Meditation}
-\cvitem{hobby 2}{Dance and Martial Arts}
-\cvitem{hobby 3}{Singing and playing piano}
 
 \section{References}
 \begin{cvcolumns}
   \cvcolumn{Managers}
       {\begin{itemize}
-      \item Mathias Hansen 
-      \item(more upon request)
+      \item Henrik Lundbladh, Skogsstyrelsen (Tel: +46 10-172 16 34)
+      \item Jonas Paulsson, MSB IT (CyberSecurity) (Tel: +46 10-225 50 00)
+      \item Julia Lawall, Assistant professor, INRIA, France
+      \item Mario Sudholt,  Assistant professor, INRIA, France
+      \item Mathias Hansen, Founder of Selfpoint.se 
       \end{itemize}}
-    \cvcolumn{Peers}
-    {\begin{itemize}
-        \item Peter Törnkvist, 
-        \item(more upon request)
-        \end{itemize}}
-    
-  \cvcolumn{Msc}
-    {\begin{itemize}
-            \item Julia Lawall, and
-            \item   Mario Sudholt
-    \end{itemize}(more upon request)}
-  \cvcolumn[0.5]{I managed}{\textit{Martin Björcke}, and \textit{David Bennehult} also (all available upon request).}
 \end{cvcolumns}
 \footnotesize
 
-\input{../../../__3._sections/tools_languages_processes.tex}
 
 \nocite{*}
 \bibliographystyle{plain}
