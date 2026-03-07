@@ -52,14 +52,14 @@
 
 \makeatletter
 
-% Definiera bredden om den inte finns
-\@ifundefined{@photowidth}{%
-  \newlength{\@photowidth}
-  \setlength{\@photowidth}{4cm} % Justera storleken här – t.ex. 3cm, 4cm, 5cm
-}{}
+% % Definiera bredden om den inte finns
+% \@ifundefined{@photowidth}{%
+%   \newlength{\@photowidth}
+%   \setlength{\@photowidth}{4cm} % Justera storleken här – t.ex. 3cm, 4cm, 5cm
+% }{}
 
-% Ange din bildfil
-\def\@photo{../../__2._photos/rickardaberg-consultant.jpeg}
+% % Ange din bildfil
+% \def\@photo{../../__2._photos/rickardaberg-consultant.jpeg}
 
 % Modifiera \makecvtitle om stilen är 'banking'
 \@ifpackageloaded{moderncvstylebanking}{%
@@ -81,15 +81,13 @@
 \renewcommand{\familydefault}{\sfdefault} % Gör hela dokumentet sans-serif
 
 \beforetitle{
-  \vspace*{-2em} % Avstånd ovanför fotot – öka för mer luft
+  \vspace*{-2em}
   \begin{center}
-    \hspace*{1.5cm}{\color{black}\Huge\sffamily\itshape \textbf{D}ev\textbf{S}ec\textbf{O}ps Coach}
+    \hspace*{1.5cm}{\color{black}\Huge\sffamily\itshape \textbf{P}enetration-\textbf{T}ester}\\[0.4em]
+    \hspace*{1.5cm}{\large\sffamily Red Team \& Ethical Hacking (Junior)}
   \end{center}
-  \vspace{1em} % Luft under rubriken
+  \vspace{1em}
 }
-
-
-
 %------------------%------------------%------------------%------------------%------------------
 % Title - photo etc
 %------------------%------------------%------------------%------------------%------------------       
@@ -233,21 +231,15 @@
 \cvlistdoubleitem{Server Development, MicroServices, Java, SpringBoot/Maven} { CI/CD, Pipelines, Github/GitLab, Azure Devops}
 \cvlistdoubleitem{DevOps, InfrastructureAsCode  (IoC), Docker/Kubernetes } {\{MS/My,No,Postgre\}SQL MongoDB, Redis}
 
-\section{Middlewware}
 
-\cvlistdoubleitem{Cassandra, Spark, Hive,Reddis}{ }
-\cvlistdoubleitem{SaaS, PaaS, IaaSCloud, Azure, AWS, GCP }{Bison, Powershell, Sentinel, Microsoft Defender for Cloud, Subnets,  }
-\cvlistdoubleitem{System Integration, Microsoft BizTalk, (ESB) Event-Service Bus, RabbitMQ, }{Tibco Rendez-vous, Java Message Service (JMS), 
-Tibco Businessworks, Tibco integration managers Scrum Master, Team Lead }
+\input{../../__3._sections/middle_ware.tex}
 
 
-\section{Cyber Security}
-\cvlistdoubleitem{Red Team, Blue Team, Pink Team, Ransome Attacks, reverse-shell, HackTheBox, }{ Ethical Hacking, Miltigate Spoofing attacks, }
-
-\section{Management by Heart}
+\input{../../__3._sections/cybersecurity_ethhacking.tex}
 
 
-\cvlistdoubleitem{NeuroLeadership, Phychological Safety} { Neurodiversity, Trauma-informed, Inclusivity }
+% \section{Management by Heart}
+% \cvlistdoubleitem{NeuroLeadership, Phychological Safety} { Neurodiversity, Trauma-informed, Inclusivity }
 
 \cvlistdoubleitem{Agile, Lean, DevOps Culture, Safe }{PI Planning, Social Psychology, In\/out group, drama improvisation}
 \cvlistdoubleitem{Trauma Therapy, PTSD litterature }{Coaching, TeamLead, Group pscychlogoy}
@@ -261,7 +253,7 @@ Negotation and Prospecting, PreSales, Coaching, TeamLead, Group pscyc
 
 \section{Certifications}
 \cvlistdoubleitem{Scrum Master }{ICC Coach}
-%\cvlistdoubleitem{ISEB / ISTQB  (Test)}{React nanodegree }
+\cvlistdoubleitem{ISEB / ISTQB  (Test)}{React nanodegree }
 
 \section{Todo}
 %\cventry{2026 VT -- }{Jhipster}{https://www.jhipster.tech/}{Remote}{Java Jascript}{Open Source}
@@ -269,7 +261,8 @@ Negotation and Prospecting, PreSales, Coaching, TeamLead, Group pscyc
 {iOS App – Breathwork, HRV & Biofeedback}
 {Independent Project}
 {}
-{Design and development of an iOS application integrating HRV analysis, breath pacing algorithms, vagal stimulation protocols and real-time biometric feedback.}
+{Design and development of an iOS application integrating HRV analysis, 
+breath pacing algorithms, vagal stimulation protocols and real-time biometric feedback.}
 {}
 
 
@@ -390,8 +383,6 @@ In the role as Senior Project Manager I’ve been driving different infrastructu
 % }
 
 \cventry{2026 VT}{Naturliga språk och AI}{Linköpings universitet}{ }{Natural Language Processing, språkmodeller, AI}{} 
-\cventry{2026 VT -- 2030 (Expected)}{Master's Programme in Sound and Music Design (120 ECTS)}{Linnéuniversitetet}{Distance studies}{Audio DSP, Sound Design, Production, Digital Signal Processing}{Expected graduation: 2030}
-\cventry{2025 VT}{MUVA61 – Musikproduktion i praktiken}{Lunds universitet}{ }{Akademiskt skrivande, musikproduktion, musikteori}{} 
 \cventry{2023 HT-- 2024 VT}{Google CyberSecurity Fundamentals}{Google/Coursera}{ }{}{} 
 \cventry{2023 VT -- Ongoing}{ToastMasters}{Lund}{ }{Public Speaking}{} 
 \cventry{2022 HT -- Ongoing}{SRE, Fullstack and Front-end}{Udacity@Palo Alto}{ }{Grafana, Terraform, Kubernetes, AWS}{} 
@@ -400,13 +391,6 @@ In the role as Senior Project Manager I’ve been driving different infrastructu
 \cventry{2016}{Programming and Problem-solving in Python. 2.5 ECTS}{Blekinge Institute of Technology}{Ronneby}{}{}  
 \cventry{1996 --2003}{MSc in Computer Science and Engineering. 300 ECTS}{Linköping Institute of Technology}{Linköping}{}{Computer/IT-Security, Software production, Artificial Intelligence, Object-Oriented Programming, Functional Programming, Real time programing, Lisp/C, Advanced computer architecture, Hardware construction, Embedded development with micro-controller}  
 \includegraphics[scale=0.4]{/images/it-security}
-\section{Courses}
-\cvdoubleitem{Agile}{Certified Scrum Master (CSM) Softhouse Consulting Öresund AB }
-{Coaching}{International Coaching Certificate, (ICC, ICF, EMCC), SLH - Center of Excellence in Thailand, Banh Phee,  Lars-Eric Uneståhl, phD }
-\cvdoubleitem{Communication}{18 days workshop during a whole year on NonViolent-Communication (Varg och giraff-språk} {Negotiation}{Negotiation workshop, Företags Ekonomiskt Institut (FEI)}
-\cvdoubleitem{Project Management}{Practical Project Management Wenell Management.}
-{Pedagogical drama, Story Telling, Improvisation }{Malmö University }
-\cvdoubleitem{Front-End}{React}{DevOps} {CA Lisa Release Automation (Nolio) (Continuous Delivery) CA Technologies Inc.}
 
 \section{Master thesis}
 \cvitem{Title}{\emph{On the automatic evolution of an OS kernel using temporal Logic and AOP}}
@@ -414,6 +398,13 @@ In the role as Senior Project Manager I’ve been driving different infrastructu
 \cvitem{Description}{
 In IEEE International Conference on Automated Software Engineering, Montréal, Canada, pages 196 --204, 42 citations}
 \url{https://www.researchgate.net/publication/220883611\_On_the_automatic_evolution_of_an_OS_kernel_using_temporal_logic_and_AOP}
+
+
+\section{Additional Education}
+
+\cventry{2025}{MUVA61 – Music Production in Practice}{Lund University}{}{}{}
+\cventry{2023--Ongoing}{Toastmasters – Public Speaking}{Lund}{}{}{}
+\cventry{2020}{Pedagogical Drama, Storytelling, Improvisation}{Malmö University}{}{}{}
 
 \section{What people have said about me}
 \large 
@@ -449,7 +440,9 @@ In IEEE International Conference on Automated Software Engineering, Montréal, C
 \section{Professional Experience}
 
 \cventry{2026}{Field Officer (Fixed-term)}{Skogsstyrelsen}{Sweden}{}{
-Nature conservation, field inventory, environmental monitoring and regulatory compliance within forestry operations.}
+Operational field work in nature conservation and forest management.
+Clearing vegetation (including birch), controlled burning, and practical measures to support biodiversity and sustainable forestry.
+}
 
 \cventry{2025}{Cloud Computing och Azure-kurs}{ReDI School of Digital Integration}{}{}{
 Praktisk kursfokuserad utbildning inom Azure, molnsäkerhet och DevOps. Förberedelse inför certifiering med case-baserade projekt.
@@ -464,112 +457,24 @@ Praktisk kursfokuserad utbildning inom Azure, molnsäkerhet och DevOps. Förbere
 \cventry{Mar 2003 --Feb 2004}{Thésard}{Ecole Des Mines}{Nantes/France}{}{MSc Thesis}
 \cventry{Jul 2002 -- Sep 2002}{Embedded Developer}{Hemocue}{Ängelholm}{}{}
 
-\section{Interests}
-\cvitem{hobby 1}{Yoga and Meditation}
-\cvitem{hobby 2}{Dance and Martial Arts}
-\cvitem{hobby 3}{Singing and playing piano}
+
 
 \section{References}
 \begin{cvcolumns}
   \cvcolumn{Managers}
       {\begin{itemize}
-      \item Mathias Hansen 
-      \item(more upon request)
+      \item Henrik Lundbladh, Skogsstyrelsen (Tel: +46 10-172 16 34)
+      \item Jonas Paulsson, MSB IT (CyberSecurity) (Tel: +46 10-225 50 00)
+      \item Julia Lawall, Assistant professor, INRIA, France
+      \item Mario Sudholt,  Assistant professor, INRIA, France
+      \item Mathias Hansen, Founder of Selfpoint.se 
       \end{itemize}}
-    \cvcolumn{Peers}
-    {\begin{itemize}
-        \item Peter Törnkvist, 
-        \item(more upon request)
-        \end{itemize}}
-    
-  \cvcolumn{Msc}
-    {\begin{itemize}
-            \item Julia Lawall, and
-            \item   Mario Sudholt
-    \end{itemize}(more upon request)}
-  \cvcolumn[0.5]{I managed}{\textit{Martin Björcke}, and \textit{David Bennehult} also (all available upon request).}
 \end{cvcolumns}
 \footnotesize
-\section{Experience from Tools, Technologies and methods}
-\begin{cvcolumns}
-    \cvcolumn{Programming languages}
-        {\begin{itemize}
-            \item Java/JEE/Spring/Android 
-            \item JavaScript, ES6, React, Redux, Bootstrap, HTML/CSS
-            \item Python
-            \item Lisp, ocaml  (functional)
-            \item SQL, PL/SQL, MySQL 
-            \item Assembler (PIC, Cop8, 68000) 
-        \end{itemize}}
-    \cvcolumn{Version Control, build, CI, CD}
-	{\begin{itemize}
-        \item Git/Gerrit, gitlab, github, bitbucket 
-        \item Gradle, Maven, Ant, npm, yarn
-        \item Docker, Kubernetes, Ansible
-        \item Bamboo, Jenkins, CruiseControl 
-        \item JFrog Artifactory, SonarQube
-        \item Azure, AWS 
-    \end{itemize}}
-\end{cvcolumns} 
-\begin{cvcolumns}
-    \cvcolumn{Methods}
-	{\begin{itemize}
-            \item Scrum
-            \item Kanban
-            \item DevOps
-            \item ITIL
-            \item Continuous Delivery 
-            \item C.D. Toolchain/pipeline 
-    \end{itemize}}
-     \cvcolumn{System integration }
-    	{\begin{itemize}
-                \item Mule ESB Studio
-                \item TIBCO Business Works, Rendez-vous 
-                \item Active MQ / JMS / RabbitMQ 
-                \item Json, XML, XSD Schemas 
-                \item SoapUI / Postman
-        \end{itemize}}
-\end{cvcolumns} 
-\begin{cvcolumns}
-  \cvcolumn{Design principles}
-	{\begin{itemize}
-            \item Object-Oriented Analysis – UML 
-            \item Aspect-Oriented Programming  
-            \item Service-Oriented Architecture 
-    \end{itemize}}
- \cvcolumn{Operating Systems and Containers }
-	{\begin{itemize}
-            \item Windows Server  
-            \item Unix and Linux (Ubuntu)
-            \item Mac Os X 
-            \item Android
-            \item iOs (Iphone)
-            \item Docker/Kubernetes
-    \end{itemize}}
-    \end{cvcolumns} 
-    \begin{cvcolumns}
- \cvcolumn{Tools }
-	{\begin{itemize}
-            \item IntelliJ, Visual Code 
-            \item Jira / Confluence 
-            \item Remedy / Serena / MS Service Desk 
-    \end{itemize}
-    }
-     \cvcolumn{Databases }
-	{\begin{itemize}
-            \item MS SQL Server
-            \item Oracle
-            \item Mysql
-            \item PostgreSQL
-    \end{itemize}}
- \end{cvcolumns} 
-   \begin{cvcolumns}
- \cvcolumn{Application Servers  }
-	{\begin{itemize}
-            \item Apache Tomcat 
-            \item JBoss/Wildfly 
-    \end{itemize}}
- \end{cvcolumns} 
+
+
+\input{../../__3._sections/cv_section_cyber_tools.tex}
+
 
 \nocite{*}
 \bibliographystyle{plain}
