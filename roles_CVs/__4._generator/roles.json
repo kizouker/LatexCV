@@ -64,6 +64,27 @@
         ["Security", "Energy"],
         ["Finance", "Trade"]
       ]
+    },
+    {
+      "id": "economics-innovation-leadership",
+      "output_dir": "1. Primary_Roles/Economics Innovation Leadership",
+      "output_file": "CV-RickardÅberg-Economics-Innovation-Leadership.tex",
+      "title_line1": "Economics, Innovation",
+      "title_line2": "& Leadership",
+      "subtitle": "Project & People Leadership -- Business Foundation",
+      "quote": "If you fall one-hundred times and then get up, the 101 time you never lost!",
+      "summary_section": "Economics_innovation_leadership.tex",
+      "extra_sections": [
+        "Economics_leadership_foundation.tex",
+        "pm_tm_experiences.tex",
+        "cv_section_education_minimal.tex"
+      ],
+      "industry_sectors": [
+        ["Finance", "Banking"],
+        ["Telecom", "Public Sector"],
+        ["Technology", "Energy"],
+        ["Retail", "Aviation"]
+      ]
     }
   ]
 }
