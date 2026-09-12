@@ -1,0 +1,48 @@
+{
+  "roles": [
+    {
+      "id": "math-teacher",
+      "output_dir": "1. Primary_Roles/Math Teacher Substitute",
+      "output_file": "CV-RickardÅberg-Math-Teacher.tex",
+      "title_line1": "Mathematics",
+      "title_line2": "Substitute Teacher",
+      "subtitle": "Pedagogical coaching -- Engineering Background",
+      "quote": "If you fall one-hundred times and then get up, the 101 time you never lost!",
+      "summary_section": "Math_teacher.tex",
+      "extra_sections": [
+        "pm_tm_experiences.tex",
+        "dev_experiences.tex",
+        "education.tex"
+      ],
+      "industry_sectors": [
+        ["Education", "Public Sector"],
+        ["Aviation", "Hospitality"],
+        ["Healthcare", "BioTech"],
+        ["Security", "Energy"],
+        ["Finance", "Trade"]
+      ]
+    },
+    {
+      "id": "french-teacher",
+      "output_dir": "1. Primary_Roles/French Teacher",
+      "output_file": "CV-RickardÅberg-French-Teacher-generated.tex",
+      "title_line1": "French-speaking",
+      "title_line2": "Language Instructor & Substitute Teacher",
+      "subtitle": "Pedagogical coaching -- Multilingual Environments",
+      "quote": "If you fall one-hundred times and then get up, the 101 time you never lost!",
+      "summary_section": "French_teacher.tex",
+      "extra_sections": [
+        "pm_tm_experiences.tex",
+        "dev_experiences.tex",
+        "education.tex"
+      ],
+      "industry_sectors": [
+        ["Aviation", "Hospitality"],
+        ["Healthcare", "BioTech"],
+        ["Security", "Energy"],
+        ["Public", "Telecom"],
+        ["Finance", "Trade"]
+      ]
+    }
+  ]
+}
