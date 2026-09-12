@@ -12,7 +12,7 @@
       "extra_sections": [
         "Math_teacher_academic_foundation.tex",
         "cv_section_it_experience_condensed.tex",
-        "education.tex"
+        "cv_section_education_minimal.tex"
       ],
       "industry_sectors": [
         ["Education", "Public Sector"],
@@ -32,9 +32,8 @@
       "quote": "If you fall one-hundred times and then get up, the 101 time you never lost!",
       "summary_section": "French_teacher.tex",
       "extra_sections": [
-        "pm_tm_experiences.tex",
-        "dev_experiences.tex",
-        "education.tex"
+        "cv_section_it_experience_condensed.tex",
+        "cv_section_education_minimal.tex"
       ],
       "industry_sectors": [
         ["Aviation", "Hospitality"],
@@ -56,7 +55,7 @@
       "extra_sections": [
         "Music_production_skills.tex",
         "cv_section_it_experience_condensed.tex",
-        "education.tex"
+        "cv_section_education_minimal.tex"
       ],
       "industry_sectors": [
         ["Education", "Public Sector"],
