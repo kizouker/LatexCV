@@ -55,7 +55,7 @@
       "extra_sections": [
         "Music_production_skills.tex",
         "cv_section_it_experience_condensed.tex",
-        "cv_section_education_minimal_music.tex"
+        "cv_section_education_minimal.tex"
       ],
       "industry_sectors": [
         ["Education", "Public Sector"],
