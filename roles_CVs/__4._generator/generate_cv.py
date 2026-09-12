@@ -19,13 +19,29 @@ TEMPLATE_PATH = os.path.join(GENERATOR_DIR, "base_cv_template.tex")
 ROLES_JSON_PATH = os.path.join(GENERATOR_DIR, "roles.json")
 
 
+def escape_latex(text):
+    """Escape characters that are special to LaTeX in plain-text data fields.
+
+    roles.json fields like title/subtitle/quote are meant to be plain,
+    human-readable text -- not raw LaTeX -- so a literal "&" or "%" must not
+    silently corrupt compilation (this bit us once already: an unescaped "&"
+    in a title broke the whole document).
+    """
+    for char in ("&", "%", "#", "_"):
+        text = text.replace(char, "\\" + char)
+    return text
+
+
 def render_extra_sections(rel, section_files):
     lines = [f"\\input{{{rel}/__3._sections/{name}}}" for name in section_files]
     return "\n".join(lines)
 
 
 def render_industry_sectors(pairs):
-    lines = [f"\\cvlistdoubleitem{{{a}}}{{{b}}}" for a, b in pairs]
+    lines = [
+        f"\\cvlistdoubleitem{{{escape_latex(a)}}}{{{escape_latex(b)}}}"
+        for a, b in pairs
+    ]
     return "\n".join(lines)
 
 
@@ -35,10 +51,10 @@ def render_role(template, role):
     rel = os.path.relpath(ROLES_CVS_DIR, output_dir)
 
     text = template
-    text = text.replace("$$TITLE_LINE1$$", role["title_line1"])
-    text = text.replace("$$TITLE_LINE2$$", role["title_line2"])
-    text = text.replace("$$SUBTITLE$$", role["subtitle"])
-    text = text.replace("$$QUOTE$$", role["quote"])
+    text = text.replace("$$TITLE_LINE1$$", escape_latex(role["title_line1"]))
+    text = text.replace("$$TITLE_LINE2$$", escape_latex(role["title_line2"]))
+    text = text.replace("$$SUBTITLE$$", escape_latex(role["subtitle"]))
+    text = text.replace("$$QUOTE$$", escape_latex(role["quote"]))
     text = text.replace("$$SUMMARY_SECTION$$", role["summary_section"])
     text = text.replace(
         "$$EXTRA_SECTIONS$$", render_extra_sections(rel, role["extra_sections"])
