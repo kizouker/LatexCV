@@ -85,6 +85,27 @@
         ["Technology", "Energy"],
         ["Retail", "Aviation"]
       ]
+    },
+    {
+      "id": "music-business-economics",
+      "output_dir": "1. Primary_Roles/Music Business Economics",
+      "output_file": "CV-RickardÅberg-Music-Business-Economics.tex",
+      "title_line1": "Music Technology,",
+      "title_line2": "Business & Innovation",
+      "subtitle": "Audio Production -- Software Engineering -- Leadership",
+      "quote": "If you fall one-hundred times and then get up, the 101 time you never lost!",
+      "summary_section": "Music_business_economics.tex",
+      "extra_sections": [
+        "Music_production_skills.tex",
+        "Economics_leadership_foundation.tex",
+        "cv_section_education_minimal.tex"
+      ],
+      "industry_sectors": [
+        ["Media", "Entertainment"],
+        ["Technology", "Finance"],
+        ["Education", "Public Sector"],
+        ["Retail", "Telecom"]
+      ]
     }
   ]
 }
