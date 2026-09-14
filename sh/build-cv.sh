@@ -8,14 +8,14 @@
 #   sh/build-cv.sh --prune-days 30      # delete exported dates older than 30 days
 #
 # Every run writes:
-#   ~/Desktop/CV.s/<YYYY-MM-DD>/<basename>__<HHMMSS>.pdf   (permanent, timestamped)
-#   ~/Desktop/CV.s/latest/<basename>.pdf                   (always the newest build)
+#   ~/Desktop/CV/<YYYY-MM-DD>/<basename>__<HHMMSS>.pdf   (permanent, timestamped)
+#   ~/Desktop/CV/latest/<basename>.pdf                   (always the newest build)
 #
-# Override the export root with CV_EXPORT_ROOT if you don't want ~/Desktop/CV.s.
+# Override the export root with CV_EXPORT_ROOT if you don't want ~/Desktop/CV.
 
 set -euo pipefail
 
-EXPORT_ROOT="${CV_EXPORT_ROOT:-$HOME/Desktop/CV.s}"
+EXPORT_ROOT="${CV_EXPORT_ROOT:-$HOME/Desktop/CV}"
 
 prune_days() {
   local days="$1"
