@@ -1,0 +1,187 @@
+\documentclass[11pt,a4paper,sans]{moderncv}
+%---------%---------%---------%---------%---------%---------%---------%---------
+% Includes of packages, etc
+%---------%---------%---------%---------%---------%---------%---------%---------
+
+\usepackage[scaled]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\setlength{\hintscolumnwidth}{3cm}
+\moderncvstyle{banking}
+\moderncvcolor{red}
+\nopagenumbers{}
+
+\usepackage[scale=0.75]{geometry}
+\setlength{\footskip}{136.00005pt}
+
+\usepackage{graphicx}
+\graphicspath{{../includes}} % Specify the directory here
+\usepackage{enumitem}
+
+\ifxetexorluatex{}
+  \usepackage{fontspec}
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Ligatures=TeX}
+  \setmainfont{Latin Modern Roman}
+  \setsansfont{Latin Modern Sans}
+  \setmonofont{Latin Modern Mono}
+  \setmathfont{Latin Modern Math}
+\else
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage{lmodern}
+\fi
+
+\usepackage[swedish]{babel}
+\usepackage{underscore}
+% ------- % ------- % ------- % ------- % ------- % ------- % -------
+% Self-defined commands
+% ------- % ------- % ------- % ------- % ------- % ------- % -------
+
+\newcommand{\thepage}{\arabic{page}}
+\newlist{quotelist}{enumerate}{1}
+\setlist[quotelist]{label=\textquotedblleft\arabic*\textquotedblright}
+
+\makeatletter
+
+% Definiera bredden om den inte finns
+\@ifundefined{@photowidth}{%
+  \newlength{\@photowidth}
+  \setlength{\@photowidth}{4cm}
+}{}
+
+% Ange bildfil
+\def\@photo{../../__2._photos/rickardaberg-service-tekniker.jpeg}
+
+% Modifiera \makecvtitle om stilen är 'banking'
+\@ifpackageloaded{moderncvstylebanking}{%
+  \let\oldmakecvtitle\makecvtitle
+  \renewcommand*{\makecvtitle}{%
+    \vspace*{-1em}
+    \begin{center}
+      \includegraphics[width=\@photowidth,keepaspectratio]{\@photo}
+    \end{center}
+    \vspace{0.5em}
+    \oldmakecvtitle
+  }%
+}
+
+\makeatother
+
+\beforetitle{
+  \vspace*{-2em}
+  \begin{center}
+    {\color{black}\Huge\sffamily\itshape \textbf{K}yl- och \textbf{V}ärmepumpmontör}
+  \end{center}
+  \begin{center}
+    {\large\sffamily Utbildningssökande -- Personal Skills, Helsingborg}
+  \end{center}
+  \vspace{1em}
+}
+
+%------------------%------------------%------------------%------------------%------------------
+% Title - photo etc
+%------------------%------------------%------------------%------------------%------------------
+\title{Civilingenjör Datateknik i karriärväxling mot kyl- och värmepumpteknik}
+%------------------%------------------%------------------%------------------%------------------
+% Address - email - phone
+%------------------%------------------%------------------%------------------%------------------
+\firstname{Rickard}
+\lastname{Åberg}
+\address{Bodekullsgatan 34b}{21440 Malmö}
+\phone[mobile]{+46~709~43~14~01}
+\email{rickard.aaberg@gmail.com}
+%------------------%------------------%------------------%------------------%------------------
+\quote{Fysiskt, tekniskt och konkret arbete -- där jag ser resultatet av dagens insats direkt.}
+%------------------%------------------%------------------%------------------%------------------
+
+\begin{document}
+\makecvtitle{}
+
+\section{Sammanfattning}
+Civilingenjör i datateknik (Linköpings tekniska högskola) med över 20 års erfarenhet av tekniskt arbete, systemfelsökning och problemlösning inom IT, mjukvaruutveckling och drift. Söker nu en konkret karriärväxling mot ett praktiskt hantverksyrke -- kyl- och värmepumpteknik -- där teknisk förståelse, noggrannhet och kundnära arbete kombineras med fysiska, handgripliga arbetsuppgifter och ett tydligt resultat varje dag. Van vid att snabbt sätta mig in i nya tekniska system, arbeta metodiskt enligt rutiner, checklistor och säkerhetskrav, samt dokumentera och felsöka avvikelser. B-körkort finns.
+
+\section{Varför kyl- och värmepumpteknik}
+\cvitem{}{
+Efter många år i mer teoretiska IT- och konsultroller vill jag arbeta med något konkret och tekniskt tillsammans med händerna, där jag kan lämna arbetsdagen bakom mig när jobbet är klart. Kyl- och värmepumpteknik är ett hantverksyrke i stark efterfrågan, med tydlig koppling till klimatomställningen, och passar väl med mitt tekniska intresse för system, styrlogik, elektronik och mätning/kontroll. Jag deltog på Arbetsförmedlingens utbildningsmässa i Malmö den 9 september och gjorde ett studiebesök hos Personal Skills i Helsingborg för att lära mig mer om utbildningen till kyl- och värmepumpmontör.
+}
+
+\section{Teknisk bakgrund och systemförståelse}
+\cvitem{}{
+\begin{itemize}
+  \item \textbf{Teknisk systemförståelse} -- Civilingenjör i datateknik med bred förståelse för hur tekniska system samverkar, inklusive mjukvara, hårdvara, sensorer, styrsystem och reglerteknik.
+  \item \textbf{System- och driftorienterat arbetssätt} -- Van vid att arbeta nära tekniska system i drift, med fokus på stabilitet, tillgänglighet och korrekt funktion -- direkt överförbart till kylanläggningar och värmepumpar i drift.
+  \item \textbf{Logiskt och strukturerat tänkande} -- Stark förmåga att analysera systembeteenden, följa flöden och förstå sekvenser, beroenden och styrlogik (relevant för kyl-/värmepumpstyrning, termostater och reglersystem).
+  \item \textbf{Teknisk felsökning och avvikelsehantering} -- Metodisk i identifiering av felorsaker, bedömning av risker och genomförande av åtgärder vid tekniska avvikelser eller driftstörningar.
+  \item \textbf{Elektronik och elteknik} -- Grundläggande erfarenhet av elektronik, mätning och praktisk felsökning sedan tidiga arbetslivserfarenheter inom bilelektronik samt hårdvarukurser under civilingenjörsutbildningen.
+  \item \textbf{Mätning, noggrannhet och kontroll} -- Förstår vikten av precision, verifiering och uppföljning i tekniska och säkerhetskritiska sammanhang -- centralt vid köldmediehantering och täthetskontroller.
+  \item \textbf{Rutiner och säkerhet} -- Van vid att arbeta enligt givna rutiner, checklistor och instruktioner, med högt säkerhetsmedvetande.
+  \item \textbf{Dokumentation och rapportering} -- Erfaren av teknisk dokumentation, tydlig rapportering och spårbarhet av åtgärder och beslut.
+  \item \textbf{Snabb inlärning i nya system} -- Snabblärd i nya tekniska system och arbetsmetoder, med fokus på korrekt hantering, kvalitet och säker drift.
+\end{itemize}
+}
+
+\section{Praktiskt arbete och arbetsförmåga}
+\cvitem{}{
+\begin{itemize}[leftmargin=1.5em]
+  \item Nyfiken på att lära sig nytt och med god studievana
+  \item Vana vid fysiskt krävande arbete under längre arbetspass, bland annat som fältarbetare inom skogsbruk
+  \item Arbetar metodiskt med fokus på säkerhet, ordning och kvalitet
+  \item Självständig, uthållig och bekväm med praktiska, repetitiva arbetsmoment
+  \item God förståelse för arbetsmiljö, riskbedömning och rutiner
+  \item Trivs med arbete utomhus, hos kund och med tydligt avgränsade arbetsuppgifter
+  \item God servicevana och van att förklara tekniska frågor för icke-tekniska kunder på ett tydligt sätt
+\end{itemize}
+}
+
+\section{Yrkeserfarenhet}
+\cventry{2026}{Fältarbetare (visstid)}{Skogsstyrelsen}{Sverige}{}{
+Naturvårdsarbete, fältinventering, miljöövervakning och regelefterlevnad inom skogsbruk -- fysiskt utomhusarbete med hög grad av självständighet och rutinföljsamhet.
+}
+\cventry{2025}{Cloud Computing och Azure-kurs}{ReDI School of Digital Integration}{Malmö}{}{
+Praktisk, kursfokuserad utbildning inom Azure och molnsäkerhet. Visar förmåga att snabbt tillgodogöra sig och certifiera sig inom ett helt nytt tekniskt område.
+}
+\cventry{2021--2022}{Fullstack-utvecklare}{ADBSafegate AB}{Malmö}{}{Angular, TypeScript, Azure, Scaled Agile Framework (SAFe)}
+\cventry{2021}{Fullstack-utvecklare}{Zaplox AB}{Lund}{}{Vue.js, Node.js, JavaScript, CSS, AWS}
+\cventry{2017--2018}{Senior mjukvaruutvecklare}{Verisure Innovation}{Malmö}{}{Java, Android, Docker/Kubernetes, drift och felsökning i produktionsmiljö}
+\cventry{2012--2017}{Managing Consultant}{Bouvet Syd AB}{Malmö}{}{Java-utvecklare, teamledare, DevOps-ansvarig -- ansvar för leverans, kvalitet och driftsäkerhet}
+\cventry{2004--2012}{Konsult}{Cybercom}{Malmö}{}{Java, systemintegration, test -- teknisk felsökning i komplexa driftmiljöer}
+\cventry{2003--2004}{Forskningsingenjör}{École des Mines}{Nantes, Frankrike}{}{Hårdvarunära utveckling och systemintegration}
+\cventry{2002}{Embedded-utvecklare}{HemoCue}{Ängelholm}{}{Utveckling nära hårdvara och mätteknik i medicintekniska instrument}
+
+\section{Tidiga arbetslivserfarenheter och praktikplatser}
+\cventry{1989--1994}{Tidningsutdelare}{Kvällsposten}{Skepparkroken och Skälderviken}{}{
+Utdelning av morgontidningar i två distrikt nästan varje helg under fem års tid, från 12 års ålder. Ansvarstagande, punktlighet och logistik i alla väder.
+}
+\cventry{1991}{Praktik: verkstadsstöd}{Bjäresläp och Bilelektro AB}{Ängelholm}{}{
+Verkstadsstöd inom släpvagnsservice och bilelektronik. Grundläggande el- och teknisk förståelse samt praktisk problemlösning -- tidig kontaktyta med hantverksyrken.
+}
+\cventry{1993--1997}{Ferie- och sommararbete}{Barkåkra kyrka}{Ängelholm}{}{
+Vaktmästeri, trädgårdsarbete, målning, handgrävning och skötsel av kyrkogård under flera somrar -- praktiskt utomhusarbete med eget ansvar.
+}
+\cventry{1995}{Praktik: IT-support}{Datafirma}{Båstad}{}{
+IT-support, installationer och teknisk kundservice.
+}
+
+\section{Utbildning}
+\cventry{1996--2003}{Civilingenjör, Datateknik (300 hp)}{Linköpings tekniska högskola}{Linköping}{}{
+Hårdvarukonstruktion, inbyggda system med mikrokontroller, avancerad datorarkitektur, realtidsprogrammering.
+}
+\cventry{2025}{Cloud Computing och Azure-säkerhet}{ReDI School of Digital Integration}{Malmö}{}{Microsoft Azure Fundamentals (AZ-900)}
+\cventry{2023--2024}{Google Cybersecurity Fundamentals}{Google/Coursera}{Online}{}{}
+\cventry{2016}{Programmering och problemlösning i Python (2.5 hp)}{Blekinge tekniska högskola}{Ronneby}{}{}
+\cventry{1993--1996}{Naturvetenskapligt program}{Rönneskolan}{Ängelholm}{}{
+Tekniskt tillval: programmering, elektronik, mikrodatorer, PC-support. Matematik upp till E, kemi A och B, fysik A och B.
+}
+
+\section{Körkort och certifikat}
+\cventry{B}{Körkort}{Personbil}{}{}{}
+
+\section{Språk}
+\cvitemwithcomment{Svenska}{Modersmål}{}
+\cvitemwithcomment{Engelska}{Mycket god}{}
+\cvitemwithcomment{Franska}{God}{}
+
+\section{Referenser}
+Lämnas på begäran.
+
+\end{document}
