@@ -1,0 +1,149 @@
+\documentclass[11pt,a4paper,sans]{moderncv}
+%---------%---------%---------%---------%---------%---------%---------%---------
+% Includes of packages, etc
+%---------%---------%---------%---------%---------%---------%---------%---------
+
+\usepackage[scaled]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\moderncvstyle{banking}
+\setlength{\hintscolumnwidth}{3cm}
+\moderncvcolor{red}
+\nopagenumbers{}
+
+\usepackage[scale=0.85]{geometry}
+\setlength{\footskip}{20pt}
+
+\usepackage{graphicx}
+\graphicspath{{../includes}} % Specify the directory here
+\usepackage{enumitem}
+
+\ifxetexorluatex{}
+  \usepackage{fontspec}
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Ligatures=TeX}
+  \setmainfont{Latin Modern Roman}
+  \setsansfont{Latin Modern Sans}
+  \setmonofont{Latin Modern Mono}
+  \setmathfont{Latin Modern Math}
+\else
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage{lmodern}
+\fi
+
+\usepackage[swedish]{babel}
+\usepackage{underscore}
+% ------- % ------- % ------- % ------- % ------- % ------- % -------
+% Self-defined commands
+% ------- % ------- % ------- % ------- % ------- % ------- % -------
+
+\newcommand{\thepage}{\arabic{page}}
+\newlist{quotelist}{enumerate}{1}
+\setlist[quotelist]{label=\textquotedblleft\arabic*\textquotedblright}
+
+\makeatletter
+
+% Definiera bredden om den inte finns
+\@ifundefined{@photowidth}{%
+  \newlength{\@photowidth}
+  \setlength{\@photowidth}{2.3cm}
+}{}
+
+% Ange bildfil
+\def\@photo{../../__2._photos/rickardaberg-service-tekniker.jpeg}
+
+% Modifiera \makecvtitle om stilen är 'banking'
+\@ifpackageloaded{moderncvstylebanking}{%
+  \let\oldmakecvtitle\makecvtitle
+  \renewcommand*{\makecvtitle}{%
+    \vspace*{-1.5em}
+    \begin{center}
+      \includegraphics[width=\@photowidth,keepaspectratio]{\@photo}
+    \end{center}
+    \vspace{0.1em}
+    \oldmakecvtitle
+  }%
+}
+
+\makeatother
+
+\newcommand{\mybeforetitle}{
+  \vspace*{-2.5em}
+  \begin{center}
+    {\color{black}\LARGE\sffamily\itshape \textbf{K}yl- och \textbf{V}ärmepumpmontör}
+  \end{center}
+  \begin{center}
+    {\normalsize\sffamily Utbildningssökande -- Personal Skills, Helsingborg}
+  \end{center}
+  \vspace{0.2em}
+}
+
+%------------------%------------------%------------------%------------------%------------------
+% Title - photo etc
+%------------------%------------------%------------------%------------------%------------------
+\title{Civilingenjör i karriärväxling mot kyl- och värmepumpteknik}
+%------------------%------------------%------------------%------------------%------------------
+% Address - email - phone
+%------------------%------------------%------------------%------------------%------------------
+\firstname{Rickard}
+\lastname{Åberg}
+\address{Bodekullsgatan 34b}{21440 Malmö}
+\phone[mobile]{+46~709~43~14~01}
+\email{raberg@duck.com}
+%------------------%------------------%------------------%------------------%------------------
+\quote{Fysiskt, tekniskt och konkret arbete -- där jag ser resultatet av dagens insats direkt.}
+%------------------%------------------%------------------%------------------%------------------
+
+\begin{document}
+\mybeforetitle
+\makecvtitle{}
+
+\section{Sammanfattning}
+Civilingenjör i datateknik (Linköpings tekniska högskola) med över 20 års erfarenhet av tekniskt arbete, systemfelsökning och problemlösning inom IT och drift. Söker nu en konkret karriärväxling mot ett praktiskt hantverksyrke -- kyl- och värmepumpteknik -- där teknisk förståelse, noggrannhet och kundnära arbete kombineras med fysiska, handgripliga arbetsuppgifter och ett tydligt resultat varje dag. Deltog på Arbetsförmedlingens utbildningsmässa i Malmö den 9 september och gjorde studiebesök hos Personal Skills i Helsingborg. B-körkort finns.
+
+\section{Kompetensprofil}
+\begin{cvcolumns}
+  \cvcolumn{Teknisk bakgrund}{%
+    \begin{itemize}[leftmargin=1.2em,itemsep=0.1em]
+      \item Systemförståelse: mjukvara, hårdvara, sensorer, styrsystem
+      \item Drift, stabilitet och felsökning i tekniska system
+      \item Logiskt tänkande: sekvenser, styrlogik, reglerteknik
+      \item Elektronik/elteknik (bilelektronik, hårdvarukurser)
+      \item Mätning, precision och kontroll
+      \item Snabblärd i nya tekniska system och rutiner
+    \end{itemize}}
+  \cvcolumn{Praktiskt arbetssätt}{%
+    \begin{itemize}[leftmargin=1.2em,itemsep=0.1em]
+      \item Van vid fysiskt krävande arbete (fältarbete, skogsbruk)
+      \item Metodisk: säkerhet, rutiner, checklistor
+      \item Självständig och uthållig
+      \item God servicevana, tydlig mot kund
+      \item Trivs med arbete utomhus och hos kund
+    \end{itemize}}
+\end{cvcolumns}
+
+\section{Yrkeserfarenhet}
+\cventry{2026 --}{iOS-app: Breathwork, HRV \& Biofeedback}{Eget projekt}{}{}{HRV-analys, andningsstyrning och realtidsbiofeedback.}
+\cventry{2024 --}{AI-verktyg \& Claude}{Eget lärande}{}{}{Praktisk erfarenhet av AI-assistenter (Claude/LLM) i utveckling och automatisering.}
+\cventry{2026}{Fältarbetare (visstid)}{Skogsstyrelsen}{Sverige}{}{Fältinventering, naturvård, fysiskt utomhusarbete.}
+\cventry{2025}{Azure-kurs}{ReDI School of Digital Integration}{Malmö}{}{Cloud \& molnsäkerhet, AZ-900.}
+\cventry{2021--2022}{Fullstack-utvecklare}{ADBSafegate AB}{Malmö}{}{Angular, Azure, SAFe.}
+\cventry{2021}{Fullstack-utvecklare}{Zaplox AB}{Lund}{}{Vue.js, Node.js, AWS.}
+\cventry{2017--2018}{Senior mjukvaruutvecklare}{Verisure Innovation}{Malmö}{}{Java, Android, drift \& felsökning.}
+\cventry{2012--2017}{Managing Consultant}{Bouvet Syd AB}{Malmö}{}{Java, teamledare, DevOps.}
+\cventry{2004--2012}{Konsult}{Cybercom}{Malmö}{}{Java, systemintegration, test.}
+\cventry{2002--2004}{Forsknings-/embeddedingenjör}{École des Mines \& HemoCue}{Frankrike / Ängelholm}{}{Hårdvarunära utveckling och mätteknik.}
+
+\section{Tidig arbetslivserfarenhet}
+\cvitem{1989--1997}{Tidningsbud, kyrkogårdsskötsel samt praktik inom bilelektronik och IT-support -- från 12 års ålder. Tidigt ansvarstagande och praktiskt handlag.}
+
+\section{Utbildning}
+\cventry{1996--2003}{Civilingenjör, Datateknik (300 hp)}{Linköpings tekniska högskola}{Linköping}{}{}
+\cventry{2025}{Cloud Computing \& Azure-säkerhet (AZ-900)}{ReDI School of Digital Integration}{Malmö}{}{}
+\cventry{1993--1996}{Naturvetenskapligt program (tekniskt tillval: el, mikrodatorer)}{Rönneskolan}{Ängelholm}{}{}
+
+\section{Övrigt}
+\cvdoubleitem{Körkort}{B (personbil)}{Språk}{Svenska (modersmål), Engelska, Franska}
+\cvitem{Referenser}{Lämnas på begäran.}
+
+\end{document}
