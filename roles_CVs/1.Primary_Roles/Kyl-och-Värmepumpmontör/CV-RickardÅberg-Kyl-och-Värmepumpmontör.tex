@@ -5,8 +5,8 @@
 
 \usepackage[scaled]{helvet}
 \renewcommand{\familydefault}{\sfdefault}
-\setlength{\hintscolumnwidth}{3cm}
 \moderncvstyle{banking}
+\setlength{\hintscolumnwidth}{3cm}
 \moderncvcolor{red}
 \nopagenumbers{}
 
@@ -67,7 +67,7 @@
 
 \makeatother
 
-\beforetitle{
+\newcommand{\mybeforetitle}{
   \vspace*{-2em}
   \begin{center}
     {\color{black}\Huge\sffamily\itshape \textbf{K}yl- och \textbf{V}ärmepumpmontör}
@@ -95,6 +95,7 @@
 %------------------%------------------%------------------%------------------%------------------
 
 \begin{document}
+\mybeforetitle
 \makecvtitle{}
 
 \section{Sammanfattning}
@@ -174,7 +175,7 @@ Tekniskt tillval: programmering, elektronik, mikrodatorer, PC-support. Matematik
 }
 
 \section{Körkort och certifikat}
-\cventry{B}{Körkort}{Personbil}{}{}{}
+\cventry{}{Körkort B}{Personbil}{}{}{}
 
 \section{Språk}
 \cvitemwithcomment{Svenska}{Modersmål}{}
