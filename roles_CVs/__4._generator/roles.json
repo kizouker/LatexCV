@@ -106,6 +106,27 @@
         ["Education", "Public Sector"],
         ["Retail", "Telecom"]
       ]
+    },
+    {
+      "id": "general-substitute-teacher",
+      "output_dir": "1. Primary_Roles/Vikarie Allman Linje",
+      "output_file": "CV-RickardÅberg-Vikarie-Allman-Linje.tex",
+      "title_line1": "General Substitute",
+      "title_line2": "Teacher (Vikarie)",
+      "subtitle": "Swedish -- English -- Mathematics -- SFI",
+      "quote": "If you fall one-hundred times and then get up, the 101 time you never lost!",
+      "summary_section": "General_substitute_teacher.tex",
+      "extra_sections": [
+        "cv_section_general_subjects.tex",
+        "cv_section_it_experience_condensed.tex",
+        "cv_section_education_minimal.tex"
+      ],
+      "industry_sectors": [
+        ["Education", "Public Sector"],
+        ["Aviation", "Hospitality"],
+        ["Healthcare", "BioTech"],
+        ["Finance", "Trade"]
+      ]
     }
   ]
 }
