@@ -1,0 +1,24 @@
+{
+    "company": "Academic Work",
+    "role": "AW Accelerate - Data Engineer",
+    "location": "Malmö alternativt Växjö",
+    "application_date": "2026-09-16",
+    "job_id": "NW2UOV",
+    "status": "Pending",
+    "response": "Not yet received",
+    "follow_up_date": "TBD",
+    "source": "academicwork.se",
+    "notes": "Direktrekrytering via AW Accelerate. Utbildningsstart 30 nov 2026. Personligt brev efterfrågas ej, endast CV.",
+    "extracted_keywords": [
+        "data engineer",
+        "sql",
+        "python",
+        "java",
+        "c#",
+        "azure",
+        "databricks",
+        "dp-203",
+        "az-900",
+        "systemutveckling"
+    ]
+}
