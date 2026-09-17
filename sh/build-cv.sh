@@ -10,7 +10,17 @@
 #   sh/build-cv.sh claude/ils-ingenjor-academic-work
 set -euo pipefail
 
-REPO_ROOT="$(git rev-parse --show-toplevel)"
+# Resolve the script's own location (following symlinks), so this still
+# finds the repo when invoked via a symlink from outside it, e.g.
+# /usr/local/bin/build-cv -> .../LatexCV/sh/build-cv.sh
+SOURCE="${BASH_SOURCE[0]}"
+while [ -h "$SOURCE" ]; do
+  SCRIPT_DIR="$(cd -P "$(dirname "$SOURCE")" >/dev/null 2>&1 && pwd)"
+  SOURCE="$(readlink "$SOURCE")"
+  [[ "$SOURCE" != /* ]] && SOURCE="$SCRIPT_DIR/$SOURCE"
+done
+SCRIPT_DIR="$(cd -P "$(dirname "$SOURCE")" >/dev/null 2>&1 && pwd)"
+REPO_ROOT="$(cd -P "$SCRIPT_DIR/.." && pwd)"
 cd "$REPO_ROOT"
 
 if [ "${1:-}" = "--list" ] || [ "${1:-}" = "-l" ]; then
