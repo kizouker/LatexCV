@@ -109,6 +109,36 @@ sh/cleanup-old-pdfs.sh --yes        # ta bort dem
 sh/cleanup-old-pdfs.sh --days 365 --yes   # annan gräns
 ```
 
+## RavenMatrix -- matristränare
+
+En fristående Angular-app under
+`processes/hiring-process/personality-tests/RavenMatrix/app/` med
+genererade Raven/Matrigma-liknande matrispussel (se
+`RavenMatrix/ROADMAP.md` för bakgrund). Ligger just nu på en egen branch,
+inte ännu mergad till `main`:
+
+```bash
+git fetch origin
+git checkout claude/gracious-gauss-msd0i2
+cd processes/hiring-process/personality-tests/RavenMatrix/app
+npm install
+npm start
+```
+
+Öppna sedan <http://localhost:4200> i webbläsaren. `npm start` kör
+`ng serve` med liveomladdning -- ändringar i koden syns direkt.
+
+Kräver Node 18.19+/20.11+/22+ och npm (matchar Angular 19:s krav). Redan
+på `main`? Då räcker `git pull` istället för `checkout`.
+
+För en produktionsbygd istället för dev-server:
+
+```bash
+npm run build
+```
+
+Bygger till `dist/app/` (statiska filer, kan öppnas/serveras hur som helst).
+
 ## Global symlänk + man-sida
 
 Kör från valfri katalog:
