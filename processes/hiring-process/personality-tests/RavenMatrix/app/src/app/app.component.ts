@@ -39,6 +39,7 @@ export class AppComponent {
     { key: 'latin', label: 'Färg & form' },
     { key: 'spikes', label: 'Uddar' },
     { key: 'trio', label: 'Tre former' },
+    { key: 'slots', label: 'Rotation & fack' },
   ];
   readonly difficulties: { key: Difficulty; label: string }[] = [
     { key: 'easy', label: 'Lätt' },

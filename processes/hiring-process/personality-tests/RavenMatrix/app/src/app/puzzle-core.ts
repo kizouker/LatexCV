@@ -1,7 +1,7 @@
 // Framework-agnostic matrix-reasoning puzzle engine (plain TypeScript, no Angular imports).
 // Intended to be reused as-is by any UI layer (Angular now, React later — see ROADMAP.md).
 
-export type Family = 'rotation' | 'crescent' | 'latin' | 'spikes' | 'trio';
+export type Family = 'rotation' | 'crescent' | 'latin' | 'spikes' | 'trio' | 'slots';
 export type Difficulty = 'easy' | 'medium' | 'hard';
 
 export interface BlobPoint {
@@ -22,6 +22,7 @@ export interface ShapeSpec {
   triRot?: number;
   dotT?: number;
   extraOn?: boolean;
+  slot?: number;
 }
 
 export interface Option extends ShapeSpec {
@@ -292,12 +293,55 @@ function genTrio(diff: Difficulty): GenResult {
   return { grid, correct, distractors, explanation };
 }
 
+function genSlots(diff: Difficulty): GenResult {
+  // Rotates consistently counter-clockwise (always subtracted, never added)
+  // while a separate marker jumps between 3 fixed slots -- two independent
+  // rules, unlike 'trio' where the moving element slides continuously.
+  const blob = makeBlobSpec(5);
+  const deltaRotCol = diff === 'easy' ? 80 : diff === 'medium' ? 55 : 34;
+  const deltaRotRow = diff === 'easy' ? 0 : diff === 'medium' ? 18 : 14;
+  const baseRot = Math.floor(Math.random() * 360);
+  const slotOffset = Math.floor(Math.random() * 3);
+  const grid: ShapeSpec[][] = [];
+  for (let r = 0; r < 3; r++) {
+    const row: ShapeSpec[] = [];
+    for (let c = 0; c < 3; c++) {
+      row.push({
+        family: 'slots',
+        blob,
+        rot: ((baseRot - c * deltaRotCol - r * deltaRotRow) % 360 + 360) % 360,
+        slot: (r + c + slotOffset) % 3,
+      });
+    }
+    grid.push(row);
+  }
+  const correct = grid[2][2];
+  const mk = (rotOffset: number, slotOffset2: number): ShapeSpec => ({
+    family: 'slots',
+    blob,
+    rot: ((correct.rot! + rotOffset) % 360 + 360) % 360,
+    slot: ((correct.slot! + slotOffset2) % 3 + 3) % 3,
+  });
+  const r0 = deltaRotRow || 30;
+  const candidates = [
+    mk(deltaRotCol, 0), mk(-deltaRotCol, 0), mk(r0, 0), mk(-r0, 0),
+    mk(0, 1), mk(0, -1), mk(180, 1), mk(deltaRotCol, -1),
+  ];
+  const keyFn = (s: ShapeSpec) => `${Math.round(s.rot!)}-${s.slot}`;
+  const distractors = pickDistractors(keyFn(correct), candidates, keyFn, 5);
+  const explanation = deltaRotRow
+    ? `Figuren roterar ${deltaRotCol}° åt vänster (moturs) för varje kolumn och ${deltaRotRow}° till för varje rad, medan punkten flyttar sig ett fack åt höger (och wrappar runt) för varje steg i rad+kolumn.`
+    : `Figuren roterar ${deltaRotCol}° åt vänster (moturs) för varje kolumn, medan punkten flyttar sig ett fack åt höger (och wrappar runt) för varje steg i rad+kolumn.`;
+  return { grid, correct, distractors, explanation };
+}
+
 const GENERATORS: Record<Family, (diff: Difficulty) => GenResult> = {
   rotation: genRotation,
   crescent: genCrescent,
   latin: genLatin,
   spikes: genSpikes,
   trio: genTrio,
+  slots: genSlots,
 };
 
 export function generatePuzzle(family: Family | 'random', difficulty: Difficulty): Puzzle {
@@ -343,6 +387,26 @@ export function shapeMarkup(spec: ShapeSpec): string {
       ]);
       const squareMarkup = spec.extraOn ? `<path class="outline-shape" d="${squareD}" />` : '';
       return `<path class="outline-shape" d="${triD}" /><circle class="trio-dot" cx="${dotX.toFixed(2)}" cy="${dotY.toFixed(2)}" r="5" />${squareMarkup}`;
+    }
+    case 'slots': {
+      const rotD = blobPath(spec.blob!, 50, 32, spec.rot!, 0.45);
+      const slotXs = [22, 50, 78];
+      const slotY = 82;
+      let slotsMarkup = '';
+      for (let i = 0; i < 3; i++) {
+        const cx = slotXs[i];
+        const slotD = pointsToPath([
+          [cx - 7, slotY - 7],
+          [cx + 7, slotY - 7],
+          [cx + 7, slotY + 7],
+          [cx - 7, slotY + 7],
+        ]);
+        slotsMarkup += `<path class="outline-shape" d="${slotD}" />`;
+        if (i === spec.slot) {
+          slotsMarkup += `<circle class="trio-dot" cx="${cx}" cy="${slotY}" r="4" />`;
+        }
+      }
+      return `<path class="outline-shape" d="${rotD}" />${slotsMarkup}`;
     }
     default:
       return '';
