@@ -1,0 +1,131 @@
+%% CV - Rickard Åberg - Professionals Nord / Infranord, Signaltekniker (Malmö)
+\documentclass[11pt,a4paper,sans]{moderncv}
+\moderncvstyle{banking}
+\moderncvcolor{blue}
+\usepackage[scale=0.75]{geometry}
+\setlength{\footskip}{136.00005pt}
+\usepackage{graphicx}
+\graphicspath{{../../../roles_CVs/__1._images/}{../../../roles_CVs/__2._photos/}}
+\usepackage{enumitem}
+\newcommand{\thepage}{\arabic{page}}
+
+\ifxetexorluatex
+  \usepackage{fontspec}
+\else
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage{lmodern}
+\fi
+
+\usepackage[swedish]{babel}
+\usepackage{underscore}
+
+\name{Rickard}{Åberg}
+\title{Signaltekniker -- Professionals Nord / Infranord}
+\photo[72pt][0pt]{me}
+\address{Bodekullsgatan 34b}{21440 Malmö}
+\phone[mobile]{+46~709~43~14~01}
+\email{rickard.aaberg@icloud.com}
+\social[linkedin]{rickard-åberg-9866891}
+\social[github]{kizouker}
+
+\quote{Civilingenjör som vill ta med sig den tekniska nyfikenheten och säkerhetsmedvetenheten från mjukvarusystem ut till järnvägens fysiska signalsystem.}
+
+\makeatletter
+\@ifpackageloaded{moderncvstylebanking}{%
+\let\oldmakecvtitle\makecvtitle
+\renewcommand*{\makecvtitle}{%
+  {\centering\framebox{\includegraphics[width=\@photowidth]{\@photo}}\par\vspace{10pt}}%
+  \oldmakecvtitle%
+}%
+}{}
+\makeatother
+
+\begin{document}
+\makecvtitle
+
+\section*{Professionell profil}
+
+Civilingenjör i datateknik (Linköpings tekniska högskola) med bred teknisk bakgrund inom hårdvarukonstruktion, inbyggda system och komplexa tekniska system i drift. Söker nu programmet till Signaltekniker för att växla från mjukvara till ett praktiskt, tekniskt hantverksyrke -- ett yrke där noggrannhet, ansvar och säkerhet avgör om systemet fungerar.
+
+Jag har ingen erfarenhet av järnvägsbranschen, men jag har byggt karriär på att snabbt sätta mig in i nya tekniska system, felsöka metodiskt och arbeta strukturerat enligt rutiner i miljöer där fel får konsekvenser. Det jag gillar allra mest är teknisk problemlösning -- och helst ute i fält, med händerna på systemet, snarare än enbart bakom en skärm. Under studietiden läste jag hårdvarukonstruktion, realtidsprogrammering och inbyggda mikrokontrollersystem (PIC, Cop8, 68000), och min tidigaste praktiska erfarenhet var i en bilelektronikverkstad. Jag trivs med praktiskt arbete utomhus -- vilket jag bekräftat i min nuvarande roll som fältarbetare hos Skogsstyrelsen -- och har genom mitt arbete med apron- och markoperationer för trafikflyg fått direkt erfarenhet av säkerhetskritiska flöden och procedurföljsamhet i en operativ miljö, precis den typen av ansvar som signaltekniker bär för tågtrafiken.
+
+\section*{Relevant profil för rollen}
+\begin{itemize}[nosep]
+  \item Civilingenjör, Datateknik -- hårdvarukonstruktion, grundläggande ellära, inbyggda system, realtidsprogrammering
+  \item Van vid tekniska system i drift, med fokus på stabilitet, tillgänglighet och korrekt funktion
+  \item Metodisk teknisk felsökning och avvikelsehantering, analys av felorsaker och risker
+  \item Erfarenhet av säkerhetskritiska flöden och procedurföljsamhet (apron-/markoperationer för trafikflyg, ADBSafegate)
+  \item Van vid att arbeta enligt givna rutiner, checklistor och instruktioner med högt säkerhetsmedvetande
+  \item Praktiskt fysiskt arbete utomhus i alla väder (fältarbete, naturvård -- Skogsstyrelsen)
+  \item Tidig praktisk teknisk erfarenhet från bilelektronikverkstad
+  \item Snabblärd i nya tekniska system och arbetsmetoder, van vid teknisk dokumentation och rapportering
+  \item Flytande svenska (modersmål) och engelska, B-körkort
+\end{itemize}
+
+\section{Erfarenhet}
+
+\cventry{2026}{Fältarbetare (visstid)}{Skogsstyrelsen}{Sverige}{}{Praktiskt fält- och naturvårdsarbete utomhus i alla väder. Röjning, kontrollerad bränning och skötselåtgärder enligt fastställda rutiner och säkerhetsföreskrifter.}
+
+\cventry{2025}{Cloud Computing och Azure-kurs}{ReDI School of Digital Integration}{Malmö}{}{Praktisk kursfokuserad utbildning inom Azure, molnsäkerhet och DevOps.}
+
+\cventry{2021--2022}{Fullstack Developer}{ADBSafegate AB}{Malmö}{}{Applikationsutveckling kopplad till apron- och markoperationer för trafikflyg, med fokus på säker parkering, positionsinformation och samordning mellan fordon och luftfartyg. Gav förståelse för säkerhetskritiska flöden, procedurföljsamhet och lägesbild i komplex operativ miljö.}
+
+\cventry{2017--2018}{Senior Software Engineer}{Verisure Innovation}{Malmö}{}{Utveckling kopplad till larm- och säkerhetssystem. Mikroservicedeploy, felsökning och driftstabilitet.}
+
+\cventry{2012--2017}{Managing Consultant}{Bouvet Syd AB}{Malmö}{}{Systemutveckling och drift i miljöer med höga krav på tillgänglighet och spårbarhet.}
+
+\cventry{2004--2012}{Konsult -- Systemintegration}{Cybercom / Telenor / IKEA IT}{Malmö/Oslo}{}{Integrationsutveckling och teknisk felsökning i storskaliga driftmiljöer.}
+
+\section{Tidiga tekniska erfarenheter}
+
+\cvitem{1991}{Praktik, Bjäresläp och Bilelektro AB, Ängelholm -- verkstadsstöd inom släpvagnsservice och bilelektronik}
+\cvitem{1992}{Praktik, F10 Flygflottilj, Ängelholm -- verksamhet med höga krav på ordning, rutiner och säkerhet}
+\cvitem{1995}{Praktik, Datafirma, Båstad -- IT-support, installationer och teknisk kundservice}
+\cvitem{1999}{Praktik, IDA Infront, Linköping -- utveckling och databasarbete. Omdöme: \emph{"Våra bästa rekommendationer"}}
+
+\section{Utbildning \& Certifieringar}
+
+\cventry{2025}{Microsoft Certified: Azure Fundamentals (AZ-900)}{Microsoft}{}{}{}
+\cventry{2023--2024}{Google Cybersecurity Fundamentals}{Google/Coursera}{}{}{}
+\cventry{1996--2003}{Civilingenjör, Datateknik (300 hp)}{Linköpings tekniska högskola}{Linköping}{}{Hårdvarukonstruktion, inbyggda system med mikrokontroller (PIC, Cop8, 68000), realtidsprogrammering, avancerad datorarkitektur, grundläggande ellära}
+
+\cvitem{}{
+\begin{minipage}[t]{0.3\linewidth}
+  \centering
+  \includegraphics[width=0.9\linewidth]{azure-fundamentals-badge.png}\\
+  \scriptsize Azure Fundamentals (AZ-900)
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.3\linewidth}
+  \centering
+  \includegraphics[width=0.9\linewidth]{liu-logo.png}\\
+  \scriptsize Linköpings tekniska högskola
+\end{minipage}
+}
+
+\section{Teknisk bakgrund, systemförståelse och arbetsförmåga}
+
+\cvitem{}{
+\begin{itemize}[nosep]
+  \item \textbf{Teknisk systemförståelse} -- bred förståelse för hur mjukvara, hårdvara, sensorer och styrsystem samverkar i operativa miljöer
+  \item \textbf{System- och driftorienterat arbetssätt} -- van vid att arbeta nära tekniska system i drift, med fokus på stabilitet och korrekt funktion
+  \item \textbf{Teknisk felsökning} -- metodisk identifiering av felorsaker, riskbedömning och åtgärd vid avvikelser
+  \item \textbf{Rutiner och säkerhet} -- van vid checklistor och instruktioner, med högt säkerhetsmedvetande och känsla för precision
+  \item \textbf{Dokumentation} -- teknisk dokumentation, tydlig rapportering och spårbarhet av åtgärder
+  \item \textbf{Snabb inlärning} -- snabblärd i nya tekniska system och arbetsmetoder
+  \item \textbf{Fysisk arbetsförmåga} -- van vid fysiskt krävande arbete under längre arbetspass utomhus i alla väder, uthållig och självständig
+\end{itemize}
+}
+
+\section{Språk}
+\cvitemwithcomment{Svenska}{Modersmål}{}
+\cvitemwithcomment{Engelska}{Flytande, professionell nivå}{}
+\cvitemwithcomment{Franska}{Professionell nivå}{}
+
+\section{Övrigt}
+\cventry{}{B-körkort}{}{}{}{}
+\cvitem{Ort}{Malmö -- söker platsen hos Infranord AB, Malmö}
+\cvitem{Tillgänglighet}{Kan påbörja intensivutbildningen 11 januari 2027}
+
+\end{document}
