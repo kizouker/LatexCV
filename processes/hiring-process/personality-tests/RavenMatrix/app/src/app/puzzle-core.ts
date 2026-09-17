@@ -1,7 +1,7 @@
 // Framework-agnostic matrix-reasoning puzzle engine (plain TypeScript, no Angular imports).
 // Intended to be reused as-is by any UI layer (Angular now, React later — see ROADMAP.md).
 
-export type Family = 'rotation' | 'crescent' | 'latin' | 'spikes' | 'trio' | 'slots' | 'fill' | 'diag';
+export type Family = 'rotation' | 'crescent' | 'latin' | 'spikes' | 'trio' | 'slots' | 'fill' | 'diag' | 'axis';
 export type Difficulty = 'easy' | 'medium' | 'hard';
 
 export interface BlobPoint {
@@ -27,6 +27,8 @@ export interface ShapeSpec {
   fillCount?: number;
   fillShape?: number;
   diagSet?: number[];
+  axisContainer?: number;
+  axisSymbol?: number;
 }
 
 export interface Option extends ShapeSpec {
@@ -424,6 +426,7 @@ function nextDiagSet(prev: number[], ccw: boolean): number[] {
 
 function genDiag(_diff: Difficulty): GenResult {
   const ccw = Math.random() < 0.5;
+  const shape = Math.random() < 0.5 ? 0 : 1; // 0 = square, 1 = circle -- same units as 'fill'
   const corners = [0, 2, 6, 8];
   const start = corners[Math.floor(Math.random() * corners.length)];
   const diagSets: number[][] = [[start]];
@@ -433,7 +436,7 @@ function genDiag(_diff: Difficulty): GenResult {
   for (let r = 0; r < 3; r++) {
     const row: ShapeSpec[] = [];
     for (let c = 0; c < 3; c++) {
-      row.push({ family: 'diag', diagSet: diagSets[r + c] });
+      row.push({ family: 'diag', diagSet: diagSets[r + c], fillShape: shape });
     }
     grid.push(row);
   }
@@ -452,10 +455,40 @@ function genDiag(_diff: Difficulty): GenResult {
   const extraOne = [...correct.diagSet!, (correct.diagSet![0] + 1) % 9].filter((v, i, a) => a.indexOf(v) === i);
 
   const candidates: ShapeSpec[] = [noAdd, overRotated, mirrored, oppositeDir, wrongStart, missingOne, extraOne].map(
-    (diagSet) => ({ family: 'diag', diagSet })
+    (diagSet) => ({ family: 'diag', diagSet, fillShape: shape })
   );
   const distractors = pickDistractors(keyFn(correct), candidates, keyFn, 5);
   const explanation = `Hela 3×3-mönstret roterar ${ccw ? 'moturs' : 'medurs'} som en enhet för varje diagonalsteg (så en ensam ruta på ena sidan hamnar på den andra), och exakt en ny ruta läggs till varje steg.`;
+  return { grid, correct, distractors, explanation };
+}
+
+function genAxis(_diff: Difficulty): GenResult {
+  // Two fully independent attributes: the outer container is bound to the
+  // row (constant across that row's three columns), the inner symbol is
+  // bound to the column (constant down that column's three rows) -- no
+  // permutation/latin-square interplay between them, unlike 'latin'.
+  const containerOrder = shuffle([0, 1, 2]);
+  const symbolOrder = shuffle([0, 1, 2]);
+  const grid: ShapeSpec[][] = [];
+  for (let r = 0; r < 3; r++) {
+    const row: ShapeSpec[] = [];
+    for (let c = 0; c < 3; c++) {
+      row.push({ family: 'axis', axisContainer: containerOrder[r], axisSymbol: symbolOrder[c] });
+    }
+    grid.push(row);
+  }
+  const correct = grid[2][2];
+  const candidates: ShapeSpec[] = [];
+  for (let ct = 0; ct < 3; ct++) {
+    for (let st = 0; st < 3; st++) {
+      if (ct === correct.axisContainer && st === correct.axisSymbol) continue;
+      candidates.push({ family: 'axis', axisContainer: ct, axisSymbol: st });
+    }
+  }
+  shuffle(candidates);
+  const keyFn = (s: ShapeSpec) => `${s.axisContainer}-${s.axisSymbol}`;
+  const distractors = pickDistractors(keyFn(correct), candidates, keyFn, 5);
+  const explanation = `Den yttre inramningen bestäms av raden (samma för hela raden) och symbolen i mitten bestäms av kolumnen (samma för hela kolumnen) -- helt oberoende av varandra.`;
   return { grid, correct, distractors, explanation };
 }
 
@@ -468,6 +501,7 @@ const GENERATORS: Record<Family, (diff: Difficulty) => GenResult> = {
   slots: genSlots,
   fill: genFill,
   diag: genDiag,
+  axis: genAxis,
 };
 
 export function generatePuzzle(family: Family | 'random', difficulty: Difficulty, avoidFamily?: Family): Puzzle {
@@ -570,13 +604,45 @@ export function shapeMarkup(spec: ShapeSpec): string {
       const filled = new Set(spec.diagSet!);
       let markup = '';
       positions9.forEach(([cx, cy], i) => {
-        const half = 11;
-        const d = pointsToPath([
-          [cx - half, cy - half], [cx + half, cy - half], [cx + half, cy + half], [cx - half, cy + half],
-        ]);
-        markup += `<path class="${filled.has(i) ? 'latin-shape tone-dark' : 'outline-shape'}" d="${d}" />`;
+        const isFilled = filled.has(i);
+        if (spec.fillShape === 1) {
+          markup += `<circle class="${isFilled ? 'trio-dot' : 'outline-shape'}" cx="${cx}" cy="${cy}" r="11" />`;
+        } else {
+          const half = 11;
+          const d = pointsToPath([
+            [cx - half, cy - half], [cx + half, cy - half], [cx + half, cy + half], [cx - half, cy + half],
+          ]);
+          markup += `<path class="${isFilled ? 'latin-shape tone-dark' : 'outline-shape'}" d="${d}" />`;
+        }
       });
       return markup;
+    }
+    case 'axis': {
+      let containerMarkup = '';
+      switch (spec.axisContainer) {
+        case 0:
+          containerMarkup = [[20, 20], [80, 20], [20, 80], [80, 80]]
+            .map(([cx, cy]) => `<circle class="trio-dot" cx="${cx}" cy="${cy}" r="5" />`)
+            .join('');
+          break;
+        case 1:
+          containerMarkup = `<path class="outline-shape" d="${spikePath(50, 50, 40, 16, 4)}" />`;
+          break;
+        default:
+          containerMarkup = `<path class="outline-shape" d="${pointsToPath([[15, 15], [85, 15], [85, 85], [15, 85]])}" />`;
+      }
+      let symbolMarkup = '';
+      switch (spec.axisSymbol) {
+        case 0:
+          symbolMarkup = `<circle class="outline-shape" cx="50" cy="50" r="12" />`;
+          break;
+        case 1:
+          symbolMarkup = `<path class="outline-shape" d="M 38 50 L 62 50 M 50 38 L 50 62" />`;
+          break;
+        default:
+          symbolMarkup = `<path class="outline-shape" d="${pointsToPath([[50, 36], [64, 50], [50, 64], [36, 50]])}" />`;
+      }
+      return containerMarkup + symbolMarkup;
     }
     default:
       return '';
