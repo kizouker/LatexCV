@@ -9,6 +9,9 @@
       <div class="stat"><span class="lbl">Följd</span><b>{{ streak() }}</b></div>
       <div class="stat"><span class="lbl">Bäst</span><b>{{ best() }}</b></div>
       <div class="stat"><span class="lbl">Tid</span><b>{{ elapsedLabel() }}</b></div>
+      @if (difficultyMode() === 'adaptive') {
+        <div class="stat"><span class="lbl">Nivå</span><b>{{ currentLevelLabel() }}</b></div>
+      }
     </div>
   </header>
 
@@ -28,7 +31,7 @@
         <button
           class="chip"
           type="button"
-          [attr.aria-pressed]="difficulty() === d.key"
+          [attr.aria-pressed]="difficultyMode() === d.key"
           (click)="setDifficulty(d.key)"
         >{{ d.label }}</button>
       }

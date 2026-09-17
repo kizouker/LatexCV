@@ -201,6 +201,11 @@ button:focus-visible {
   fill: var(--tone-light);
 }
 
+::ng-deep .trio-dot {
+  fill: var(--sheet-ink);
+  stroke: none;
+}
+
 .options {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

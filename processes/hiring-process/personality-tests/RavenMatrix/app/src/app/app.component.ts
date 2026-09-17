@@ -24,6 +24,9 @@ interface OptionView {
   state: 'idle' | 'correct' | 'wrong';
 }
 
+type DifficultyMode = Difficulty | 'random' | 'adaptive';
+const ADAPTIVE_LEVELS: Difficulty[] = ['easy', 'medium', 'hard'];
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -38,15 +41,23 @@ export class AppComponent {
     { key: 'crescent', label: 'Månskära' },
     { key: 'latin', label: 'Färg & form' },
     { key: 'spikes', label: 'Uddar' },
+    { key: 'trio', label: 'Tre former' },
+    { key: 'slots', label: 'Rotation & fack' },
+    { key: 'fill', label: 'Byggmönster' },
+    { key: 'diag', label: 'Rotera & lägg till' },
+    { key: 'axis', label: 'Ram & symbol' },
   ];
-  readonly difficulties: { key: Difficulty; label: string }[] = [
+  readonly difficulties: { key: DifficultyMode; label: string }[] = [
     { key: 'easy', label: 'Lätt' },
     { key: 'medium', label: 'Medel' },
     { key: 'hard', label: 'Svår' },
+    { key: 'random', label: 'Slumpa nivå' },
+    { key: 'adaptive', label: 'Adaptiv' },
   ];
 
   family = signal<Family | 'random'>('random');
-  difficulty = signal<Difficulty>('medium');
+  difficultyMode = signal<DifficultyMode>('medium');
+  adaptiveLevel = signal(0);
 
   score = signal(0);
   total = signal(0);
@@ -62,6 +73,7 @@ export class AppComponent {
   verdictOk = signal(false);
 
   private current: Puzzle | null = null;
+  private lastFamily: Family | null = null;
   private timerId: ReturnType<typeof setInterval> | null = null;
   private startTime = 0;
 
@@ -73,8 +85,20 @@ export class AppComponent {
     return this.sanitizer.bypassSecurityTrustHtml(cellSvg(spec));
   }
 
+  private effectiveDifficulty(): Difficulty {
+    const mode = this.difficultyMode();
+    if (mode === 'random') {
+      return ADAPTIVE_LEVELS[Math.floor(Math.random() * ADAPTIVE_LEVELS.length)];
+    }
+    if (mode === 'adaptive') {
+      return ADAPTIVE_LEVELS[this.adaptiveLevel()];
+    }
+    return mode;
+  }
+
   newPuzzle(): void {
-    const puzzle = generatePuzzle(this.family(), this.difficulty());
+    const puzzle = generatePuzzle(this.family(), this.effectiveDifficulty(), this.lastFamily ?? undefined);
+    this.lastFamily = puzzle.family;
     this.current = puzzle;
     this.answered.set(false);
     this.explanation.set(puzzle.explanation);
@@ -134,8 +158,14 @@ export class AppComponent {
       this.score.update((v) => v + 1);
       this.streak.update((v) => v + 1);
       this.best.update((v) => Math.max(v, this.streak()));
+      if (this.difficultyMode() === 'adaptive') {
+        this.adaptiveLevel.update((v) => Math.min(ADAPTIVE_LEVELS.length - 1, v + 1));
+      }
     } else {
       this.streak.set(0);
+      if (this.difficultyMode() === 'adaptive') {
+        this.adaptiveLevel.update((v) => Math.max(0, v - 1));
+      }
     }
 
     this.options.update((opts) =>
@@ -154,8 +184,16 @@ export class AppComponent {
     this.newPuzzle();
   }
 
-  setDifficulty(key: Difficulty): void {
-    this.difficulty.set(key);
+  setDifficulty(key: DifficultyMode): void {
+    this.difficultyMode.set(key);
+    if (key === 'adaptive') {
+      this.adaptiveLevel.set(0);
+    }
     this.newPuzzle();
+  }
+
+  currentLevelLabel(): string {
+    const labels: Record<Difficulty, string> = { easy: 'Lätt', medium: 'Medel', hard: 'Svår' };
+    return labels[ADAPTIVE_LEVELS[this.adaptiveLevel()]];
   }
 }

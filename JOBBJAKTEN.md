@@ -13,19 +13,15 @@ Kategorierna nedan speglar mapparna som redan finns under `processes/` och
 
 *(`roles_CVs/`, `processes/Applications/`)*
 
-- [ ] Slå ihop de två AcademicWork-mapparna
-  (`2026_09_16_AcademicWork_Data-Engineer-Accelerate` och
-  `2026_09_17_AcademicWork_Data-Engineer-Accelerate`) till en.
+- Se [#3](https://github.com/kizouker/LatexCV/issues/3) — Slå ihop de två AcademicWork-mapparna.
 
 ## Personlighetstester & övning
 
 *(`processes/hiring-process/personality-tests/`)*
 
-- [ ] Få in de riktiga Matrigma/RavenMatrix-referensbilderna i repot (finns
-  bara lokalt på Mac just nu — se `RavenMatrix/ROADMAP.md`).
-- [ ] React-version av RavenMatrix, återanvänd `puzzle-core.ts` (se
-  `RavenMatrix/ROADMAP.md`).
-- [ ] Fler pusseltyper/svårighetsgrader i RavenMatrix.
+- Se [#4](https://github.com/kizouker/LatexCV/issues/4) — Riktiga Matrigma/RavenMatrix-referensbilder.
+- Se [#5](https://github.com/kizouker/LatexCV/issues/5) — React-portning av RavenMatrix.
+- Se [#6](https://github.com/kizouker/LatexCV/issues/6) — Fler pusseltyper/svårighetsgrader.
 
 ## Intervjuförberedelse
 
