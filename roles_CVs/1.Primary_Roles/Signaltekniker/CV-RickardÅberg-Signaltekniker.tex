@@ -1,5 +1,8 @@
 %% CV - Rickard Åberg - Signaltekniker
 \documentclass[11pt,a4paper,sans]{moderncv}
+% ATS-läge: kompileras via sh/build-cv.sh --ats, som injicerar \ATSMODE=1
+% för att slå av foto/ramar (vanlig ATS-parsningsbov).
+\providecommand{\ATSMODE}{0}
 \moderncvstyle{banking}
 \moderncvcolor{blue}
 \usepackage[scale=0.75]{geometry}
@@ -22,7 +25,7 @@
 
 \name{Rickard}{Åberg}
 \title{Civilingenjör}
-\photo[72pt][0pt]{me}
+\ifnum\ATSMODE=1\else\photo[72pt][0pt]{me}\fi
 \address{Bodekullsgatan 34b}{21440 Malmö}
 \phone[mobile]{+46~709~43~14~01}
 \email{rickard.aaberg@icloud.com}
@@ -31,6 +34,7 @@
 
 \quote{Civilingenjör som vill ta med sig den tekniska nyfikenheten och säkerhetsmedvetenheten från mjukvarusystem ut till järnvägens fysiska signalsystem.}
 
+\ifnum\ATSMODE=1\else
 \makeatletter
 \@ifpackageloaded{moderncvstylebanking}{%
 \let\oldmakecvtitle\makecvtitle
@@ -40,6 +44,7 @@
 }%
 }{}
 \makeatother
+\fi
 
 \begin{document}
 \makecvtitle
