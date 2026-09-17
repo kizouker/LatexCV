@@ -1,7 +1,7 @@
 // Framework-agnostic matrix-reasoning puzzle engine (plain TypeScript, no Angular imports).
 // Intended to be reused as-is by any UI layer (Angular now, React later — see ROADMAP.md).
 
-export type Family = 'rotation' | 'crescent' | 'latin' | 'spikes' | 'trio' | 'slots';
+export type Family = 'rotation' | 'crescent' | 'latin' | 'spikes' | 'trio' | 'slots' | 'fill' | 'diag';
 export type Difficulty = 'easy' | 'medium' | 'hard';
 
 export interface BlobPoint {
@@ -23,6 +23,10 @@ export interface ShapeSpec {
   dotT?: number;
   extraOn?: boolean;
   slot?: number;
+  fillStart?: number;
+  fillCount?: number;
+  fillShape?: number;
+  diagSet?: number[];
 }
 
 export interface Option extends ShapeSpec {
@@ -335,6 +339,124 @@ function genSlots(diff: Difficulty): GenResult {
   return { grid, correct, distractors, explanation };
 }
 
+const FILL_TEMPLATE_SIZE = 6;
+
+function genFill(diff: Difficulty): GenResult {
+  // A fixed 6-slot template. Each cell fills in (or empties) one slot at a
+  // time moving across columns, starting from a different slot each row --
+  // reading order is fixed, only the starting slot and the running count
+  // change.
+  const fillShape = Math.random() < 0.5 ? 0 : 1;
+  const growing = Math.random() < 0.5;
+  const colDelta = growing ? 1 : -1;
+  const baseCount = growing
+    ? 1 + Math.floor(Math.random() * 4) // 1..4, so col2 <= 6
+    : 3 + Math.floor(Math.random() * 4); // 3..6, so col2 >= 1
+  const rowShift = diff === 'easy' ? 2 : diff === 'medium' ? 1 : 4; // avoid 0/3 (mod 6 degeneracy)
+  const baseStart = Math.floor(Math.random() * FILL_TEMPLATE_SIZE);
+  const grid: ShapeSpec[][] = [];
+  for (let r = 0; r < 3; r++) {
+    const row: ShapeSpec[] = [];
+    for (let c = 0; c < 3; c++) {
+      row.push({
+        family: 'fill',
+        fillStart: (baseStart + r * rowShift) % FILL_TEMPLATE_SIZE,
+        fillCount: baseCount + c * colDelta,
+        fillShape,
+      });
+    }
+    grid.push(row);
+  }
+  const correct = grid[2][2];
+  const filledSet = (start: number, count: number) => {
+    const s = new Set<number>();
+    for (let i = 0; i < count; i++) s.add((start + i) % FILL_TEMPLATE_SIZE);
+    return s;
+  };
+  const keyFn = (s: ShapeSpec) =>
+    `${[...filledSet(s.fillStart!, s.fillCount!)].sort((a, b) => a - b).join(',')}-${s.fillShape}`;
+  const mk = (startOffset: number, countOffset: number, altShape: boolean): ShapeSpec => ({
+    family: 'fill',
+    fillStart: (correct.fillStart! + startOffset + FILL_TEMPLATE_SIZE) % FILL_TEMPLATE_SIZE,
+    fillCount: Math.max(1, Math.min(FILL_TEMPLATE_SIZE, correct.fillCount! + countOffset)),
+    fillShape: altShape ? 1 - correct.fillShape! : correct.fillShape,
+  });
+  const candidates = [
+    mk(rowShift, 0, false), mk(-rowShift, 0, false), mk(1, 0, false), mk(-1, 0, false),
+    mk(0, 1, false), mk(0, -1, false), mk(0, 0, true), mk(2, 1, false),
+  ];
+  const distractors = pickDistractors(keyFn(correct), candidates, keyFn, 5);
+  const explanation = growing
+    ? `Mallen fylls på med en ruta i taget för varje kolumn, men varje rad börjar fyllas från en annan startruta (skiftad ${rowShift} steg).`
+    : `Mallen töms med en ruta i taget för varje kolumn, men varje rad börjar fyllas från en annan startruta (skiftad ${rowShift} steg).`;
+  return { grid, correct, distractors, explanation };
+}
+
+// Index 0..8 into a 3x3 grid, row-major (0=top-left, 8=bottom-right).
+function rotateIdx9(idx: number, ccw: boolean): number {
+  const r = Math.floor(idx / 3), c = idx % 3;
+  const [nr, nc] = ccw ? [2 - c, r] : [c, 2 - r];
+  return nr * 3 + nc;
+}
+
+function mirrorIdx9(idx: number): number {
+  const r = Math.floor(idx / 3), c = idx % 3;
+  return r * 3 + (2 - c);
+}
+
+// Rotate the whole set as one rigid pattern, then add exactly one more
+// square -- the first empty slot in a fixed row-major scan. This is the
+// general "rotate + accrete" construction behind classic progressive-matrix
+// items; the scan order is our own choice, not copied from any specific
+// test's actual item.
+function nextDiagSet(prev: number[], ccw: boolean): number[] {
+  const rotated = new Set(prev.map((i) => rotateIdx9(i, ccw)));
+  for (let i = 0; i < 9; i++) {
+    if (!rotated.has(i)) {
+      rotated.add(i);
+      break;
+    }
+  }
+  return [...rotated].sort((a, b) => a - b);
+}
+
+function genDiag(_diff: Difficulty): GenResult {
+  const ccw = Math.random() < 0.5;
+  const corners = [0, 2, 6, 8];
+  const start = corners[Math.floor(Math.random() * corners.length)];
+  const diagSets: number[][] = [[start]];
+  for (let k = 1; k <= 4; k++) diagSets.push(nextDiagSet(diagSets[k - 1], ccw));
+
+  const grid: ShapeSpec[][] = [];
+  for (let r = 0; r < 3; r++) {
+    const row: ShapeSpec[] = [];
+    for (let c = 0; c < 3; c++) {
+      row.push({ family: 'diag', diagSet: diagSets[r + c] });
+    }
+    grid.push(row);
+  }
+  const correct = grid[2][2];
+  const keyFn = (s: ShapeSpec) => s.diagSet!.slice().sort((a, b) => a - b).join(',');
+
+  const noAdd = [...new Set(diagSets[3].map((i) => rotateIdx9(i, ccw)))].sort((a, b) => a - b);
+  const overRotated = nextDiagSet(diagSets[4], ccw);
+  const mirrored = correct.diagSet!.map(mirrorIdx9).sort((a, b) => a - b);
+  const oppositeDir = nextDiagSet(diagSets[3], !ccw);
+  const otherStart = corners.filter((c) => c !== start)[Math.floor(Math.random() * 3)];
+  let altSets: number[][] = [[otherStart]];
+  for (let k = 1; k <= 4; k++) altSets.push(nextDiagSet(altSets[k - 1], ccw));
+  const wrongStart = altSets[4];
+  const missingOne = correct.diagSet!.slice(1);
+  const extraOne = [...correct.diagSet!, (correct.diagSet![0] + 1) % 9].filter((v, i, a) => a.indexOf(v) === i);
+
+  const candidates: ShapeSpec[] = [noAdd, overRotated, mirrored, oppositeDir, wrongStart, missingOne, extraOne].map(
+    (diagSet) => ({ family: 'diag', diagSet })
+  );
+  const distractors = pickDistractors(keyFn(correct), candidates, keyFn, 5);
+  const explanation = `Hela 3×3-mönstret roterar ${ccw ? 'moturs' : 'medurs'} som en enhet för varje diagonalsteg (så en ensam ruta på ena sidan hamnar på den andra), och exakt en ny ruta läggs till varje steg.`;
+  return { grid, correct, distractors, explanation };
+}
+
 const GENERATORS: Record<Family, (diff: Difficulty) => GenResult> = {
   rotation: genRotation,
   crescent: genCrescent,
@@ -342,6 +464,8 @@ const GENERATORS: Record<Family, (diff: Difficulty) => GenResult> = {
   spikes: genSpikes,
   trio: genTrio,
   slots: genSlots,
+  fill: genFill,
+  diag: genDiag,
 };
 
 export function generatePuzzle(family: Family | 'random', difficulty: Difficulty): Puzzle {
@@ -407,6 +531,44 @@ export function shapeMarkup(spec: ShapeSpec): string {
         }
       }
       return `<path class="outline-shape" d="${rotD}" />${slotsMarkup}`;
+    }
+    case 'fill': {
+      const positions: [number, number][] = [
+        [25, 25], [50, 25], [75, 25],
+        [25, 75], [50, 75], [75, 75],
+      ];
+      const filled = new Set<number>();
+      for (let i = 0; i < spec.fillCount!; i++) filled.add((spec.fillStart! + i) % FILL_TEMPLATE_SIZE);
+      let markup = '';
+      positions.forEach(([cx, cy], i) => {
+        const isFilled = filled.has(i);
+        if (spec.fillShape === 1) {
+          markup += `<circle class="${isFilled ? 'trio-dot' : 'outline-shape'}" cx="${cx}" cy="${cy}" r="10" />`;
+        } else {
+          const d = pointsToPath([
+            [cx - 10, cy - 10], [cx + 10, cy - 10], [cx + 10, cy + 10], [cx - 10, cy + 10],
+          ]);
+          markup += `<path class="${isFilled ? 'latin-shape tone-dark' : 'outline-shape'}" d="${d}" />`;
+        }
+      });
+      return markup;
+    }
+    case 'diag': {
+      const positions9: [number, number][] = [
+        [22, 22], [50, 22], [78, 22],
+        [22, 50], [50, 50], [78, 50],
+        [22, 78], [50, 78], [78, 78],
+      ];
+      const filled = new Set(spec.diagSet!);
+      let markup = '';
+      positions9.forEach(([cx, cy], i) => {
+        const half = 11;
+        const d = pointsToPath([
+          [cx - half, cy - half], [cx + half, cy - half], [cx + half, cy + half], [cx - half, cy + half],
+        ]);
+        markup += `<path class="${filled.has(i) ? 'latin-shape tone-dark' : 'outline-shape'}" d="${d}" />`;
+      });
+      return markup;
     }
     default:
       return '';
