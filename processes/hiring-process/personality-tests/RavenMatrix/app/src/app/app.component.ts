@@ -66,6 +66,7 @@ export class AppComponent {
   verdictOk = signal(false);
 
   private current: Puzzle | null = null;
+  private lastFamily: Family | null = null;
   private timerId: ReturnType<typeof setInterval> | null = null;
   private startTime = 0;
 
@@ -78,7 +79,8 @@ export class AppComponent {
   }
 
   newPuzzle(): void {
-    const puzzle = generatePuzzle(this.family(), this.difficulty());
+    const puzzle = generatePuzzle(this.family(), this.difficulty(), this.lastFamily ?? undefined);
+    this.lastFamily = puzzle.family;
     this.current = puzzle;
     this.answered.set(false);
     this.explanation.set(puzzle.explanation);

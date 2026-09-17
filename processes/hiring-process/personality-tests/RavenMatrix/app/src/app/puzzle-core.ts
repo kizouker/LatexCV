@@ -37,6 +37,7 @@ export interface Puzzle {
   grid: ShapeSpec[][];
   explanation: string;
   options: Option[];
+  family: Family;
 }
 
 interface GenResult {
@@ -469,14 +470,20 @@ const GENERATORS: Record<Family, (diff: Difficulty) => GenResult> = {
   diag: genDiag,
 };
 
-export function generatePuzzle(family: Family | 'random', difficulty: Difficulty): Puzzle {
-  const fam = family === 'random' ? FAMILIES[Math.floor(Math.random() * FAMILIES.length)] : family;
+export function generatePuzzle(family: Family | 'random', difficulty: Difficulty, avoidFamily?: Family): Puzzle {
+  let fam: Family;
+  if (family === 'random') {
+    const pool = avoidFamily && FAMILIES.length > 1 ? FAMILIES.filter((f) => f !== avoidFamily) : FAMILIES;
+    fam = pool[Math.floor(Math.random() * pool.length)];
+  } else {
+    fam = family;
+  }
   const gen = GENERATORS[fam](difficulty);
   const options = shuffle<Option>([
     { ...gen.correct, isCorrect: true },
     ...gen.distractors.map((d) => ({ ...d, isCorrect: false })),
   ]);
-  return { grid: gen.grid, explanation: gen.explanation, options };
+  return { grid: gen.grid, explanation: gen.explanation, options, family: fam };
 }
 
 // ---------- SVG rendering (returns raw markup string, UI layer decides how to inject it) ----------
