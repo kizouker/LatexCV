@@ -38,6 +38,7 @@ export class AppComponent {
     { key: 'crescent', label: 'Månskära' },
     { key: 'latin', label: 'Färg & form' },
     { key: 'spikes', label: 'Uddar' },
+    { key: 'trio', label: 'Tre former' },
   ];
   readonly difficulties: { key: Difficulty; label: string }[] = [
     { key: 'easy', label: 'Lätt' },

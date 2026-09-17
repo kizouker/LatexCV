@@ -1,7 +1,7 @@
 // Framework-agnostic matrix-reasoning puzzle engine (plain TypeScript, no Angular imports).
 // Intended to be reused as-is by any UI layer (Angular now, React later — see ROADMAP.md).
 
-export type Family = 'rotation' | 'crescent' | 'latin' | 'spikes';
+export type Family = 'rotation' | 'crescent' | 'latin' | 'spikes' | 'trio';
 export type Difficulty = 'easy' | 'medium' | 'hard';
 
 export interface BlobPoint {
@@ -19,6 +19,9 @@ export interface ShapeSpec {
   tone?: number;
   n?: number;
   innerR?: number;
+  triRot?: number;
+  dotT?: number;
+  extraOn?: boolean;
 }
 
 export interface Option extends ShapeSpec {
@@ -38,7 +41,7 @@ interface GenResult {
   explanation: string;
 }
 
-export const FAMILIES: Family[] = ['rotation', 'crescent', 'latin', 'spikes'];
+export const FAMILIES: Family[] = ['rotation', 'crescent', 'latin', 'spikes', 'trio'];
 export const LETTERS = ['A', 'B', 'C', 'D', 'E', 'F'];
 
 function shuffle<T>(arr: T[]): T[] {
@@ -238,11 +241,63 @@ function genSpikes(diff: Difficulty): GenResult {
   return { grid, correct, distractors, explanation };
 }
 
+function genTrio(diff: Difficulty): GenResult {
+  // A regular (equilateral) triangle has 3-fold rotational symmetry, so any
+  // rotation step that is a nice fraction of 120° makes some columns render
+  // identically. Use an irregular 3-point blob instead (same trick as
+  // genRotation), which has no rotational symmetry at all.
+  const blob = makeBlobSpec(3);
+  const deltaTriCol = diff === 'easy' ? 90 : diff === 'medium' ? 60 : 40;
+  const deltaTriRow = diff === 'easy' ? 0 : diff === 'medium' ? 20 : 15;
+  const baseTri = Math.floor(Math.random() * 360);
+  const dotStep = 0.5; // col 0/1/2 -> t = 0 / 0.5 / 1, same path for every row
+  const grid: ShapeSpec[][] = [];
+  for (let r = 0; r < 3; r++) {
+    const row: ShapeSpec[] = [];
+    for (let c = 0; c < 3; c++) {
+      row.push({
+        family: 'trio',
+        blob,
+        triRot: ((baseTri + c * deltaTriCol + r * deltaTriRow) % 360 + 360) % 360,
+        dotT: c * dotStep,
+        extraOn: (r + c) % 2 === 0,
+      });
+    }
+    grid.push(row);
+  }
+  const correct = grid[2][2];
+  const mk = (triOffset: number, dotOffset: number, flipExtra: boolean): ShapeSpec => ({
+    family: 'trio',
+    blob,
+    triRot: ((correct.triRot! + triOffset) % 360 + 360) % 360,
+    dotT: Math.max(0, Math.min(1, correct.dotT! + dotOffset)),
+    extraOn: flipExtra ? !correct.extraOn : correct.extraOn,
+  });
+  const t0 = deltaTriRow || 30;
+  const candidates = [
+    mk(deltaTriCol, 0, false),
+    mk(-deltaTriCol, 0, false),
+    mk(t0, 0, false),
+    mk(0, -dotStep, false),
+    mk(0, dotStep, false),
+    mk(0, 0, true),
+    mk(180, 0, false),
+    mk(deltaTriCol, dotStep, true),
+  ];
+  const keyFn = (s: ShapeSpec) => `${Math.round(s.triRot!)}-${s.dotT!.toFixed(2)}-${s.extraOn}`;
+  const distractors = pickDistractors(keyFn(correct), candidates, keyFn, 5);
+  const explanation = deltaTriRow
+    ? `Triangeln roterar ${deltaTriCol}° per kolumn och ${deltaTriRow}° per rad, punkten flyttar sig längre längs sin diagonal ju längre åt höger du kommer, och den lilla kvadraten syns bara när rad + kolumn är jämnt (ett schackrutemönster).`
+    : `Triangeln roterar ${deltaTriCol}° per kolumn, punkten flyttar sig längre längs sin diagonal ju längre åt höger du kommer, och den lilla kvadraten syns bara när rad + kolumn är jämnt (ett schackrutemönster).`;
+  return { grid, correct, distractors, explanation };
+}
+
 const GENERATORS: Record<Family, (diff: Difficulty) => GenResult> = {
   rotation: genRotation,
   crescent: genCrescent,
   latin: genLatin,
   spikes: genSpikes,
+  trio: genTrio,
 };
 
 export function generatePuzzle(family: Family | 'random', difficulty: Difficulty): Puzzle {
@@ -272,6 +327,22 @@ export function shapeMarkup(spec: ShapeSpec): string {
       else if (spec.shape === 1) d = heartPath(50, 42, 26);
       else d = pointsToPath([[50, 20], [80, 50], [50, 80], [20, 50]]);
       return `<path class="latin-shape ${toneClass}" d="${d}" />`;
+    }
+    case 'trio': {
+      const triD = blobPath(spec.blob!, 50, 28, spec.triRot!, 0.45);
+      const dotX0 = 20, dotY0 = 55, dotX1 = 80, dotY1 = 85;
+      const t = spec.dotT!;
+      const dotX = dotX0 + (dotX1 - dotX0) * t;
+      const dotY = dotY0 + (dotY1 - dotY0) * t;
+      const sq = 78, sqY = 20, half = 7;
+      const squareD = pointsToPath([
+        [sq - half, sqY - half],
+        [sq + half, sqY - half],
+        [sq + half, sqY + half],
+        [sq - half, sqY + half],
+      ]);
+      const squareMarkup = spec.extraOn ? `<path class="outline-shape" d="${squareD}" />` : '';
+      return `<path class="outline-shape" d="${triD}" /><circle class="trio-dot" cx="${dotX.toFixed(2)}" cy="${dotY.toFixed(2)}" r="5" />${squareMarkup}`;
     }
     default:
       return '';
