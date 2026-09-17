@@ -118,6 +118,7 @@ genererade Raven/Matrigma-liknande matrispussel (se
 inte ännu mergad till `main`:
 
 ```bash
+cd ~/Desktop/01_Arbete_Studier/CV_Work/LatexCV
 git fetch origin
 git checkout claude/gracious-gauss-msd0i2
 cd processes/hiring-process/personality-tests/RavenMatrix/app
