@@ -228,21 +228,22 @@ function genLatin(_diff: Difficulty): GenResult {
 
 function genSpikes(diff: Difficulty): GenResult {
   const deltaN = diff === 'easy' ? 2 : 1;
+  const rowDelta = 2; // each row starts from a different spike count than the last
   const baseN = diff === 'easy' ? 3 : 4;
   const grid: ShapeSpec[][] = [];
   for (let r = 0; r < 3; r++) {
     const row: ShapeSpec[] = [];
     for (let c = 0; c < 3; c++) {
-      row.push({ family: 'spikes', n: baseN + c * deltaN, innerR: 17 });
+      row.push({ family: 'spikes', n: baseN + r * rowDelta + c * deltaN, innerR: 17 });
     }
     grid.push(row);
   }
   const correct = grid[2][2];
   const mk = (nOffset: number): ShapeSpec => ({ family: 'spikes', n: Math.max(3, correct.n! + nOffset), innerR: 17 });
-  const candidates = [mk(deltaN), mk(-deltaN), mk(deltaN * 2), mk(-deltaN * 2), mk(1), mk(-1), mk(3), mk(-3)];
+  const candidates = [mk(deltaN), mk(-deltaN), mk(deltaN * 2), mk(-deltaN * 2), mk(rowDelta), mk(-rowDelta), mk(1), mk(-1)];
   const keyFn = (s: ShapeSpec) => `${s.n}`;
   const distractors = pickDistractors(keyFn(correct), candidates, keyFn, 5);
-  const explanation = `Antalet uddar ökar med ${deltaN} för varje kolumn, likadant på varje rad.`;
+  const explanation = `Antalet uddar ökar med ${deltaN} för varje kolumn, likadant på varje rad. För varje ny rad så börjar vi på ett annat startläge än föregående rad.`;
   return { grid, correct, distractors, explanation };
 }
 
