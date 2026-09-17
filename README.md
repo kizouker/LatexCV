@@ -66,3 +66,39 @@ git branch -a
 Vill du bara titta på filerna utan att byta branch i din arbetskopia, använd
 `git worktree add ../signaltekniker claude/signaltekniker-professionals-nord`
 istället för `git checkout`.
+
+## ATS-vänlig variant (utan foto)
+
+Vissa rekryteringssystem (ATS, Applicant Tracking Systems) har svårt att
+parsa CV:n med inbäddat foto. Lägg till `--ats` för att även bygga en
+fotolös variant vid sidan av den vanliga:
+
+```bash
+build-cv claude/signaltekniker-professionals-nord --ats
+```
+
+Ger `CV-RickardÅberg-Signaltekniker.pdf` (vanlig) och
+`CV-RickardÅberg-Signaltekniker-ATS.pdf` (utan foto) i samma `build/`-mapp.
+Fungerar bara på CV:n vars `.tex`-fil deklarerar
+`\providecommand{\ATSMODE}{0}` (alla byggda från 2026-09 och framåt).
+
+## Global symlänk + man-sida
+
+Kör från valfri katalog:
+
+```bash
+mkdir -p ~/bin
+ln -sf ~/Desktop/01_Arbete_Studier/CV_Work/LatexCV/sh/build-cv.sh ~/bin/build-cv
+echo 'export PATH="$HOME/bin:$PATH"' >> ~/.zshrc
+source ~/.zshrc
+```
+
+Full dokumentation: `build-cv --help`, eller som riktig man-sida:
+
+```bash
+man ./sh/build-cv.1                                    # läs direkt, ingen installation
+# eller, för att kunna köra `man build-cv` varsomhelst:
+echo 'export MANPATH="$HOME/Desktop/01_Arbete_Studier/CV_Work/LatexCV/sh:$MANPATH"' >> ~/.zshrc
+source ~/.zshrc
+man build-cv
+```
