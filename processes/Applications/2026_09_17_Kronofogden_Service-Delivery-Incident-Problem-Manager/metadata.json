@@ -1,0 +1,25 @@
+{
+    "company": "Kronofogden",
+    "role": "Service Delivery Manager, Incident- och Problem Manager",
+    "location": "Sundbyberg",
+    "application_date": "2026-09-17",
+    "job_id": "2026/213",
+    "status": "Pending",
+    "response": "Not yet received",
+    "follow_up_date": "2026-10-07",
+    "source": "Skatteverket/Kronofogden rekrytering (Varbi)",
+    "notes": "Endast CV, inget personligt brev. Rekryteringen hanteras av Skatteverkets HR. Kan medföra säkerhetsprövning/registerkontroll. Provanställning 6 mån, titel IT-handläggare. Stark matchning mot verklig bakgrund: Problem Manager (Länsstyrelsen), Deployment/Release Manager (Ikano Bank), Senior PM/Scrum Master (Nordea).",
+    "extracted_keywords": [
+        "service delivery manager",
+        "incident manager",
+        "problem manager",
+        "ITIL",
+        "RCA",
+        "SLA",
+        "OLA",
+        "disaster recovery",
+        "SAFe",
+        "DevSecOps",
+        "leverantörsstyrning"
+    ]
+}

@@ -1,0 +1,86 @@
+Service Delivery Manager, Incident- och Problem Manager till Kronofogden IT
+
+Företag: Kronofogden (rekrytering hanteras av Skatteverkets HR-avdelning)
+Ort: Sundbyberg (minst 2 dagar/vecka på kontoret, distans övriga dagar)
+Anställningsform: Tillsvidare, inleds med 6 månaders provanställning
+Titel vid anställning: IT-handläggare
+Omfattning: Heltid, 100%
+Referensnummer: 2026/213
+Publicerat: 2026-09-16
+Sista ansökningsdag: 2026-10-07
+
+OBS: Personligt brev används INTE i denna rekrytering -- bifoga endast CV.
+
+Om rollen:
+Två personer söks som delar ansvaret för Incident Management och Problem
+Management, och båda har även ett tydligt ansvar som Service Delivery Manager.
+Team: Produktionsstöd (driftleverans, styrning, operativt stöd), del av IT med
+230 kollegor som stödjer 2300 medarbetare. Kronofogden är i en
+moderniseringsresa: digitalisering, automatisering, frekventa releaser.
+
+Ansvarsområden:
+1) Service Delivery Management
+   - Service Delivery Manager gentemot IT-leverantörer
+   - SLA/OLA definieras, implementeras, följs upp
+   - Tjänster levereras enligt avtal
+   - Utveckla/förvalta processer för drift och förvaltning
+   - Samverkan med driftleverantörer, operativa ärenden
+   - Driva/koordinera kortare uppdrag självständigt
+
+2) Incident Management
+   - Incident Manager vid IT- och säkerhetsincidenter
+   - Aktivera incidentprocess, etablera incidentkanal
+   - Leda incidentmöten, koordinera interna/externa parter
+   - Tydlig kommunikation under incidentens gång
+   - Dokumentera förlopp, beslut, åtgärder
+   - Strukturerad avslutning och återställning
+   - Delar ansvar med kollega
+
+3) Problem Management
+   - Problem Manager, driva RCA (rotorsaksanalys)
+   - Samordna tekniska/säkerhetsrelaterade analyser med leverantörer/interna
+   - Identifiera bakomliggande orsaker, trender, återkommande problem
+   - Säkerställa åtgärdsplaner tas fram/följs upp/implementeras
+   - Bidra till kontinuerlig förbättring
+   - Delar ansvar med kollega
+
+Arbetssätt/teknik: frekventa releaser, CI/CD, DevSecOps, SAFe-inspirerat,
+outsourcade leveranser, komplexa integrationsmiljöer.
+
+Krav:
+- Flera års erfarenhet som Service Delivery Manager (eller motsv.) i större
+  organisation (>1000 anställda)
+- Flera års erfarenhet som Incident- och Problem Manager
+- Erfarenhet av operativt arbete där delar/hela leveransen är outsourcad
+- Dokumenterad kunskap om ITIL och dess processer
+- Erfarenhet av IT-drift, IT-infrastruktur, plattformstjänster
+- Erfarenhet av Disaster Recovery och återställning
+- Erfarenhet av att leda större IT-incidenter i komplexa miljöer
+- Erfarenhet av Problem Management och RCA-metodik
+- God förståelse för Incident/Problem/Change enligt ITIL 4
+- Erfarenhet av agilt arbetssätt, gärna SAFe-inspirerat
+- Erfarenhet av DevOps/DevSecOps och kontinuerlig leverans
+- Mycket goda kunskaper svenska och engelska
+- God förmåga att dokumentera och kommunicera med verksamhet och IT
+
+Meriterande:
+- Budgetarbete/ekonomisk uppföljning
+- Leverantörsstyrning i outsourcade miljöer
+- IT-säkerhetsincidenter
+- Certifiering: ITIL 4 Foundation eller högre, RCA-metodik (t.ex. Kepner-Tregoe)
+- Processförvaltning eller dataskyddsrelaterade processer
+- Incident/Problem/Change i SAFe-inspirerad organisation
+- Personuppgiftsincidenter, informationssäkerhet, dataskyddsprocesser
+- Teknisk projektledning
+
+Övrigt:
+- Statlig värdegrund, särskilda krav på omdöme och säkerhetstänkande
+- Frågor om ev. tidigare brottslighet vid intervju; även till referenser
+- Kontroll av skulder hos Kronofogden, konkurs, näringsförbud
+- Kan innebära placering i säkerhetsklass -> säkerhetsprövning med
+  registerkontroll (Säkerhetsskyddslagen 2018:585). Vissa uppgifter i
+  säkerhetsklass kräver svenskt medborgarskap.
+
+Kontakt:
+Stephan Quist Karlsson, Chef, 010-5792692, stephan.quist.karlsson@kronofogden.se
+Susanna Jareno, HR-specialist, 010-5743143, susanna.jareno@skatteverket.se

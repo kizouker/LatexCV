@@ -1,0 +1,132 @@
+%% CV - Rickard Åberg - Service Delivery Manager / Incident- och Problem Manager
+\documentclass[11pt,a4paper,sans]{moderncv}
+\moderncvstyle{banking}
+\moderncvcolor{blue}
+\usepackage[scale=0.75]{geometry}
+\setlength{\footskip}{136.00005pt}
+\usepackage{graphicx}
+\graphicspath{{../../__1._images/}{../../__2._photos/}}
+\usepackage{enumitem}
+\newcommand{\thepage}{\arabic{page}}
+
+\ifxetexorluatex
+  \usepackage{fontspec}
+\else
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage{lmodern}
+\fi
+
+\usepackage[swedish]{babel}
+\usepackage{underscore}
+
+\name{Rickard}{Åberg}
+\title{Incident- \& Problem Manager}
+\photo[72pt][0pt]{me}
+\address{Bodekullsgatan 34b}{21440 Malmö}
+\phone[mobile]{+46~709~43~14~01}
+\email{rickard.aaberg@icloud.com}
+\social[linkedin]{rickard-åberg-9866891}
+\social[github]{kizouker}
+
+\quote{Jag ser snabbt helheten i en pressad situation, tar ansvar för att koordinera rätt personer, och driver sedan förbättringen som gör att det inte händer igen.}
+
+\makeatletter
+\@ifpackageloaded{moderncvstylebanking}{%
+\let\oldmakecvtitle\makecvtitle
+\renewcommand*{\makecvtitle}{%
+  {\centering\framebox{\includegraphics[width=\@photowidth]{\@photo}}\par\vspace{10pt}}%
+  \oldmakecvtitle%
+}%
+}{}
+\makeatother
+
+\begin{document}
+\makecvtitle
+
+\section*{Professionell profil}
+
+Civilingenjör i datateknik med över 15 års erfarenhet från IT-drift, systemutveckling och ledarskap i stora, komplexa organisationer -- offentlig sektor, bank och telekom. Har verkat i roller som Problem Manager på Länsstyrelsernas IT-enhet, Deployment/Release Manager på Ikano Bank samt Senior Project Manager/Scrum Master på Nordea, med ansvar för både leverantörsstyrning och operativ incidenthantering i outsourcade och tvärfunktionella miljöer.
+
+Kombinerar processledning (ITIL, DevOps, Agile/SAFe) med djup teknisk förståelse inom systemutveckling, integration och drift, vilket gör mig van att snabbt analysera komplexa incidenter, koordinera tekniska och säkerhetsrelaterade rotorsaksanalyser, och samtidigt driva de strukturella förbättringar som minskar återkommande fel och höjer leveranskvaliteten över tid.
+
+\section*{Relevant profil för rollen}
+\begin{itemize}[nosep]
+  \item Flera års erfarenhet av Problem Management och rotorsaksanalys (RCA) i större organisation
+  \item Erfarenhet av att koordinera Major Incidents och tvärfunktionella team under press
+  \item Praktisk erfarenhet av ITIL-processer: Incident-, Problem-, Change- och Release Management
+  \item Leverantörsstyrning i outsourcade/multi-site-miljöer (Tyskland/Danmark/Sverige, AWS/Tibco)
+  \item Erfarenhet av Disaster Recovery och återställning i produktionskritiska miljöer
+  \item DevOps/DevSecOps och kontinuerlig leverans (CI/CD), agilt arbetssätt (Scrum, SAFe-inspirerat)
+  \item Van vid att dokumentera och kommunicera tydligt mellan verksamhet och IT under incidentens gång
+  \item Flytande svenska och engelska i tal och skrift
+\end{itemize}
+
+\section{Erfarenhet}
+
+\cventry{2026}{Fältarbetare (visstid)}{Skogsstyrelsen}{Sverige}{}{Praktiskt fält- och naturvårdsarbete enligt fastställda rutiner och säkerhetsföreskrifter.}
+
+\cventry{2015--2016}{Problem Manager}{Länsstyrelsernas IT-enhet}{Västra Götaland}{}{Samordnade incident- och problemprocesser tvärs över tekniska domäner (nät, webb, print, GIS, Windows, integration). Rotorsaksanalys (RCA) och eskalering till processägare och senior ledning. Ny arkitektur i printområdet minskade återkommande felkoder från \textbf{1400 till 50 per månad}.}
+
+\cventry{2014--2015}{Senior Project Manager / Scrum Master}{Nordea}{Köpenhamn}{}{Ledde infrastrukturprojekt (IaaS/AWS EC2 PoC) inklusive riskanalys (QRA) och leverantörskontakt (AWS, Tibco) för staffing och rådgivning. Introducerade agila metoder och verktyg (Git, Jira, Confluence) för tvärfunktionellt team av drift- och utvecklingsspecialister.}
+
+\cventry{2012--2017}{Managing Consultant}{Bouvet Syd AB}{Malmö}{}{Team Lead / DevOps-ansvarig. Backend, systemintegration och drift i miljöer med höga krav på tillgänglighet och spårbarhet.}
+
+\cventry{2012--2014}{Deployment / Release Manager}{Ikano Bank}{Malmö/Tyskland/Danmark}{}{Ansvarade för produktionssättning av ikanobank.se och koordinerade \textbf{15--20 specialister} vid driftsättningar. Ledde kunskapsöverföring från Tyskland till Danmark och byggde upp ett nytt driftteam på \textbf{5 personer}. Införde CA Lisa/Nolio (Continuous Delivery), vilket halverade resursbehovet i Operations (\textbf{ca 75\% minskning}) och minskade fel i UAT/PROD med \textbf{7--8 gånger}. Höll retrospektiv efter varje leverans och drev kontinuerlig förbättring.}
+
+\cventry{2011}{Solution Architect}{IKEA IT}{Helsingborg}{}{Utvärderade SaaS-leverantör för supportsystem åt Enterprise Architecture Board (EAB) -- analys av integration, säkerhet, kapacitet och kostnad inför beslut.}
+
+\cventry{2011}{System Integration Specialist -- Application Lead}{Hi3G (Tre)}{Stockholm}{}{Ansvarig för EAI-lager med 15+ adapters mot system som Billing och CRM. Teknisk specifikation, granskning av leverantörsarbete och kravuppföljning.}
+
+\cventry{2004--2012}{Konsult -- Java \& Systemintegration}{Cybercom / Telenor / IKEA IT}{Malmö/Oslo/Stockholm}{}{Backend- och integrationsutveckling i Java EE och TIBCO i storskaliga telekomsystem. CI-servrar och testtäckning för att korta ledtider i release-processen.}
+
+\section{Utbildning \& Certifieringar}
+
+\cventry{2025}{Microsoft Certified: Azure Fundamentals (AZ-900)}{Microsoft}{}{}{}
+\cventry{2023--2024}{Google Cybersecurity Fundamentals}{Google/Coursera}{}{}{}
+\cventry{2014}{Certified Scrum Master (CSM)}{Softhouse Consulting Öresund AB}{}{}{}
+\cventry{2006}{ISTQB Certified Tester -- Foundation Level (CTFL)}{}{}{}{}
+\cventry{1996--2003}{Civilingenjör, Datateknik (300 hp)}{Linköpings tekniska högskola}{Linköping}{}{Systemteknik, mjukvaruproduktion, avancerad datorarkitektur, realtidsprogrammering}
+
+\cvitem{}{
+\begin{minipage}[t]{0.3\linewidth}
+  \centering
+  \includegraphics[width=0.9\linewidth]{azure-fundamentals-badge.png}\\
+  \scriptsize Azure Fundamentals (AZ-900)
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.3\linewidth}
+  \centering
+  \includegraphics[width=0.9\linewidth]{Certified_Scrum_Master_(CSM)_certification_badge.png}\\
+  \scriptsize Certified Scrum Master
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.3\linewidth}
+  \centering
+  \includegraphics[width=0.9\linewidth]{ISQTB.jpg}\\
+  \scriptsize ISTQB Certified Tester (CTFL)
+\end{minipage}
+}
+
+\section{Processkompetens}
+
+\cvitem{ITIL}{Incident Management, Problem Management (RCA), Change Management, Release Management}
+\cvitem{Service Delivery}{SLA/OLA-uppföljning, leverantörsstyrning, multi-site-koordinering}
+\cvitem{DevOps/DevSecOps}{CI/CD, Continuous Delivery (CA Lisa/Nolio), automatiserad testning, Puppet-automation}
+\cvitem{Agilt arbetssätt}{Scrum (Certified Scrum Master), SAFe-inspirerat arbetssätt, Kanban}
+\cvitem{Teknik}{Java, .NET, Oracle, BizTalk, Azure, TIBCO, integrationsarkitektur (EAI)}
+
+\section{Språk}
+\cvitemwithcomment{Svenska}{Modersmål}{}
+\cvitemwithcomment{Engelska}{Flytande, professionell nivå}{}
+\cvitemwithcomment{Franska}{Professionell nivå}{Använt i projektarbete med kund på École des Mines, Frankrike}
+
+\section{Övrigt}
+\cventry{}{B-körkort}{}{}{}{}
+\cvitem{Ort}{Bosatt i Malmö, uppvuxen i Ängelholm -- öppen för placering i Sundbyberg (2 dagar/vecka på kontoret enligt annons)}
+
+\section{Vad tidigare chefer/kollegor har sagt}
+\cvitem{}{\emph{``Rickard is ambitious and dedicated to his work and his team the reason for our success with a stable environment.''} -- Frank Amersbasch, Head of Technical Operations, Ikano Bank}
+\cvitem{}{\emph{``Rickard has not only used the existing processes but also simplified and improved them. Rickard is goal-oriented, planning-oriented and flexible.''} -- Jonas Paulsson, Länsstyrelsen IT}
+
+\end{document}
