@@ -78,12 +78,16 @@ if [ ! -f "$TEX_FILE" ]; then
   exit 1
 fi
 
-DIR="$(dirname "$TEX_FILE")"
+TEX_FILE_ABS="$REPO_ROOT/$TEX_FILE"
+DIR="$(dirname "$TEX_FILE_ABS")"
 BASENAME="$(basename "$TEX_FILE" .tex)"
+TEX_BASENAME="$(basename "$TEX_FILE_ABS")"
 
 echo "==> Kompilerar $TEX_FILE ..."
 mkdir -p "$DIR/build"
-latexmk -pdf -interaction=nonstopmode -halt-on-error -output-directory="$DIR/build" "$TEX_FILE"
+# Körs från filens egen katalog, eftersom mallarnas \graphicspath/\input
+# är relativa till den (t.ex. ../../../roles_CVs/__1._images/).
+(cd "$DIR" && latexmk -pdf -interaction=nonstopmode -halt-on-error -output-directory=build "$TEX_BASENAME")
 
 PDF_PATH="$DIR/build/$BASENAME.pdf"
 echo "==> Klar: $PDF_PATH"
