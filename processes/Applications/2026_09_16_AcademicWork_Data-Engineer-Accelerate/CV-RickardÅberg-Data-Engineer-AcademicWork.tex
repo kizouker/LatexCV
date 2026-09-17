@@ -1,5 +1,8 @@
 %% CV - Rickard Åberg - AW Accelerate, Data Engineer (Academic Work)
 \documentclass[11pt,a4paper,sans]{moderncv}
+% ATS-läge: kompileras via sh/build-cv.sh --ats, som injicerar \ATSMODE=1
+% för att slå av foto/ramar (vanlig ATS-parsningsbov).
+\providecommand{\ATSMODE}{0}
 \moderncvstyle{banking}
 \moderncvcolor{blue}
 \usepackage[scale=0.75]{geometry}
@@ -22,7 +25,7 @@
 
 \name{Rickard}{Åberg}
 \title{Data Engineer -- AW Accelerate}
-\photo[72pt][0pt]{me}
+\ifnum\ATSMODE=1\else\photo[72pt][0pt]{me}\fi
 \address{Bodekullsgatan 34b}{21440 Malmö}
 \phone[mobile]{+46~709~43~14~01}
 \email{rickard.aaberg@icloud.com}
@@ -31,6 +34,7 @@
 
 \quote{Systemutvecklare som vill byta spår till Data Engineering -- med erfarenheten kvar, men riktningen mot morgondagens dataplattformar.}
 
+\ifnum\ATSMODE=1\else
 \makeatletter
 \@ifpackageloaded{moderncvstylebanking}{%
 \let\oldmakecvtitle\makecvtitle
@@ -40,6 +44,7 @@
 }%
 }{}
 \makeatother
+\fi
 
 \begin{document}
 \makecvtitle
