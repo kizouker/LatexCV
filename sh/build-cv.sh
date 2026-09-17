@@ -58,7 +58,7 @@ fi
 TEX_FILE="${2:-}"
 if [ -z "$TEX_FILE" ]; then
   echo "==> Letar efter CV-fil som skiljer branchen från main..."
-  MAPFILE_CANDIDATES=$(git diff --name-only origin/main..."$BRANCH" -- '*.tex' 2>/dev/null | grep -i '/CV-' || true)
+  MAPFILE_CANDIDATES=$(git -c core.quotepath=false diff --name-only origin/main..."$BRANCH" -- '*.tex' 2>/dev/null | grep -i '/CV-' || true)
   COUNT=$(echo "$MAPFILE_CANDIDATES" | grep -c . || true)
 
   if [ "$COUNT" -eq 0 ]; then
