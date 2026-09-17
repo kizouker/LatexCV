@@ -1,0 +1,132 @@
+%% CV - Rickard Åberg - Academic Work Academy, ILS-Ingenjör
+\documentclass[11pt,a4paper,sans]{moderncv}
+\moderncvstyle{banking}
+\moderncvcolor{blue}
+\usepackage[scale=0.75]{geometry}
+\setlength{\footskip}{136.00005pt}
+\usepackage{graphicx}
+\graphicspath{{../../../roles_CVs/__1._images/}{../../../roles_CVs/__2._photos/}}
+\usepackage{enumitem}
+\newcommand{\thepage}{\arabic{page}}
+
+\ifxetexorluatex
+  \usepackage{fontspec}
+\else
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage{lmodern}
+\fi
+
+\usepackage[swedish]{babel}
+\usepackage{underscore}
+
+\name{Rickard}{Åberg}
+\title{ILS-Ingenjör -- Academic Work Academy}
+\photo[72pt][0pt]{me}
+\address{Bodekullsgatan 34b}{21440 Malmö}
+\phone[mobile]{+46~709~43~14~01}
+\email{rickard.aaberg@icloud.com}
+\social[linkedin]{rickard-åberg-9866891}
+\social[github]{kizouker}
+
+\quote{Civilingenjör som vill växla från mjukvarusystemens livscykel till de fysiska systemens -- med samma nyfikenhet på hur helheten hålls driftsäker, underhållbar och kostnadseffektiv över tid.}
+
+\makeatletter
+\@ifpackageloaded{moderncvstylebanking}{%
+\let\oldmakecvtitle\makecvtitle
+\renewcommand*{\makecvtitle}{%
+  {\centering\framebox{\includegraphics[width=\@photowidth]{\@photo}}\par\vspace{10pt}}%
+  \oldmakecvtitle%
+}%
+}{}
+\makeatother
+
+\begin{document}
+\makecvtitle
+
+\section*{Professionell profil}
+
+Civilingenjör i datateknik (Linköpings tekniska högskola) med över 15 års erfarenhet av att arbeta med komplexa tekniska system i miljöer med höga krav på driftsäkerhet, spårbarhet och långsiktig förvaltningsbarhet -- inom bank, telekom, offentlig sektor och industri. Söker nu Academic Work Academy för att växla spår till ILS-Ingenjör: en roll som förenar teknisk analys, kravhantering och livscykeltänkande, vilket ligger nära det jag redan gjort i roller som Problem Manager, Solution Architect och systemintegratör.
+
+Det som lockar mig med ILS är helhetsperspektivet -- att inte bara få ett system att fungera idag, utan att säkerställa funktionssäkerhet, underhållsmässighet och en hållbar supportlösning under hela dess livslängd. Som Problem Manager på Länsstyrelsernas IT-enhet drev jag rotorsaksanalyser tvärs över tekniska domäner och minskade antalet återkommande fel från 1400 till 50 per månad i ett kritiskt delsystem -- samma typ av strukturerade, kravdrivna arbetssätt som ILS bygger på. Jag är van vid teknisk dokumentation, kvalitetsprocesser (ITIL) och att kommunicera med både leverantörer och tekniska specialister, och ser fram emot att bygga vidare på detta inom Integrated Logistics Support.
+
+\section*{Relevant profil för rollen}
+\begin{itemize}[noitemsep]
+  \item Civilingenjör, Datateknik (300 hp) -- van vid teknisk analys, systemtänkande och dokumentation
+  \item Erfarenhet av kravhantering, arkitekturarbete och tekniska specifikationer
+  \item Kvalitetsprocesser och rotorsaksanalys (ITIL: Problem-, Change- och Release Management)
+  \item Systemintegration i miljöer med höga krav på driftsäkerhet (bank, telekom, försvarsnära IT)
+  \item Utvärdering av leverantörslösningar och teknisk granskning (bl.a. SaaS-utvärdering för IKEA IT:s arkitekturråd)
+  \item God vana vid Excel, strukturerad dataanalys och rapportering
+  \item Genuint tekniskt intresse och van vid att sätta mig in i nya tekniska domäner snabbt
+  \item Flytande svenska (modersmål) och engelska, van vid internationella miljöer (Frankrike, Norge, Danmark)
+\end{itemize}
+
+\section{Erfarenhet}
+
+\cventry{2026}{Fältarbetare (visstid)}{Skogsstyrelsen}{Sverige}{}{Praktiskt fält- och naturvårdsarbete enligt fastställda rutiner och säkerhetsföreskrifter.}
+
+\cventry{2015--2016}{Problem Manager}{Länsstyrelsernas IT-enhet}{Västra Götaland}{}{ITIL-baserad problemhantering tvärs över tekniska domäner (nät, webb, print, GIS, Windows, integration). Rotorsaksanalys och eskalering till processägare och senior ledning. Ny arkitektur i printområdet minskade återkommande fel från 1400 till 50 per månad.}
+
+\cventry{2014--2015}{Senior Project Manager / Scrum Master}{Nordea}{Köpenhamn}{}{Ledde infrastrukturprojekt (IaaS/AWS EC2 PoC), inklusive riskanalys (QRA), leverantörskontakt och initial arkitektur för en beräkningsgrid. Koordinerade tvärfunktionella team av drift- och utvecklingsspecialister.}
+
+\cventry{2012--2017}{Managing Consultant}{Bouvet Syd AB}{Malmö}{}{Java-utvecklare, Team Lead och DevOps-ansvarig. Ansvar för driftsättning, kunskapsöverföring och kvalitetsprocesser i kundleveranser.}
+
+\cventry{2012--2014}{DevOps / Release Management}{Ikano Bank}{Malmö/Tyskland/Danmark}{}{Ansvarade för driftsättning av ikanobank.se och kunskapsöverföring mellan Tyskland och Danmark. Koordinerade ett team på 15 personer (utvecklare, testare, drift). Kontinuerlig förbättring minskade resursåtgång med ca 75\%.}
+
+\cventry{2011}{Solution Architect}{IKEA IT}{Helsingborg}{}{Utvärderade SaaS-lösning för supportsystem åt Enterprise Architecture Board (EAB). Analys av integration, säkerhet, kapacitet och kostnad -- teknisk granskning och rapportering till styrande grupp.}
+
+\cventry{2011}{System Integration Specialist -- Application Lead}{Hi3G (Tre)}{Stockholm}{}{Ansvarig för EAI-lager med 15+ adapters mot system som Billing och CRM. Teknisk specifikation, granskning av leverantörsarbete och kravuppföljning.}
+
+\cventry{2004--2012}{Konsult -- Java \& Systemintegration}{Cybercom / Telenor / IKEA IT}{Malmö/Oslo}{}{Backend- och integrationsutveckling i miljöer med höga krav på tillgänglighet. Teknisk dokumentation och arkitekturbeskrivningar (TOGAF, Zachman).}
+
+\cventry{2003--2004}{Research Engineer / Thésard}{Ecole des Mines}{Nantes, Frankrike}{}{Forskningsprojekt inom integration av komponentramverk. Teknisk rapportering och samarbete med internationella forskargrupper (publicerat på IEEE-konferens).}
+
+\section{Utbildning \& Certifieringar}
+
+\cventry{2025}{Microsoft Certified: Azure Fundamentals (AZ-900)}{Microsoft}{}{}{}
+\cventry{2023--2024}{Google Cybersecurity Fundamentals}{Google/Coursera}{}{}{}
+\cventry{2014}{Certified Scrum Master (CSM)}{Softhouse Consulting Öresund AB}{}{}{}
+\cventry{2006}{ISTQB Certified Tester -- Foundation Level (CTFL)}{}{}{}{}
+\cventry{1996--2003}{Civilingenjör, Datateknik (300 hp)}{Linköpings tekniska högskola}{Linköping}{}{Systemteknik, mjukvaruproduktion, avancerad datorarkitektur, realtidsprogrammering, hårdvarukonstruktion, inbyggda system}
+
+\cvitem{}{
+\begin{minipage}[t]{0.22\linewidth}
+  \centering
+  \includegraphics[width=0.9\linewidth]{azure-fundamentals-badge.png}\\
+  \scriptsize Azure Fundamentals (AZ-900)
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.22\linewidth}
+  \centering
+  \includegraphics[width=0.9\linewidth]{ISQTB.jpg}\\
+  \scriptsize ISTQB Certified Tester (CTFL)
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.22\linewidth}
+  \centering
+  \includegraphics[width=0.9\linewidth]{liu-logo.png}\\
+  \scriptsize Linköpings tekniska högskola
+\end{minipage}
+}
+
+\section{Relevanta kunskaper}
+
+\cvitem{Kvalitet \& Processer}{ITIL (Problem-, Change-, Release Management), rotorsaksanalys, kontinuerlig förbättring}
+\cvitem{Krav \& Arkitektur}{Kravhantering, teknisk specifikation, arkitekturbeskrivning (TOGAF, Zachman), leverantörsgranskning}
+\cvitem{Verktyg}{Excel (grundläggande till avancerad), Jira/Confluence, teknisk dokumentation}
+\cvitem{System \& Integration}{Systemintegration i miljöer med höga krav på tillgänglighet och säkerhet}
+\cvitem{Metoder}{Agile (Scrum/Kanban), projektledning, riskanalys (QRA)}
+
+\section{Språk}
+\cvitemwithcomment{Svenska}{Modersmål}{}
+\cvitemwithcomment{Engelska}{Flytande, professionell nivå}{}
+\cvitemwithcomment{Franska}{Professionell nivå}{Använd i projektarbete med kund på École des Mines, Frankrike}
+
+\section{Övrigt}
+\cventry{}{B-körkort}{}{}{}{}
+\cvitem{Ort}{Malmö -- öppen för placering i Göteborg eller Stockholm}
+\cvitem{Tillgänglighet}{Kan påbörja utbildning 16 november 2026}
+\cvitem{Säkerhetsprövning}{Öppen för säkerhetsprövning/registerkontroll vid säkerhetsklassat uppdrag.}
+
+\end{document}
