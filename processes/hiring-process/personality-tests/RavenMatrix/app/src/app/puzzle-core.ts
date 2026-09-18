@@ -117,9 +117,20 @@ function blobPath(spec: BlobPoint[], cx: number, cy: number, rotDeg: number, sca
   return pointsToPath(pts);
 }
 
-function crescentPath(cx: number, cy: number, R: number, ratio: number): string {
-  const r2 = R * ratio;
-  return `M ${cx} ${(cy - R).toFixed(2)} A ${R} ${R} 0 1 1 ${cx} ${(cy + R).toFixed(2)} A ${r2.toFixed(2)} ${r2.toFixed(2)} 0 0 0 ${cx} ${(cy - R).toFixed(2)} Z`;
+// BUG (fixed): the previous implementation connected two diametrically
+// opposite points (a chord equal to the full diameter, 2R) with a second
+// arc of radius R*ratio. Per the SVG arc spec, an arc's radius can never be
+// smaller than half its chord length -- here that minimum is R itself, so
+// any ratio < 1 was silently corrected back up to R by every renderer,
+// making the "ratio" parameter have zero visual effect (every crescent
+// rendered identically). Fixed with a mask-based two-circle subtraction,
+// which has no such minimum-radius constraint.
+let crescentMaskCounter = 0;
+function crescentMarkup(cx: number, cy: number, R: number, ratio: number, rotDeg: number): string {
+  const id = `crescent-mask-${crescentMaskCounter++}`;
+  const Rin = R * (0.3 + 0.65 * ratio);
+  const dx = (R - Rin) * 0.95;
+  return `<mask id="${id}"><rect x="0" y="0" width="100" height="100" fill="black" /><circle cx="${cx}" cy="${cy}" r="${R}" fill="white" /><circle cx="${(cx + dx).toFixed(2)}" cy="${cy}" r="${Rin.toFixed(2)}" fill="black" /></mask><rect class="crescent-fill" x="0" y="0" width="100" height="100" mask="url(#${id})" transform="rotate(${rotDeg} ${cx} ${cy})" />`;
 }
 
 function heartPath(cx: number, cy: number, r: number): string {
@@ -527,7 +538,7 @@ export function shapeMarkup(spec: ShapeSpec): string {
     case 'rotation':
       return `<path class="outline-shape" d="${blobPath(spec.blob!, 50, 50, spec.rot!, 1, spec.mirror)}" />`;
     case 'crescent':
-      return `<path class="outline-shape" d="${crescentPath(50, 50, 26, spec.ratio!)}" transform="rotate(${spec.rot} 50 50)" />`;
+      return crescentMarkup(50, 50, 26, spec.ratio!, spec.rot!);
     case 'spikes':
       return `<path class="outline-shape" d="${spikePath(50, 50, 34, spec.innerR!, spec.n!)}" />`;
     case 'latin': {

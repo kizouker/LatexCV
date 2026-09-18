@@ -206,6 +206,10 @@ button:focus-visible {
   stroke: none;
 }
 
+::ng-deep .crescent-fill {
+  fill: var(--sheet-ink);
+}
+
 .options {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
