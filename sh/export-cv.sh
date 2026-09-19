@@ -1,11 +1,13 @@
 #!/usr/bin/env bash
 # Compile one or more CV .tex files and export the resulting PDFs to a
 # dated, tagged folder outside the repo, so a finished CV is easy to find
-# without digging through build/ directories.
+# without digging through build/ directories. Complements sh/build-cv.sh
+# (which fetches/checks out a branch, compiles, and opens the PDF) --
+# this one is for archiving a finished build somewhere findable.
 #
 # Usage:
-#   sh/build-cv.sh path/to/CV-Foo.tex [more .tex files...]
-#   sh/build-cv.sh --prune-days 30      # delete exported dates older than 30 days
+#   sh/export-cv.sh path/to/CV-Foo.tex [more .tex files...]
+#   sh/export-cv.sh --prune-days 30      # delete exported dates older than 30 days
 #
 # Every run writes:
 #   ~/Desktop/CV/<YYYY-MM-DD>/<basename>__<HHMMSS>.pdf   (permanent, timestamped)
@@ -58,13 +60,13 @@ build_one() {
 }
 
 if [[ "${1:-}" == "--prune-days" ]]; then
-  prune_days "${2:?usage: sh/build-cv.sh --prune-days <N>}"
+  prune_days "${2:?usage: sh/export-cv.sh --prune-days <N>}"
   exit 0
 fi
 
 if [[ $# -eq 0 ]]; then
-  echo "usage: sh/build-cv.sh <file.tex> [<file.tex> ...]" >&2
-  echo "       sh/build-cv.sh --prune-days <N>" >&2
+  echo "usage: sh/export-cv.sh <file.tex> [<file.tex> ...]" >&2
+  echo "       sh/export-cv.sh --prune-days <N>" >&2
   exit 1
 fi
 
