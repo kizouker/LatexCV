@@ -1,0 +1,32 @@
+Framtidssäkra din karriär - bli specialist på rekordtid!
+
+Företag: Academic Work
+Plats: Malmö alternativt Växjö
+Startdatum: 30 november 2026
+Omfattning: Heltid, 08.00-17.00, digital utbildning.
+Typ av uppdrag: Rekrytering (AW Accelerate -> tillsvidareanställning som konsult)
+Ansök: https://www.academicwork.se/lediga-jobb/j/framtidssakra-din-karriar--bli-specialist-pa-rekordtid/NW2UOV/apply
+Annons-ID: NW2UOV
+Kontakt: mal09@academicwork.se
+
+Sammanfattning:
+AW Accelerate - intensivutbildning (5 veckor lärarledd + 2 veckor självstudier) för
+systemutvecklare med minst 2 års erfarenhet som vill växla spår till Data Engineering.
+Kostnadsfri utbildning, garanterad tillsvidareanställning som konsult hos Academic Work
+efter examen, arbetsplats Malmö. Certifieringsspår under år 1: Azure Fundamentals (AZ-900),
+Azure Data Engineer Associate (DP-203), Databricks Certified Data Engineer Associate.
+
+Viktiga datum:
+- Digital välkomstträff: 16 november 2026
+- Förstudieperiod: 16-27 november 2026
+- Utbildningsstart: 30 november 2026
+- Studieuppehåll: 23 december 2026 - 3 januari 2027
+- Examen: 15 januari 2027
+
+Krav:
+- Minst 2 års arbetslivserfarenhet som systemutvecklare (backend)
+- Mycket goda kunskaper i SQL
+- Mycket goda kunskaper i OOP (Python, Java eller C#)
+- Grundläggande förståelse för databaser, API-integrationer och molnkoncept
+- Analytisk förmåga och problemlösning
+- Flytande svenska och engelska

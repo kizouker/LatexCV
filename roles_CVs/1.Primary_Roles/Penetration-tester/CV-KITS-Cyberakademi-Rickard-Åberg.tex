@@ -1,0 +1,99 @@
+\documentclass[10pt,a4paper,sans]{moderncv}
+
+% moderncv styles: 'casual', 'classic', 'banking', 'oldstyle', 'fancy'
+\moderncvstyle{banking}
+\moderncvcolor{blue}
+
+\usepackage[scale=0.86]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\setlist[itemize]{leftmargin=*, itemsep=2pt, topsep=2pt}
+
+% Reduce whitespace a bit
+\AtBeginDocument{%
+  \recomputelengths
+}
+
+% Personal data
+\name{Rickard}{\AA berg}
+\title{Cybersecurity / Software Engineer}
+\address{Malm\"o, Sweden}{}{}
+\phone[mobile]{+46~709~43~14~01}
+\email{rickard.aaberg@icloud.com}
+\social[linkedin]{rickard-\aa berg-9866891}
+\social[github]{kizouker}
+
+\begin{document}
+\makecvtitle
+
+% ---- PROFILE ----
+\section{Profile}
+\cvitem{}{Software engineer with a strong background in Java, integration, and enterprise systems. Currently transitioning into cybersecurity with hands-on practice in penetration testing, web security, and cloud security.}
+
+% ---- CURRENT FOCUS ----
+\section{Cybersecurity Focus}
+\cvitem{}{\begin{itemize}
+  \item Web application security: OWASP Top 10, common web vulnerabilities, and how they manifest in modern stacks.
+  \item API security: REST / GraphQL, authentication, authorization, and data exposure risks.
+  \item Enterprise Java security: reviewing historical vulnerability patterns in frameworks such as Struts and Spring.
+  \item Container and cloud security: Docker / Kubernetes environments and cloud-related security considerations.
+  \item Practical pentesting through hands-on labs and vulnerable applications.
+\end{itemize}}
+
+% ---- PRACTICE ----
+\section{Security Practice}
+\cvitem{}{\begin{itemize}
+  \item Hack The Box -- web and system exploitation practice.
+  \item OWASP vulnerable applications (DVWA / Juice Shop) -- SQL injection, XSS, command injection.
+  \item Kali Linux -- experimentation with common security tools.
+\end{itemize}}
+
+% ---- TECHNICAL FOUNDATION ----
+\section{Technical Foundation}
+\cvitem{Programming}{Java (JEE, Spring), JavaScript / TypeScript, React, Python}
+\cvitem{Backend \& APIs}{REST APIs, microservices, system integration, messaging-based architectures}
+\cvitem{DevOps}{CI/CD pipelines, Git, Jenkins, Docker, Kubernetes}
+\cvitem{Cloud}{Azure, AWS}
+\cvitem{Messaging}{RabbitMQ, JMS, TIBCO}
+\cvitem{Databases}{SQL, MongoDB, PostgreSQL, MySQL}
+
+% ---- EXPERIENCE ----
+\section{Relevant Experience}
+\cventry{2021--2022}{Fullstack Developer}{ADB Safegate}{Malm\"o}{}{Angular, TypeScript, Azure, SAFe.}
+
+\cventry{2017--2018}{Fullstack Developer / Senior Software Engineer}{Verisure Innovation}{Malm\"o}{}{Java, Docker / Kubernetes, REST APIs, CI/CD, Linux. Worked across the stack from database to frontend. Contributed to GDPR-related analysis of application data flows.}
+
+\cventry{2012--2014}{DevOps / Automatic Deployment / Release Management}{Ikano Bank}{}{}{Worked with deployment, automation, knowledge transfer, and coordination across development, testing, and operations.}
+
+\cventry{2004--2012}{System Integration \& Java Development}{Telenor / IKEA IT / related enterprise assignments}{}{}{Enterprise backend and integration work using Java EE, messaging systems, BPM-related solutions, and large-scale system integration.}
+
+\cventry{2023--2025}{Open Source \& Side Projects}{Selected projects}{}{}{Zetkin (React / TypeScript), OpenTripPlanner (Java / GraphQL), Fia Med Knuff (microservices, RabbitMQ), WordPress development (Hot Yoga Malm\"o).}
+
+% ---- EDUCATION ----
+\section{Education}
+\cventry{}{MSc in Computer Science and Engineering}{Link\"oping University}{}{}{ }
+
+% ---- CERTIFICATIONS ----
+\section{Certifications \& Courses}
+\cvitem{}{\begin{itemize}
+  \item Microsoft Certified: Azure Fundamentals (AZ-900)
+  \item Google Cybersecurity
+  \item React Nanodegree (Udacity)
+  \item ISTQB Certified Tester
+  \item Certified Scrum Master
+\end{itemize}}
+
+% ---- ADDITIONAL ----
+\section{Additional}
+\cvitem{Languages}{Swedish (native), English (professional), French (professional)}
+\cvitem{Other}{Driving license. Experience across telecom, finance, public sector, healthcare, trade, and enterprise IT environments.}
+
+% ---- OPTIONAL SECTION ----
+% Uncomment if you want to add a short motivation block for KITS specifically.
+% \section{Motivation for KITS}
+% \cvitem{}{I am applying to KITS because I want to build on my software engineering background and move further into practical cybersecurity work in a structured, hands-on environment.}
+
+\end{document}

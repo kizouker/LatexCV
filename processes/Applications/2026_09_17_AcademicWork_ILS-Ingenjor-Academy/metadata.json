@@ -1,0 +1,23 @@
+{
+    "company": "Academic Work Academy",
+    "role": "ILS-Ingenjör",
+    "location": "Göteborg, Stockholm",
+    "application_date": "2026-09-17",
+    "job_id": "Unknown",
+    "status": "Pending",
+    "response": "Not yet received",
+    "follow_up_date": "TBD",
+    "source": "academicwork.se/academy",
+    "notes": "Academy-program, ingen tidigare erfarenhet krävs. Kan medföra säkerhetsprövning/registerkontroll för säkerhetsklassade uppdrag. Programstart 16 nov 2026, examen 19 feb 2027.",
+    "extracted_keywords": [
+        "ILS",
+        "integrated logistics support",
+        "livscykelanalys",
+        "funktionssäkerhet",
+        "underhållsmässighet",
+        "kravhantering",
+        "försvar",
+        "excel",
+        "kvalitetskontroll"
+    ]
+}

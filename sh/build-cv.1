@@ -1,0 +1,117 @@
+.TH BUILD-CV 1 "2026-09-17" "LatexCV" "User Commands"
+.SH NAME
+build-cv \- fetch, checkout and compile a CV branch to PDF
+.SH SYNOPSIS
+.B build-cv
+.I branch-name
+.RI [ path/to/file.tex ]
+.RB [ --ats ]
+.br
+.B build-cv
+.RB { --list | -l }
+.br
+.B build-cv
+.RB { --help | -h }
+.SH DESCRIPTION
+.B build-cv
+automates the full local workflow for this repository's per-application
+CV branches. It fetches from
+.I origin ,
+checks out
+.I branch-name
+(creating a local branch tracking
+.I origin/branch-name
+if one doesn't already exist locally), auto-detects which
+.B CV-*.tex
+file is new on that branch compared to
+.IR main ,
+compiles it with
+.BR latexmk (1),
+and opens the resulting PDF with
+.BR open (1)
+on macOS.
+.PP
+The script refuses to switch branches while the working tree has
+uncommitted changes, to avoid losing local edits.
+.SH ARGUMENTS
+.TP
+.I branch-name
+The branch to build, e.g.
+.IR claude/signaltekniker-professionals-nord .
+.TP
+.RI [ path/to/file.tex ]
+Optional. Skip auto-detection and compile this file explicitly (path
+relative to the repository root). Needed when a branch touches more
+than one
+.B CV-*.tex
+file.
+.SH OPTIONS
+.TP
+.B --ats
+In addition to the normal PDF, also compile an ATS-friendly variant of
+the CV: no photo, no framebox around it, plain header. This avoids the
+most common reason automated resume-screening systems (Applicant
+Tracking Systems) fail to parse a CV correctly. The output is named
+.IB CV-name -ATS.pdf
+next to the normal PDF in the same
+.B build/
+directory.
+.IP
+This requires the target
+.B .tex
+file to declare
+.B \e providecommand{\e ATSMODE}{0}
+near the top of its preamble (true for CVs built from 2026-09 onward;
+older templates in this repo predate this convention and don't support
+it -- the script will report a compile failure and point at the log if
+so).
+.TP
+.BR --list ", " -l
+List all local and remote (origin) branches, then exit. Does not touch
+the working tree.
+.TP
+.BR --help ", " -h
+Show a usage summary and exit.
+.SH EXAMPLES
+.TP
+List available branches:
+.B build-cv --list
+.TP
+Build a specific application's CV and open it:
+.B build-cv claude/signaltekniker-professionals-nord
+.TP
+Also produce an ATS-friendly variant:
+.B build-cv claude/kronofogden-service-delivery-incident-problem-manager --ats
+.TP
+Disambiguate when a branch has more than one CV file:
+.B build-cv claude/ils-ingenjor-academic-work roles_CVs/1.Primary_Roles/Foo/CV-Foo.tex
+.SH FILES
+.TP
+.B sh/build-cv.sh
+The script itself.
+.TP
+.B README.md
+Local LaTeX installation instructions (macOS: MacTeX/BasicTeX via Homebrew).
+.SH INSTALLING THIS MAN PAGE
+This file can be read directly without installing it:
+.PP
+.RS
+.B man ./sh/build-cv.1
+.RE
+.PP
+To make
+.B man build-cv
+work from any directory, add the
+.B sh/
+directory to your
+.B MANPATH
+(it contains this file named as a section-1 page):
+.PP
+.RS
+.B echo 'export MANPATH="$HOME/path/to/LatexCV/sh:$MANPATH"' >> ~/.zshrc
+.br
+.B source ~/.zshrc
+.RE
+.SH SEE ALSO
+.BR latexmk (1),
+.BR pdflatex (1)
