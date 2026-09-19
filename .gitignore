@@ -10,3 +10,8 @@ roles_CVs/Primary_Roles/Security/.DS_Store
 *.pdf
 roles_CVs/Secondary_Roles/Developer/.DS_Store
 roles_CVs/Secondary_Roles/Manager/.DS_Store
+
+# Real Matrigma/Raven test reference images -- kept locally for private
+# inspiration only, never committed (see issue #4 for why).
+processes/hiring-process/personality-tests/RavenMatrix/ravensm/
+**/newideas/

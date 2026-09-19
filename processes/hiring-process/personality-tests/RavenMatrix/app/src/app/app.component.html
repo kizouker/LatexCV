@@ -1,0 +1,83 @@
+<div class="page">
+  <header>
+    <div>
+      <h1>RavenMatrix</h1>
+      <p class="subtitle">Hitta mönstret i rader och kolumner och välj rätt bricka i luckan.</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="lbl">Rätt</span><b>{{ score() }}/{{ total() }}</b></div>
+      <div class="stat"><span class="lbl">Följd</span><b>{{ streak() }}</b></div>
+      <div class="stat"><span class="lbl">Bäst</span><b>{{ best() }}</b></div>
+      <div class="stat"><span class="lbl">Tid</span><b>{{ elapsedLabel() }}</b></div>
+      @if (difficultyMode() === 'adaptive') {
+        <div class="stat"><span class="lbl">Nivå</span><b>{{ currentLevelLabel() }}</b></div>
+      }
+    </div>
+  </header>
+
+  <div class="controls">
+    <div class="chip-group" role="group" aria-label="Pusseltyp">
+      @for (f of families; track f.key) {
+        <button
+          class="chip"
+          type="button"
+          [attr.aria-pressed]="family() === f.key"
+          (click)="setFamily(f.key)"
+        >{{ f.label }}</button>
+      }
+    </div>
+    <div class="chip-group" role="group" aria-label="Svårighetsgrad">
+      @for (d of difficulties; track d.key) {
+        <button
+          class="chip"
+          type="button"
+          [attr.aria-pressed]="difficultyMode() === d.key"
+          (click)="setDifficulty(d.key)"
+        >{{ d.label }}</button>
+      }
+    </div>
+  </div>
+
+  <div class="item-card">
+    <div class="matrix-wrap">
+      <div class="matrix">
+        @for (cell of cells(); track $index) {
+          @if (cell.isQuestion) {
+            <div class="cell qmark">?</div>
+          } @else {
+            <div class="cell"><div class="cell-svg" [innerHTML]="cell.svg"></div></div>
+          }
+        }
+      </div>
+    </div>
+    <div class="divider"></div>
+    <div class="options-wrap">
+      <div class="options">
+        @for (opt of options(); track opt.idx) {
+          <button
+            class="option"
+            [class.correct]="opt.state === 'correct'"
+            [class.wrong]="opt.state === 'wrong'"
+            type="button"
+            [disabled]="answered()"
+            [attr.aria-label]="'Alternativ ' + opt.letter"
+            (click)="selectOption(opt.idx)"
+          >
+            <span class="opt-shape" [innerHTML]="opt.svg"></span>
+            <span class="opt-label">{{ opt.letter }}</span>
+          </button>
+        }
+      </div>
+    </div>
+  </div>
+
+  @if (answered()) {
+    <div class="feedback">
+      <div class="verdict" [class.ok]="verdictOk()" [class.bad]="!verdictOk()">{{ verdictText() }}</div>
+      <div class="rule">Regel: {{ explanation() }}</div>
+      <div class="next-row"><button class="btn-primary" type="button" (click)="newPuzzle()">Nästa pussel →</button></div>
+    </div>
+  }
+
+  <p class="disclaimer">Genererade övningspussel inspirerade av Raven- och Matrigma-liknande matristest &mdash; inte riktiga testfrågor.</p>
+</div>

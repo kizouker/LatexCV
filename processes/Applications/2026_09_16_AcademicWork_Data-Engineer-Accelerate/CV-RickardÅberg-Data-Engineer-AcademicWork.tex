@@ -1,0 +1,141 @@
+%% CV - Rickard Åberg - AW Accelerate, Data Engineer (Academic Work)
+\documentclass[11pt,a4paper,sans]{moderncv}
+% ATS-läge: kompileras via sh/build-cv.sh --ats, som injicerar \ATSMODE=1
+% för att slå av foto/ramar (vanlig ATS-parsningsbov).
+\providecommand{\ATSMODE}{0}
+\moderncvstyle{banking}
+\moderncvcolor{blue}
+\usepackage[scale=0.75]{geometry}
+\setlength{\footskip}{136.00005pt}
+\usepackage{graphicx}
+\graphicspath{{../../../roles_CVs/__1._images/}{../../../roles_CVs/__2._photos/}}
+\usepackage{enumitem}
+\newcommand{\thepage}{\arabic{page}}
+
+\ifxetexorluatex
+  \usepackage{fontspec}
+\else
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage{lmodern}
+\fi
+
+\usepackage[swedish]{babel}
+\usepackage{underscore}
+
+\name{Rickard}{Åberg}
+\title{Data Engineer -- AW Accelerate}
+\ifnum\ATSMODE=1\else\photo[72pt][0pt]{me}\fi
+\address{Bodekullsgatan 34b}{21440 Malmö}
+\phone[mobile]{+46~709~43~14~01}
+\email{rickard.aaberg@icloud.com}
+\social[linkedin]{rickard-åberg-9866891}
+\social[github]{kizouker}
+
+\quote{Systemutvecklare som vill byta spår till Data Engineering -- med erfarenheten kvar, men riktningen mot morgondagens dataplattformar.}
+
+\ifnum\ATSMODE=1\else
+\makeatletter
+\@ifpackageloaded{moderncvstylebanking}{%
+\let\oldmakecvtitle\makecvtitle
+\renewcommand*{\makecvtitle}{%
+  {\centering\framebox{\includegraphics[width=\@photowidth]{\@photo}}\par\vspace{10pt}}%
+  \oldmakecvtitle%
+}%
+}{}
+\makeatother
+\fi
+
+\begin{document}
+\makecvtitle
+
+\section*{Professionell profil}
+
+Civilingenjör i datateknik (Linköpings tekniska högskola) och systemutvecklare med lång erfarenhet av backendutveckling, systemintegration och databasdesign i komplexa enterprise-miljöer inom bank, offentlig sektor och telekom. Söker nu AW Accelerate för att växla spår mot Data Engineering -- inte för att börja om, utan för att bygga vidare på en stabil grund inom SQL, objektorienterad programmering och molnkoncept.
+
+Jag har redan tagit Microsoft Azure Fundamentals (AZ-900) och gått en praktisk kurs i Cloud Computing och Azure (ReDI School), vilket ger mig ett försprång in i programmets certifieringsspår mot DP-203 och Databricks Certified Data Engineer Associate. Jag skriver Java och Python i det dagliga arbetet, och motiveras av att automatisera flöden som leder till pipelines av plattformar som gör data tillgänglig, pålitlig och användbar -- och av att kombinera min tekniska bredd med ett helhetsperspektiv på hur data skapar verksamhetsnytta.
+
+\section*{Relevant profil för rollen}
+\begin{itemize}[noitemsep]
+  \item Över 15 års erfarenhet av backendutveckling och systemintegration (Java, JEE, Spring)
+  \item Mycket goda kunskaper i SQL och databasdesign (MS SQL Server, Oracle, MySQL, PostgreSQL)
+  \item Objektorienterad programmering: Java, C\#/.NET, Python
+  \item API-integration och tjänstearkitektur (REST, JSON/XML, ESB/meddelandeköer)
+  \item Grundläggande molnkunskap: Microsoft Azure Fundamentals (AZ-900), praktisk Azure-kurs
+  \item Van vid CI/CD, versionshantering (Git) och automatiserade leveransflöden
+  \item Analytisk problemlösare med erfarenhet av rotorsaksanalys och processförbättring
+  \item Flytande svenska (modersmål) och engelska
+
+\end{itemize}
+
+\section{Erfarenhet}
+
+\cventry{2026}{Fältarbetare (visstid)}{Skogsstyrelsen}{Sverige}{}{Praktiskt naturvårdsarbete. Strukturerat, noggrant fältarbete enligt fastställda rutiner.}
+
+\cventry{2025}{Cloud Computing och Azure-kurs}{ReDI School of Digital Integration}{Malmö}{}{Praktisk kursfokuserad utbildning inom Azure, molnsäkerhet och DevOps. Förberedelse inför certifiering med case-baserade projekt.}
+
+\cventry{2021--2022}{Fullstack Developer}{ADBSafegate AB}{Malmö}{}{Angular, TypeScript, Azure, SAFe (Scaled Agile Framework)}
+
+\cventry{2021}{Fullstack Developer}{Zaplox AB}{Lund}{}{Vue.js, Node.js, JavaScript, CSS, AWS}
+
+\cventry{2017--2018}{Senior Software Engineer}{Verisure Innovation}{Malmö}{}{Java 8, Docker/Kubernetes, MySQL/Cassandra, mikroservicedeploy till Kubernetes, RESTful API}
+
+\cventry{2012--2017}{Managing Consultant}{Bouvet Syd AB}{Malmö}{}{Java-utvecklare, Team Lead / DevOps-ansvarig. Backend, systemintegration, databasdesign}
+
+\cventry{2004--2012}{Konsult -- Java \& Systemintegration}{Cybercom / Telenor / Hi3G / IKEA IT}{Malmö/Oslo/Stockholm}{}{Backend- och integrationsutveckling i Java EE och TIBCO. EAI-lösningar med 15+ adapters (Billing, CRM). SQL, databasdesign och dataflöden i storskaliga telekomsystem}
+
+\cventry{2003--2004}{Research Engineer / Thésard}{Ecole des Mines}{Nantes, Frankrike}{}{Forskningsprojekt EASYCOMP: integration av komponentramverk. Java, RMI. Examensarbete inom automatisk evolution av OS-kärna}
+
+\cventry{1999}{Utvecklare (extraarbete under studietiden)}{IDA Infront}{Linköping}{}{Tidig erfarenhet av SQL och databasdesign}
+
+\section{Privata projekt}
+
+\cventry{}{MADRS-screening -- mobilapp}{Eget projekt}{}{}{Utvecklade en app i Xamarin (C\#) för självskattning enligt MADRS-skalan (Montgomery--Åsberg Depression Rating Scale). Cross-platform mobilutveckling, C\#/.NET, formulärlogik och poängberäkning.}
+
+\section{Utbildning \& Certifieringar}
+
+\cventry{2025}{Microsoft Certified: Azure Fundamentals (AZ-900)}{Microsoft}{}{}{}
+\cventry{2026 VT}{Naturliga språk och AI}{Linköpings universitet}{}{Natural Language Processing, språkmodeller, AI}{}
+\cventry{2023--2024}{Google Cybersecurity Fundamentals}{Google/Coursera}{}{}{}
+\cventry{2016}{Programming and Problem-solving in Python (2.5 hp)}{Blekinge Tekniska Högskola}{Ronneby}{}{}
+\cventry{1996--2003}{Civilingenjör, Datateknik (300 hp)}{Linköpings tekniska högskola}{Linköping}{}{Objektorienterad programmering, databaser, mjukvaruproduktion, AI, realtidsprogrammering, avancerad datorarkitektur}
+
+\cvitem{}{
+\begin{minipage}[t]{0.22\linewidth}
+  \centering
+  \includegraphics[width=0.9\linewidth]{azure-fundamentals-badge.png}\\
+  \scriptsize Azure Fundamentals (AZ-900)
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.22\linewidth}
+  \centering
+  \includegraphics[width=0.9\linewidth]{ISQTB.jpg}\\
+  \scriptsize ISTQB Certified Tester (CTFL)
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.22\linewidth}
+  \centering
+  \includegraphics[width=0.9\linewidth]{liu-logo.png}\\
+  \scriptsize Linköpings tekniska högskola
+\end{minipage}
+}
+
+\section{Tekniska kunskaper}
+
+\cvitem{Programmering}{Java (JEE, Spring Boot), C\#/.NET, Python, JavaScript}
+\cvitem{Databaser \& SQL}{MS SQL Server, Oracle, MySQL, PostgreSQL, databasdesign}
+\cvitem{Integration \& API}{REST, JSON/XML, Mule ESB, TIBCO, RabbitMQ/ActiveMQ/JMS}
+\cvitem{Moln \& DevOps}{Azure (AZ-900), AWS, Docker, Kubernetes, CI/CD, Git}
+\cvitem{Metoder}{Agile (Scrum/Kanban), ITIL, Continuous Delivery}
+
+\section{Språk}
+\cvitemwithcomment{Svenska}{Modersmål}{}
+\cvitemwithcomment{Engelska}{Flytande, professionell nivå}{}
+\cvitemwithcomment{Franska}{Professionell nivå}{Använd i projektarbete med kund på École des Mines}
+
+\section{Övrigt}
+\cventry{}{B-körkort}{}{}{}{}
+\cvitem{Ort}{Malmö -- öppen för placering i Malmö eller Växjö}
+\cvitem{Tillgänglighet}{Kan påbörja utbildning 30 november 2026}
+
+\end{document}
