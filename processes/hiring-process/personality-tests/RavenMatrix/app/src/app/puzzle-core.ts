@@ -49,7 +49,7 @@ interface GenResult {
   explanation: string;
 }
 
-export const FAMILIES: Family[] = ['rotation', 'crescent', 'latin', 'spikes', 'trio'];
+export const FAMILIES: Family[] = ['rotation', 'crescent', 'latin', 'spikes', 'trio', 'slots', 'fill', 'diag', 'axis'];
 export const LETTERS = ['A', 'B', 'C', 'D', 'E', 'F'];
 
 function shuffle<T>(arr: T[]): T[] {
@@ -142,7 +142,9 @@ function spikePath(cx: number, cy: number, outerR: number, innerR: number, n: nu
 
 function genRotation(diff: Difficulty): GenResult {
   const blob = makeBlobSpec(7);
-  const deltaCol = diff === 'easy' ? 80 : diff === 'medium' ? 55 : 34;
+  // Rotation step floored at 90° -- smaller steps read as "almost the same
+  // shape" rather than a clear rotation (see user feedback).
+  const deltaCol = diff === 'easy' ? 150 : diff === 'medium' ? 115 : 90;
   const deltaRow = diff === 'easy' ? 0 : diff === 'medium' ? 18 : 14;
   const baseRot = Math.floor(Math.random() * 360);
   const grid: ShapeSpec[][] = [];
@@ -256,7 +258,7 @@ function genTrio(diff: Difficulty): GenResult {
   // identically. Use an irregular 3-point blob instead (same trick as
   // genRotation), which has no rotational symmetry at all.
   const blob = makeBlobSpec(3);
-  const deltaTriCol = diff === 'easy' ? 90 : diff === 'medium' ? 60 : 40;
+  const deltaTriCol = diff === 'easy' ? 150 : diff === 'medium' ? 115 : 90; // floored at 90°
   const deltaTriRow = diff === 'easy' ? 0 : diff === 'medium' ? 20 : 15;
   const baseTri = Math.floor(Math.random() * 360);
   const dotStep = 0.5; // col 0/1/2 -> t = 0 / 0.5 / 1, same path for every row
@@ -306,7 +308,7 @@ function genSlots(diff: Difficulty): GenResult {
   // while a separate marker jumps between 3 fixed slots -- two independent
   // rules, unlike 'trio' where the moving element slides continuously.
   const blob = makeBlobSpec(5);
-  const deltaRotCol = diff === 'easy' ? 80 : diff === 'medium' ? 55 : 34;
+  const deltaRotCol = diff === 'easy' ? 150 : diff === 'medium' ? 115 : 90; // floored at 90°
   const deltaRotRow = diff === 'easy' ? 0 : diff === 'medium' ? 18 : 14;
   const baseRot = Math.floor(Math.random() * 360);
   const slotOffset = Math.floor(Math.random() * 3);
