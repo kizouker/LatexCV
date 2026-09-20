@@ -41,15 +41,17 @@ just that it's a fixed inherent complexity rather than tunable.
 | `fill` | Byggmönster | described in words (6-slot template fills/empties) | partial (row-shift only) |
 | `diag` | Rotera & lägg till | pasted example (3×3 rotate-whole-pattern + accrete) | no |
 | `axis` | Ram & symbol | two pasted examples (container↔row, symbol↔column) | no |
+| `quadrant` | Hörnzoner | 5 pasted examples (crosshair grid, triangle↔row corner, circle↔column corner) | no |
 
-Follow-up worth doing: `latin`, `diag`, and `axis` are combinatorial/discrete
-rules (a Latin square, a fixed rotate-and-add sequence, two independent
-axis bindings) rather than magnitude-based ones, so "harder" doesn't mean
-"bigger number" for them the way it does for rotation degrees or spike
-counts. If they need real difficulty tiers, that likely means something
-qualitatively different per tier (e.g. more visually-similar distractor
-shapes for hard, or combining `axis` with a `latin`-style permutation on
-one axis for hard) rather than scaling an existing parameter — not started.
+Follow-up worth doing: `latin`, `diag`, `axis`, and `quadrant` are
+combinatorial/discrete rules (a Latin square, a fixed rotate-and-add
+sequence, independent axis bindings) rather than magnitude-based ones, so
+"harder" doesn't mean "bigger number" for them the way it does for rotation
+degrees or spike counts. If they need real difficulty tiers, that likely
+means something qualitatively different per tier (e.g. more
+visually-similar distractor shapes for hard, or combining `axis`/`quadrant`
+with a `latin`-style permutation on one axis for hard) rather than scaling
+an existing parameter — not started.
 
 ## Copyright decision (see issue #4)
 

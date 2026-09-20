@@ -1,7 +1,7 @@
 // Framework-agnostic matrix-reasoning puzzle engine (plain TypeScript, no Angular imports).
 // Intended to be reused as-is by any UI layer (Angular now, React later — see ROADMAP.md).
 
-export type Family = 'rotation' | 'crescent' | 'latin' | 'spikes' | 'trio' | 'slots' | 'fill' | 'diag' | 'axis';
+export type Family = 'rotation' | 'crescent' | 'latin' | 'spikes' | 'trio' | 'slots' | 'fill' | 'diag' | 'axis' | 'quadrant';
 export type Difficulty = 'easy' | 'medium' | 'hard';
 
 export interface BlobPoint {
@@ -29,6 +29,8 @@ export interface ShapeSpec {
   diagSet?: number[];
   axisContainer?: number;
   axisSymbol?: number;
+  quadA?: number;
+  quadB?: number;
 }
 
 export interface Option extends ShapeSpec {
@@ -49,7 +51,6 @@ interface GenResult {
   explanation: string;
 }
 
-export const FAMILIES: Family[] = ['rotation', 'crescent', 'latin', 'spikes', 'trio', 'slots', 'fill', 'diag', 'axis'];
 export const LETTERS = ['A', 'B', 'C', 'D', 'E', 'F'];
 
 function shuffle<T>(arr: T[]): T[] {
@@ -494,6 +495,37 @@ function genAxis(_diff: Difficulty): GenResult {
   return { grid, correct, distractors, explanation };
 }
 
+function genQuadrant(_diff: Difficulty): GenResult {
+  // A fixed crosshair splits the cell into 4 corner zones (0=NW,1=NE,2=SW,3=SE).
+  // Symbol A's zone is bound to the row, symbol B's zone is bound to the
+  // column -- same independent-axis principle as 'axis', but with spatial
+  // corner positions as the attribute instead of container/symbol type.
+  const zones = [0, 1, 2, 3];
+  const zoneOrderA = shuffle(zones).slice(0, 3);
+  const zoneOrderB = shuffle(zones).slice(0, 3);
+  const grid: ShapeSpec[][] = [];
+  for (let r = 0; r < 3; r++) {
+    const row: ShapeSpec[] = [];
+    for (let c = 0; c < 3; c++) {
+      row.push({ family: 'quadrant', quadA: zoneOrderA[r], quadB: zoneOrderB[c] });
+    }
+    grid.push(row);
+  }
+  const correct = grid[2][2];
+  const candidates: ShapeSpec[] = [];
+  for (let a = 0; a < 4; a++) {
+    for (let b = 0; b < 4; b++) {
+      if (a === correct.quadA && b === correct.quadB) continue;
+      candidates.push({ family: 'quadrant', quadA: a, quadB: b });
+    }
+  }
+  shuffle(candidates);
+  const keyFn = (s: ShapeSpec) => `${s.quadA}-${s.quadB}`;
+  const distractors = pickDistractors(keyFn(correct), candidates, keyFn, 5);
+  const explanation = `Triangeln hamnar i ett hörn som bestäms av raden och cirkeln i ett hörn som bestäms av kolumnen -- helt oberoende av varandra.`;
+  return { grid, correct, distractors, explanation };
+}
+
 const GENERATORS: Record<Family, (diff: Difficulty) => GenResult> = {
   rotation: genRotation,
   crescent: genCrescent,
@@ -504,7 +536,14 @@ const GENERATORS: Record<Family, (diff: Difficulty) => GenResult> = {
   fill: genFill,
   diag: genDiag,
   axis: genAxis,
+  quadrant: genQuadrant,
 };
+
+// Derived from GENERATORS (not maintained separately) so a new family can
+// never again be reachable from its own chip but silently missing from
+// "Slumpa" -- TypeScript's Record<Family, ...> already forces every case
+// in GENERATORS itself to be present.
+export const FAMILIES: Family[] = Object.keys(GENERATORS) as Family[];
 
 export function generatePuzzle(family: Family | 'random', difficulty: Difficulty, avoidFamily?: Family): Puzzle {
   let fam: Family;
@@ -645,6 +684,16 @@ export function shapeMarkup(spec: ShapeSpec): string {
           symbolMarkup = `<path class="outline-shape" d="${pointsToPath([[50, 36], [64, 50], [50, 64], [36, 50]])}" />`;
       }
       return containerMarkup + symbolMarkup;
+    }
+    case 'quadrant': {
+      const crosshair = `<path class="outline-shape" d="M 50 12 L 50 88 M 12 50 L 88 50" />`;
+      const zoneCenters: [number, number][] = [[28, 28], [72, 28], [28, 72], [72, 72]];
+      const [ax, ay] = zoneCenters[spec.quadA!];
+      const [bx, by] = zoneCenters[spec.quadB!];
+      const triD = pointsToPath(polygonPoints(ax - 6, ay - 6, 9, 3, -90));
+      const triMarkup = `<path class="latin-shape tone-dark" d="${triD}" />`;
+      const circMarkup = `<circle class="trio-dot" cx="${bx + 6}" cy="${by + 6}" r="7" />`;
+      return crosshair + triMarkup + circMarkup;
     }
     default:
       return '';

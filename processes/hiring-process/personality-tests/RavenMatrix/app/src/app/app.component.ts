@@ -46,6 +46,7 @@ export class AppComponent {
     { key: 'fill', label: 'Byggmönster' },
     { key: 'diag', label: 'Rotera & lägg till' },
     { key: 'axis', label: 'Ram & symbol' },
+    { key: 'quadrant', label: 'Hörnzoner' },
   ];
   readonly difficulties: { key: DifficultyMode; label: string }[] = [
     { key: 'easy', label: 'Lätt' },
