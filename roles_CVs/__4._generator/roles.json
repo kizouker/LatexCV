@@ -152,6 +152,34 @@
         ["Healthcare", "BioTech"],
         ["Finance", "Trade"]
       ]
+    },
+    {
+      "id": "vikarie-with-interests-sv",
+      "lang": "sv",
+      "output_dir": "1.Primary_Roles/Vikarie Alla Amnen Intressen",
+      "output_file": "CV-RickardÅberg-Vikarie-Alla-Amnen-Intressen-SV.tex",
+      "photo": "rickardaberg-consultant.jpeg",
+      "title_line1": "Vikarie --",
+      "title_line2": "Alla ämnen, djup i tre",
+      "subtitle": "Matematik -- Musikproduktion -- Programmering med AI-agenter",
+      "quote": "Om du ramlar hundra gånger och reser dig igen, är den 101:a gången aldrig en förlust!",
+      "summary_section": "All_subjects_with_interests_sv.tex",
+      "employments_section": "section_employments_sv.tex",
+      "extra_sections": [
+        "cv_section_general_subjects_sv.tex",
+        "Math_teacher_academic_foundation_sv.tex",
+        "Music_production_skills_sv.tex",
+        "AI_agent_programming_sv.tex",
+        "cv_section_it_experience_condensed_sv.tex",
+        "cv_section_education_minimal_sv.tex"
+      ],
+      "industry_sectors": [
+        ["Utbildning", "Offentlig sektor"],
+        ["Media", "Underhållning"],
+        ["Teknik", "Flyg"],
+        ["Sjukvård", "Bioteknik"],
+        ["Finans", "Handel"]
+      ]
     }
   ]
 }

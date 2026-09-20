@@ -15,8 +15,16 @@ import sys
 
 GENERATOR_DIR = os.path.dirname(os.path.abspath(__file__))
 ROLES_CVS_DIR = os.path.dirname(GENERATOR_DIR)  # .../roles_CVs
-TEMPLATE_PATH = os.path.join(GENERATOR_DIR, "base_cv_template.tex")
 ROLES_JSON_PATH = os.path.join(GENERATOR_DIR, "roles.json")
+
+# One template file per supported "lang" value in roles.json. Add a new
+# language by dropping a base_cv_template.<code>.tex here (copy the "en"
+# one and translate its static strings) and adding a line below.
+TEMPLATE_PATHS = {
+    "en": os.path.join(GENERATOR_DIR, "base_cv_template.tex"),
+    "sv": os.path.join(GENERATOR_DIR, "base_cv_template.sv.tex"),
+}
+DEFAULT_PHOTO = "rickardaberg-consultant.jpeg"
 
 
 def escape_latex(text):
@@ -45,7 +53,17 @@ def render_industry_sectors(pairs):
     return "\n".join(lines)
 
 
-def render_role(template, role):
+def render_role(role):
+    lang = role.get("lang", "en")
+    if lang not in TEMPLATE_PATHS:
+        raise ValueError(
+            f"Role '{role['id']}' has lang '{lang}', but there's no "
+            f"base_cv_template.{lang}.tex in TEMPLATE_PATHS. Known: "
+            f"{list(TEMPLATE_PATHS)}"
+        )
+    with open(TEMPLATE_PATHS[lang], encoding="utf-8") as f:
+        template = f.read()
+
     output_dir = os.path.join(ROLES_CVS_DIR, role["output_dir"])
     os.makedirs(output_dir, exist_ok=True)
     rel = os.path.relpath(ROLES_CVS_DIR, output_dir)
@@ -62,6 +80,11 @@ def render_role(template, role):
     text = text.replace(
         "$$INDUSTRY_SECTORS$$", render_industry_sectors(role["industry_sectors"])
     )
+    text = text.replace("$$PHOTO$$", role.get("photo", DEFAULT_PHOTO))
+    text = text.replace(
+        "$$EMPLOYMENTS_SECTION$$",
+        role.get("employments_section", "section_employments.tex"),
+    )
     text = text.replace("$$REL$$", rel)
 
     out_path = os.path.join(output_dir, role["output_file"])
@@ -73,8 +96,6 @@ def render_role(template, role):
 def main():
     requested_id = sys.argv[1] if len(sys.argv) > 1 else None
 
-    with open(TEMPLATE_PATH, encoding="utf-8") as f:
-        template = f.read()
     with open(ROLES_JSON_PATH, encoding="utf-8") as f:
         roles = json.load(f)["roles"]
 
@@ -85,7 +106,7 @@ def main():
             sys.exit(1)
 
     for role in roles:
-        out_path = render_role(template, role)
+        out_path = render_role(role)
         print(f"Generated: {out_path}")
 
 
