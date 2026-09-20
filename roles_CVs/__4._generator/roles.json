@@ -2,7 +2,7 @@
   "roles": [
     {
       "id": "math-teacher",
-      "output_dir": "1. Primary_Roles/Math Teacher Substitute",
+      "output_dir": "1.Primary_Roles/Math Teacher Substitute",
       "output_file": "CV-RickardÅberg-Math-Teacher.tex",
       "title_line1": "Mathematics",
       "title_line2": "Substitute Teacher",
@@ -24,7 +24,7 @@
     },
     {
       "id": "french-teacher",
-      "output_dir": "1. Primary_Roles/French Teacher",
+      "output_dir": "1.Primary_Roles/French Teacher",
       "output_file": "CV-RickardÅberg-French-Teacher-generated.tex",
       "title_line1": "French-speaking",
       "title_line2": "Language Instructor & Substitute Teacher",
@@ -45,7 +45,7 @@
     },
     {
       "id": "music-production-teacher",
-      "output_dir": "1. Primary_Roles/Music Production Teacher Substitute",
+      "output_dir": "1.Primary_Roles/Music Production Teacher Substitute",
       "output_file": "CV-RickardÅberg-Music-Production-Teacher.tex",
       "title_line1": "Music Production",
       "title_line2": "Substitute Teacher",
@@ -67,7 +67,7 @@
     },
     {
       "id": "economics-innovation-leadership",
-      "output_dir": "1. Primary_Roles/Economics Innovation Leadership",
+      "output_dir": "1.Primary_Roles/Economics Innovation Leadership",
       "output_file": "CV-RickardÅberg-Economics-Innovation-Leadership.tex",
       "title_line1": "Economics, Innovation",
       "title_line2": "& Leadership",
@@ -88,7 +88,7 @@
     },
     {
       "id": "music-business-economics",
-      "output_dir": "1. Primary_Roles/Music Business Economics",
+      "output_dir": "1.Primary_Roles/Music Business Economics",
       "output_file": "CV-RickardÅberg-Music-Business-Economics.tex",
       "title_line1": "Music Technology,",
       "title_line2": "Business & Innovation",
@@ -109,7 +109,7 @@
     },
     {
       "id": "general-substitute-teacher",
-      "output_dir": "1. Primary_Roles/Vikarie Allman Linje",
+      "output_dir": "1.Primary_Roles/Vikarie Allman Linje",
       "output_file": "CV-RickardÅberg-Vikarie-Allman-Linje.tex",
       "title_line1": "General Substitute",
       "title_line2": "Teacher (Vikarie)",
@@ -124,6 +124,31 @@
       "industry_sectors": [
         ["Education", "Public Sector"],
         ["Aviation", "Hospitality"],
+        ["Healthcare", "BioTech"],
+        ["Finance", "Trade"]
+      ]
+    },
+    {
+      "id": "vikarie-with-interests",
+      "output_dir": "1.Primary_Roles/Vikarie Alla Amnen Intressen",
+      "output_file": "CV-RickardÅberg-Vikarie-Alla-Amnen-Intressen.tex",
+      "title_line1": "Substitute Teacher --",
+      "title_line2": "All Subjects, Deep in Three",
+      "subtitle": "Mathematics -- Music Production -- Programming with AI Agents",
+      "quote": "If you fall one-hundred times and then get up, the 101 time you never lost!",
+      "summary_section": "All_subjects_with_interests.tex",
+      "extra_sections": [
+        "cv_section_general_subjects.tex",
+        "Math_teacher_academic_foundation.tex",
+        "Music_production_skills.tex",
+        "AI_agent_programming.tex",
+        "cv_section_it_experience_condensed.tex",
+        "cv_section_education_minimal.tex"
+      ],
+      "industry_sectors": [
+        ["Education", "Public Sector"],
+        ["Media", "Entertainment"],
+        ["Technology", "Aviation"],
         ["Healthcare", "BioTech"],
         ["Finance", "Trade"]
       ]
