@@ -127,6 +127,27 @@
         ["Healthcare", "BioTech"],
         ["Finance", "Trade"]
       ]
+    },
+    {
+      "id": "saab-systems-engineer",
+      "output_dir": "1. Primary_Roles/Saab Systems Engineer",
+      "output_file": "CV-RickardÅberg-Saab-Systems-Engineer.tex",
+      "title_line1": "Civilingenjör,",
+      "title_line2": "Systemutveckling",
+      "subtitle": "Software & Systems Engineering -- 20+ Years Experience",
+      "quote": "If you fall one-hundred times and then get up, the 101 time you never lost!",
+      "summary_section": "Saab_systems_engineer.tex",
+      "extra_sections": [
+        "Saab_technical_foundation.tex",
+        "dev_experiences.tex",
+        "cv_section_education_minimal.tex"
+      ],
+      "industry_sectors": [
+        ["Defense", "Aviation"],
+        ["Telecom", "Finance"],
+        ["Public Sector", "Energy"],
+        ["Technology", "Security"]
+      ]
     }
   ]
 }
