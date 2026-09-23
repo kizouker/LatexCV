@@ -1,0 +1,142 @@
+%% CV - Rickard Åberg - Blue Cromos AB, iOS Developer (speculative application) - English
+\documentclass[11pt,a4paper,sans]{moderncv}
+% ATS mode: compiled via sh/build-cv.sh --ats, which injects \ATSMODE=1
+% to disable photo/frame (the most common ATS parsing pitfall).
+\providecommand{\ATSMODE}{0}
+\moderncvstyle{banking}
+\moderncvcolor{blue}
+\usepackage[scale=0.75]{geometry}
+\setlength{\footskip}{136.00005pt}
+\usepackage{graphicx}
+\graphicspath{{../../__1._images/}{../../__2._photos/}}
+\usepackage{enumitem}
+\newcommand{\thepage}{\arabic{page}}
+
+\ifxetexorluatex
+  \usepackage{fontspec}
+\else
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage{lmodern}
+\fi
+
+\usepackage[english]{babel}
+\usepackage{underscore}
+
+\name{Rickard}{Åberg}
+\title{MSc CS -- iOS \& AI Developer}
+\ifnum\ATSMODE=1\else\photo[72pt][0pt]{me}\fi
+\address{Bodekullsgatan 34b}{21440 Malmö, Sweden}
+\phone[mobile]{+46~709~43~14~01}
+\email{rickard.aaberg@icloud.com}
+\social[linkedin]{rickard-åberg-9866891}
+\social[github]{kizouker}
+
+\quote{Authenticity measured directly in the material, without added complexity -- that's exactly the kind of elegant, real-world problem-solving I want to build apps and backends for.}
+
+\ifnum\ATSMODE=1\else
+\makeatletter
+\@ifpackageloaded{moderncvstylebanking}{%
+\let\oldmakecvtitle\makecvtitle
+\renewcommand*{\makecvtitle}{%
+  {\centering\framebox{\includegraphics[width=\@photowidth]{\@photo}}\par\vspace{10pt}}%
+  \oldmakecvtitle%
+}%
+}{}
+\makeatother
+\fi
+
+\begin{document}
+\makecvtitle
+
+\section*{Speculative Application -- iOS Developer}
+
+MSc in Computer Science and Engineering with 15+ years of experience in software development, systems integration and test in production-critical environments -- banking, telecom, aviation and the public sector. I'm sending this speculative application because I couldn't find a currently advertised role, but your technology -- making authenticity and traceability measurable directly in a product's physical material, via computer vision and digital fingerprints, without QR codes or added markers -- is exactly the kind of elegant, real-world problem-solving I want to build mobile apps and backends for.
+
+On the mobile side, I'm currently building my own HRV (Heart Rate Variability) app for Apple Watch and iPhone -- a genuine personal project. I combine this with solid backend and integration experience (Java, APIs, cloud and on-prem), certified test expertise (ISTQB) -- relevant for a product whose core \emph{is} verification -- and hobby projects in sensor- and camera-based IoT, close to your optics-based technology. Innovation in computer vision is exactly what I want to work with, and I enjoy pitching my ideas and seeing them through -- not just coding them.
+
+\section*{Relevant profile for the role}
+\begin{itemize}[nosep]
+  \item Own ongoing iOS/watchOS project: HRV app for Apple Watch and iPhone
+  \item Cross-platform mobile development (Xamarin/C\#) from a previous private app (MADRS screening)
+  \item 15+ years of software development and systems integration in production-critical environments
+  \item ISTQB Certified Tester (CTFL) -- test methodology and quality assurance, the core of a verification product
+  \item Hands-on experience with both cloud and on-premises (Azure, AWS, Docker, Kubernetes)
+  \item Personal IoT hobby projects (camera- and sensor-based) -- close to your optics-based technology
+  \item Object-oriented programming: Java, C\#/.NET, working knowledge of Python
+  \item API integration and service architecture (REST, JSON/XML, EAI) in large-scale systems
+  \item Experience with security-critical, traceable systems (banking, telecom, aviation)
+  \item Fluent in Swedish and English
+\end{itemize}
+
+\section{Experience}
+
+\cventry{2026}{Field Worker (fixed-term)}{Skogsstyrelsen (Swedish Forest Agency)}{Sweden}{}{Hands-on field and conservation work according to established procedures and safety regulations.}
+
+\cventry{2021--2022}{Fullstack Developer}{ADBSafegate AB}{Malmö}{}{Application development tied to apron and ground operations for air traffic -- safe parking, position information and traceability between vehicles and aircraft in a safety-critical, verifiable environment.}
+
+\cventry{2021}{Fullstack Developer}{Zaplox AB}{Lund}{}{Vue.js, Node.js, JavaScript, CSS, AWS.}
+
+\cventry{2017--2018}{Senior Software Engineer}{Verisure Innovation}{Malmö}{}{Java 8, Docker/Kubernetes, microservice deployment, RESTful API, MySQL/Cassandra -- alarm and security systems.}
+
+\cventry{2012--2017}{Managing Consultant}{Bouvet Syd AB}{Malmö}{}{Java developer, Team Lead / DevOps lead. Backend, systems integration and database design.}
+
+\cventry{2004--2012}{Consultant -- Java, Integration \& Test}{Cybercom / Telenor / Hi3G / IKEA IT}{Malmö/Oslo/Stockholm}{}{Backend and integration development in Java EE and TIBCO. EAI solutions with 15+ adapters (Billing, CRM). Testing and quality assurance in large-scale telecom systems.}
+
+\section{Personal Projects}
+
+\cventry{}{HRV app -- Apple Watch \& iPhone}{Personal project, ongoing}{}{}{Own app to measure and track HRV (Heart Rate Variability) via Apple Watch, with an iPhone app as the interface. Native iOS/watchOS development, built with Claude Code as part of the workflow.}
+
+\cventry{}{MADRS screening -- mobile app}{Personal project}{}{}{Xamarin (C\#) -- self-assessment app based on the MADRS scale. Cross-platform mobile development, form logic and scoring.}
+
+\cventry{}{Sensor- and camera-based IoT}{Personal project}{}{}{Arduino and Raspberry Pi -- collecting and processing sensor data (incl. image, pressure, temperature).}
+
+\cventry{}{Computer vision for brush-cutter work -- early concept stage}{Personal project}{}{}{Sketching how computer vision could apply to brush-cutting work, drawing on my own field experience at Skogsstyrelsen. Planning OpenCV on a robot platform through iterative prototypes -- concept stage, but a natural meeting point between fieldwork and computer vision.}
+
+\section{Education \& Certifications}
+
+\cventry{2025}{Microsoft Certified: Azure Fundamentals (AZ-900)}{Microsoft}{}{}{}
+\cventry{2023--2024}{Google Cybersecurity Fundamentals}{Google/Coursera}{}{}{}
+\cventry{2016}{Programming and Problem-solving in Python (2.5 ECTS)}{Blekinge Institute of Technology}{Ronneby}{}{}
+\cventry{2006}{ISTQB Certified Tester -- Foundation Level (CTFL)}{}{}{}{}
+\cventry{1996--2003}{MSc in Computer Science and Engineering (300 ECTS)}{Linköping Institute of Technology}{Linköping}{}{Object-oriented programming, databases, software production, AI, advanced computer architecture}
+
+\cvitem{}{
+\begin{minipage}[t]{0.3\linewidth}
+  \centering
+  \includegraphics[width=0.9\linewidth]{azure-fundamentals-badge.png}\\
+  \scriptsize Azure Fundamentals (AZ-900)
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.3\linewidth}
+  \centering
+  \includegraphics[width=0.9\linewidth]{ISQTB.jpg}\\
+  \scriptsize ISTQB Certified Tester (CTFL)
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.3\linewidth}
+  \centering
+  \includegraphics[width=0.9\linewidth]{liu-logo.png}\\
+  \scriptsize Linköping Institute of Technology
+\end{minipage}
+}
+
+\section{Technical Skills}
+
+\cvitem{Mobile}{iOS/watchOS (own HRV app project), Xamarin/C\# (cross-platform)}
+\cvitem{Programming}{Java (JEE, Spring), C\#/.NET, Python (working knowledge), JavaScript}
+\cvitem{Integration \& API}{REST, JSON/XML, EAI (Mule ESB, TIBCO), RabbitMQ/ActiveMQ/JMS}
+\cvitem{Cloud \& DevOps}{Azure (AZ-900), AWS, Docker, Kubernetes, CI/CD, Git}
+\cvitem{Databases}{MS SQL Server, Oracle, MySQL, PostgreSQL, Cassandra}
+\cvitem{Test \& Quality}{ISTQB methodology, test automation, quality assurance in production}
+\cvitem{Hardware/IoT}{Arduino, Raspberry Pi, sensor- and camera-based data processing}
+
+\section{Languages}
+\cvitemwithcomment{Swedish}{Native speaker}{}
+\cvitemwithcomment{English}{Fluent, professional proficiency}{}
+\cvitemwithcomment{French}{Professional proficiency}{}
+
+\section{Other}
+\cvlistdoubleitem{Driver's licence (B)}{Location: Malmö -- same city as Blue Cromos}
+
+\end{document}
