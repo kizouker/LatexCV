@@ -29,6 +29,13 @@ logistik. Presenterade patenterad "digital tvilling"-teknik på Hannover
 Messe 2025-03-31 (arkitekt Fredrik Ponten citerad i pressmeddelande).
 Team: ~15 personer (ledning, ingenjörer, arkitekter, testare).
 
+LinkedIn-post (~1 vecka innan denna research): Blue Cromos AB välkomnade
+"Joy Bagret" som ny Quality Assurance Engineer (11+ års testerfarenhet).
+-> QA-rollen är alltså nyligen tillsatt. Stärker valet av Backend
+Developer som ansatsvinkel för spontanansökan (QA redan bemannat,
+Computer Vision Engineer-annonsen stängd och kräver djupare CV/ML-
+profil än Rickards).
+
 Relaterad (STÄNGD) annons -- Computer Vision Engineer, Blue Cromos AB,
 Malmö (LinkedIn, postad ~6 dagar innan denna research, >100 sökande,
 "No longer accepting applications"):
