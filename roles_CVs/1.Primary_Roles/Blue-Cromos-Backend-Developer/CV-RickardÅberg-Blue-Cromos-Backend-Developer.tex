@@ -1,0 +1,136 @@
+%% CV - Rickard Åberg - Blue Cromos AB, Backend Developer (spontanansökan)
+\documentclass[11pt,a4paper,sans]{moderncv}
+% ATS-läge: kompileras via sh/build-cv.sh --ats, som injicerar \ATSMODE=1
+% för att slå av foto/ramar (vanlig ATS-parsningsbov).
+\providecommand{\ATSMODE}{0}
+\moderncvstyle{banking}
+\moderncvcolor{blue}
+\usepackage[scale=0.75]{geometry}
+\setlength{\footskip}{136.00005pt}
+\usepackage{graphicx}
+\graphicspath{{../../__1._images/}{../../__2._photos/}}
+\usepackage{enumitem}
+\newcommand{\thepage}{\arabic{page}}
+
+\ifxetexorluatex
+  \usepackage{fontspec}
+\else
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage{lmodern}
+\fi
+
+\usepackage[swedish]{babel}
+\usepackage{underscore}
+
+\name{Rickard}{Åberg}
+\title{Backend}
+\ifnum\ATSMODE=1\else\photo[72pt][0pt]{me}\fi
+\address{Bodekullsgatan 34b}{21440 Malmö}
+\phone[mobile]{+46~709~43~14~01}
+\email{rickard.aaberg@icloud.com}
+\social[linkedin]{rickard-åberg-9866891}
+\social[github]{kizouker}
+
+\quote{Äkthet mätt direkt i materialet, utan extra komplexitet -- det är precis den typen av elegant, verklighetsförankrad problemlösning jag vill bygga backend åt.}
+
+\ifnum\ATSMODE=1\else
+\makeatletter
+\@ifpackageloaded{moderncvstylebanking}{%
+\let\oldmakecvtitle\makecvtitle
+\renewcommand*{\makecvtitle}{%
+  {\centering\framebox{\includegraphics[width=\@photowidth]{\@photo}}\par\vspace{10pt}}%
+  \oldmakecvtitle%
+}%
+}{}
+\makeatother
+\fi
+
+\begin{document}
+\makecvtitle
+
+\section*{Spontanansökan -- Backend Developer}
+
+Civilingenjör i datateknik med över 15 års erfarenhet av backendutveckling, systemintegration och test i produktionskritiska miljöer -- bank, telekom, flyg och offentlig sektor. Jag skickar denna spontanansökan eftersom jag inte hittat någon aktuell utannonserad tjänst, men er teknik -- att göra äkthet och spårbarhet mätbar direkt i produktens fysiska material, via Computer Vision och digitala fingeravtryck, utan QR-koder eller tillagda markörer -- är precis den typ av elegant, verklighetsförankrad problemlösning jag vill bygga backend åt.
+
+Jag kombinerar gedigen backend- och integrationserfarenhet (Java, systemarkitektur, API:er, moln och on-prem) med certifierad testkompetens (ISTQB) -- relevant i en produkt vars kärna \emph{är} verifiering -- och egna hobbyprojekt inom sensor- och kamerabaserad IoT (Arduino, Raspberry Pi), vilket ligger nära er optikbaserade fingerprinting-teknik. Jag är van vid att bygga robusta, spårbara system som måste fungera i skarp produktionsdrift, inte bara i teorin.
+
+\section*{Relevant profil för rollen}
+\begin{itemize}[nosep]
+  \item Över 15 års erfarenhet av backendutveckling och systemintegration (Java, JEE, Spring) i produktionskritiska miljöer
+  \item ISTQB Certified Tester (CTFL) -- testmetodik och kvalitetssäkring, kärnan i en verifieringsprodukt
+  \item Praktisk erfarenhet av både moln och on-premises (Azure, AWS, Docker, Kubernetes) -- matchar en hybridmiljö
+  \item Egna hobbyprojekt med kamera- och sensorbaserad IoT (Arduino, Raspberry Pi) -- nära er optikbaserade teknik
+  \item Objektorienterad programmering: Java, C\#/.NET, arbetande kunskap i Python
+  \item API-integration och tjänstearkitektur (REST, JSON/XML, EAI) i storskaliga system
+  \item Van vid säkerhetskritiska, spårbara system inom bank, telekom och flygdrift (ADBSafegate)
+  \item Flytande svenska och engelska
+\end{itemize}
+
+\section{Erfarenhet}
+
+\cventry{2026}{Fältarbetare (visstid)}{Skogsstyrelsen}{Sverige}{}{Praktiskt fält- och naturvårdsarbete enligt fastställda rutiner och säkerhetsföreskrifter.}
+
+\cventry{2021--2022}{Fullstack Developer}{ADBSafegate AB}{Malmö}{}{Applikationsutveckling kopplad till apron- och markoperationer för trafikflyg -- säker parkering, positionsinformation och spårbarhet mellan fordon och luftfartyg i en säkerhetskritisk, verifierbar miljö.}
+
+\cventry{2021}{Fullstack Developer}{Zaplox AB}{Lund}{}{Vue.js, Node.js, JavaScript, CSS, AWS.}
+
+\cventry{2017--2018}{Senior Software Engineer}{Verisure Innovation}{Malmö}{}{Java 8, Docker/Kubernetes, mikroservicedeploy, RESTful API, MySQL/Cassandra -- larm- och säkerhetssystem.}
+
+\cventry{2012--2017}{Managing Consultant}{Bouvet Syd AB}{Malmö}{}{Java-utvecklare, Team Lead / DevOps-ansvarig. Backend, systemintegration och databasdesign.}
+
+\cventry{2004--2012}{Konsult -- Java, Integration \& Test}{Cybercom / Telenor / Hi3G / IKEA IT}{Malmö/Oslo/Stockholm}{}{Backend- och integrationsutveckling i Java EE och TIBCO. EAI-lösningar med 15+ adapters (Billing, CRM). Testarbete och kvalitetssäkring i storskaliga telekomsystem.}
+
+\section{Privata projekt}
+
+\cventry{}{Sensor- och kamerabaserad IoT}{Eget projekt}{}{}{Arduino och Raspberry Pi -- insamling och bearbetning av sensordata (bl.a. bild, tryck, temperatur).}
+
+\cventry{}{MADRS-screening -- mobilapp}{Eget projekt}{}{}{Xamarin (C\#) -- självskattningsapp enligt MADRS-skalan. Cross-platform mobilutveckling, formulärlogik och poängberäkning.}
+
+\section{Utbildning \& Certifieringar}
+
+\cventry{2025}{Microsoft Certified: Azure Fundamentals (AZ-900)}{Microsoft}{}{}{}
+\cventry{2023--2024}{Google Cybersecurity Fundamentals}{Google/Coursera}{}{}{}
+\cventry{2016}{Programming and Problem-solving in Python (2.5 hp)}{Blekinge Tekniska Högskola}{Ronneby}{}{}
+\cventry{2006}{ISTQB Certified Tester -- Foundation Level (CTFL)}{}{}{}{}
+\cventry{1996--2003}{Civilingenjör, Datateknik (300 hp)}{Linköpings tekniska högskola}{Linköping}{}{Objektorienterad programmering, databaser, mjukvaruproduktion, AI, avancerad datorarkitektur}
+
+\cvitem{}{
+\begin{minipage}[t]{0.3\linewidth}
+  \centering
+  \includegraphics[width=0.9\linewidth]{azure-fundamentals-badge.png}\\
+  \scriptsize Azure Fundamentals (AZ-900)
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.3\linewidth}
+  \centering
+  \includegraphics[width=0.9\linewidth]{ISQTB.jpg}\\
+  \scriptsize ISTQB Certified Tester (CTFL)
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.3\linewidth}
+  \centering
+  \includegraphics[width=0.9\linewidth]{liu-logo.png}\\
+  \scriptsize Linköpings tekniska högskola
+\end{minipage}
+}
+
+\section{Tekniska kunskaper}
+
+\cvitem{Programmering}{Java (JEE, Spring), C\#/.NET, Python (arbetande kunskap), JavaScript}
+\cvitem{Integration \& API}{REST, JSON/XML, EAI (Mule ESB, TIBCO), RabbitMQ/ActiveMQ/JMS}
+\cvitem{Moln \& DevOps}{Azure (AZ-900), AWS, Docker, Kubernetes, CI/CD, Git}
+\cvitem{Databaser}{MS SQL Server, Oracle, MySQL, PostgreSQL, Cassandra}
+\cvitem{Test \& Kvalitet}{ISTQB-metodik, testautomatisering, kvalitetssäkring i produktionsmiljö}
+\cvitem{Hårdvara/IoT}{Arduino, Raspberry Pi, sensor- och kamerabaserad databehandling}
+
+\section{Språk}
+\cvitemwithcomment{Svenska}{Modersmål}{}
+\cvitemwithcomment{Engelska}{Flytande, professionell nivå}{}
+\cvitemwithcomment{Franska}{Professionell nivå}{}
+
+\section{Övrigt}
+\cventry{}{B-körkort}{}{}{}{}
+\cvitem{Ort}{Malmö -- samma stad som Blue Cromos}
+
+\end{document}
