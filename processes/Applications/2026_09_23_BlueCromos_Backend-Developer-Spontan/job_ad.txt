@@ -1,0 +1,52 @@
+Blue Cromos AB -- Spontanansökan (Backend Developer)
+
+Ingen aktuell utannonserad Backend Developer-tjänst hittades. Detta är en
+spontanansökan.
+
+VIKTIGT -- bolagsstruktur (research 2026-09-23):
+- "Blue Cromos Management AB" (org.nr 556912-6724) gick i KONKURS
+  2025-06-23 (beslut Lunds tingsrätt). SNI 62020 Datakonsultverksamhet.
+  Senast kända adress: Bassänkajen 12, Malmö. Bekräftat av två oberoende
+  källor (allabolag.se, Konkurslistan.se).
+- "Blue Cromos AB" (separat/efterträdande enhet, org.nr ej verifierat) är
+  AKTIV: adress Stortorget 27, Malmö. Aktiv på Facebook och LinkedIn
+  (1753 följare på LinkedIn, 11-50 anställda, 12 på LinkedIn, verifierad
+  sida). Postat innehåll så sent som september 2026 (bl.a. ACG IP Expo i
+  Edinburgh med AstraZeneca/Diageo/adidas som kontakter).
+- Kontakt: info@bluecromos.se (även info@bluecromos.com nämnt i äldre
+  pressmeddelande), tel 072-157 90 22.
+- Webb: bluecromos.com (huvudsajt), bluecromos.se (nyare domän)
+
+Om bolaget:
+Svenskt teknikbolag (startup, Malmö) inom brand protection / produkt-
+äkthetsverifiering. Patenterad teknik som verifierar äkthet direkt via
+produktens fysiska materialstruktur -- ingen QR-kod, tagg eller tillagd
+markör. Ytstrukturen (osynlig för blotta ögat) fångas med optik eller
+vanlig mobilkamera och omvandlas till ett "Digital Fingerprint" som
+lagras i molnet. Kombinerar AI och klassisk Computer Vision. Riktar sig
+mot industrier: fordon, läkemedel (pharma), lyxvaror, tillverkning,
+logistik. Presenterade patenterad "digital tvilling"-teknik på Hannover
+Messe 2025-03-31 (arkitekt Fredrik Ponten citerad i pressmeddelande).
+Team: ~15 personer (ledning, ingenjörer, arkitekter, testare).
+
+Relaterad (STÄNGD) annons -- Computer Vision Engineer, Blue Cromos AB,
+Malmö (LinkedIn, postad ~6 dagar innan denna research, >100 sökande,
+"No longer accepting applications"):
+Krav: 5+ års erfarenhet av Computer Vision, 3+ års Python, OpenCV/
+scikit-image/Pillow/PyTorch/TensorFlow, matematisk grund (linjär
+algebra, analys, statistik), OOP/designmönster/containerisering/git.
+Meriterande: optik/bildtagningsfysik (lins, djupskärpa, exponering,
+sensorrespons), sensor-/linsval, industriell domän, Qt, molndeploy,
+UI-design.
+-> Denna profil (5+ års djup CV/ML-specialisering) matchar INTE Rickards
+bakgrund ärligt. Därför spontanansökan mot Backend Developer istället,
+med testkompetens (ISTQB) och sensor-/kamera-IoT-hobbyprojekt som
+naturlig brygga till bolagets tekniska tema -- utan att överdriva
+CV/ML-kompetens som inte finns.
+
+Anställningsvillkor i CV-relaterad annons (för referens, gäller den
+stängda CV Engineer-rollen, ej nödvändigtvis Backend):
+- Permanent, heltid
+- Onsite i Malmö med hybridmöjlighet
+- Kandidater måste redan vara baserade i Sverige
+- Snarast möjliga start
