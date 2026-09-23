@@ -1,4 +1,4 @@
-%% CV - Rickard Åberg - Blue Cromos AB, iOS Developer (speculative application) - English
+%% CV - Rickard Åberg - Blue Cromos AB, QA Engineer (speculative application) - English
 \documentclass[11pt,a4paper,sans]{moderncv}
 % ATS mode: compiled via sh/build-cv.sh --ats, which injects \ATSMODE=1
 % to disable photo/frame (the most common ATS parsing pitfall).
@@ -24,7 +24,7 @@
 \usepackage{underscore}
 
 \name{Rickard}{Åberg}
-\title{MSc CS -- iOS \& AI Developer}
+\title{QA Engineer}
 \ifnum\ATSMODE=1\else\photo[72pt][0pt]{me}\fi
 \address{Bodekullsgatan 34b}{21440 Malmö, Sweden}
 \phone[mobile]{+46~709~43~14~01}
@@ -32,7 +32,7 @@
 \social[linkedin]{rickard-åberg-9866891}
 \social[github]{kizouker}
 
-\quote{Authenticity measured directly in the material, without added complexity -- that's exactly the kind of elegant, real-world problem-solving I want to build apps and backends for.}
+\quote{Authenticity measured directly in the material, without added complexity -- and quality assured through methodical, certified testing, not guesswork.}
 
 \ifnum\ATSMODE=1\else
 \makeatletter
@@ -49,23 +49,22 @@
 \begin{document}
 \makecvtitle
 
-\section*{Speculative Application -- iOS Developer}
+\section*{Speculative Application -- QA Engineer}
 
-MSc in Computer Science and Engineering with 15+ years of experience in software development, systems integration and test in production-critical environments -- banking, telecom, aviation and the public sector. I'm sending this speculative application because I couldn't find a currently advertised role, but your technology -- making authenticity and traceability measurable directly in a product's physical material, via computer vision and digital fingerprints, without QR codes or added markers -- is exactly the kind of elegant, real-world problem-solving I want to build mobile apps and backends for.
+MSc in Computer Science and Engineering with an ISTQB Certified Tester certification and 15+ years of experience in testing, quality assurance and systems integration in production-critical environments -- banking, telecom, aviation and the public sector. I'm sending this speculative application because I couldn't find a currently advertised role, but your core business -- making authenticity and traceability measurable and verifiable, via computer vision and digital fingerprints -- is exactly what I'm passionate about quality-assuring: a product whose sole purpose \emph{is} verification must itself be flawlessly verified.
 
-On the mobile side, I'm currently building my own HRV (Heart Rate Variability) app for Apple Watch and iPhone -- a genuine personal project. I combine this with solid backend and integration experience (Java, APIs, cloud and on-prem), certified test expertise (ISTQB) -- relevant for a product whose core \emph{is} verification -- and hobby projects in sensor- and camera-based IoT, close to your optics-based technology. Innovation in computer vision is exactly what I want to work with, and I enjoy pitching my ideas and seeing them through -- not just coding them.
+I've also started building genuine technical curiosity in computer vision on my own -- a concept project on brush-cutter applications (OpenCV, a robot platform), grounded in my fieldwork at Skogsstyrelsen. I don't just want to test black boxes; I want to understand the technology I'm testing in depth. I combine this with solid backend and integration experience (Java, APIs, cloud and on-prem), which lets me test the whole way from code to production. I also enjoy pitching my ideas and seeing them through -- not just executing them.
 
 \section*{Relevant profile for the role}
 \begin{itemize}[nosep]
-  \item Own ongoing iOS/watchOS project: HRV app for Apple Watch and iPhone
-  \item Cross-platform mobile development (Xamarin/C\#) from a previous private app (MADRS screening)
-  \item 15+ years of software development and systems integration in production-critical environments
   \item ISTQB Certified Tester (CTFL) -- test methodology and quality assurance, the core of a verification product
+  \item 15+ years of testing and quality assurance experience in production-critical systems
+  \item Growing technical curiosity in computer vision: own concept project with OpenCV
+  \item Solid backend and systems integration experience (Java, JEE, Spring) -- can test all the way from code to production
   \item Hands-on experience with both cloud and on-premises (Azure, AWS, Docker, Kubernetes)
-  \item Personal IoT hobby projects (camera- and sensor-based) -- close to your optics-based technology
   \item Object-oriented programming: Java, C\#/.NET, working knowledge of Python
-  \item API integration and service architecture (REST, JSON/XML, EAI) in large-scale systems
   \item Experience with security-critical, traceable systems (banking, telecom, aviation)
+  \item Personal hobby projects in sensor- and camera-based IoT (Arduino, Raspberry Pi)
   \item Fluent in Swedish and English
 \end{itemize}
 
@@ -85,13 +84,13 @@ On the mobile side, I'm currently building my own HRV (Heart Rate Variability) a
 
 \section{Personal Projects}
 
-\cventry{}{HRV app -- Apple Watch \& iPhone}{Personal project, ongoing}{}{}{Own app to measure and track HRV (Heart Rate Variability) via Apple Watch, with an iPhone app as the interface. Native iOS/watchOS development, built with Claude Code as part of the workflow.}
+\cventry{}{Computer vision for brush-cutter work -- early concept stage}{Personal project}{}{}{Sketching how computer vision could apply to brush-cutting work, drawing on my own field experience at Skogsstyrelsen. Planning OpenCV on a robot platform through iterative prototypes -- concept stage, but a genuine entry point into computer vision.}
+
+\cventry{}{HRV app -- Apple Watch \& iPhone}{Personal project, ongoing}{}{}{Own app to measure and track HRV (Heart Rate Variability) via Apple Watch, with an iPhone app as the interface. Built with Claude Code as part of the workflow.}
 
 \cventry{}{MADRS screening -- mobile app}{Personal project}{}{}{Xamarin (C\#) -- self-assessment app based on the MADRS scale. Cross-platform mobile development, form logic and scoring.}
 
 \cventry{}{Sensor- and camera-based IoT}{Personal project}{}{}{Arduino and Raspberry Pi -- collecting and processing sensor data (incl. image, pressure, temperature).}
-
-\cventry{}{Computer vision for brush-cutter work -- early concept stage}{Personal project}{}{}{Sketching how computer vision could apply to brush-cutting work, drawing on my own field experience at Skogsstyrelsen. Planning OpenCV on a robot platform through iterative prototypes -- concept stage, but a natural meeting point between fieldwork and computer vision.}
 
 \section{Education \& Certifications}
 
@@ -123,12 +122,12 @@ On the mobile side, I'm currently building my own HRV (Heart Rate Variability) a
 
 \section{Technical Skills}
 
-\cvitem{Mobile}{iOS/watchOS (own HRV app project), Xamarin/C\# (cross-platform)}
+\cvitem{Test \& Quality}{ISTQB methodology, test automation, quality assurance in production}
+\cvitem{Computer Vision}{OpenCV (own concept project, currently learning)}
 \cvitem{Programming}{Java (JEE, Spring), C\#/.NET, Python (working knowledge), JavaScript}
 \cvitem{Integration \& API}{REST, JSON/XML, EAI (Mule ESB, TIBCO), RabbitMQ/ActiveMQ/JMS}
 \cvitem{Cloud \& DevOps}{Azure (AZ-900), AWS, Docker, Kubernetes, CI/CD, Git}
 \cvitem{Databases}{MS SQL Server, Oracle, MySQL, PostgreSQL, Cassandra}
-\cvitem{Test \& Quality}{ISTQB methodology, test automation, quality assurance in production}
 \cvitem{Hardware/IoT}{Arduino, Raspberry Pi, sensor- and camera-based data processing}
 
 \section{Languages}

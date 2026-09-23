@@ -1,6 +1,6 @@
 {
     "company": "Blue Cromos AB",
-    "role": "iOS Developer (spontanansökan)",
+    "role": "QA Engineer (spontanansökan)",
     "location": "Malmö (Stortorget 27)",
     "application_date": "2026-09-23",
     "job_id": "N/A - spontanansökan",
@@ -8,7 +8,7 @@
     "response": "Not yet received",
     "follow_up_date": "TBD",
     "source": "info@bluecromos.se / LinkedIn",
-    "notes": "OBS: 'Blue Cromos Management AB' (556912-6724) gick i konkurs 2025-06-23 -- ej samma juridiska person som den aktiva 'Blue Cromos AB' (Stortorget 27) denna ansökan riktas till. Ingen öppen tjänst hittad; den enda hittade annonsen (Computer Vision Engineer, kräver 5+ års CV/ML-erfarenhet) var stängd och passade inte Rickards profil ärligt, QA-rollen nyligen tillsatt. Pivoterad från Backend till iOS Developer eftersom Rickard har ett genuint pågående eget projekt (HRV-app för Apple Watch/iPhone). CV finns på svenska och engelska (EN-fil). Skicka till info@bluecromos.se, ev. även via LinkedIn-meddelande.",
+    "notes": "OBS: 'Blue Cromos Management AB' (556912-6724) gick i konkurs 2025-06-23 -- ej samma juridiska person som den aktiva 'Blue Cromos AB' (Stortorget 27) denna ansökan riktas till. Vägval: 1) Backend Developer (första utkast) -> 2) iOS Developer (pga eget HRV-app-projekt) -> 3) QA Engineer (slutgiltigt val). Enligt uppgift använder bolaget React Native, inte native iOS, vilket gjorde iOS-vinkeln irrelevant. De behöver antingen QA eller Computer Vision-kompetens; QA/ISTQB är Rickards ärligt starkaste, verifierbara matchning (certifiering + 15+ års testerfarenhet), medan datorseende bara är ett tidigt eget konceptprojekt -- presenteras som genuin nyfikenhet, inte som huvudkompetens. CV finns på svenska och engelska (EN-fil). Skicka till info@bluecromos.se, ev. även via LinkedIn-meddelande.",
     "extracted_keywords": [
         "brand protection",
         "computer vision",
@@ -16,7 +16,8 @@
         "digital fingerprint",
         "authentication",
         "traceability",
-        "backend developer",
+        "QA engineer",
+        "quality assurance",
         "ISTQB",
         "Malmö"
     ]
