@@ -1,0 +1,153 @@
+{
+  "roles": [
+    {
+      "id": "math-teacher",
+      "output_dir": "1.Primary_Roles/Math Teacher Substitute",
+      "output_file": "CV-RickardÅberg-Math-Teacher.tex",
+      "title_line1": "Mathematics",
+      "title_line2": "Substitute Teacher",
+      "subtitle": "Pedagogical coaching -- Engineering Background",
+      "quote": "If you fall one-hundred times and then get up, the 101 time you never lost!",
+      "summary_section": "Math_teacher.tex",
+      "extra_sections": [
+        "Math_teacher_academic_foundation.tex",
+        "cv_section_it_experience_condensed.tex",
+        "cv_section_education_minimal.tex"
+      ],
+      "industry_sectors": [
+        ["Education", "Public Sector"],
+        ["Aviation", "Hospitality"],
+        ["Healthcare", "BioTech"],
+        ["Security", "Energy"],
+        ["Finance", "Trade"]
+      ]
+    },
+    {
+      "id": "french-teacher",
+      "output_dir": "1.Primary_Roles/French Teacher",
+      "output_file": "CV-RickardÅberg-French-Teacher-generated.tex",
+      "title_line1": "French-speaking",
+      "title_line2": "Language Instructor & Substitute Teacher",
+      "subtitle": "Pedagogical coaching -- Multilingual Environments",
+      "quote": "If you fall one-hundred times and then get up, the 101 time you never lost!",
+      "summary_section": "French_teacher.tex",
+      "extra_sections": [
+        "cv_section_it_experience_condensed.tex",
+        "cv_section_education_minimal.tex"
+      ],
+      "industry_sectors": [
+        ["Aviation", "Hospitality"],
+        ["Healthcare", "BioTech"],
+        ["Security", "Energy"],
+        ["Public", "Telecom"],
+        ["Finance", "Trade"]
+      ]
+    },
+    {
+      "id": "music-production-teacher",
+      "output_dir": "1.Primary_Roles/Music Production Teacher Substitute",
+      "output_file": "CV-RickardÅberg-Music-Production-Teacher.tex",
+      "title_line1": "Music Production",
+      "title_line2": "Substitute Teacher",
+      "subtitle": "Songwriting & Production -- Engineering Background",
+      "quote": "If you fall one-hundred times and then get up, the 101 time you never lost!",
+      "summary_section": "Music_production_teacher.tex",
+      "extra_sections": [
+        "Music_production_skills.tex",
+        "cv_section_it_experience_condensed.tex",
+        "cv_section_education_minimal.tex"
+      ],
+      "industry_sectors": [
+        ["Education", "Public Sector"],
+        ["Media", "Entertainment"],
+        ["Healthcare", "BioTech"],
+        ["Security", "Energy"],
+        ["Finance", "Trade"]
+      ]
+    },
+    {
+      "id": "economics-innovation-leadership",
+      "output_dir": "1.Primary_Roles/Economics Innovation Leadership",
+      "output_file": "CV-RickardÅberg-Economics-Innovation-Leadership.tex",
+      "title_line1": "Economics, Innovation",
+      "title_line2": "& Leadership",
+      "subtitle": "Project & People Leadership -- Business Foundation",
+      "quote": "If you fall one-hundred times and then get up, the 101 time you never lost!",
+      "summary_section": "Economics_innovation_leadership.tex",
+      "extra_sections": [
+        "Economics_leadership_foundation.tex",
+        "pm_tm_experiences.tex",
+        "cv_section_education_minimal.tex"
+      ],
+      "industry_sectors": [
+        ["Finance", "Banking"],
+        ["Telecom", "Public Sector"],
+        ["Technology", "Energy"],
+        ["Retail", "Aviation"]
+      ]
+    },
+    {
+      "id": "music-business-economics",
+      "output_dir": "1.Primary_Roles/Music Business Economics",
+      "output_file": "CV-RickardÅberg-Music-Business-Economics.tex",
+      "title_line1": "Music Technology,",
+      "title_line2": "Business & Innovation",
+      "subtitle": "Audio Production -- Software Engineering -- Leadership",
+      "quote": "If you fall one-hundred times and then get up, the 101 time you never lost!",
+      "summary_section": "Music_business_economics.tex",
+      "extra_sections": [
+        "Music_production_skills.tex",
+        "Economics_leadership_foundation.tex",
+        "cv_section_education_minimal.tex"
+      ],
+      "industry_sectors": [
+        ["Media", "Entertainment"],
+        ["Technology", "Finance"],
+        ["Education", "Public Sector"],
+        ["Retail", "Telecom"]
+      ]
+    },
+    {
+      "id": "general-substitute-teacher",
+      "output_dir": "1.Primary_Roles/Vikarie Allman Linje",
+      "output_file": "CV-RickardÅberg-Vikarie-Allman-Linje.tex",
+      "title_line1": "General Substitute",
+      "title_line2": "Teacher (Vikarie)",
+      "subtitle": "Swedish -- English -- Mathematics -- SFI",
+      "quote": "If you fall one-hundred times and then get up, the 101 time you never lost!",
+      "summary_section": "General_substitute_teacher.tex",
+      "extra_sections": [
+        "cv_section_general_subjects.tex",
+        "cv_section_it_experience_condensed.tex",
+        "cv_section_education_minimal.tex"
+      ],
+      "industry_sectors": [
+        ["Education", "Public Sector"],
+        ["Aviation", "Hospitality"],
+        ["Healthcare", "BioTech"],
+        ["Finance", "Trade"]
+      ]
+    },
+    {
+      "id": "saab-systems-engineer",
+      "output_dir": "1.Primary_Roles/Saab Systems Engineer",
+      "output_file": "CV-RickardÅberg-Saab-Systems-Engineer.tex",
+      "title_line1": "Civilingenjör,",
+      "title_line2": "Systemutveckling",
+      "subtitle": "Software & Systems Engineering -- 20+ Years Experience",
+      "quote": "If you fall one-hundred times and then get up, the 101 time you never lost!",
+      "summary_section": "Saab_systems_engineer.tex",
+      "extra_sections": [
+        "Saab_technical_foundation.tex",
+        "dev_experiences.tex",
+        "cv_section_education_minimal.tex"
+      ],
+      "industry_sectors": [
+        ["Defense", "Aviation"],
+        ["Telecom", "Finance"],
+        ["Public Sector", "Energy"],
+        ["Technology", "Security"]
+      ]
+    }
+  ]
+}

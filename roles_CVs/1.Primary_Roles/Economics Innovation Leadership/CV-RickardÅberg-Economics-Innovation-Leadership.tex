@@ -1,0 +1,173 @@
+\documentclass[11pt,a4paper,sans]{moderncv}
+%---------%---------%---------%---------%---------%---------%---------%---------
+% Includes of packages, etc
+%---------%---------%---------%---------%---------%---------%---------%---------
+\moderncvstyle{banking}
+\moderncvcolor{red}
+\nopagenumbers{}
+
+\usepackage[scale=0.75]{geometry}
+\setlength{\footskip}{136.00005pt}
+
+\usepackage{graphicx}
+\graphicspath{{../includes}} % Specify the directory here
+\usepackage{enumitem}
+
+\setlength{\hintscolumnwidth}{3cm}
+\setlength{\footskip}{136.00005pt}
+
+\setlength{\hintscolumnwidth}{3cm}
+
+\ifxetexorluatex{}
+  \usepackage{fontspec}
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Ligatures=TeX}
+  \setmainfont{Latin Modern Roman}
+  \setsansfont{Latin Modern Sans}
+  \setmonofont{Latin Modern Mono}
+  \setmathfont{Latin Modern Math}
+  \moderncvcolor{blue}
+\else
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage{lmodern}
+\fi
+
+\usepackage[swedish]{babel}
+\usepackage{underscore}
+
+\newcommand{\thepage}{\arabic{page}}
+\newlist{quotelist}{enumerate}{1}
+\setlist[quotelist]{label=\textquotedblleft\arabic*\textquotedblright}
+
+\newcommand{\myparagraph}[1]{\paragraph{#1}\mbox{}\par}
+
+\title{MSc, Software Engineering}
+
+\firstname{Rickard}
+\lastname{\AA{}berg}
+\address{Bodekullsgatan 34b}{21440 Malm\"o}
+\phone[mobile]{+46~709~43~14~01}
+\email{rickard.aaberg@icloud.com}
+
+\quote{If you fall one-hundred times and then get up, the 101 time you never lost!}
+
+\begin{document}
+
+\renewcommand*{\namefont}{\LARGE\sffamily\mdseries}
+\renewcommand*{\titlefont}{\Large\sffamily\mdseries}
+
+\vspace*{-2em}
+\begin{center}
+  {\Huge\sffamily\bfseries Economics, Innovation} \\[0.3em]
+  {\Huge\sffamily \& Leadership} \\[0.4em]
+  {\color{gray}\large\sffamily Project \& People Leadership -- Business Foundation} \\[1em]
+  \includegraphics[width=3.6cm]{../../__2._photos/rickardaberg-consultant.jpeg} \\[1em]
+  {\Large\sffamily Rickard \textbf{\AA{}berg}} \\[-0.3em]
+  {\normalsize\sffamily MSc in Software Engineering} \\[0.5em]
+  {\small\sffamily
+    \textbf{Tel:} +46 709 43 14 01 \quad
+    \textbf{Email:} rickard.aaberg@icloud.com \quad
+    \textbf{Malmö, Sweden}
+  }
+\end{center}
+\vspace{0.5em}
+
+\input{../../__3._sections/Economics_innovation_leadership.tex}
+
+\section{Certification Badges}
+\cvitem{}{
+  \begin{minipage}[t]{0.24\linewidth}
+    \centering
+    \includegraphics[width=0.9\linewidth]{../../__1._images/azure-fundamentals-badge.png}\\
+    \scriptsize Microsoft Certified: Azure Fundamentals (AZ-900)
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.24\linewidth}
+    \centering
+    \includegraphics[width=0.6\linewidth]{../../__1._images/ICC_coach.jpeg}\\
+    \scriptsize ICC Certified Coach
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.24\linewidth}
+    \centering
+    \includegraphics[width=0.6\linewidth]{../../__1._images/ISQTB.jpg}\\
+    \scriptsize ISTQB Certified Tester\\
+    Foundation Level (CTFL)
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.24\linewidth}
+    \centering
+    \includegraphics[width=0.9\linewidth]{../../__1._images/Certified_Scrum_Master_(CSM)_certification_badge.png}\\
+    \scriptsize Certified Scrum Master
+  \end{minipage}
+}
+\vspace{0.5em}
+\cvitem{}{
+  \begin{minipage}[t]{0.24\linewidth}
+    \centering
+    \includegraphics[width=0.9\linewidth]{../../__1._images/wenell-ppl-badge.png}\\
+    \scriptsize Practical Project Management (Wenell)
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.24\linewidth}
+    \centering
+    \includegraphics[width=0.9\linewidth]{../../__1._images/nvc-year-badge.jpeg}\\
+    \scriptsize 1-Year Program in Nonviolent Communication (NVC)
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.24\linewidth}
+    \centering
+    \includegraphics[width=0.8\linewidth]{../../__1._images/IMT_Atlantique_logo_1.png}\\
+    \scriptsize École des Mines de Nantes
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.24\linewidth}
+    \centering
+    \includegraphics[width=0.9\linewidth]{../../__1._images/liu-logo.png}\\
+    \scriptsize Linköpings tekniska högskola (LiTH)
+  \end{minipage}
+}
+
+\cventry{Car driver's license}{}{}{}{}{}
+
+\section{Process Management}
+\cvlistdoubleitem{Change Mnmt} {Release Mnmt}
+\cvlistdoubleitem{Deploy Mnmt} {Problem Mnmt}
+\cvlistdoubleitem{ITIL}{GDPR}
+
+\input{../../__3._sections/Economics_leadership_foundation.tex}
+\input{../../__3._sections/pm_tm_experiences.tex}
+\input{../../__3._sections/cv_section_education_minimal.tex}
+
+\input{../../__3._sections/section_employments.tex}
+
+\section{What people have said about me}
+
+\begin{quotelist}
+\item  ``Rickard has not only used the existing processes but also simplified and improved them.
+        Rickard is goal-oriented, planning-oriented and flexible''  -- Jonas Paulsson, Länsstyrelsen IT
+\item
+        `` Rickard is ambitious and dedicated to his work and his team the reason for our success with a stable environment''  -- Frank Amersbasch, Head of Technical Operations, Ikano Bank
+  \end{quotelist}
+
+\section{Languages}
+\cvitemwithcomment{Swedish}{Mother tongue}{}
+\cvitemwithcomment{English}{Professional proficiency}{}
+\cvitemwithcomment{French}{Professional proficiency}{}
+
+\section{Industry sectors}
+\cvlistdoubleitem{Finance}{Banking}
+\cvlistdoubleitem{Telecom}{Public Sector}
+\cvlistdoubleitem{Technology}{Energy}
+\cvlistdoubleitem{Retail}{Aviation}
+
+\section{References}
+\cvitem{}{Available upon request.}
+
+\nocite{*}
+
+\clearpage
+\Large
+
+\end{document}
