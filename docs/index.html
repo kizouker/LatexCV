@@ -22,20 +22,6 @@
     --feedback: #b5482f;
     color-scheme: light;
   }
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-      --bg: #17181a; --panel: #212226; --fg: #ecebe7; --muted: #9a978f;
-      --border: #38393d; --accent: #6fc4cd; --accent-soft: #223335;
-      --agent: #e0a874; --agent-soft: #332821; --feedback: #e3846b;
-      color-scheme: dark;
-    }
-  }
-  :root[data-theme="dark"] {
-    --bg: #17181a; --panel: #212226; --fg: #ecebe7; --muted: #9a978f;
-    --border: #38393d; --accent: #6fc4cd; --accent-soft: #223335;
-    --agent: #e0a874; --agent-soft: #332821; --feedback: #e3846b;
-    color-scheme: dark;
-  }
   * { box-sizing: border-box; }
   body {
     margin: 0;
@@ -93,10 +79,6 @@
 
   .summary p { max-width: 72ch; margin: 0 0 14px; }
 
-  .roles-grid {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-    gap: 16px;
-  }
   .role-card {
     background: var(--panel); border: 1px solid var(--border); border-radius: 12px;
     padding: 16px 18px;
@@ -111,16 +93,38 @@
   .role-card p b { color: var(--fg); }
   .role-card .grounded { color: var(--muted); font-size: 0.82rem; }
 
+  .detail-panel {
+    background: var(--panel); border: 1px solid var(--border); border-radius: 12px;
+    padding: 18px 20px; margin-bottom: 18px; min-height: 108px;
+  }
+  .detail-panel .tag {
+    display: inline-block; font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.04em; color: var(--accent); background: var(--accent-soft);
+    padding: 3px 9px; border-radius: 999px; margin-bottom: 8px;
+  }
+  .detail-panel h3 { margin: 0 0 8px; font-size: 1.1rem; }
+  .detail-panel p { margin: 0 0 6px; font-size: 0.92rem; max-width: 68ch; }
+  .detail-panel p b { color: var(--fg); }
+  .detail-panel .grounded { color: var(--muted); font-size: 0.85rem; }
+  .diagram-hint { color: var(--muted); font-size: 0.82rem; margin: 10px 0 16px; }
+
   figure.diagram {
-    margin: 26px 0 0; background: var(--panel); border: 1px solid var(--border);
+    margin: 0; background: var(--panel); border: 1px solid var(--border);
     border-radius: 16px; padding: 16px clamp(8px,3vw,24px) 6px;
   }
   figure.diagram svg { width: 100%; height: auto; display: block; }
   figure.diagram text { fill: currentColor; }
-  .role-box rect { fill: var(--accent-soft); stroke: var(--accent); }
-  .agent-box rect { fill: var(--agent-soft); stroke: var(--agent); }
-  .node-title { font-size: 13.5px; font-weight: 700; }
-  .node-sub { font-size: 10.5px; fill: var(--muted); }
+  .role-box rect { fill: var(--accent-soft); stroke: var(--accent); stroke-width: 1.5; transition: stroke-width 0.15s, fill 0.15s; }
+  .agent-box rect { fill: var(--agent-soft); stroke: var(--agent); stroke-width: 1.5; transition: stroke-width 0.15s, fill 0.15s; }
+  .node-box { cursor: pointer; }
+  .node-box:hover rect { stroke-width: 2.5; }
+  .node-box.active.role-box rect { stroke-width: 3; fill: var(--accent); }
+  .node-box.active.role-box text { fill: #fff; }
+  .node-box.active.agent-box rect { stroke-width: 3; fill: var(--agent); }
+  .node-box.active.agent-box text { fill: #fff; }
+  .node-title { font-size: 16.5px; font-weight: 700; }
+  .node-hint { font-size: 9px; fill: var(--muted); letter-spacing: 0.03em; }
+  .node-box.active .node-hint { fill: #fff; opacity: 0.85; }
   .edge-label { font-size: 11px; fill: var(--muted); }
   .edge-label.feedback-label { fill: var(--feedback); font-weight: 600; }
   .flow-line { stroke: var(--fg); stroke-width: 1.6; fill: none; opacity: 0.75; }
@@ -165,8 +169,8 @@
   <div class="wrap">
     <span class="name">Rickard Åberg</span>
     <nav>
+      <a href="#role-fit">Process</a>
       <a href="#summary">Summary</a>
-      <a href="#role-fit">Role Fit</a>
       <a href="#experience">Experience</a>
       <a href="#tools">Tools</a>
       <a href="#certifications">Certifications</a>
@@ -183,6 +187,87 @@
       <a class="btn" href="https://www.linkedin.com/in/rickard-%C3%A5berg-9866891/" target="_blank" rel="noopener">Connect on LinkedIn →</a>
       <a class="btn secondary" href="mailto:raberg@duck.com">Email me</a>
     </div>
+  </div>
+</section>
+
+<section id="role-fit">
+  <div class="wrap">
+    <h2>How This Role Fits the Overall Picture</h2>
+    <p class="lead">Six roles, each grounded in a real prior assignment, now held by one person in a single AI-assisted delivery loop.</p>
+
+    <div id="detail-panel" class="detail-panel"></div>
+    <p class="diagram-hint">↑ Click a box below to see the role, responsibility, and process behind that step.</p>
+
+    <figure class="diagram">
+      <svg viewBox="0 0 1000 470" role="img" aria-label="A change starts as a backlog item, moves through Solution Architect, Claude Code, test and CI agents, and a code reviewer, then down through release management, application ownership, and DevOps coaching, whose retrospective insight loops back to inform the next architecture decision. Each box is clickable for detail.">
+        <defs>
+          <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0,0 L10,5 L0,10 z" fill="currentColor" />
+          </marker>
+          <marker id="arrow-fb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0,0 L10,5 L0,10 z" fill="var(--feedback)" />
+          </marker>
+        </defs>
+        <g class="role-box node-box" data-key="backlog" tabindex="0" role="button" aria-label="Backlog item">
+          <rect x="60" y="8" width="160" height="40" rx="9" />
+          <text x="140" y="33" text-anchor="middle" class="node-title">Backlog item</text>
+        </g>
+        <line x1="140" y1="48" x2="140" y2="84" class="flow-line" marker-end="url(#arrow)" />
+
+        <g class="role-box node-box" data-key="architect" tabindex="0" role="button" aria-label="Solution Architect">
+          <rect x="55" y="87" width="170" height="66" rx="10" />
+          <text x="140" y="126" text-anchor="middle" class="node-title">Solution Architect</text>
+        </g>
+        <g class="agent-box node-box" data-key="claude" tabindex="0" role="button" aria-label="Claude Code">
+          <rect x="295" y="87" width="170" height="66" rx="10" />
+          <text x="380" y="126" text-anchor="middle" class="node-title">Claude Code</text>
+        </g>
+        <g class="agent-box node-box" data-key="testagents" tabindex="0" role="button" aria-label="Test and CI Agents">
+          <rect x="535" y="87" width="170" height="66" rx="10" />
+          <text x="620" y="126" text-anchor="middle" class="node-title">Test &amp; CI Agents</text>
+        </g>
+        <g class="role-box node-box" data-key="reviewer" tabindex="0" role="button" aria-label="Code Reviewer">
+          <rect x="775" y="87" width="170" height="66" rx="10" />
+          <text x="860" y="126" text-anchor="middle" class="node-title">Code Reviewer</text>
+        </g>
+
+        <line x1="225" y1="120" x2="291" y2="120" class="flow-line" marker-end="url(#arrow)" />
+        <text x="258" y="112" text-anchor="middle" class="edge-label">architecture spec</text>
+        <line x1="465" y1="120" x2="531" y2="120" class="flow-line" marker-end="url(#arrow)" />
+        <text x="498" y="112" text-anchor="middle" class="edge-label">code diff</text>
+        <line x1="705" y1="120" x2="771" y2="120" class="flow-line" marker-end="url(#arrow)" />
+        <text x="738" y="112" text-anchor="middle" class="edge-label">test results</text>
+        <path d="M 860 153 L 860 225 L 380 225 L 380 157" class="iterate-line" marker-end="url(#arrow)" />
+        <text x="620" y="219" text-anchor="middle" class="edge-label">change request (iterate)</text>
+        <line x1="860" y1="153" x2="860" y2="353" class="flow-line" marker-end="url(#arrow)" />
+        <text x="905" y="260" text-anchor="middle" class="edge-label">approved diff</text>
+
+        <g class="role-box node-box" data-key="release" tabindex="0" role="button" aria-label="Release Manager">
+          <rect x="775" y="357" width="170" height="66" rx="10" />
+          <text x="860" y="396" text-anchor="middle" class="node-title">Release Manager</text>
+        </g>
+        <g class="role-box node-box" data-key="appowner" tabindex="0" role="button" aria-label="Application Owner">
+          <rect x="535" y="357" width="170" height="66" rx="10" />
+          <text x="620" y="396" text-anchor="middle" class="node-title">Application Owner</text>
+        </g>
+        <g class="role-box node-box" data-key="devops" tabindex="0" role="button" aria-label="DevOps Coach">
+          <rect x="295" y="357" width="170" height="66" rx="10" />
+          <text x="380" y="396" text-anchor="middle" class="node-title">DevOps Coach</text>
+        </g>
+
+        <line x1="771" y1="390" x2="705" y2="390" class="flow-line" marker-end="url(#arrow)" />
+        <text x="738" y="382" text-anchor="middle" class="edge-label">merged release</text>
+        <line x1="531" y1="390" x2="465" y2="390" class="flow-line" marker-end="url(#arrow)" />
+        <text x="498" y="382" text-anchor="middle" class="edge-label">prod signals</text>
+        <path d="M 291 390 L 32 390 L 32 120 L 51 120" class="feedback-line" marker-end="url(#arrow-fb)" />
+        <text x="32" y="255" text-anchor="middle" class="edge-label feedback-label" transform="rotate(-90 32 255)">retro insight → next architecture decision</text>
+      </svg>
+      <figcaption>
+        Teal boxes are human-held roles, brown boxes are AI/automated agents. The dashed line is the fast
+        local iterate loop between reviewer and Claude Code; the rust-colored line is the slower loop —
+        what production actually does feeds back into the next architecture decision.
+      </figcaption>
+    </figure>
   </div>
 </section>
 
@@ -204,137 +289,6 @@
       level — unit, component, integration, system function test (SFT), and end-to-end — inside a single,
       fast feedback loop, without losing rigor at any stage.
     </p>
-  </div>
-</section>
-
-<section id="role-fit">
-  <div class="wrap">
-    <h2>How This Role Fits the Overall Picture</h2>
-    <p class="lead">Six roles, each grounded in a real prior assignment, now held by one person in a single AI-assisted delivery loop.</p>
-
-    <div class="roles-grid">
-      <div class="role-card">
-        <span class="tag">Test Process</span>
-        <h3>Test Architect / Test Lead</h3>
-        <p><b>Responsibility:</b> own test strategy across unit, component, integration, system function test (SFT), and e2e — deciding what must be human-reviewed vs. what AI-generated tests cover well enough.</p>
-        <p><b>Process:</b> define test strategy and risk areas before code is written; run and review tests continuously during AI-assisted development, catching regressions before they reach a human.</p>
-        <p class="grounded">Grounded in: ISTQB CTFL (2006); Test Leader, J2EE project (Sony Ericsson); on-site system integration tester in Norway on a BPM system later awarded silver at the BPM Global Awards.</p>
-      </div>
-
-      <div class="role-card">
-        <span class="tag">Development Process</span>
-        <h3>Senior Developer / Code Reviewer</h3>
-        <p><b>Responsibility:</b> code quality, readability, and making sure AI-generated code actually fits existing architecture — not just "does it run".</p>
-        <p><b>Process:</b> reviews and directs AI-generated changes with the rigor of reviewing a junior developer's pull request, iteratively through the whole dev flow.</p>
-        <p class="grounded">Grounded in: 20+ years hands-on development — Java/JEE, .NET, React/Angular/Vue, fullstack — at Telenor, IKEA IT, Cybercom, Bouvet Syd, Verisure, ADBSafegate, and Zaplox.</p>
-      </div>
-
-      <div class="role-card">
-        <span class="tag">Application Management</span>
-        <h3>Application Owner</h3>
-        <p><b>Responsibility:</b> understand and own the consequences of changes to a system already running in production — not just deliver a sprint.</p>
-        <p><b>Process:</b> tracks what changes, why, and what it affects downstream, even when the changes are AI-assisted.</p>
-        <p class="grounded">Grounded in: Java Developer &amp; Coordinator, IKEA IT (bridged central IT and store operations); GDPR Coordinator, Verisure (owned the data-flow compliance analysis inside a live application).</p>
-      </div>
-
-      <div class="role-card">
-        <span class="tag">Version Control &amp; CM</span>
-        <h3>Release Manager</h3>
-        <p><b>Responsibility:</b> branch discipline, commit hygiene, and rollback-safety — so velocity never costs a clean, auditable history.</p>
-        <p><b>Process:</b> defines branch strategy and release flow, checks that AI-generated commits follow it before merge.</p>
-        <p class="grounded">Grounded in: DevOps Lead &amp; Release Manager, IKANO Bank (CA Lisa/Nolio release automation); Git/Gerrit, GitLab CI, Jenkins, SonarQube, and Artifactory throughout a 20+ year career.</p>
-      </div>
-
-      <div class="role-card">
-        <span class="tag">Architecture</span>
-        <h3>Solution Architect</h3>
-        <p><b>Responsibility:</b> the structural decisions — what an AI assistant should not be allowed to decide alone — before code is generated inside that structure.</p>
-        <p><b>Process:</b> defines target architecture and interfaces first, then lets the AI tool implement within those boundaries, with architecture review as its own explicit step.</p>
-        <p class="grounded">Grounded in: Solution Architect, IKEA IT (SaaS feasibility evaluation for the Enterprise Architecture Board); Software Architectural Description template (TOGAF, Zachman, Kruchten 4+1) at Telenor; Application Lead for a 15-system EAI layer (Hi3G/Tre).</p>
-      </div>
-
-      <div class="role-card">
-        <span class="tag">DevOps &amp; Coaching</span>
-        <h3>DevOps Coach / Scrum Master</h3>
-        <p><b>Responsibility:</b> make AI a genuine part of the team's workflow — process, tooling, and quality gates included — not a novelty bolted on top.</p>
-        <p><b>Process:</b> facilitates the same retrospectives, ways-of-working adjustments, and coaching as before, now applied to AI-assisted work.</p>
-        <p class="grounded">Grounded in: DevOps Coach &amp; Scrum Master, Nordea; Problem Manager (ITIL), Länsstyrelsen; DevOps/CD tooling rollout, IKANO Bank.</p>
-      </div>
-    </div>
-
-    <figure class="diagram">
-      <svg viewBox="0 0 1000 470" role="img" aria-label="A change starts as a backlog item, moves through Solution Architect, Claude Code, test and CI agents, and a code reviewer, then down through release management, application ownership, and DevOps coaching, whose retrospective insight loops back to inform the next architecture decision.">
-        <defs>
-          <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-            <path d="M0,0 L10,5 L0,10 z" fill="currentColor" />
-          </marker>
-          <marker id="arrow-fb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-            <path d="M0,0 L10,5 L0,10 z" fill="var(--feedback)" />
-          </marker>
-        </defs>
-        <g class="role-box">
-          <rect x="60" y="8" width="160" height="40" rx="9" />
-          <text x="140" y="32" text-anchor="middle" class="node-title">Backlog item</text>
-        </g>
-        <line x1="140" y1="48" x2="140" y2="84" class="flow-line" marker-end="url(#arrow)" />
-        <g class="role-box">
-          <rect x="55" y="87" width="170" height="66" rx="10" />
-          <text x="140" y="115" text-anchor="middle" class="node-title">Solution Architect</text>
-          <text x="140" y="133" text-anchor="middle" class="node-sub">target structure &amp; interfaces</text>
-        </g>
-        <g class="agent-box">
-          <rect x="295" y="87" width="170" height="66" rx="10" />
-          <text x="380" y="115" text-anchor="middle" class="node-title">Claude Code</text>
-          <text x="380" y="133" text-anchor="middle" class="node-sub">AI pair-programmer</text>
-        </g>
-        <g class="agent-box">
-          <rect x="535" y="87" width="170" height="66" rx="10" />
-          <text x="620" y="115" text-anchor="middle" class="node-title">Test &amp; CI Agents</text>
-          <text x="620" y="133" text-anchor="middle" class="node-sub">unit / component / e2e runners</text>
-        </g>
-        <g class="role-box">
-          <rect x="775" y="87" width="170" height="66" rx="10" />
-          <text x="860" y="115" text-anchor="middle" class="node-title">Code Reviewer</text>
-          <text x="860" y="133" text-anchor="middle" class="node-sub">senior developer</text>
-        </g>
-        <line x1="225" y1="120" x2="291" y2="120" class="flow-line" marker-end="url(#arrow)" />
-        <text x="258" y="112" text-anchor="middle" class="edge-label">architecture spec</text>
-        <line x1="465" y1="120" x2="531" y2="120" class="flow-line" marker-end="url(#arrow)" />
-        <text x="498" y="112" text-anchor="middle" class="edge-label">code diff</text>
-        <line x1="705" y1="120" x2="771" y2="120" class="flow-line" marker-end="url(#arrow)" />
-        <text x="738" y="112" text-anchor="middle" class="edge-label">test results</text>
-        <path d="M 860 153 L 860 225 L 380 225 L 380 157" class="iterate-line" marker-end="url(#arrow)" />
-        <text x="620" y="219" text-anchor="middle" class="edge-label">change request (iterate)</text>
-        <line x1="860" y1="153" x2="860" y2="353" class="flow-line" marker-end="url(#arrow)" />
-        <text x="905" y="260" text-anchor="middle" class="edge-label">approved diff</text>
-        <g class="role-box">
-          <rect x="775" y="357" width="170" height="66" rx="10" />
-          <text x="860" y="385" text-anchor="middle" class="node-title">Release Manager</text>
-          <text x="860" y="403" text-anchor="middle" class="node-sub">CM &amp; version control</text>
-        </g>
-        <g class="role-box">
-          <rect x="535" y="357" width="170" height="66" rx="10" />
-          <text x="620" y="385" text-anchor="middle" class="node-title">Application Owner</text>
-          <text x="620" y="403" text-anchor="middle" class="node-sub">runs in production</text>
-        </g>
-        <g class="role-box">
-          <rect x="295" y="357" width="170" height="66" rx="10" />
-          <text x="380" y="385" text-anchor="middle" class="node-title">DevOps Coach</text>
-          <text x="380" y="403" text-anchor="middle" class="node-sub">process &amp; retro</text>
-        </g>
-        <line x1="771" y1="390" x2="705" y2="390" class="flow-line" marker-end="url(#arrow)" />
-        <text x="738" y="382" text-anchor="middle" class="edge-label">merged release</text>
-        <line x1="531" y1="390" x2="465" y2="390" class="flow-line" marker-end="url(#arrow)" />
-        <text x="498" y="382" text-anchor="middle" class="edge-label">prod signals</text>
-        <path d="M 291 390 L 32 390 L 32 120 L 51 120" class="feedback-line" marker-end="url(#arrow-fb)" />
-        <text x="32" y="255" text-anchor="middle" class="edge-label feedback-label" transform="rotate(-90 32 255)">retro insight → next architecture decision</text>
-      </svg>
-      <figcaption>
-        Teal boxes are human-held roles, brown boxes are AI/automated agents. The dashed line is the fast
-        local iterate loop between reviewer and Claude Code; the rust-colored line is the slower loop —
-        what production actually does feeds back into the next architecture decision.
-      </figcaption>
-    </figure>
   </div>
 </section>
 
@@ -406,5 +360,72 @@
   </div>
 </footer>
 
+<script>
+  var ROLE_DATA = {
+    backlog: {
+      tag: "Input", title: "Backlog item",
+      html: "<p>Where a change starts — a requirement, bug report, or business need. Everything downstream traces back to this.</p>"
+    },
+    architect: {
+      tag: "Architecture", title: "Solution Architect",
+      html: "<p><b>Responsibility:</b> the structural decisions — what an AI assistant should not be allowed to decide alone — before code is generated inside that structure.</p>" +
+            "<p><b>Process:</b> defines target architecture and interfaces first, then lets the AI tool implement within those boundaries, with architecture review as its own explicit step.</p>" +
+            "<p class=\"grounded\">Grounded in: Solution Architect, IKEA IT (SaaS feasibility evaluation for the Enterprise Architecture Board); Software Architectural Description template (TOGAF, Zachman, Kruchten 4+1) at Telenor; Application Lead for a 15-system EAI layer (Hi3G/Tre).</p>"
+    },
+    claude: {
+      tag: "AI Pair-Programmer", title: "Claude Code",
+      html: "<p>Generates the implementation inside the constraints the architect set. Not one of Rickard's roles — the tool being directed by the roles around it.</p>"
+    },
+    testagents: {
+      tag: "Test Process", title: "Test Architect / Test Lead",
+      html: "<p><b>Responsibility:</b> own test strategy across unit, component, integration, system function test (SFT), and e2e — deciding what must be human-reviewed vs. what AI-generated tests cover well enough.</p>" +
+            "<p><b>Process:</b> define test strategy and risk areas before code is written; run and review tests continuously during AI-assisted development, catching regressions before they reach a human.</p>" +
+            "<p class=\"grounded\">Grounded in: ISTQB CTFL (2006); Test Leader, J2EE project (Sony Ericsson); on-site system integration tester in Norway on a BPM system later awarded silver at the BPM Global Awards.</p>"
+    },
+    reviewer: {
+      tag: "Development Process", title: "Senior Developer / Code Reviewer",
+      html: "<p><b>Responsibility:</b> code quality, readability, and making sure AI-generated code actually fits existing architecture — not just \"does it run\".</p>" +
+            "<p><b>Process:</b> reviews and directs AI-generated changes with the rigor of reviewing a junior developer's pull request, iteratively through the whole dev flow.</p>" +
+            "<p class=\"grounded\">Grounded in: 20+ years hands-on development — Java/JEE, .NET, React/Angular/Vue, fullstack — at Telenor, IKEA IT, Cybercom, Bouvet Syd, Verisure, ADBSafegate, and Zaplox.</p>"
+    },
+    release: {
+      tag: "Version Control & CM", title: "Release Manager",
+      html: "<p><b>Responsibility:</b> branch discipline, commit hygiene, and rollback-safety — so velocity never costs a clean, auditable history.</p>" +
+            "<p><b>Process:</b> defines branch strategy and release flow, checks that AI-generated commits follow it before merge.</p>" +
+            "<p class=\"grounded\">Grounded in: DevOps Lead &amp; Release Manager, IKANO Bank (CA Lisa/Nolio release automation); Git/Gerrit, GitLab CI, Jenkins, SonarQube, and Artifactory throughout a 20+ year career.</p>"
+    },
+    appowner: {
+      tag: "Application Management", title: "Application Owner",
+      html: "<p><b>Responsibility:</b> understand and own the consequences of changes to a system already running in production — not just deliver a sprint.</p>" +
+            "<p><b>Process:</b> tracks what changes, why, and what it affects downstream, even when the changes are AI-assisted.</p>" +
+            "<p class=\"grounded\">Grounded in: Java Developer &amp; Coordinator, IKEA IT (bridged central IT and store operations); GDPR Coordinator, Verisure (owned the data-flow compliance analysis inside a live application).</p>"
+    },
+    devops: {
+      tag: "DevOps & Coaching", title: "DevOps Coach / Scrum Master",
+      html: "<p><b>Responsibility:</b> make AI a genuine part of the team's workflow — process, tooling, and quality gates included — not a novelty bolted on top.</p>" +
+            "<p><b>Process:</b> facilitates the same retrospectives, ways-of-working adjustments, and coaching as before, now applied to AI-assisted work.</p>" +
+            "<p class=\"grounded\">Grounded in: DevOps Coach &amp; Scrum Master, Nordea; Problem Manager (ITIL), Länsstyrelsen; DevOps/CD tooling rollout, IKANO Bank.</p>"
+    }
+  };
+
+  function selectNode(key) {
+    var data = ROLE_DATA[key];
+    if (!data) return;
+    document.querySelectorAll(".node-box").forEach(function (n) { n.classList.remove("active"); });
+    var el = document.querySelector('.node-box[data-key="' + key + '"]');
+    if (el) el.classList.add("active");
+    document.getElementById("detail-panel").innerHTML =
+      '<span class="tag">' + data.tag + '</span><h3>' + data.title + '</h3>' + data.html;
+  }
+
+  document.querySelectorAll(".node-box").forEach(function (node) {
+    node.addEventListener("click", function () { selectNode(node.dataset.key); });
+    node.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); selectNode(node.dataset.key); }
+    });
+  });
+
+  selectNode("architect");
+</script>
 </body>
 </html>
