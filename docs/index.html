@@ -131,6 +131,11 @@
   .node-box.active.agent-box rect { stroke-width: 3; fill: var(--agent); }
   .node-box.active.agent-box text { fill: #fff; }
   .node-title { font-size: 16.5px; font-weight: 700; }
+  .node-title.small { font-size: 12px; font-weight: 600; }
+  .verify-box rect { stroke-width: 2.5; }
+  .actor-token { transition: transform 0.4s ease; pointer-events: none; }
+  .actor-token circle { fill: var(--accent); stroke: var(--panel); stroke-width: 2; }
+  .actor-token text { fill: #fff; font-size: 10px; font-weight: 700; }
   .node-hint { font-size: 9px; fill: var(--muted); letter-spacing: 0.03em; }
   .node-box.active .node-hint { fill: #fff; opacity: 0.85; }
   .edge-label { font-size: 11px; fill: var(--muted); }
@@ -201,13 +206,15 @@
 <section id="role-fit">
   <div class="wrap">
     <h2>How This Role Fits the Overall Picture</h2>
-    <p class="lead">Six standard roles, each grounded in a real prior assignment, now held by one person in a single AI-assisted delivery loop.</p>
+    <p class="lead">Product Owner, Architect, and Release &amp; Ops are Rickard's alone. Two agents work in parallel on
+    code and tests; Rickard and Claude jointly verify what they produce — the heaviest checkpoint in the loop.</p>
 
     <div id="detail-panel" class="detail-panel"></div>
-    <p class="diagram-hint">↑ Hover or click any box below — it shows the role, responsibility, and real past assignments behind that step.</p>
+    <p class="diagram-hint">↑ Hover or click any box below. The small "You" badge moves to wherever Rickard is
+    actually hands-on — it stays put over the parallel agent boxes, since that work is supervised, not done by hand.</p>
 
     <figure class="diagram">
-      <svg viewBox="0 0 1450 280" role="img" aria-label="A change moves left to right through Product Owner, Architect, Claude Code, Tester, Developer, and Release and Ops, with a short iterate loop between Developer and Claude Code and a feedback loop from Release and Ops back to Product Owner. Every box is interactive.">
+      <svg viewBox="0 0 1550 270" role="img" aria-label="A change moves from Product Owner to Architect, then fans out to two agents working in parallel — Codex writing code and Gemini writing tests — which converge into a larger Verify step where Claude and Rickard jointly check the result, with a rework loop back to the agents when it isn't good enough. A DevOps Engineer agent then runs CI/CD and deploys, before Release and Ops, whose feedback loops back to Product Owner. A You badge marks which human-held box Rickard is currently at.">
         <defs>
           <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
             <path d="M0,0 L10,5 L0,10 z" fill="currentColor" />
@@ -222,47 +229,71 @@
           <text x="130" y="131" text-anchor="middle" class="node-title">Product Owner</text>
         </g>
         <g class="role-box node-box" data-key="architect" tabindex="0" role="button" aria-label="Architect">
-          <rect x="275" y="90" width="170" height="70" rx="10" />
-          <text x="360" y="131" text-anchor="middle" class="node-title">Architect</text>
+          <rect x="295" y="90" width="170" height="70" rx="10" />
+          <text x="380" y="131" text-anchor="middle" class="node-title">Architect</text>
         </g>
-        <g class="agent-box node-box" data-key="claude" tabindex="0" role="button" aria-label="Claude Code">
-          <rect x="505" y="90" width="170" height="70" rx="10" />
-          <text x="590" y="131" text-anchor="middle" class="node-title">Claude Code</text>
+
+        <g class="agent-box node-box" data-key="codex" tabindex="0" role="button" aria-label="Codex writes code">
+          <rect x="545" y="90" width="170" height="32" rx="8" />
+          <text x="630" y="111" text-anchor="middle" class="node-title small">Codex — code</text>
         </g>
-        <g class="role-box node-box" data-key="tester" tabindex="0" role="button" aria-label="Tester">
-          <rect x="735" y="90" width="170" height="70" rx="10" />
-          <text x="820" y="131" text-anchor="middle" class="node-title">Tester</text>
+        <g class="agent-box node-box" data-key="gemini" tabindex="0" role="button" aria-label="Gemini writes tests">
+          <rect x="545" y="128" width="170" height="32" rx="8" />
+          <text x="630" y="149" text-anchor="middle" class="node-title small">Gemini — tests</text>
         </g>
-        <g class="role-box node-box" data-key="developer" tabindex="0" role="button" aria-label="Developer">
-          <rect x="965" y="90" width="170" height="70" rx="10" />
-          <text x="1050" y="131" text-anchor="middle" class="node-title">Developer</text>
+
+        <g class="role-box node-box verify-box" data-key="verify" tabindex="0" role="button" aria-label="Verify, Claude and You">
+          <rect x="835" y="84" width="190" height="82" rx="12" />
+          <text x="930" y="120" text-anchor="middle" class="node-title">Verify</text>
+          <text x="930" y="140" text-anchor="middle" class="node-title small">Claude + You</text>
         </g>
+
+        <g class="agent-box node-box" data-key="devopseng" tabindex="0" role="button" aria-label="DevOps Engineer agent">
+          <rect x="1075" y="90" width="170" height="70" rx="10" />
+          <text x="1160" y="131" text-anchor="middle" class="node-title">DevOps Engineer</text>
+        </g>
+
         <g class="role-box node-box" data-key="releaseops" tabindex="0" role="button" aria-label="Release and Ops">
-          <rect x="1195" y="90" width="170" height="70" rx="10" />
-          <text x="1280" y="131" text-anchor="middle" class="node-title">Release &amp; Ops</text>
+          <rect x="1325" y="90" width="170" height="70" rx="10" />
+          <text x="1410" y="131" text-anchor="middle" class="node-title">Release &amp; Ops</text>
         </g>
 
-        <line x1="215" y1="125" x2="271" y2="125" class="flow-line" marker-end="url(#arrow)" />
-        <text x="243" y="117" text-anchor="middle" class="edge-label">requirements</text>
-        <line x1="441" y1="125" x2="501" y2="125" class="flow-line" marker-end="url(#arrow)" />
-        <text x="471" y="117" text-anchor="middle" class="edge-label">architecture</text>
-        <line x1="671" y1="125" x2="731" y2="125" class="flow-line" marker-end="url(#arrow)" />
-        <text x="701" y="117" text-anchor="middle" class="edge-label">code diff</text>
-        <line x1="901" y1="125" x2="961" y2="125" class="flow-line" marker-end="url(#arrow)" />
-        <text x="931" y="117" text-anchor="middle" class="edge-label">test results</text>
-        <line x1="1131" y1="125" x2="1191" y2="125" class="flow-line" marker-end="url(#arrow)" />
-        <text x="1161" y="117" text-anchor="middle" class="edge-label">approved</text>
+        <line x1="215" y1="125" x2="291" y2="125" class="flow-line" marker-end="url(#arrow)" />
+        <text x="253" y="117" text-anchor="middle" class="edge-label">requirements</text>
+        <line x1="465" y1="125" x2="541" y2="125" class="flow-line" marker-end="url(#arrow)" />
+        <text x="503" y="117" text-anchor="middle" class="edge-label">architecture</text>
 
-        <path d="M 1050 90 L 1050 42 L 590 42 L 590 86" class="iterate-line" marker-end="url(#arrow)" />
-        <text x="820" y="36" text-anchor="middle" class="edge-label">iterate</text>
+        <line x1="469" y1="110" x2="541" y2="106" class="flow-line" marker-end="url(#arrow)" />
+        <line x1="469" y1="140" x2="541" y2="144" class="flow-line" marker-end="url(#arrow)" />
 
-        <path d="M 1280 160 L 1280 240 L 130 240 L 130 164" class="feedback-line" marker-end="url(#arrow-fb)" />
-        <text x="705" y="234" text-anchor="middle" class="edge-label feedback-label">feedback → next idea</text>
+        <line x1="719" y1="106" x2="839" y2="123" class="flow-line" marker-end="url(#arrow)" />
+        <line x1="719" y1="144" x2="839" y2="127" class="flow-line" marker-end="url(#arrow)" />
+        <text x="780" y="90" text-anchor="middle" class="edge-label">parallel work</text>
+
+        <path d="M 930 166 L 930 205 L 630 205 L 630 164" class="iterate-line" marker-end="url(#arrow)" />
+        <text x="780" y="199" text-anchor="middle" class="edge-label">rework</text>
+
+        <line x1="1029" y1="125" x2="1071" y2="125" class="flow-line" marker-end="url(#arrow)" />
+        <text x="1050" y="117" text-anchor="middle" class="edge-label">verified</text>
+
+        <line x1="1249" y1="125" x2="1321" y2="125" class="flow-line" marker-end="url(#arrow)" />
+        <text x="1285" y="117" text-anchor="middle" class="edge-label">deployed</text>
+
+        <path d="M 1410 160 L 1410 235 L 130 235 L 130 164" class="feedback-line" marker-end="url(#arrow-fb)" />
+        <text x="770" y="229" text-anchor="middle" class="edge-label feedback-label">feedback → next idea</text>
+
+        <g id="actor-token" class="actor-token" transform="translate(130,86)">
+          <circle r="15" />
+          <text text-anchor="middle" dy="4">You</text>
+        </g>
       </svg>
       <figcaption>
-        Teal boxes are human-held roles, brown is the AI. The dashed arc is the fast local iterate loop
-        between Developer and Claude Code; the rust-colored line is the slower loop — what Release &amp;
-        Ops sees in production feeds back into the next Product Owner decision.
+        Teal boxes are human-held roles, brown boxes are AI agents. Verify is drawn larger because it
+        carries the heaviest responsibility — Claude and Rickard jointly checking what Codex and Gemini
+        produced, sending work back (the dashed loop) when it isn't good enough. DevOps Engineer is another
+        agent, running CI/CD and provisioning cloud environments when needed, supervised by Release &amp;
+        Ops rather than operated by hand. The small circular "You" badge marks which human-held step
+        Rickard is actually at.
       </figcaption>
     </figure>
   </div>
@@ -371,35 +402,38 @@
             "<p><b>Process:</b> defines target architecture and interfaces before implementation starts, then reviews that the result actually fits.</p>" +
             "<p class=\"grounded\">Grounded in: Software Architectural Description template (TOGAF, Zachman, Kruchten 4+1) authored at Telenor; Application Lead for a 15-system EAI integration layer (Hi3G/Tre).</p>"
     },
-    claude: {
-      tag: "AI Pair-Programmer", title: "Claude Code",
-      html: "<p>Generates and reviews code together with Rickard, inside the architecture. Larger implementation work can fan out to other coding models at different capability levels:</p>" +
-            "<div class=\"ai-team-row\">" +
-              "<span class=\"chip\">OpenAI Codex</span>" +
-              "<span class=\"chip\">Google Gemini</span>" +
-              "<span class=\"chip\">Mistral</span>" +
-              "<span class=\"chip\">Meta Llama</span>" +
-              "<span class=\"chip\">Alibaba Qwen</span>" +
-            "</div>"
+    codex: {
+      tag: "Parallel Agent", title: "Codex — writes code",
+      html: "<p>Generates the code implementation for a task, in parallel with Gemini writing the tests, inside the architecture the Architect step defined.</p>" +
+            "<p>One of several models that can take this slot at different capability levels: Codex, Gemini, Mistral, Meta Llama, or an open model like Alibaba Qwen.</p>"
     },
-    tester: {
-      tag: "Tester", title: "Tester",
-      html: "<p><b>Responsibility:</b> own test strategy across unit, component, integration, and end-to-end levels.</p>" +
-            "<p><b>Process:</b> defines the test strategy up front, then runs and reviews tests continuously, catching regressions before they reach a human.</p>" +
-            "<p class=\"grounded\">Grounded in: ISTQB CTFL (2006); Test Leader, J2EE project (Sony Ericsson); on-site integration tester in Norway on a BPM system later awarded silver at the BPM Global Awards.</p>"
+    gemini: {
+      tag: "Parallel Agent", title: "Gemini — writes tests",
+      html: "<p>Generates unit and component tests for the same task, independently and in parallel with the code itself — so the two are never written by the same hand.</p>"
     },
-    developer: {
-      tag: "Developer", title: "Developer",
-      html: "<p><b>Responsibility:</b> code quality and making sure it actually fits the architecture — not just \"does it run\".</p>" +
-            "<p><b>Process:</b> reviews AI-generated changes the same way a senior developer reviews a colleague's pull request.</p>" +
-            "<p class=\"grounded\">Grounded in: 20+ years hands-on development — Java/JEE, .NET, React/Angular/Vue — at Telenor, IKEA IT, Cybercom, Bouvet Syd, Verisure, ADBSafegate, and Zaplox.</p>"
+    verify: {
+      tag: "Verification", title: "Verify — Claude + You",
+      html: "<p><b>Responsibility:</b> the heaviest checkpoint in the loop — checking that what the parallel agents produced is actually correct and fits together, not just that it runs.</p>" +
+            "<p><b>Process:</b> Claude and Rickard jointly review the code and the tests, send work back for another pass (the rework loop) when it isn't good enough, and only pass on what both agree is solid.</p>" +
+            "<p class=\"grounded\">Grounded in: 20+ years reviewing code and test coverage as a senior developer and ISTQB-certified tester — the same scrutiny now applied jointly with Claude to AI-generated work.</p>"
+    },
+    devopseng: {
+      tag: "Deploy Agent", title: "DevOps Engineer",
+      html: "<p>Runs the CI/CD pipeline — builds the verified change, provisions cloud environments when needed, and deploys it. Another agent execution step: supervised by Release &amp; Ops, not operated by hand.</p>"
     },
     releaseops: {
       tag: "Release & Ops", title: "Release &amp; Ops",
       html: "<p><b>Responsibility:</b> safe releases, and owning what happens once a change is actually live.</p>" +
-            "<p><b>Process:</b> enforces branch and release discipline, then tracks production impact and feeds it back into the next decision.</p>" +
+            "<p><b>Process:</b> oversees what the DevOps Engineer agent deployed, monitors production impact, and feeds it back into the next Product Owner decision.</p>" +
             "<p class=\"grounded\">Grounded in: DevOps Lead &amp; Release Manager, IKANO Bank; GDPR Coordinator &amp; app owner, Verisure; DevOps Coach &amp; Scrum Master, Nordea; Problem Manager (ITIL), Länsstyrelsen.</p>"
     }
+  };
+
+  var HUMAN_POSITIONS = {
+    productowner: { x: 130, y: 86 },
+    architect: { x: 380, y: 86 },
+    verify: { x: 930, y: 80 },
+    releaseops: { x: 1410, y: 86 }
   };
 
   function selectNode(key) {
@@ -410,6 +444,10 @@
     if (el) el.classList.add("active");
     document.getElementById("detail-panel").innerHTML =
       '<span class="tag">' + data.tag + '</span><h3>' + data.title + '</h3>' + data.html;
+    var pos = HUMAN_POSITIONS[key];
+    if (pos) {
+      document.getElementById("actor-token").setAttribute("transform", "translate(" + pos.x + "," + pos.y + ")");
+    }
   }
 
   document.querySelectorAll(".node-box").forEach(function (node) {
