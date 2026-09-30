@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rickard Åberg — AI-Augmented Quality Architect</title>
+<meta name="description" content="20+ years across test leadership, solution architecture, development, release/CM, and DevOps coaching — now applied to AI-assisted software delivery.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f6f5f2;
+    --panel: #ffffff;
+    --fg: #1c1b19;
+    --muted: #6b6862;
+    --border: #d8d4cb;
+    --accent: #1f6f78;
+    --accent-soft: #e4f0ef;
+    --agent: #7a4f2b;
+    --agent-soft: #f3e8dd;
+    --feedback: #b5482f;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #17181a; --panel: #212226; --fg: #ecebe7; --muted: #9a978f;
+      --border: #38393d; --accent: #6fc4cd; --accent-soft: #223335;
+      --agent: #e0a874; --agent-soft: #332821; --feedback: #e3846b;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #17181a; --panel: #212226; --fg: #ecebe7; --muted: #9a978f;
+    --border: #38393d; --accent: #6fc4cd; --accent-soft: #223335;
+    --agent: #e0a874; --agent-soft: #332821; --feedback: #e3846b;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: "Source Sans 3", "Segoe UI", sans-serif;
+    line-height: 1.55;
+  }
+  a { color: var(--accent); }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 0 20px; }
+
+  header.site {
+    position: sticky; top: 0; z-index: 10;
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--border);
+  }
+  header.site .wrap { display: flex; justify-content: space-between; align-items: center; padding-block: 12px; }
+  header.site nav { display: flex; gap: 18px; font-size: 0.88rem; flex-wrap: wrap; }
+  header.site nav a { color: var(--muted); text-decoration: none; }
+  header.site nav a:hover { color: var(--fg); }
+  header.site .name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.05rem; }
+
+  .hero { padding-block: 56px 40px; }
+  .hero h1 {
+    font-family: "Fraunces", Georgia, serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    margin: 0 0 6px;
+    text-wrap: balance;
+  }
+  .hero .subtitle { color: var(--muted); font-size: 1.1rem; margin: 0 0 18px; max-width: 60ch; }
+  .hero .quote {
+    font-family: "Fraunces", serif; font-style: italic; font-size: 1rem;
+    color: var(--fg); border-left: 3px solid var(--accent); padding-left: 14px;
+    margin: 0 0 24px; max-width: 60ch;
+  }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--accent); color: #fff; text-decoration: none;
+    padding: 10px 18px; border-radius: 999px; font-weight: 600; font-size: 0.92rem;
+  }
+  .btn:hover { opacity: 0.9; }
+  .btn.secondary {
+    background: transparent; color: var(--accent); border: 1.5px solid var(--accent);
+  }
+  .btn-row { display: flex; gap: 12px; flex-wrap: wrap; }
+
+  section { padding-block: 36px; border-top: 1px solid var(--border); }
+  section h2 {
+    font-family: "Fraunces", serif; font-size: 1.5rem; font-weight: 600;
+    margin: 0 0 18px;
+  }
+  section > .wrap > p.lead { color: var(--muted); max-width: 68ch; margin: -8px 0 20px; }
+
+  .summary p { max-width: 72ch; margin: 0 0 14px; }
+
+  .roles-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 16px;
+  }
+  .role-card {
+    background: var(--panel); border: 1px solid var(--border); border-radius: 12px;
+    padding: 16px 18px;
+  }
+  .role-card .tag {
+    display: inline-block; font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.04em; color: var(--accent); background: var(--accent-soft);
+    padding: 3px 9px; border-radius: 999px; margin-bottom: 8px;
+  }
+  .role-card h3 { margin: 0 0 8px; font-size: 1.02rem; }
+  .role-card p { margin: 0 0 6px; font-size: 0.88rem; }
+  .role-card p b { color: var(--fg); }
+  .role-card .grounded { color: var(--muted); font-size: 0.82rem; }
+
+  figure.diagram {
+    margin: 26px 0 0; background: var(--panel); border: 1px solid var(--border);
+    border-radius: 16px; padding: 16px clamp(8px,3vw,24px) 6px;
+  }
+  figure.diagram svg { width: 100%; height: auto; display: block; }
+  figure.diagram text { fill: currentColor; }
+  .role-box rect { fill: var(--accent-soft); stroke: var(--accent); }
+  .agent-box rect { fill: var(--agent-soft); stroke: var(--agent); }
+  .node-title { font-size: 13.5px; font-weight: 700; }
+  .node-sub { font-size: 10.5px; fill: var(--muted); }
+  .edge-label { font-size: 11px; fill: var(--muted); }
+  .edge-label.feedback-label { fill: var(--feedback); font-weight: 600; }
+  .flow-line { stroke: var(--fg); stroke-width: 1.6; fill: none; opacity: 0.75; }
+  .iterate-line { stroke: var(--muted); stroke-width: 1.4; fill: none; stroke-dasharray: 5 4; }
+  .feedback-line { stroke: var(--feedback); stroke-width: 2.2; fill: none; }
+  figcaption { color: var(--muted); font-size: 0.85rem; padding: 10px 4px 16px; max-width: 74ch; }
+
+  .timeline { list-style: none; margin: 0; padding: 0; }
+  .timeline li {
+    display: grid; grid-template-columns: 150px 1fr; gap: 14px;
+    padding: 12px 0; border-bottom: 1px solid var(--border);
+  }
+  .timeline li:last-child { border-bottom: none; }
+  .timeline .when { color: var(--muted); font-size: 0.85rem; white-space: nowrap; }
+  .timeline .what b { display: block; font-size: 0.98rem; }
+  .timeline .what span { color: var(--muted); font-size: 0.86rem; }
+
+  .tools-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+  }
+  .tools-grid .col h4 {
+    margin: 0 0 8px; font-size: 0.82rem; text-transform: uppercase;
+    letter-spacing: 0.04em; color: var(--muted);
+  }
+  .tools-grid ul { margin: 0; padding-left: 18px; font-size: 0.9rem; }
+  .tools-grid li { margin-bottom: 3px; }
+  .tools-note { color: var(--muted); font-size: 0.82rem; margin-top: 18px; }
+
+  .certs { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap: 14px; }
+  .cert { background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; }
+  .cert b { display: block; font-size: 0.92rem; }
+  .cert span { color: var(--muted); font-size: 0.82rem; }
+
+  footer { padding-block: 40px 60px; text-align: center; }
+  footer p { color: var(--muted); font-size: 0.85rem; }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <span class="name">Rickard Åberg</span>
+    <nav>
+      <a href="#summary">Summary</a>
+      <a href="#role-fit">Role Fit</a>
+      <a href="#experience">Experience</a>
+      <a href="#tools">Tools</a>
+      <a href="#certifications">Certifications</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <h1>AI-Augmented Quality Architect</h1>
+    <p class="subtitle">Test · Architecture · Development · CM &amp; DevOps — full-lifecycle ownership, now applied to AI-assisted software delivery.</p>
+    <p class="quote">“If you fall one-hundred times and then get up, the 101st time you never lost.”</p>
+    <div class="btn-row">
+      <a class="btn" href="https://www.linkedin.com/in/rickard-%C3%A5berg-9866891/" target="_blank" rel="noopener">Connect on LinkedIn →</a>
+      <a class="btn secondary" href="mailto:raberg@duck.com">Email me</a>
+    </div>
+  </div>
+</section>
+
+<section id="summary">
+  <div class="wrap summary">
+    <h2>Summary</h2>
+    <p>
+      AI-Augmented Quality Architect with 20+ years spanning nearly every stage of the software lifecycle:
+      ISTQB-certified tester and test leader (J2EE project, Sony Ericsson), on-site system integrator tester
+      for a BPM platform later awarded silver at the BPM Global Awards, Solution Architect (SaaS evaluation
+      for IKEA IT's Enterprise Architecture Board; TOGAF/Zachman/Kruchten 4+1-based architecture templates at
+      Telenor), Application Lead for a 15-system EAI integration layer (Hi3G/Tre), 20+ years hands-on
+      developer (Java/JEE, .NET, React/Angular/Vue, fullstack), release and configuration-management owner
+      (CA Lisa/Nolio, Jenkins, SonarQube, Artifactory), and DevOps Coach &amp; Scrum Master (Nordea, IKANO Bank).
+    </p>
+    <p>
+      Working with AI pair-programming tools (Claude Code) now lets one person hold what used to require a
+      full team: requirements framing, architectural decisions, and quality ownership across every test
+      level — unit, component, integration, system function test (SFT), and end-to-end — inside a single,
+      fast feedback loop, without losing rigor at any stage.
+    </p>
+  </div>
+</section>
+
+<section id="role-fit">
+  <div class="wrap">
+    <h2>How This Role Fits the Overall Picture</h2>
+    <p class="lead">Six roles, each grounded in a real prior assignment, now held by one person in a single AI-assisted delivery loop.</p>
+
+    <div class="roles-grid">
+      <div class="role-card">
+        <span class="tag">Test Process</span>
+        <h3>Test Architect / Test Lead</h3>
+        <p><b>Responsibility:</b> own test strategy across unit, component, integration, system function test (SFT), and e2e — deciding what must be human-reviewed vs. what AI-generated tests cover well enough.</p>
+        <p><b>Process:</b> define test strategy and risk areas before code is written; run and review tests continuously during AI-assisted development, catching regressions before they reach a human.</p>
+        <p class="grounded">Grounded in: ISTQB CTFL (2006); Test Leader, J2EE project (Sony Ericsson); on-site system integration tester in Norway on a BPM system later awarded silver at the BPM Global Awards.</p>
+      </div>
+
+      <div class="role-card">
+        <span class="tag">Development Process</span>
+        <h3>Senior Developer / Code Reviewer</h3>
+        <p><b>Responsibility:</b> code quality, readability, and making sure AI-generated code actually fits existing architecture — not just "does it run".</p>
+        <p><b>Process:</b> reviews and directs AI-generated changes with the rigor of reviewing a junior developer's pull request, iteratively through the whole dev flow.</p>
+        <p class="grounded">Grounded in: 20+ years hands-on development — Java/JEE, .NET, React/Angular/Vue, fullstack — at Telenor, IKEA IT, Cybercom, Bouvet Syd, Verisure, ADBSafegate, and Zaplox.</p>
+      </div>
+
+      <div class="role-card">
+        <span class="tag">Application Management</span>
+        <h3>Application Owner</h3>
+        <p><b>Responsibility:</b> understand and own the consequences of changes to a system already running in production — not just deliver a sprint.</p>
+        <p><b>Process:</b> tracks what changes, why, and what it affects downstream, even when the changes are AI-assisted.</p>
+        <p class="grounded">Grounded in: Java Developer &amp; Coordinator, IKEA IT (bridged central IT and store operations); GDPR Coordinator, Verisure (owned the data-flow compliance analysis inside a live application).</p>
+      </div>
+
+      <div class="role-card">
+        <span class="tag">Version Control &amp; CM</span>
+        <h3>Release Manager</h3>
+        <p><b>Responsibility:</b> branch discipline, commit hygiene, and rollback-safety — so velocity never costs a clean, auditable history.</p>
+        <p><b>Process:</b> defines branch strategy and release flow, checks that AI-generated commits follow it before merge.</p>
+        <p class="grounded">Grounded in: DevOps Lead &amp; Release Manager, IKANO Bank (CA Lisa/Nolio release automation); Git/Gerrit, GitLab CI, Jenkins, SonarQube, and Artifactory throughout a 20+ year career.</p>
+      </div>
+
+      <div class="role-card">
+        <span class="tag">Architecture</span>
+        <h3>Solution Architect</h3>
+        <p><b>Responsibility:</b> the structural decisions — what an AI assistant should not be allowed to decide alone — before code is generated inside that structure.</p>
+        <p><b>Process:</b> defines target architecture and interfaces first, then lets the AI tool implement within those boundaries, with architecture review as its own explicit step.</p>
+        <p class="grounded">Grounded in: Solution Architect, IKEA IT (SaaS feasibility evaluation for the Enterprise Architecture Board); Software Architectural Description template (TOGAF, Zachman, Kruchten 4+1) at Telenor; Application Lead for a 15-system EAI layer (Hi3G/Tre).</p>
+      </div>
+
+      <div class="role-card">
+        <span class="tag">DevOps &amp; Coaching</span>
+        <h3>DevOps Coach / Scrum Master</h3>
+        <p><b>Responsibility:</b> make AI a genuine part of the team's workflow — process, tooling, and quality gates included — not a novelty bolted on top.</p>
+        <p><b>Process:</b> facilitates the same retrospectives, ways-of-working adjustments, and coaching as before, now applied to AI-assisted work.</p>
+        <p class="grounded">Grounded in: DevOps Coach &amp; Scrum Master, Nordea; Problem Manager (ITIL), Länsstyrelsen; DevOps/CD tooling rollout, IKANO Bank.</p>
+      </div>
+    </div>
+
+    <figure class="diagram">
+      <svg viewBox="0 0 1000 470" role="img" aria-label="A change starts as a backlog item, moves through Solution Architect, Claude Code, test and CI agents, and a code reviewer, then down through release management, application ownership, and DevOps coaching, whose retrospective insight loops back to inform the next architecture decision.">
+        <defs>
+          <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0,0 L10,5 L0,10 z" fill="currentColor" />
+          </marker>
+          <marker id="arrow-fb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0,0 L10,5 L0,10 z" fill="var(--feedback)" />
+          </marker>
+        </defs>
+        <g class="role-box">
+          <rect x="60" y="8" width="160" height="40" rx="9" />
+          <text x="140" y="32" text-anchor="middle" class="node-title">Backlog item</text>
+        </g>
+        <line x1="140" y1="48" x2="140" y2="84" class="flow-line" marker-end="url(#arrow)" />
+        <g class="role-box">
+          <rect x="55" y="87" width="170" height="66" rx="10" />
+          <text x="140" y="115" text-anchor="middle" class="node-title">Solution Architect</text>
+          <text x="140" y="133" text-anchor="middle" class="node-sub">target structure &amp; interfaces</text>
+        </g>
+        <g class="agent-box">
+          <rect x="295" y="87" width="170" height="66" rx="10" />
+          <text x="380" y="115" text-anchor="middle" class="node-title">Claude Code</text>
+          <text x="380" y="133" text-anchor="middle" class="node-sub">AI pair-programmer</text>
+        </g>
+        <g class="agent-box">
+          <rect x="535" y="87" width="170" height="66" rx="10" />
+          <text x="620" y="115" text-anchor="middle" class="node-title">Test &amp; CI Agents</text>
+          <text x="620" y="133" text-anchor="middle" class="node-sub">unit / component / e2e runners</text>
+        </g>
+        <g class="role-box">
+          <rect x="775" y="87" width="170" height="66" rx="10" />
+          <text x="860" y="115" text-anchor="middle" class="node-title">Code Reviewer</text>
+          <text x="860" y="133" text-anchor="middle" class="node-sub">senior developer</text>
+        </g>
+        <line x1="225" y1="120" x2="291" y2="120" class="flow-line" marker-end="url(#arrow)" />
+        <text x="258" y="112" text-anchor="middle" class="edge-label">architecture spec</text>
+        <line x1="465" y1="120" x2="531" y2="120" class="flow-line" marker-end="url(#arrow)" />
+        <text x="498" y="112" text-anchor="middle" class="edge-label">code diff</text>
+        <line x1="705" y1="120" x2="771" y2="120" class="flow-line" marker-end="url(#arrow)" />
+        <text x="738" y="112" text-anchor="middle" class="edge-label">test results</text>
+        <path d="M 860 153 L 860 225 L 380 225 L 380 157" class="iterate-line" marker-end="url(#arrow)" />
+        <text x="620" y="219" text-anchor="middle" class="edge-label">change request (iterate)</text>
+        <line x1="860" y1="153" x2="860" y2="353" class="flow-line" marker-end="url(#arrow)" />
+        <text x="905" y="260" text-anchor="middle" class="edge-label">approved diff</text>
+        <g class="role-box">
+          <rect x="775" y="357" width="170" height="66" rx="10" />
+          <text x="860" y="385" text-anchor="middle" class="node-title">Release Manager</text>
+          <text x="860" y="403" text-anchor="middle" class="node-sub">CM &amp; version control</text>
+        </g>
+        <g class="role-box">
+          <rect x="535" y="357" width="170" height="66" rx="10" />
+          <text x="620" y="385" text-anchor="middle" class="node-title">Application Owner</text>
+          <text x="620" y="403" text-anchor="middle" class="node-sub">runs in production</text>
+        </g>
+        <g class="role-box">
+          <rect x="295" y="357" width="170" height="66" rx="10" />
+          <text x="380" y="385" text-anchor="middle" class="node-title">DevOps Coach</text>
+          <text x="380" y="403" text-anchor="middle" class="node-sub">process &amp; retro</text>
+        </g>
+        <line x1="771" y1="390" x2="705" y2="390" class="flow-line" marker-end="url(#arrow)" />
+        <text x="738" y="382" text-anchor="middle" class="edge-label">merged release</text>
+        <line x1="531" y1="390" x2="465" y2="390" class="flow-line" marker-end="url(#arrow)" />
+        <text x="498" y="382" text-anchor="middle" class="edge-label">prod signals</text>
+        <path d="M 291 390 L 32 390 L 32 120 L 51 120" class="feedback-line" marker-end="url(#arrow-fb)" />
+        <text x="32" y="255" text-anchor="middle" class="edge-label feedback-label" transform="rotate(-90 32 255)">retro insight → next architecture decision</text>
+      </svg>
+      <figcaption>
+        Teal boxes are human-held roles, brown boxes are AI/automated agents. The dashed line is the fast
+        local iterate loop between reviewer and Claude Code; the rust-colored line is the slower loop —
+        what production actually does feeds back into the next architecture decision.
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <h2>Experience</h2>
+    <ul class="timeline">
+      <li><span class="when">2026</span><span class="what"><b>Field Officer</b><span>Skogsstyrelsen — nature conservation &amp; forest management, coordinated a multilingual work team.</span></span></li>
+      <li><span class="when">2021–2022</span><span class="what"><b>Fullstack Developer</b><span>ADBSafegate AB, Malmö — Angular, TypeScript, Azure, SAFe.</span></span></li>
+      <li><span class="when">2021</span><span class="what"><b>Fullstack Developer</b><span>Zaplox AB, Lund — Vue.js, Node, AWS.</span></span></li>
+      <li><span class="when">2017–2018</span><span class="what"><b>Senior Software Engineer</b><span>Verisure Innovation, Malmö — Java8, Android, Docker/Kubernetes; led GDPR compliance implementation.</span></span></li>
+      <li><span class="when">2012–2017</span><span class="what"><b>Managing Consultant</b><span>Bouvet Syd AB, Malmö — Java Developer, Team Lead / CU Manager, Partner-Responsible DevOps.</span></span></li>
+      <li><span class="when">2011</span><span class="what"><b>Solution Architect</b><span>IKEA IT, Helsingborg — SaaS feasibility evaluation for the Enterprise Architecture Board.</span></span></li>
+      <li><span class="when">2011</span><span class="what"><b>System Integration Specialist</b><span>Hi3G (Tre), Stockholm — Application Lead for a 15-system EAI integration layer (Billing, CRM).</span></span></li>
+      <li><span class="when">2008–2010</span><span class="what"><b>Java Developer &amp; Coordinator</b><span>IKEA IT, Helsingborg — bridged central IT systems with in-store operations.</span></span></li>
+      <li><span class="when">2004–2012</span><span class="what"><b>Consultant — Integration &amp; Test</b><span>Cybercom (client: Telenor), Malmö/Oslo — Java EE, Tibco, integration testing, Software Architectural Description templates (TOGAF/Zachman/Kruchten 4+1).</span></span></li>
+      <li><span class="when">2003–2004</span><span class="what"><b>Research Engineer / Thésard</b><span>École des Mines de Nantes, France — MSc thesis on OS kernel evolution using temporal logic and AOP.</span></span></li>
+      <li><span class="when">2002</span><span class="what"><b>Embedded Developer</b><span>HemoCue, Ängelholm.</span></span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="tools">
+  <div class="wrap">
+    <h2>Tools &amp; Technologies</h2>
+    <div class="tools-grid">
+      <div class="col">
+        <h4>Languages</h4>
+        <ul><li>Java/JEE/Spring/Android</li><li>.NET Core / C#</li><li>JavaScript, React, Angular, Vue</li><li>Python</li><li>SQL / PL-SQL</li></ul>
+      </div>
+      <div class="col">
+        <h4>Version Control &amp; CI/CD</h4>
+        <ul><li>Git/Gerrit, GitHub, GitLab</li><li>Jenkins</li><li>SonarQube, Artifactory</li><li>Docker, Kubernetes</li><li>Azure, AWS</li></ul>
+      </div>
+      <div class="col">
+        <h4>Methods</h4>
+        <ul><li>Scrum, Kanban</li><li>DevOps</li><li>ITIL</li><li>Continuous Delivery</li></ul>
+      </div>
+      <div class="col">
+        <h4>Integration</h4>
+        <ul><li>TIBCO, Mule ESB</li><li>JMS / RabbitMQ</li><li>REST, SOAP, JSON/XML</li><li>Postman / SoapUI</li></ul>
+      </div>
+    </div>
+    <p class="tools-note">This list spans a 20+ year career — some entries (e.g. legacy CI tooling) reflect earlier assignments rather than current daily tools.</p>
+  </div>
+</section>
+
+<section id="certifications">
+  <div class="wrap">
+    <h2>Certifications &amp; Education</h2>
+    <div class="certs">
+      <div class="cert"><b>ISTQB Certified Tester, Foundation Level</b><span>2006</span></div>
+      <div class="cert"><b>Certified ScrumMaster (CSM)</b><span>Softhouse Consulting Öresund AB, 2014</span></div>
+      <div class="cert"><b>ICC Certified Coach</b><span>SLH – Center of Excellence, Thailand, 2009</span></div>
+      <div class="cert"><b>Microsoft Certified: Azure Fundamentals (AZ-900)</b><span>2025</span></div>
+      <div class="cert"><b>MSc, Computer Science and Engineering (300 ECTS)</b><span>Linköping Institute of Technology, 1996–2003</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>Rickard Åberg — Malmö, Sweden</p>
+    <p>
+      <a href="https://www.linkedin.com/in/rickard-%C3%A5berg-9866891/" target="_blank" rel="noopener">linkedin.com/in/rickard-åberg</a>
+      &nbsp;·&nbsp;
+      <a href="mailto:raberg@duck.com">raberg@duck.com</a>
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
