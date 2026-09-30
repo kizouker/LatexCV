@@ -20,6 +20,7 @@
     --agent: #7a4f2b;
     --agent-soft: #f3e8dd;
     --feedback: #b5482f;
+    --actor: #7a4fb0;
     color-scheme: light;
   }
   * { box-sizing: border-box; }
@@ -169,8 +170,8 @@
   .compose-label { font-size: 10.5px; fill: var(--muted); font-style: italic; }
   .compose-label.tiny { font-size: 8.5px; font-style: normal; }
   .actor-token { transition: transform 0.4s ease; pointer-events: none; }
-  .actor-token circle { fill: var(--accent); stroke: var(--panel); stroke-width: 2; }
-  .actor-token text { fill: #fff; font-size: 10px; font-weight: 700; }
+  .actor-token .actor-bg { fill: var(--actor); stroke: var(--panel); stroke-width: 3; filter: drop-shadow(0 2px 5px rgba(0,0,0,0.25)); }
+  .actor-token .actor-head, .actor-token .actor-body { fill: #fff; }
   .node-hint { font-size: 9px; fill: var(--muted); letter-spacing: 0.03em; }
   .node-box.active .node-hint { fill: #fff; opacity: 0.85; }
   .edge-label { font-size: 11px; fill: var(--muted); }
@@ -318,9 +319,10 @@
         <path d="M 1410 160 L 1410 235 L 130 235 L 130 164" class="feedback-line" marker-end="url(#arrow-fb)" />
         <text x="770" y="229" text-anchor="middle" class="edge-label feedback-label">feedback → next idea</text>
 
-        <g id="actor-token" class="actor-token" transform="translate(130,86)">
-          <circle r="15" />
-          <text text-anchor="middle" dy="4">You</text>
+        <g id="actor-token" class="actor-token" role="img" aria-label="Rickard" transform="translate(130,86)">
+          <circle class="actor-bg" r="20" />
+          <circle class="actor-head" cy="-6" r="7" />
+          <path class="actor-body" d="M -12 10 Q -12 -4 0 -4 Q 12 -4 12 10 Z" />
         </g>
       </svg>
       <figcaption>
@@ -373,9 +375,10 @@
           <text x="80" y="262" text-anchor="middle" class="node-title small">Ops</text>
         </g>
 
-        <g id="actor-token-persona" class="actor-token" transform="translate(291,39)">
-          <circle r="15" />
-          <text text-anchor="middle" dy="4">You</text>
+        <g id="actor-token-persona" class="actor-token" role="img" aria-label="Rickard" transform="translate(291,39)">
+          <circle class="actor-bg" r="20" />
+          <circle class="actor-head" cy="-6" r="7" />
+          <path class="actor-body" d="M -12 10 Q -12 -4 0 -4 Q 12 -4 12 10 Z" />
         </g>
       </svg>
       <figcaption>
