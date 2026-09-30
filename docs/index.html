@@ -139,6 +139,27 @@
   .verify-box rect, .verify-box circle { stroke-width: 2.5; }
   .persona-line { stroke: var(--muted); stroke-width: 1.4; fill: none; stroke-dasharray: 4 4; opacity: 0.8; }
   .persona-diagram { margin-top: 22px; }
+
+  .test-levels { list-style: none; margin: 26px 0 0; padding: 0; counter-reset: level; }
+  .test-levels li {
+    counter-increment: level;
+    display: grid; grid-template-columns: 28px 1fr auto; align-items: baseline; gap: 12px;
+    padding: 12px 0; border-bottom: 1px solid var(--border);
+  }
+  .test-levels li:last-child { border-bottom: none; }
+  .test-levels li::before {
+    content: counter(level); font-family: "Fraunces", serif; font-weight: 700;
+    color: var(--accent); font-size: 1rem;
+  }
+  .test-levels .what b { display: block; font-size: 0.98rem; }
+  .test-levels .what span { color: var(--muted); font-size: 0.86rem; }
+  .test-levels .actor {
+    font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;
+    color: var(--accent); background: var(--accent-soft); padding: 3px 9px; border-radius: 999px;
+    white-space: nowrap;
+  }
+  .test-levels .actor.customer { color: var(--feedback); background: color-mix(in srgb, var(--feedback) 14%, transparent); }
+  .test-levels .actor.agent { color: var(--agent); background: var(--agent-soft); }
   .actor-token { transition: transform 0.4s ease; pointer-events: none; }
   .actor-token circle { fill: var(--accent); stroke: var(--panel); stroke-width: 2; }
   .actor-token text { fill: #fff; font-size: 10px; font-weight: 700; }
@@ -189,6 +210,7 @@
     <span class="name">Rickard Åberg</span>
     <nav>
       <a href="#role-fit">Process</a>
+      <a href="#test-process">Test Process</a>
       <a href="#summary">Summary</a>
       <a href="#experience">Experience</a>
       <a href="#tools">Tools</a>
@@ -357,6 +379,111 @@
   </div>
 </section>
 
+<section id="test-process">
+  <div class="wrap">
+    <h2>Zoom In: From Module to Release</h2>
+    <p class="lead">What "Claude Code" and "Verify" in the flow above actually look like up close, once work
+    splits across several modules — and what happens after, through every test level, up to the customer.</p>
+
+    <figure class="diagram">
+      <svg viewBox="0 0 940 500" role="img" aria-label="Claude breaks a change into module tickets, delegates each to a parallel coding agent, an Unit-Test Agent tests every module and sends bugs back to fix, then the change becomes a pull request that goes through a Code Review loop with Claude and Rickard before merging onward to Release and Ops.">
+        <defs>
+          <marker id="arrow2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0,0 L10,5 L0,10 z" fill="currentColor" />
+          </marker>
+        </defs>
+
+        <g class="agent-box node-box" data-key="moduleplanning" tabindex="0" role="button" aria-label="Claude breaks into modules">
+          <rect x="320" y="25" width="260" height="70" rx="10" />
+          <text x="450" y="55" text-anchor="middle" class="node-title small">Claude — Break Into</text>
+          <text x="450" y="72" text-anchor="middle" class="node-title small">Modules (Tickets)</text>
+        </g>
+
+        <line x1="450" y1="95" x2="150" y2="146" class="flow-line" marker-end="url(#arrow2)" />
+        <line x1="450" y1="95" x2="450" y2="146" class="flow-line" marker-end="url(#arrow2)" />
+        <line x1="450" y1="95" x2="750" y2="146" class="flow-line" marker-end="url(#arrow2)" />
+
+        <g class="agent-box node-box" data-key="moduleagents" tabindex="0" role="button" aria-label="Codex, module 1">
+          <rect x="30" y="150" width="240" height="60" rx="10" />
+          <text x="150" y="185" text-anchor="middle" class="node-title small">Codex — Module 1</text>
+        </g>
+        <g class="agent-box node-box" data-key="moduleagents" tabindex="0" role="button" aria-label="Gemini, module 2">
+          <rect x="330" y="150" width="240" height="60" rx="10" />
+          <text x="450" y="185" text-anchor="middle" class="node-title small">Gemini — Module 2</text>
+        </g>
+        <g class="agent-box node-box" data-key="moduleagents" tabindex="0" role="button" aria-label="Mistral, module 3">
+          <rect x="630" y="150" width="240" height="60" rx="10" />
+          <text x="750" y="185" text-anchor="middle" class="node-title small">Mistral — Module 3</text>
+        </g>
+
+        <line x1="150" y1="210" x2="400" y2="270" class="flow-line" marker-end="url(#arrow2)" />
+        <line x1="450" y1="210" x2="450" y2="270" class="flow-line" marker-end="url(#arrow2)" />
+        <line x1="750" y1="210" x2="500" y2="270" class="flow-line" marker-end="url(#arrow2)" />
+
+        <g class="agent-box node-box" data-key="unittestagent" tabindex="0" role="button" aria-label="Unit-Test Agent">
+          <rect x="320" y="270" width="260" height="70" rx="10" />
+          <text x="450" y="311" text-anchor="middle" class="node-title">Unit-Test Agent</text>
+        </g>
+
+        <path d="M 580 305 L 900 305 L 900 180 L 874 180" class="iterate-line" marker-end="url(#arrow2)" />
+        <text x="740" y="297" text-anchor="middle" class="edge-label">bug → fix</text>
+
+        <line x1="450" y1="340" x2="450" y2="378" class="flow-line" marker-end="url(#arrow2)" />
+        <text x="450" y="364" text-anchor="middle" class="edge-label">opens PR</text>
+
+        <g class="role-box node-box verify-box" data-key="verify" tabindex="0" role="button" aria-label="Code Review, Claude and You">
+          <rect x="305" y="380" width="290" height="82" rx="12" />
+          <text x="450" y="416" text-anchor="middle" class="node-title">Code Review</text>
+          <text x="450" y="436" text-anchor="middle" class="node-title small">Claude + You</text>
+        </g>
+
+        <path d="M 305 421 L 10 421 L 10 180 L 26 180" class="iterate-line" marker-end="url(#arrow2)" />
+        <text x="155" y="413" text-anchor="middle" class="edge-label">request changes</text>
+
+        <line x1="595" y1="421" x2="750" y2="421" class="flow-line" marker-end="url(#arrow2)" />
+        <text x="672" y="413" text-anchor="middle" class="edge-label">merge</text>
+        <text x="672" y="445" text-anchor="middle" class="edge-label">→ Release &amp; Ops</text>
+      </svg>
+      <figcaption>
+        Brown boxes are agents, each handling one module in parallel. Both dashed loops are local and fast —
+        bugs go straight back to the module's own agent, review comments go back the same way — nothing
+        reaches Release &amp; Ops until Code Review (the same Verify step from the flow diagram above) signs off.
+      </figcaption>
+    </figure>
+
+    <h3 class="persona-heading">Then Through Every Test Level</h3>
+    <p class="lead">Different actors own different levels — automation gets denser near the code, people get
+    involved as the scope widens toward the customer.</p>
+
+    <ol class="test-levels">
+      <li>
+        <span class="what"><b>Unit Test</b><span>Every function, in isolation, immediately after it's written — coverage tracked and enforced, not just "tests pass".</span></span>
+        <span class="actor agent">Unit-Test Agent</span>
+      </li>
+      <li>
+        <span class="what"><b>Component / Function Test</b><span>Does the whole module do what its ticket asked for?</span></span>
+        <span class="actor agent">Module Agent + Test Agent</span>
+      </li>
+      <li>
+        <span class="what"><b>System Function Test (SFT)</b><span>Does the feature work end-to-end inside the running system?</span></span>
+        <span class="actor">Tester (Claude + You)</span>
+      </li>
+      <li>
+        <span class="what"><b>System Integration Test</b><span>Does this change break how other systems talk to it?</span></span>
+        <span class="actor">Tester (Claude + You)</span>
+      </li>
+      <li>
+        <span class="what"><b>End-to-End Test</b><span>Full user flows across the whole system, browser to backend.</span></span>
+        <span class="actor agent">E2E Test Agent</span>
+      </li>
+      <li>
+        <span class="what"><b>Acceptance Test / Sprint Demo</b><span>Runs UAT, or simply watches the sprint demo and reacts live.</span></span>
+        <span class="actor customer">Customer</span>
+      </li>
+    </ol>
+  </div>
+</section>
+
 <section id="summary">
   <div class="wrap summary">
     <h2>Summary</h2>
@@ -474,6 +601,19 @@
       html: "<p><b>Responsibility:</b> the heaviest checkpoint in the loop — checking that what the parallel agents produced is actually correct and fits together, not just that it runs.</p>" +
             "<p><b>Process:</b> Claude and Rickard jointly review the code and the tests, send work back for another pass (the rework loop) when it isn't good enough, and only pass on what both agree is solid.</p>" +
             "<p class=\"grounded\">Grounded in: 20+ years reviewing code and test coverage as a senior developer and ISTQB-certified tester — the same scrutiny now applied jointly with Claude to AI-generated work.</p>"
+    },
+    moduleplanning: {
+      tag: "Planning", title: "Claude — Break Into Modules",
+      html: "<p>Once the Architect has set the structure, Claude splits the change into tickets — one per module — sized for an agent to handle independently.</p>"
+    },
+    moduleagents: {
+      tag: "Parallel Agents", title: "Module Agents (one per ticket)",
+      html: "<p>Each module goes to its own coding agent, in parallel — the same roster as the main flow (Codex, Gemini, Mistral, and others), just one instance per module instead of one per whole change.</p>"
+    },
+    unittestagent: {
+      tag: "Test Agent", title: "Unit-Test Agent",
+      html: "<p>Writes and runs unit tests against each finished module, independently of whichever agent wrote it. Bugs it finds go straight back to that module's own agent to fix, before anything moves on.</p>" +
+            "<p><b>Code coverage:</b> tracked per module and enforced as a gate, not just \"tests pass\". AI-generated code doesn't get a pass on coverage just because it was fast to produce — if anything, coverage matters more now, since nobody read every line by hand.</p>"
     },
     devopseng: {
       tag: "Deploy Agent", title: "DevOps Engineer",
