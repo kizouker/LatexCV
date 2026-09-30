@@ -76,6 +76,10 @@
     margin: 0 0 18px;
   }
   section > .wrap > p.lead { color: var(--muted); max-width: 68ch; margin: -8px 0 20px; }
+  .persona-heading {
+    font-family: "Fraunces", serif; font-size: 1.15rem; font-weight: 600;
+    margin: 34px 0 6px;
+  }
 
   .summary p { max-width: 72ch; margin: 0 0 14px; }
 
@@ -120,19 +124,21 @@
   }
   figure.diagram svg { width: 100%; height: auto; display: block; }
   figure.diagram text { fill: currentColor; }
-  .role-box rect { fill: var(--accent-soft); stroke: var(--accent); stroke-width: 1.5; transition: stroke-width 0.15s, fill 0.15s; }
-  .agent-box rect { fill: var(--agent-soft); stroke: var(--agent); stroke-width: 1.5; transition: stroke-width 0.15s, fill 0.15s; }
+  .role-box rect, .role-box circle { fill: var(--accent-soft); stroke: var(--accent); stroke-width: 1.5; transition: stroke-width 0.15s, fill 0.15s; }
+  .agent-box rect, .agent-box circle { fill: var(--agent-soft); stroke: var(--agent); stroke-width: 1.5; transition: stroke-width 0.15s, fill 0.15s; }
   .node-box { cursor: pointer; }
-  .node-box:hover rect, .node-box:focus-visible rect { stroke-width: 2.5; filter: drop-shadow(0 2px 5px rgba(0,0,0,0.12)); }
+  .node-box:hover rect, .node-box:hover circle, .node-box:focus-visible rect, .node-box:focus-visible circle { stroke-width: 2.5; filter: drop-shadow(0 2px 5px rgba(0,0,0,0.12)); }
   .node-box:hover, .node-box:focus-visible { transform: translateY(-2px); transform-box: fill-box; transform-origin: center; }
-  .node-box:focus-visible rect { outline: none; stroke: var(--feedback); }
-  .node-box.active.role-box rect { stroke-width: 3; fill: var(--accent); }
+  .node-box:focus-visible rect, .node-box:focus-visible circle { outline: none; stroke: var(--feedback); }
+  .node-box.active.role-box rect, .node-box.active.role-box circle { stroke-width: 3; fill: var(--accent); }
   .node-box.active.role-box text { fill: #fff; }
-  .node-box.active.agent-box rect { stroke-width: 3; fill: var(--agent); }
+  .node-box.active.agent-box rect, .node-box.active.agent-box circle { stroke-width: 3; fill: var(--agent); }
   .node-box.active.agent-box text { fill: #fff; }
   .node-title { font-size: 16.5px; font-weight: 700; }
   .node-title.small { font-size: 12px; font-weight: 600; }
-  .verify-box rect { stroke-width: 2.5; }
+  .verify-box rect, .verify-box circle { stroke-width: 2.5; }
+  .persona-line { stroke: var(--muted); stroke-width: 1.4; fill: none; stroke-dasharray: 4 4; opacity: 0.8; }
+  .persona-diagram { margin-top: 22px; }
   .actor-token { transition: transform 0.4s ease; pointer-events: none; }
   .actor-token circle { fill: var(--accent); stroke: var(--panel); stroke-width: 2; }
   .actor-token text { fill: #fff; font-size: 10px; font-weight: 700; }
@@ -296,6 +302,58 @@
         Rickard is actually at.
       </figcaption>
     </figure>
+
+    <h3 class="persona-heading">The Same Roles, as a Persona</h3>
+    <p class="lead">One person, orbiting a constant collaborator — which hat is on changes what "working with
+    Claude" actually means.</p>
+
+    <figure class="diagram persona-diagram">
+      <svg viewBox="0 0 500 500" role="img" aria-label="Rickard's persona orbits a constant Claude at the center, taking the position of Product Owner, Architect, Verify, or Release and Ops around it. Each position shows a different relationship to Claude: briefing it, constraining it, checking its work, or directing what its deploy agent does.">
+        <g class="agent-box" aria-hidden="true">
+          <circle cx="250" cy="250" r="52" />
+          <text x="250" y="256" text-anchor="middle" class="node-title">Claude</text>
+        </g>
+
+        <line x1="250" y1="198" x2="250" y2="138" class="persona-line" />
+        <text x="250" y="168" text-anchor="middle" class="edge-label">briefs</text>
+        <line x1="302" y1="250" x2="362" y2="250" class="persona-line" />
+        <text x="332" y="242" text-anchor="middle" class="edge-label">constrains</text>
+        <line x1="250" y1="302" x2="250" y2="355" class="persona-line" />
+        <text x="250" y="332" text-anchor="middle" class="edge-label">checks together</text>
+        <line x1="198" y1="250" x2="138" y2="250" class="persona-line" />
+        <text x="168" y="242" text-anchor="middle" class="edge-label">directs deploy</text>
+
+        <g class="role-box node-box" data-key="productowner" tabindex="0" role="button" aria-label="Product Owner">
+          <circle cx="250" cy="80" r="58" />
+          <text x="250" y="76" text-anchor="middle" class="node-title small">Product</text>
+          <text x="250" y="92" text-anchor="middle" class="node-title small">Owner</text>
+        </g>
+        <g class="role-box node-box" data-key="architect" tabindex="0" role="button" aria-label="Architect">
+          <circle cx="420" cy="250" r="58" />
+          <text x="420" y="256" text-anchor="middle" class="node-title small">Architect</text>
+        </g>
+        <g class="role-box node-box verify-box" data-key="verify" tabindex="0" role="button" aria-label="Verify, Claude and You">
+          <circle cx="250" cy="420" r="65" />
+          <text x="250" y="416" text-anchor="middle" class="node-title small">Verify</text>
+          <text x="250" y="432" text-anchor="middle" class="node-title small">Claude + You</text>
+        </g>
+        <g class="role-box node-box" data-key="releaseops" tabindex="0" role="button" aria-label="Release and Ops">
+          <circle cx="80" cy="250" r="58" />
+          <text x="80" y="246" text-anchor="middle" class="node-title small">Release &amp;</text>
+          <text x="80" y="262" text-anchor="middle" class="node-title small">Ops</text>
+        </g>
+
+        <g id="actor-token-persona" class="actor-token" transform="translate(291,39)">
+          <circle r="15" />
+          <text text-anchor="middle" dy="4">You</text>
+        </g>
+      </svg>
+      <figcaption>
+        Claude stays fixed at the center — the constant collaborator. The "You" badge orbits to whichever
+        hat is currently active; hover or click a role here or in the flow diagram above, they share the
+        same detail panel.
+      </figcaption>
+    </figure>
   </div>
 </section>
 
@@ -436,17 +494,27 @@
     releaseops: { x: 1410, y: 86 }
   };
 
+  var PERSONA_POSITIONS = {
+    productowner: { x: 291, y: 39 },
+    architect: { x: 461, y: 209 },
+    verify: { x: 296, y: 374 },
+    releaseops: { x: 121, y: 209 }
+  };
+
   function selectNode(key) {
     var data = ROLE_DATA[key];
     if (!data) return;
     document.querySelectorAll(".node-box").forEach(function (n) { n.classList.remove("active"); });
-    var el = document.querySelector('.node-box[data-key="' + key + '"]');
-    if (el) el.classList.add("active");
+    document.querySelectorAll('.node-box[data-key="' + key + '"]').forEach(function (n) { n.classList.add("active"); });
     document.getElementById("detail-panel").innerHTML =
       '<span class="tag">' + data.tag + '</span><h3>' + data.title + '</h3>' + data.html;
     var pos = HUMAN_POSITIONS[key];
     if (pos) {
       document.getElementById("actor-token").setAttribute("transform", "translate(" + pos.x + "," + pos.y + ")");
+    }
+    var personaPos = PERSONA_POSITIONS[key];
+    if (personaPos) {
+      document.getElementById("actor-token-persona").setAttribute("transform", "translate(" + personaPos.x + "," + personaPos.y + ")");
     }
   }
 
