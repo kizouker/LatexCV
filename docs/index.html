@@ -160,6 +160,14 @@
   }
   .test-levels .actor.customer { color: var(--feedback); background: color-mix(in srgb, var(--feedback) 14%, transparent); }
   .test-levels .actor.agent { color: var(--agent); background: var(--agent-soft); }
+
+  .untested-box rect { fill: transparent; stroke: var(--muted); stroke-width: 1.5; stroke-dasharray: 5 4; }
+  .untested-box text { fill: var(--muted); }
+  .tested-box rect { fill: var(--accent-soft); stroke: var(--accent); stroke-width: 1.5; }
+  .tested-box.final rect { fill: var(--accent); }
+  .tested-box.final text { fill: #fff; }
+  .compose-label { font-size: 10.5px; fill: var(--muted); font-style: italic; }
+  .compose-label.tiny { font-size: 8.5px; font-style: normal; }
   .actor-token { transition: transform 0.4s ease; pointer-events: none; }
   .actor-token circle { fill: var(--accent); stroke: var(--panel); stroke-width: 2; }
   .actor-token text { fill: #fff; font-size: 10px; font-weight: 700; }
@@ -481,6 +489,110 @@
         <span class="actor customer">Customer</span>
       </li>
     </ol>
+
+    <h3 class="persona-heading">How Tested Pieces Compose Upward</h3>
+    <p class="lead">A module starts untested — dashed. Its unit test is a client that calls it from the
+    outside; once it passes, the module becomes a filled, solid square. Several tested squares together
+    form a component, which is itself untested (dashed) until its own test runs — and the pattern repeats
+    all the way to e2e.</p>
+
+    <figure class="diagram">
+      <svg viewBox="0 0 1080 170" role="img" aria-label="Four modules -- Client, API and Server, Frontend, and Backend -- start as dashed, untested squares. Each one's unit test, acting as a client to it, turns it into a solid, filled, tested square. The four solid squares combine inside a dashed, untested Component box, which its own component test turns solid. Several solid components combine inside a dashed, untested Integration box, which an integration test turns solid, and a final end-to-end test turns the whole thing into a solid, verified state.">
+        <defs>
+          <marker id="arrow3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M0,0 L10,5 L0,10 z" fill="currentColor" />
+          </marker>
+        </defs>
+
+        <g class="untested-box">
+          <rect x="20" y="20" width="30" height="30" />
+          <rect x="58" y="20" width="30" height="30" />
+          <rect x="20" y="58" width="30" height="30" />
+          <rect x="58" y="58" width="30" height="30" />
+        </g>
+        <text x="20" y="103" class="compose-label tiny">Client</text>
+        <text x="58" y="103" class="compose-label tiny">API/Server</text>
+        <text x="20" y="118" class="compose-label tiny">Frontend</text>
+        <text x="58" y="118" class="compose-label tiny">Backend</text>
+
+        <line x1="92" y1="54" x2="140" y2="54" class="flow-line" marker-end="url(#arrow3)" />
+        <text x="116" y="45" text-anchor="middle" class="compose-label">unit test</text>
+        <text x="116" y="66" text-anchor="middle" class="compose-label">(client)</text>
+
+        <g class="tested-box">
+          <rect x="144" y="20" width="30" height="30" />
+          <rect x="182" y="20" width="30" height="30" />
+          <rect x="144" y="58" width="30" height="30" />
+          <rect x="182" y="58" width="30" height="30" />
+        </g>
+        <text x="163" y="104" text-anchor="middle" class="compose-label">4 tested units</text>
+
+        <line x1="216" y1="54" x2="264" y2="54" class="flow-line" marker-end="url(#arrow3)" />
+        <text x="240" y="45" text-anchor="middle" class="compose-label">combine</text>
+
+        <g class="untested-box">
+          <rect x="268" y="8" width="94" height="94" rx="6" />
+        </g>
+        <g class="tested-box">
+          <rect x="285" y="25" width="26" height="26" />
+          <rect x="317" y="25" width="26" height="26" />
+          <rect x="285" y="57" width="26" height="26" />
+          <rect x="317" y="57" width="26" height="26" />
+        </g>
+        <text x="315" y="116" text-anchor="middle" class="compose-label">Component (untested)</text>
+
+        <line x1="366" y1="54" x2="410" y2="54" class="flow-line" marker-end="url(#arrow3)" />
+        <text x="388" y="45" text-anchor="middle" class="compose-label">component</text>
+        <text x="388" y="66" text-anchor="middle" class="compose-label">test</text>
+
+        <g class="tested-box">
+          <rect x="414" y="8" width="94" height="94" rx="6" />
+        </g>
+        <text x="461" y="55" text-anchor="middle" class="node-title small">&#10003;</text>
+        <text x="461" y="116" text-anchor="middle" class="compose-label">Component, tested</text>
+
+        <line x1="512" y1="54" x2="560" y2="54" class="flow-line" marker-end="url(#arrow3)" />
+        <text x="536" y="45" text-anchor="middle" class="compose-label">integrate</text>
+        <text x="536" y="66" text-anchor="middle" class="compose-label">×N</text>
+
+        <g class="untested-box">
+          <rect x="564" y="0" width="116" height="112" rx="6" />
+        </g>
+        <g class="tested-box">
+          <rect x="580" y="12" width="30" height="30" />
+          <rect x="618" y="12" width="30" height="30" />
+          <rect x="580" y="48" width="30" height="30" />
+          <rect x="618" y="48" width="30" height="30" />
+          <rect x="580" y="76" width="68" height="24" />
+        </g>
+        <text x="622" y="126" text-anchor="middle" class="compose-label">Integration (untested)</text>
+
+        <line x1="680" y1="54" x2="726" y2="54" class="flow-line" marker-end="url(#arrow3)" />
+        <text x="703" y="45" text-anchor="middle" class="compose-label">integration</text>
+        <text x="703" y="66" text-anchor="middle" class="compose-label">test</text>
+
+        <g class="tested-box">
+          <rect x="730" y="0" width="116" height="112" rx="6" />
+        </g>
+        <text x="788" y="60" text-anchor="middle" class="node-title small">&#10003;</text>
+        <text x="788" y="126" text-anchor="middle" class="compose-label">Integrated, tested</text>
+
+        <line x1="846" y1="54" x2="892" y2="54" class="flow-line" marker-end="url(#arrow3)" />
+        <text x="869" y="45" text-anchor="middle" class="compose-label">e2e</text>
+        <text x="869" y="66" text-anchor="middle" class="compose-label">test</text>
+
+        <g class="tested-box final">
+          <rect x="896" y="0" width="150" height="112" rx="8" />
+          <text x="971" y="52" text-anchor="middle" class="node-title small">&#10003;</text>
+          <text x="971" y="70" text-anchor="middle" class="node-title small">E2E Verified</text>
+        </g>
+      </svg>
+      <figcaption>
+        Dashed = untested; solid/filled = tested. Every solid square inside a box is a piece that already
+        passed its own test — the box around them is only as trustworthy as its own test makes it, whatever
+        already passed inside it.
+      </figcaption>
+    </figure>
   </div>
 </section>
 
