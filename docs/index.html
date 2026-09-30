@@ -108,14 +108,11 @@
   .detail-panel .grounded { color: var(--muted); font-size: 0.85rem; }
   .diagram-hint { color: var(--muted); font-size: 0.82rem; margin: 10px 0 16px; }
 
-  .ai-team { margin-top: 10px; }
-  .ai-team-arrow { color: var(--muted); font-size: 0.8rem; margin: 8px 0; }
-  .ai-team-row { display: flex; flex-wrap: wrap; gap: 8px; }
+  .ai-team-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
   .chip {
     display: inline-block; padding: 4px 11px; border-radius: 999px;
     border: 1px solid var(--border); font-size: 0.82rem; background: var(--bg);
   }
-  .chip.lead { background: var(--agent); color: #fff; border-color: var(--agent); font-weight: 600; }
 
   figure.diagram {
     margin: 0; background: var(--panel); border: 1px solid var(--border);
@@ -204,13 +201,13 @@
 <section id="role-fit">
   <div class="wrap">
     <h2>How This Role Fits the Overall Picture</h2>
-    <p class="lead">Eight roles, each grounded in a real prior assignment, now held by one person in a single AI-assisted delivery loop.</p>
+    <p class="lead">Six standard roles, each grounded in a real prior assignment, now held by one person in a single AI-assisted delivery loop.</p>
 
     <div id="detail-panel" class="detail-panel"></div>
     <p class="diagram-hint">↑ Hover or click any box below — it shows the role, responsibility, and real past assignments behind that step.</p>
 
     <figure class="diagram">
-      <svg viewBox="0 0 1480 450" role="img" aria-label="A change starts as an idea and vision, moves through requirements framed by a product owner, then a solution architect, Claude Code, test and CI agents, and a code reviewer, then down through release management, application ownership, and DevOps coaching, whose retrospective insight loops back to inform the next idea. Every box is interactive.">
+      <svg viewBox="0 0 1450 280" role="img" aria-label="A change moves left to right through Product Owner, Architect, Claude Code, Tester, Developer, and Release and Ops, with a short iterate loop between Developer and Claude Code and a feedback loop from Release and Ops back to Product Owner. Every box is interactive.">
         <defs>
           <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
             <path d="M0,0 L10,5 L0,10 z" fill="currentColor" />
@@ -220,70 +217,52 @@
           </marker>
         </defs>
 
-        <g class="role-box node-box" data-key="idea" tabindex="0" role="button" aria-label="Idea and Vision">
-          <rect x="55" y="30" width="170" height="66" rx="10" />
-          <text x="140" y="69" text-anchor="middle" class="node-title">Idea &amp; Vision</text>
+        <g class="role-box node-box" data-key="productowner" tabindex="0" role="button" aria-label="Product Owner">
+          <rect x="45" y="90" width="170" height="70" rx="10" />
+          <text x="130" y="131" text-anchor="middle" class="node-title">Product Owner</text>
         </g>
-        <g class="role-box node-box" data-key="requirements" tabindex="0" role="button" aria-label="Requirements, Product Owner">
-          <rect x="295" y="30" width="170" height="66" rx="10" />
-          <text x="380" y="69" text-anchor="middle" class="node-title">Requirements</text>
-        </g>
-        <g class="role-box node-box" data-key="architect" tabindex="0" role="button" aria-label="Solution Architect">
-          <rect x="535" y="30" width="170" height="66" rx="10" />
-          <text x="620" y="69" text-anchor="middle" class="node-title">Solution Architect</text>
+        <g class="role-box node-box" data-key="architect" tabindex="0" role="button" aria-label="Architect">
+          <rect x="275" y="90" width="170" height="70" rx="10" />
+          <text x="360" y="131" text-anchor="middle" class="node-title">Architect</text>
         </g>
         <g class="agent-box node-box" data-key="claude" tabindex="0" role="button" aria-label="Claude Code">
-          <rect x="775" y="30" width="170" height="66" rx="10" />
-          <text x="860" y="69" text-anchor="middle" class="node-title">Claude Code</text>
+          <rect x="505" y="90" width="170" height="70" rx="10" />
+          <text x="590" y="131" text-anchor="middle" class="node-title">Claude Code</text>
         </g>
-        <g class="agent-box node-box" data-key="testagents" tabindex="0" role="button" aria-label="Test and CI Agents">
-          <rect x="1015" y="30" width="170" height="66" rx="10" />
-          <text x="1100" y="69" text-anchor="middle" class="node-title">Test &amp; CI Agents</text>
+        <g class="role-box node-box" data-key="tester" tabindex="0" role="button" aria-label="Tester">
+          <rect x="735" y="90" width="170" height="70" rx="10" />
+          <text x="820" y="131" text-anchor="middle" class="node-title">Tester</text>
         </g>
-        <g class="role-box node-box" data-key="reviewer" tabindex="0" role="button" aria-label="Code Reviewer">
-          <rect x="1255" y="30" width="170" height="66" rx="10" />
-          <text x="1340" y="69" text-anchor="middle" class="node-title">Code Reviewer</text>
+        <g class="role-box node-box" data-key="developer" tabindex="0" role="button" aria-label="Developer">
+          <rect x="965" y="90" width="170" height="70" rx="10" />
+          <text x="1050" y="131" text-anchor="middle" class="node-title">Developer</text>
         </g>
-
-        <line x1="225" y1="63" x2="291" y2="63" class="flow-line" marker-end="url(#arrow)" />
-        <text x="258" y="55" text-anchor="middle" class="edge-label">validated idea</text>
-        <line x1="465" y1="63" x2="531" y2="63" class="flow-line" marker-end="url(#arrow)" />
-        <text x="498" y="55" text-anchor="middle" class="edge-label">requirements &amp; scope</text>
-        <line x1="705" y1="63" x2="771" y2="63" class="flow-line" marker-end="url(#arrow)" />
-        <text x="738" y="55" text-anchor="middle" class="edge-label">architecture spec</text>
-        <line x1="945" y1="63" x2="1011" y2="63" class="flow-line" marker-end="url(#arrow)" />
-        <text x="978" y="55" text-anchor="middle" class="edge-label">code diff</text>
-        <line x1="1185" y1="63" x2="1251" y2="63" class="flow-line" marker-end="url(#arrow)" />
-        <text x="1218" y="55" text-anchor="middle" class="edge-label">test results</text>
-        <path d="M 1340 96 L 1340 190 L 860 190 L 860 100" class="iterate-line" marker-end="url(#arrow)" />
-        <text x="1100" y="184" text-anchor="middle" class="edge-label">change request (iterate)</text>
-        <line x1="1340" y1="96" x2="1340" y2="353" class="flow-line" marker-end="url(#arrow)" />
-        <text x="1385" y="230" text-anchor="middle" class="edge-label">approved diff</text>
-
-        <g class="role-box node-box" data-key="release" tabindex="0" role="button" aria-label="Release Manager">
-          <rect x="1255" y="357" width="170" height="66" rx="10" />
-          <text x="1340" y="396" text-anchor="middle" class="node-title">Release Manager</text>
-        </g>
-        <g class="role-box node-box" data-key="appowner" tabindex="0" role="button" aria-label="Application Owner">
-          <rect x="1015" y="357" width="170" height="66" rx="10" />
-          <text x="1100" y="396" text-anchor="middle" class="node-title">Application Owner</text>
-        </g>
-        <g class="role-box node-box" data-key="devops" tabindex="0" role="button" aria-label="DevOps Coach">
-          <rect x="775" y="357" width="170" height="66" rx="10" />
-          <text x="860" y="396" text-anchor="middle" class="node-title">DevOps Coach</text>
+        <g class="role-box node-box" data-key="releaseops" tabindex="0" role="button" aria-label="Release and Ops">
+          <rect x="1195" y="90" width="170" height="70" rx="10" />
+          <text x="1280" y="131" text-anchor="middle" class="node-title">Release &amp; Ops</text>
         </g>
 
-        <line x1="1251" y1="390" x2="1189" y2="390" class="flow-line" marker-end="url(#arrow)" />
-        <text x="1220" y="382" text-anchor="middle" class="edge-label">merged release</text>
-        <line x1="1011" y1="390" x2="949" y2="390" class="flow-line" marker-end="url(#arrow)" />
-        <text x="980" y="382" text-anchor="middle" class="edge-label">prod signals</text>
-        <path d="M 775 390 L 32 390 L 32 63 L 51 63" class="feedback-line" marker-end="url(#arrow-fb)" />
-        <text x="32" y="227" text-anchor="middle" class="edge-label feedback-label" transform="rotate(-90 32 227)">retro insight → next idea</text>
+        <line x1="215" y1="125" x2="271" y2="125" class="flow-line" marker-end="url(#arrow)" />
+        <text x="243" y="117" text-anchor="middle" class="edge-label">requirements</text>
+        <line x1="441" y1="125" x2="501" y2="125" class="flow-line" marker-end="url(#arrow)" />
+        <text x="471" y="117" text-anchor="middle" class="edge-label">architecture</text>
+        <line x1="671" y1="125" x2="731" y2="125" class="flow-line" marker-end="url(#arrow)" />
+        <text x="701" y="117" text-anchor="middle" class="edge-label">code diff</text>
+        <line x1="901" y1="125" x2="961" y2="125" class="flow-line" marker-end="url(#arrow)" />
+        <text x="931" y="117" text-anchor="middle" class="edge-label">test results</text>
+        <line x1="1131" y1="125" x2="1191" y2="125" class="flow-line" marker-end="url(#arrow)" />
+        <text x="1161" y="117" text-anchor="middle" class="edge-label">approved</text>
+
+        <path d="M 1050 90 L 1050 42 L 590 42 L 590 86" class="iterate-line" marker-end="url(#arrow)" />
+        <text x="820" y="36" text-anchor="middle" class="edge-label">iterate</text>
+
+        <path d="M 1280 160 L 1280 240 L 130 240 L 130 164" class="feedback-line" marker-end="url(#arrow-fb)" />
+        <text x="705" y="234" text-anchor="middle" class="edge-label feedback-label">feedback → next idea</text>
       </svg>
       <figcaption>
-        Teal boxes are human-held roles, brown boxes are AI/automated agents. The dashed line is the fast
-        local iterate loop between reviewer and Claude Code; the rust-colored line is the slower loop —
-        what production actually does feeds back into the next idea, closing the cycle.
+        Teal boxes are human-held roles, brown is the AI. The dashed arc is the fast local iterate loop
+        between Developer and Claude Code; the rust-colored line is the slower loop — what Release &amp;
+        Ops sees in production feeds back into the next Product Owner decision.
       </figcaption>
     </figure>
   </div>
@@ -380,69 +359,46 @@
 
 <script>
   var ROLE_DATA = {
-    idea: {
-      tag: "Vision", title: "Idea &amp; Vision",
-      html: "<p><b>Responsibility:</b> assess whether an idea is worth building at all — technical feasibility, cost, and risk — before committing resources to it.</p>" +
-            "<p><b>Process:</b> evaluates the idea's feasibility and fit with the bigger picture first; only a validated idea moves on to concrete requirements.</p>" +
-            "<p class=\"grounded\">Grounded in: Solution Architect, IKEA IT — evaluated SaaS feasibility (technical, legal, economic) for the Enterprise Architecture Board before any commitment to build.</p>"
-    },
-    requirements: {
-      tag: "Requirements", title: "Requirements (Product Owner)",
-      html: "<p><b>Responsibility:</b> turn a validated idea into concrete, buildable requirements and priorities.</p>" +
-            "<p><b>Process:</b> defines scope and acceptance criteria before Claude Code starts generating anything, translating a stakeholder or business need into a concrete backlog item.</p>" +
-            "<p class=\"grounded\">Grounded in: Managing Consultant &amp; Partner-Responsible, Bouvet Syd (translated client needs into delivery scope); GDPR Coordinator, Verisure (turned a legal requirement into concrete application requirements); Senior Project Manager, Nordea (project planning &amp; requirements documentation for infrastructure projects).</p>"
+    productowner: {
+      tag: "Product Owner", title: "Product Owner",
+      html: "<p><b>Responsibility:</b> decide what's worth building and turn it into concrete requirements.</p>" +
+            "<p><b>Process:</b> weighs feasibility and cost first, then defines scope and acceptance criteria before any code is written.</p>" +
+            "<p class=\"grounded\">Grounded in: Solution Architect, IKEA IT (SaaS feasibility evaluation for the Enterprise Architecture Board); Managing Consultant &amp; Partner-Responsible, Bouvet Syd; GDPR Coordinator, Verisure; Senior Project Manager, Nordea.</p>"
     },
     architect: {
-      tag: "Architecture", title: "Solution Architect",
-      html: "<p><b>Responsibility:</b> the structural decisions — what an AI assistant should not be allowed to decide alone — before code is generated inside that structure.</p>" +
-            "<p><b>Process:</b> defines target architecture and interfaces first, then lets the AI tool implement within those boundaries, with architecture review as its own explicit step.</p>" +
+      tag: "Architect", title: "Architect",
+      html: "<p><b>Responsibility:</b> the structural decisions an AI assistant shouldn't make alone.</p>" +
+            "<p><b>Process:</b> defines target architecture and interfaces before implementation starts, then reviews that the result actually fits.</p>" +
             "<p class=\"grounded\">Grounded in: Software Architectural Description template (TOGAF, Zachman, Kruchten 4+1) authored at Telenor; Application Lead for a 15-system EAI integration layer (Hi3G/Tre).</p>"
     },
     claude: {
       tag: "AI Pair-Programmer", title: "Claude Code",
-      html: "<p>Works alongside Rickard as co-architect and co-tester — defining structure and test strategy together, not just generating code to spec.</p>" +
-            "<p>The actual coding work fans out further, sized and leveled like a two-pizza Scrum team — different models for different jobs, each one's output reviewed the same way a lead reviews any team member's pull request:</p>" +
-            "<div class=\"ai-team\">" +
-              "<span class=\"chip lead\">Claude — architecture &amp; test, with Rickard</span>" +
-              "<div class=\"ai-team-arrow\">delegates coding to ↓</div>" +
-              "<div class=\"ai-team-row\">" +
-                "<span class=\"chip\">Mistral (Codestral)</span>" +
-                "<span class=\"chip\">OpenAI Codex</span>" +
-                "<span class=\"chip\">Google Gemini</span>" +
-                "<span class=\"chip\">Meta Llama</span>" +
-                "<span class=\"chip\">Alibaba Qwen (open)</span>" +
-              "</div>" +
+      html: "<p>Generates and reviews code together with Rickard, inside the architecture. Larger implementation work can fan out to other coding models at different capability levels:</p>" +
+            "<div class=\"ai-team-row\">" +
+              "<span class=\"chip\">OpenAI Codex</span>" +
+              "<span class=\"chip\">Google Gemini</span>" +
+              "<span class=\"chip\">Mistral</span>" +
+              "<span class=\"chip\">Meta Llama</span>" +
+              "<span class=\"chip\">Alibaba Qwen</span>" +
             "</div>"
     },
-    testagents: {
-      tag: "Test Process", title: "Test Architect / Test Lead",
-      html: "<p><b>Responsibility:</b> own test strategy across unit, component, integration, system function test (SFT), and e2e — deciding what must be human-reviewed vs. what AI-generated tests cover well enough.</p>" +
-            "<p><b>Process:</b> define test strategy and risk areas before code is written; run and review tests continuously during AI-assisted development, catching regressions before they reach a human.</p>" +
-            "<p class=\"grounded\">Grounded in: ISTQB CTFL (2006); Test Leader, J2EE project (Sony Ericsson); on-site system integration tester in Norway on a BPM system later awarded silver at the BPM Global Awards.</p>"
+    tester: {
+      tag: "Tester", title: "Tester",
+      html: "<p><b>Responsibility:</b> own test strategy across unit, component, integration, and end-to-end levels.</p>" +
+            "<p><b>Process:</b> defines the test strategy up front, then runs and reviews tests continuously, catching regressions before they reach a human.</p>" +
+            "<p class=\"grounded\">Grounded in: ISTQB CTFL (2006); Test Leader, J2EE project (Sony Ericsson); on-site integration tester in Norway on a BPM system later awarded silver at the BPM Global Awards.</p>"
     },
-    reviewer: {
-      tag: "Development Process", title: "Senior Developer / Code Reviewer",
-      html: "<p><b>Responsibility:</b> code quality, readability, and making sure AI-generated code actually fits existing architecture — not just \"does it run\".</p>" +
-            "<p><b>Process:</b> reviews and directs AI-generated changes with the rigor of reviewing a junior developer's pull request, iteratively through the whole dev flow.</p>" +
-            "<p class=\"grounded\">Grounded in: 20+ years hands-on development — Java/JEE, .NET, React/Angular/Vue, fullstack — at Telenor, IKEA IT, Cybercom, Bouvet Syd, Verisure, ADBSafegate, and Zaplox.</p>"
+    developer: {
+      tag: "Developer", title: "Developer",
+      html: "<p><b>Responsibility:</b> code quality and making sure it actually fits the architecture — not just \"does it run\".</p>" +
+            "<p><b>Process:</b> reviews AI-generated changes the same way a senior developer reviews a colleague's pull request.</p>" +
+            "<p class=\"grounded\">Grounded in: 20+ years hands-on development — Java/JEE, .NET, React/Angular/Vue — at Telenor, IKEA IT, Cybercom, Bouvet Syd, Verisure, ADBSafegate, and Zaplox.</p>"
     },
-    release: {
-      tag: "Version Control & CM", title: "Release Manager",
-      html: "<p><b>Responsibility:</b> branch discipline, commit hygiene, and rollback-safety — so velocity never costs a clean, auditable history.</p>" +
-            "<p><b>Process:</b> defines branch strategy and release flow, checks that AI-generated commits follow it before merge.</p>" +
-            "<p class=\"grounded\">Grounded in: DevOps Lead &amp; Release Manager, IKANO Bank (CA Lisa/Nolio release automation); Git/Gerrit, GitLab CI, Jenkins, SonarQube, and Artifactory throughout a 20+ year career.</p>"
-    },
-    appowner: {
-      tag: "Application Management", title: "Application Owner",
-      html: "<p><b>Responsibility:</b> understand and own the consequences of changes to a system already running in production — not just deliver a sprint.</p>" +
-            "<p><b>Process:</b> tracks what changes, why, and what it affects downstream, even when the changes are AI-assisted.</p>" +
-            "<p class=\"grounded\">Grounded in: Java Developer &amp; Coordinator, IKEA IT (bridged central IT and store operations); GDPR Coordinator, Verisure (owned the data-flow compliance analysis inside a live application).</p>"
-    },
-    devops: {
-      tag: "DevOps & Coaching", title: "DevOps Coach / Scrum Master",
-      html: "<p><b>Responsibility:</b> make AI a genuine part of the team's workflow — process, tooling, and quality gates included — not a novelty bolted on top.</p>" +
-            "<p><b>Process:</b> facilitates the same retrospectives, ways-of-working adjustments, and coaching as before, now applied to AI-assisted work.</p>" +
-            "<p class=\"grounded\">Grounded in: DevOps Coach &amp; Scrum Master, Nordea; Problem Manager (ITIL), Länsstyrelsen; DevOps/CD tooling rollout, IKANO Bank.</p>"
+    releaseops: {
+      tag: "Release & Ops", title: "Release &amp; Ops",
+      html: "<p><b>Responsibility:</b> safe releases, and owning what happens once a change is actually live.</p>" +
+            "<p><b>Process:</b> enforces branch and release discipline, then tracks production impact and feeds it back into the next decision.</p>" +
+            "<p class=\"grounded\">Grounded in: DevOps Lead &amp; Release Manager, IKANO Bank; GDPR Coordinator &amp; app owner, Verisure; DevOps Coach &amp; Scrum Master, Nordea; Problem Manager (ITIL), Länsstyrelsen.</p>"
     }
   };
 
@@ -465,7 +421,7 @@
     });
   });
 
-  selectNode("idea");
+  selectNode("productowner");
 </script>
 </body>
 </html>
